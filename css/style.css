@@ -46,6 +46,7 @@ main.container { flex: 1; padding-top: 22px; padding-bottom: 40px; }
 }
 .topnav a:hover, .topnav a.active { background: rgba(255,255,255,.1); color: #fff; }
 
+h1, h2, h3, .stat b, .countdown b, .score, .rank { font-variant-numeric: lining-nums; }
 h1, h2, h3 { font-family: var(--serif); font-weight: 700; line-height: 1.2; margin: 0 0 .4em; }
 h1 { font-size: 30px; }
 h2 { font-size: 22px; margin-top: 1.4em; }
