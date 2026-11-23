@@ -211,7 +211,7 @@
           <div><label for="password">Mot de passe</label><input id="password" type="password" minlength="6" maxlength="72" required autocomplete="current-password" placeholder="6 caractères minimum"></div>
         </div>
         <label for="code">Code de classe</label><input id="code" type="text" required placeholder="Donné par Antoine" autocapitalize="characters" value="${esc(store.get("lastCode", ""))}">
-        <p class="small muted">Première fois ? Choisis un pseudo et un mot de passe : ton compte est créé. Ensuite, reprends les mêmes pour retrouver ta progression sur n'importe quel appareil. Le mot de passe est chiffré : personne ne peut le lire, pas même Antoine. S'il est oublié, demande à Antoine de le réinitialiser.</p>
+        <p class="small muted">Première fois ? Choisis un pseudo et un mot de passe : ton compte est créé. Ensuite, reprends les mêmes pour retrouver ta progression sur n'importe quel appareil. N'utilise pas un mot de passe que tu as ailleurs. En cas d'oubli, demande à Antoine.</p>
         <div id="login-msg"></div>
         <div class="actions">
           <button class="btn accent" type="submit">Entrer</button>

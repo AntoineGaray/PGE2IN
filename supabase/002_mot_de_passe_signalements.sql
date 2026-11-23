@@ -3,8 +3,11 @@
 -- À coller dans Supabase > SQL Editor > New query > Run, APRÈS setup.sql.
 -- Ré-exécutable sans perte de données.
 --
--- Mot de passe : stocké uniquement sous forme de hash bcrypt (pgcrypto).
--- Personne ne peut le relire, pas même depuis le tableau de bord Supabase.
+-- Mot de passe : vérifié avec un hash bcrypt (pgcrypto). Une copie lisible
+-- (colonne pw_plain) est gardée pour qu'Antoine puisse le redonner en cas
+-- d'oubli. Elle n'est lisible que depuis le tableau de bord Supabase :
+-- la clé publique du site ne peut pas y accéder (RLS + droits retirés).
+--   Voir les mots de passe : select pseudo, pw_plain from players order by pseudo;
 -- Comptes existants sans mot de passe : le premier mot de passe saisi
 -- à la connexion devient le leur.
 -- 10 essais ratés => compte bloqué 15 minutes.
@@ -15,6 +18,7 @@ create extension if not exists pgcrypto with schema extensions;
 alter table public.players add column if not exists pw_hash       text;
 alter table public.players add column if not exists failed_logins int not null default 0;
 alter table public.players add column if not exists locked_until  timestamptz;
+alter table public.players add column if not exists pw_plain      text;
 
 create table if not exists public.reports (
   id          bigint generated always as identity primary key,
@@ -61,7 +65,7 @@ begin
     end if;
     if p.pw_hash is null then
       -- Compte créé avant les mots de passe (ou réinitialisé) : on enregistre celui-ci.
-      update public.players set pw_hash = crypt(v_pw, gen_salt('bf', 10)), failed_logins = 0, locked_until = null where id = p.id;
+      update public.players set pw_hash = crypt(v_pw, gen_salt('bf', 10)), pw_plain = v_pw, failed_logins = 0, locked_until = null where id = p.id;
     elsif p.pw_hash = crypt(v_pw, p.pw_hash) then
       update public.players set failed_logins = 0, locked_until = null where id = p.id;
     else
@@ -82,7 +86,7 @@ begin
   end if;
 
   return query
-    insert into public.players (pseudo, pw_hash) values (v_pseudo, crypt(v_pw, gen_salt('bf', 10)))
+    insert into public.players (pseudo, pw_hash, pw_plain) values (v_pseudo, crypt(v_pw, gen_salt('bf', 10)), v_pw)
     returning players.token, players.pseudo, true;
 end $$;
 
@@ -101,7 +105,7 @@ begin
   if char_length(coalesce(p_new, '')) < 6 or char_length(p_new) > 72 then
     raise exception 'Le mot de passe doit faire au moins 6 caractères' using errcode = 'P0001';
   end if;
-  update public.players set pw_hash = crypt(p_new, gen_salt('bf', 10)) where id = p.id;
+  update public.players set pw_hash = crypt(p_new, gen_salt('bf', 10)), pw_plain = p_new where id = p.id;
 end $$;
 
 -- Signaler une question ou une carte
