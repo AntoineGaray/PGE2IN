@@ -11,7 +11,7 @@ Site de révision pour la classe PGE2 International : quiz QCM, flashcards à r�
 ## Technique
 - Site statique (HTML, CSS, JS sans dépendance) hébergé par GitHub Pages.
 - Supabase (offre gratuite) pour le classement, les erreurs et la progression des flashcards. Le site n'utilise que la clé *publishable* ; les tables sont fermées (RLS sans policy) et tout passe par les fonctions `rpc_*` de `supabase/setup.sql`.
-- Connexion : pseudo + mot de passe (vérifié par hash bcrypt ; copie lisible par l'admin uniquement, depuis Supabase) + code de classe. Le code n'est pas dans ce dépôt. 10 essais ratés bloquent le compte 15 minutes.
+- Connexion : pseudo + code de classe. Le code n'est pas dans ce dépôt.
 - Bouton « Signaler une erreur » sur chaque question et carte : les signalements vont dans la table `reports`.
-- Scripts SQL à lancer dans l'ordre : `supabase/setup.sql`, puis `supabase/002_mot_de_passe_signalements.sql`.
+- Scripts SQL à lancer dans l'ordre : `supabase/setup.sql`, puis `supabase/002_signalements.sql`.
 - Sans connexion (ou si la base Supabase est en pause), on peut réviser en mode invité : la progression reste dans le navigateur.

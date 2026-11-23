@@ -203,15 +203,14 @@
   function viewLogin() {
     $app.innerHTML = `
       <div class="hero"><div><h1>Rejoins la classe</h1>
-      <p>Pas d'e-mail : un pseudo, un mot de passe et le code de classe.</p></div>
+      <p>Un pseudo et le code de classe suffisent. Pas d'e-mail, pas de mot de passe.</p></div>
       <div class="countdown"><b>J-${daysToExam()}</b><span>avant les partiels</span></div></div>
       <form class="panel" id="f-login" autocomplete="off">
         <div class="field-row">
           <div><label for="pseudo">Pseudo</label><input id="pseudo" type="text" maxlength="20" required placeholder="ex. Antoine G." value="${esc(store.get("lastPseudo", ""))}"></div>
-          <div><label for="password">Mot de passe</label><input id="password" type="password" minlength="6" maxlength="72" required autocomplete="current-password" placeholder="6 caractères minimum"></div>
+          <div><label for="code">Code de classe</label><input id="code" type="text" required placeholder="Donné par Antoine" autocapitalize="characters" value="${esc(store.get("lastCode", ""))}"></div>
         </div>
-        <label for="code">Code de classe</label><input id="code" type="text" required placeholder="Donné par Antoine" autocapitalize="characters" value="${esc(store.get("lastCode", ""))}">
-        <p class="small muted">Première fois ? Choisis un pseudo et un mot de passe : ton compte est créé. Ensuite, reprends les mêmes pour retrouver ta progression sur n'importe quel appareil. N'utilise pas un mot de passe que tu as ailleurs. En cas d'oubli, demande à Antoine.</p>
+        <p class="small muted">Utilise toujours le même pseudo : c'est lui qui retrouve ta progression sur un autre appareil. Le classement fonctionne sur la confiance, ne prends pas le pseudo d'un·e camarade.</p>
         <div id="login-msg"></div>
         <div class="actions">
           <button class="btn accent" type="submit">Entrer</button>
@@ -225,21 +224,16 @@
       ev.preventDefault();
       const pseudo = document.getElementById("pseudo").value.trim();
       const code = document.getElementById("code").value.trim().toUpperCase();
-      const password = document.getElementById("password").value;
       const msg = document.getElementById("login-msg");
       const btn = ev.submitter || ev.target.querySelector("button[type=submit]");
       btn.disabled = true; msg.innerHTML = "";
       try {
-        const rows = await rpc("rpc_join", { p_code: code, p_pseudo: pseudo, p_password: password });
+        const rows = await rpc("rpc_join", { p_code: code, p_pseudo: pseudo });
         const r = Array.isArray(rows) ? rows[0] : rows;
-        if (!r || !r.token) {
-          msg.innerHTML = `<div class="notice err">Mot de passe incorrect pour ce pseudo. Si ce n'est pas ton compte, choisis un autre pseudo. Après 10 essais ratés, le compte est bloqué 15 minutes.</div>`;
-          return;
-        }
         session = { token: r.token, pseudo: r.pseudo };
         store.set("session", session); store.set("lastPseudo", r.pseudo); store.set("lastCode", code);
         await Promise.all([srsSync(), flushQueue()]);
-        toast(r.created ? "Compte créé. Retiens bien ton mot de passe !" : "Bienvenue " + r.pseudo + " !", 4000);
+        toast("Bienvenue " + r.pseudo + " !");
         location.hash = "#/"; route();
       } catch (e) {
         msg.innerHTML = `<div class="notice err">${esc(e.server ? e.message : "Serveur injoignable. Réessaie dans un instant, ou révise sans compte.")}</div>`;
@@ -259,29 +253,11 @@
           <button class="btn secondary" id="logout">${online() ? "Se déconnecter" : "Quitter le mode invité"}</button>
         </div>
       </div>
-      ${online() ? `<form class="panel" id="f-pw" autocomplete="off">
-        <h3>Changer mon mot de passe</h3>
-        <div class="field-row">
-          <div><label for="pw-old">Mot de passe actuel</label><input id="pw-old" type="password" autocomplete="current-password"></div>
-          <div><label for="pw-new">Nouveau mot de passe</label><input id="pw-new" type="password" minlength="6" maxlength="72" required autocomplete="new-password"></div>
-        </div>
-        <div id="pw-msg"></div>
-        <div class="actions"><button class="btn" type="submit">Enregistrer</button></div>
-      </form>` : ""}
       <div class="panel">
         <h3>Réinitialiser cet appareil</h3>
         <p class="small muted">Efface les cartes, les erreurs et les statistiques gardées dans ce navigateur. Ce qui est en ligne n'est pas touché.</p>
         <button class="btn bad" id="reset">Effacer les données locales</button>
       </div>`;
-    const fpw = document.getElementById("f-pw");
-    if (fpw) fpw.onsubmit = async (ev) => {
-      ev.preventDefault();
-      const m = document.getElementById("pw-msg");
-      try {
-        await rpc("rpc_set_password", { p_token: session.token, p_old: document.getElementById("pw-old").value, p_new: document.getElementById("pw-new").value });
-        m.innerHTML = `<div class="notice">Mot de passe changé.</div>`; fpw.reset();
-      } catch (e) { m.innerHTML = `<div class="notice err">${esc(e.server ? e.message : "Serveur injoignable, réessaie plus tard.")}</div>`; }
-    };
     const gl = document.getElementById("go-login");
     if (gl) gl.onclick = (e) => { e.preventDefault(); session = null; store.del("session"); viewLogin(); setNav(); };
     document.getElementById("logout").onclick = () => { session = null; store.del("session"); leaderboardCache = null; location.hash = "#/"; route(); };
