@@ -203,14 +203,15 @@
   function viewLogin() {
     $app.innerHTML = `
       <div class="hero"><div><h1>Rejoins la classe</h1>
-      <p>Un pseudo et le code de classe suffisent. Pas d'e-mail, pas de mot de passe.</p></div>
+      <p>Pas d'e-mail : un pseudo, un mot de passe et le code de classe.</p></div>
       <div class="countdown"><b>J-${daysToExam()}</b><span>avant les partiels</span></div></div>
       <form class="panel" id="f-login" autocomplete="off">
         <div class="field-row">
           <div><label for="pseudo">Pseudo</label><input id="pseudo" type="text" maxlength="20" required placeholder="ex. Antoine G." value="${esc(store.get("lastPseudo", ""))}"></div>
-          <div><label for="code">Code de classe</label><input id="code" type="text" required placeholder="Donné par Antoine" autocapitalize="characters"></div>
+          <div><label for="password">Mot de passe</label><input id="password" type="password" minlength="6" maxlength="72" required autocomplete="current-password" placeholder="6 caractères minimum"></div>
         </div>
-        <p class="small muted">Utilise toujours le même pseudo : c'est lui qui retrouve ta progression sur un autre appareil. Le classement fonctionne sur la confiance, ne prends pas le pseudo d'un·e camarade.</p>
+        <label for="code">Code de classe</label><input id="code" type="text" required placeholder="Donné par Antoine" autocapitalize="characters" value="${esc(store.get("lastCode", ""))}">
+        <p class="small muted">Première fois ? Choisis un pseudo et un mot de passe : ton compte est créé. Ensuite, reprends les mêmes pour retrouver ta progression sur n'importe quel appareil. Le mot de passe est chiffré : personne ne peut le lire, pas même Antoine. S'il est oublié, demande à Antoine de le réinitialiser.</p>
         <div id="login-msg"></div>
         <div class="actions">
           <button class="btn accent" type="submit">Entrer</button>
@@ -224,16 +225,21 @@
       ev.preventDefault();
       const pseudo = document.getElementById("pseudo").value.trim();
       const code = document.getElementById("code").value.trim().toUpperCase();
+      const password = document.getElementById("password").value;
       const msg = document.getElementById("login-msg");
       const btn = ev.submitter || ev.target.querySelector("button[type=submit]");
       btn.disabled = true; msg.innerHTML = "";
       try {
-        const rows = await rpc("rpc_join", { p_code: code, p_pseudo: pseudo });
+        const rows = await rpc("rpc_join", { p_code: code, p_pseudo: pseudo, p_password: password });
         const r = Array.isArray(rows) ? rows[0] : rows;
+        if (!r || !r.token) {
+          msg.innerHTML = `<div class="notice err">Mot de passe incorrect pour ce pseudo. Si ce n'est pas ton compte, choisis un autre pseudo. Après 10 essais ratés, le compte est bloqué 15 minutes.</div>`;
+          return;
+        }
         session = { token: r.token, pseudo: r.pseudo };
-        store.set("session", session); store.set("lastPseudo", r.pseudo);
+        store.set("session", session); store.set("lastPseudo", r.pseudo); store.set("lastCode", code);
         await Promise.all([srsSync(), flushQueue()]);
-        toast("Bienvenue " + r.pseudo + " !");
+        toast(r.created ? "Compte créé. Retiens bien ton mot de passe !" : "Bienvenue " + r.pseudo + " !", 4000);
         location.hash = "#/"; route();
       } catch (e) {
         msg.innerHTML = `<div class="notice err">${esc(e.server ? e.message : "Serveur injoignable. Réessaie dans un instant, ou révise sans compte.")}</div>`;
@@ -253,11 +259,29 @@
           <button class="btn secondary" id="logout">${online() ? "Se déconnecter" : "Quitter le mode invité"}</button>
         </div>
       </div>
+      ${online() ? `<form class="panel" id="f-pw" autocomplete="off">
+        <h3>Changer mon mot de passe</h3>
+        <div class="field-row">
+          <div><label for="pw-old">Mot de passe actuel</label><input id="pw-old" type="password" autocomplete="current-password"></div>
+          <div><label for="pw-new">Nouveau mot de passe</label><input id="pw-new" type="password" minlength="6" maxlength="72" required autocomplete="new-password"></div>
+        </div>
+        <div id="pw-msg"></div>
+        <div class="actions"><button class="btn" type="submit">Enregistrer</button></div>
+      </form>` : ""}
       <div class="panel">
         <h3>Réinitialiser cet appareil</h3>
         <p class="small muted">Efface les cartes, les erreurs et les statistiques gardées dans ce navigateur. Ce qui est en ligne n'est pas touché.</p>
         <button class="btn bad" id="reset">Effacer les données locales</button>
       </div>`;
+    const fpw = document.getElementById("f-pw");
+    if (fpw) fpw.onsubmit = async (ev) => {
+      ev.preventDefault();
+      const m = document.getElementById("pw-msg");
+      try {
+        await rpc("rpc_set_password", { p_token: session.token, p_old: document.getElementById("pw-old").value, p_new: document.getElementById("pw-new").value });
+        m.innerHTML = `<div class="notice">Mot de passe changé.</div>`; fpw.reset();
+      } catch (e) { m.innerHTML = `<div class="notice err">${esc(e.server ? e.message : "Serveur injoignable, réessaie plus tard.")}</div>`; }
+    };
     const gl = document.getElementById("go-login");
     if (gl) gl.onclick = (e) => { e.preventDefault(); session = null; store.del("session"); viewLogin(); setNav(); };
     document.getElementById("logout").onclick = () => { session = null; store.del("session"); leaderboardCache = null; location.hash = "#/"; route(); };
@@ -353,6 +377,37 @@
       <p class="small muted" style="margin-top:16px">La barre verte montre la part des questions du chapitre réussies à ta dernière tentative. Les questions marquées « Complément » viennent de la fiche mais pas directement des slides du prof.</p>`;
   }
 
+  // ---------- Signaler une question ou une carte ----------
+  const REASONS = ["Réponse fausse", "Question ambiguë", "Faute ou coquille", "Hors programme", "Autre"];
+  function reportLink(itemId) {
+    const done = store.get("reported", {})[itemId];
+    return `<span class="report-slot" data-item="${esc(itemId)}">${done ? `<span class="small muted">Signalé ✓</span>` : `<button type="button" class="linkbtn small" data-report="${esc(itemId)}">Signaler une erreur</button>`}</span>`;
+  }
+  function wireReports(root) {
+    (root || $app).querySelectorAll("[data-report]").forEach((b) => {
+      b.onclick = (ev) => {
+        ev.stopPropagation();
+        const id = b.dataset.report;
+        const slot = b.closest(".report-slot");
+        if (!online()) { toast("Rejoins la classe (onglet compte) pour signaler une erreur."); return; }
+        slot.innerHTML = `<div class="report-box" onclick="event.stopPropagation()">
+          <select aria-label="Motif">${REASONS.map((r) => `<option>${r}</option>`).join("")}</select>
+          <textarea maxlength="500" rows="2" placeholder="Qu'est-ce qui ne va pas ? Si tu connais la bonne réponse, écris-la (facultatif)"></textarea>
+          <div class="actions" style="margin-top:6px"><button type="button" class="btn" data-send>Envoyer</button><button type="button" class="btn secondary" data-cancel>Annuler</button></div></div>`;
+        slot.querySelector("[data-cancel]").onclick = (e) => { e.stopPropagation(); slot.outerHTML = reportLink(id); wireReports(root); };
+        slot.querySelector("[data-send]").onclick = async (e) => {
+          e.stopPropagation();
+          const btn = e.currentTarget; btn.disabled = true;
+          try {
+            await rpc("rpc_report", { p_token: session.token, p_item_id: id, p_reason: slot.querySelector("select").value, p_comment: slot.querySelector("textarea").value });
+            const r = store.get("reported", {}); r[id] = now(); store.set("reported", r);
+            slot.innerHTML = `<span class="small muted">Signalé ✓ Merci, Antoine va vérifier.</span>`;
+          } catch (err) { btn.disabled = false; toast(err.server ? err.message : "Serveur injoignable, réessaie plus tard."); }
+        };
+      };
+    });
+  }
+
   // ---------- Moteur de quiz ----------
   function runQuiz({ title, back, questions, subject, mode }) {
     let i = 0, correct = 0;
@@ -394,7 +449,8 @@
       const last = i === prepared.length - 1;
       document.getElementById("after").innerHTML = `
         <div class="explain"><b class="${ok ? "ok" : "ko"}">${ok ? "Juste." : "Faux."}</b> ${esc(q.explain || "")}</div>
-        <div class="actions"><button class="btn accent" id="next">${last ? "Voir mon score" : "Question suivante →"}</button></div>`;
+        <div class="actions" style="align-items:center;justify-content:space-between"><button class="btn accent" id="next">${last ? "Voir mon score" : "Question suivante →"}</button>${reportLink(q.id)}</div>`;
+      wireReports(document.getElementById("after"));
       const nb = document.getElementById("next");
       nb.focus({ preventScroll: true });
       nb.onclick = () => { if (last) finish(); else { i++; renderQ(); window.scrollTo(0, 0); } };
@@ -437,7 +493,8 @@
           <div class="review-item"><div><b>${esc(a.q.q)}</b></div>
           <div class="small">Ta réponse : <span style="color:var(--bad)">${esc(a.q.choices[a.k])}</span></div>
           <div class="small">Bonne réponse : <span class="a">${esc(a.q.choices[a.q.answer])}</span></div>
-          <div class="small muted">${esc(a.q.explain || "")}</div></div>`).join("")}</div>` : ""}`;
+          <div class="small muted">${esc(a.q.explain || "")}</div><div style="margin-top:4px">${reportLink(a.q.id)}</div></div>`).join("")}</div>` : ""}`;
+      wireReports();
       document.getElementById("again").onclick = () => route();
     }
 
@@ -485,12 +542,13 @@
           <div class="review-item"><div><b>${esc(q.q)}</b></div>
           <div class="small">Réponse : <span class="a">${esc(q.choices[q.answer])}</span></div>
           <div class="small muted">${esc(q.explain || "")}</div>
-          <div class="small" style="margin-top:4px"><span class="pill warn">ratée ${x.w} fois</span> ${x.r ? `<span class="pill ok">${x.r}/2 bonne réponse</span>` : ""}</div></div>`).join("")}</div>`);
+          <div class="small" style="margin-top:4px"><span class="pill warn">ratée ${x.w} fois</span> ${x.r ? `<span class="pill ok">${x.r}/2 bonne réponse</span>` : ""} ${reportLink(q.id)}</div></div>`).join("")}</div>`);
     }
     $app.innerHTML = `<h1>Mes erreurs</h1>
       <p class="muted">Une question sort de la liste quand tu y réponds juste 2 fois d'affilée. ${solved ? solved + " erreur" + (solved > 1 ? "s" : "") + " déjà réglée" + (solved > 1 ? "s" : "") + "." : ""}</p>
       <div class="actions"><a class="btn" href="#/errors/quiz">Quiz sur toutes mes erreurs (${open.length})</a></div>
       ${blocks.join("")}`;
+    wireReports();
   }
 
   async function viewErrorQuiz(params) {
@@ -552,9 +610,11 @@
         <div class="actions" id="grade" style="justify-content:center;visibility:hidden">
           <button class="btn bad" id="again">À revoir</button>
           <button class="btn good" id="knew">Je savais</button>
-        </div>`;
+        </div>
+        <p class="hint" id="rep-card" style="visibility:hidden">${reportLink(c.id)}</p>`;
+      wireReports(document.getElementById("rep-card"));
       const f = document.getElementById("flash");
-      const flip = () => { flipped = !flipped; f.classList.toggle("flipped", flipped); document.getElementById("grade").style.visibility = "visible"; document.getElementById("hint").style.visibility = "hidden"; };
+      const flip = () => { flipped = !flipped; f.classList.toggle("flipped", flipped); document.getElementById("grade").style.visibility = "visible"; document.getElementById("rep-card").style.visibility = "visible"; document.getElementById("hint").style.visibility = "hidden"; };
       f.onclick = flip;
       f.onkeydown = (e) => { if (e.key === " " || e.key === "Enter") { e.preventDefault(); flip(); } };
       document.getElementById("again").onclick = () => grade(false);
@@ -596,7 +656,7 @@
 
     document.onkeydown = (e) => {
       if (!document.getElementById("flash")) { document.onkeydown = null; return; }
-      if (e.target.tagName === "INPUT") return;
+      if (["INPUT", "TEXTAREA", "SELECT"].includes(e.target.tagName)) return;
       if (flipped && (e.key === "1" || e.key === "ArrowLeft")) grade(false);
       if (flipped && (e.key === "2" || e.key === "ArrowRight")) grade(true);
     };

@@ -108,7 +108,7 @@ h3 { font-size: 18px; }
 .btn.block { width: 100%; justify-content: center; }
 .linkbtn { background: none; border: 0; color: var(--ink-2); text-decoration: underline; cursor: pointer; padding: 0; font-size: 14px; }
 
-select, input[type=text], input[type=password] {
+select, textarea, input[type=text], input[type=password] {
   font: inherit; padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px;
   background: #fff; color: var(--ink); width: 100%;
 }
@@ -206,3 +206,8 @@ table.lb tr.me td { background: #fff6e3; font-weight: 600; }
   .topnav a { font-size: 13px; padding: 6px 7px; white-space: nowrap; }
   .hero .countdown { padding: 8px 14px; }
 }
+
+.report-box { margin-top: 8px; display: grid; gap: 6px; text-align: left; width: 100%; }
+.report-box textarea { resize: vertical; min-height: 54px; }
+.report-slot { display: inline-block; }
+.report-slot:has(.report-box) { display: block; flex-basis: 100%; }
