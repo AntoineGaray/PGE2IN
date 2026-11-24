@@ -1,11 +1,65 @@
 {
   "subjects": [
-    { "id": "ma", "short": "Management Accounting", "name": "Management Accounting", "prof": "M. Sabeur · Environnement comptable et financier II", "color": "#3b6fd8", "file": "ma.json" },
-    { "id": "strat", "short": "Management stratégique", "name": "Introduction au management stratégique", "prof": "M. Fally", "color": "#c2412d", "file": "strat.json" },
-    { "id": "mq", "short": "Méthodes quantitatives", "name": "Méthodes quantitatives III", "prof": "Mme Levavasseur", "color": "#7b4fc9", "file": "mq.json" },
-    { "id": "art", "short": "Art et culture en Asie", "name": "Art et culture en Asie", "prof": "M. Sridi", "color": "#c98a12", "file": "art.json" },
-    { "id": "rse", "short": "Workshop RSE", "name": "Workshop RSE", "prof": "Mme Nabet-Martin", "color": "#1f8a5b", "file": "rse.json" },
-    { "id": "macro", "short": "Macroéconomie", "name": "Macroéconomie", "prof": "M. Zumer", "color": "#6b7280", "file": null },
-    { "id": "geo", "short": "Géopolitique en Asie", "name": "Géopolitique en Asie", "prof": "M. Dupuy", "color": "#6b7280", "file": null }
+    {
+      "id": "ma",
+      "short": "Management Accounting",
+      "name": "Management Accounting",
+      "prof": "M. Sabeur · Environnement comptable et financier II",
+      "color": "#3b6fd8",
+      "file": "ma.json",
+      "fiche": "fiches/ma.json"
+    },
+    {
+      "id": "strat",
+      "short": "Management stratégique",
+      "name": "Introduction au management stratégique",
+      "prof": "M. Fally",
+      "color": "#c2412d",
+      "file": "strat.json",
+      "fiche": "fiches/strat.json"
+    },
+    {
+      "id": "mq",
+      "short": "Méthodes quantitatives",
+      "name": "Méthodes quantitatives III",
+      "prof": "Mme Levavasseur",
+      "color": "#7b4fc9",
+      "file": "mq.json",
+      "fiche": "fiches/mq.json"
+    },
+    {
+      "id": "art",
+      "short": "Art et culture en Asie",
+      "name": "Art et culture en Asie",
+      "prof": "M. Sridi",
+      "color": "#c98a12",
+      "file": "art.json",
+      "fiche": "fiches/art.json"
+    },
+    {
+      "id": "rse",
+      "short": "Workshop RSE",
+      "name": "Workshop RSE",
+      "prof": "Mme Nabet-Martin",
+      "color": "#1f8a5b",
+      "file": "rse.json",
+      "fiche": "fiches/rse.json"
+    },
+    {
+      "id": "macro",
+      "short": "Macroéconomie",
+      "name": "Macroéconomie",
+      "prof": "M. Zumer",
+      "color": "#6b7280",
+      "file": null
+    },
+    {
+      "id": "geo",
+      "short": "Géopolitique en Asie",
+      "name": "Géopolitique en Asie",
+      "prof": "M. Dupuy",
+      "color": "#6b7280",
+      "file": null
+    }
   ]
 }

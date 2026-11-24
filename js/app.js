@@ -190,6 +190,7 @@
       if (parts[0] === "s" && parts[1] && !parts[2]) return viewSubject(parts[1]);
       if (parts[0] === "s" && parts[2] === "quiz") return viewQuiz(parts[1], params);
       if (parts[0] === "s" && parts[2] === "cards") return viewCards(parts[1], params);
+      if (parts[0] === "s" && parts[2] === "fiche") return viewFiche(parts[1], params);
       if (parts[0] === "errors" && parts[1] === "quiz") return viewErrorQuiz(params);
       if (parts[0] === "errors") return viewErrors();
       if (parts[0] === "lb") return viewLeaderboard();
@@ -342,6 +343,7 @@
       <div class="panel">
         <h3>Réviser toute la matière</h3>
         <div class="actions">
+          ${s.fiche ? `<a class="btn fiche-btn" href="#/s/${id}/fiche">📄 Fiche de cours</a>` : ""}
           <a class="btn accent" href="#/s/${id}/quiz">Quiz de ${Math.min(CFG.quizLength, d.quiz.length)} questions</a>
           <a class="btn" href="#/s/${id}/cards">Flashcards ${due ? "(" + Math.min(due, CFG.cardsPerSession) + " à revoir)" : ""}</a>
           <a class="btn secondary" href="#/s/${id}/quiz?all=1">Les ${d.quiz.length} questions</a>
@@ -637,6 +639,84 @@
       if (flipped && (e.key === "2" || e.key === "ArrowRight")) grade(true);
     };
     render();
+  }
+
+  // ---------- Vue : fiche de cours ----------
+  const ficheCache = {};
+  let katexLoaded = false;
+  function ensureKatexCss() {
+    if (katexLoaded) return; katexLoaded = true;
+    const l = document.createElement("link"); l.rel = "stylesheet"; l.href = "css/katex/katex.min.css";
+    document.head.appendChild(l);
+  }
+
+  async function viewFiche(id, params) {
+    const s = subjOf(id);
+    if (!s || !s.fiche) { location.hash = "#/"; return; }
+    $app.innerHTML = `<p class="muted">Chargement de la fiche…</p>`;
+    if (!ficheCache[id]) {
+      const r = await fetch("data/" + s.fiche, { cache: "no-cache" });
+      if (!r.ok) throw new Error("Fiche introuvable");
+      ficheCache[id] = await r.json();
+    }
+    const f = ficheCache[id];
+    const prefs = store.get("ficheTab", {});
+    const key = params.get("tab") || prefs[id] || "detaillee";
+    const tab = f.tabs.find((t) => t.key === key) || f.tabs[0];
+    prefs[id] = tab.key; store.set("ficheTab", prefs);
+    if (/class="katex/.test(tab.html)) ensureKatexCss();
+
+    const toc = tab.toc.map((t) => `<a href="#" data-target="${esc(t.id)}" class="toc-l${t.level}">${esc(t.text)}</a>`).join("");
+    $app.innerHTML = `
+      <p><a href="#/s/${id}" class="small muted">← ${esc(s.short)}</a></p>
+      <div class="fiche-head">
+        <div><h1>${esc(f.title)}</h1>
+        <p class="muted small">Copie des fiches de révision, mise à jour le ${new Date(f.updated).toLocaleDateString("fr-FR", { day: "numeric", month: "long" })}.</p></div>
+        <div class="tabs" role="tablist">${f.tabs.map((t) => `<button role="tab" data-tab="${t.key}" class="${t.key === tab.key ? "on" : ""}">${esc(t.name)}</button>`).join("")}</div>
+      </div>
+      <div class="fiche-layout">
+        <nav class="toc" id="toc" aria-label="Sommaire">
+          <button class="toc-toggle" id="toc-toggle" aria-expanded="false">☰ Sommaire</button>
+          <div class="toc-list" id="toc-list"><div class="toc-title">Sommaire</div>${toc}</div>
+        </nav>
+        <article class="fiche" id="fiche">${tab.html}</article>
+      </div>
+      <div class="fiche-foot actions">
+        <a class="btn accent" href="#/s/${id}/quiz">Tester avec un quiz</a>
+        <a class="btn secondary" href="#/s/${id}/cards">Flashcards</a>
+        <button class="btn secondary" id="to-top">↑ Haut de page</button>
+      </div>`;
+
+    document.querySelectorAll(".fiche-head .tabs button").forEach((b) => {
+      b.onclick = () => { location.hash = "#/s/" + id + "/fiche?tab=" + b.dataset.tab; };
+    });
+    const list = document.getElementById("toc-list");
+    const toggle = document.getElementById("toc-toggle");
+    toggle.onclick = () => { const open = list.classList.toggle("open"); toggle.setAttribute("aria-expanded", open); };
+    list.querySelectorAll("a[data-target]").forEach((a) => {
+      a.onclick = (e) => {
+        e.preventDefault();
+        const el = document.getElementById(a.dataset.target);
+        if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+        list.classList.remove("open"); toggle.setAttribute("aria-expanded", "false");
+      };
+    });
+    document.getElementById("to-top").onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
+    // Surligne la section en cours de lecture
+    if ("IntersectionObserver" in window) {
+      const links = {}; list.querySelectorAll("a[data-target]").forEach((a) => { links[a.dataset.target] = a; });
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach((en) => {
+          if (en.isIntersecting) {
+            Object.values(links).forEach((l) => l.classList.remove("active"));
+            const l = links[en.target.id]; if (l) { l.classList.add("active"); const t = l.offsetTop; if (t < list.scrollTop || t > list.scrollTop + list.clientHeight - 30) list.scrollTop = t - 40; }
+          }
+        });
+      }, { rootMargin: "-80px 0px -70% 0px" });
+      document.querySelectorAll("#fiche h2, #fiche h3").forEach((h) => obs.observe(h));
+      leaveGuard = () => obs.disconnect();
+    }
   }
 
   // ---------- Vue : classement ----------
