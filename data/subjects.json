@@ -36,7 +36,8 @@
       "prof": "M. Sridi",
       "color": "#c98a12",
       "file": "art.json",
-      "fiche": "fiches/art.json"
+      "fiche": "fiches/art.json",
+      "exam": "exams/art.json"
     },
     {
       "id": "rse",
