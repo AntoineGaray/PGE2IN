@@ -187,7 +187,7 @@
 
   // ---------- Défi du jour (n°33) ----------
   // Le même défi pour toute la classe : 2 questions par matière, tirées dans un ordre fixe propre à chaque matière.
-  const DAILY_START = "2026-11-25";
+  const DAILY_START = "2026-11-24";
   const DAILY_PER_SUBJECT = 2;
   const todayKey = () => { const d = new Date(); return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0"); };
   const dayIndex = (key) => Math.max(0, Math.round((Date.parse(key + "T12:00:00") - Date.parse(DAILY_START + "T12:00:00")) / DAY));
