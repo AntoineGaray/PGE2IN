@@ -865,7 +865,7 @@
   // ---------- Vue : partiel type (énoncé et corrigé en parallèle) ----------
   const examCache = {};
   const EXAM_SHOW = { both: "Énoncé + corrigé", q: "Énoncé seul", c: "Corrigé seul" };
-  const fmtPts = (n) => String(n).replace(".", ",") + (n > 1 ? " pts" : " pt");
+  const fmtPts = (n) => String(n) + (n > 1 ? " pts" : " pt");
 
   async function viewExam(id, params) {
     const s = subjOf(id);
@@ -887,24 +887,24 @@
     const row = (q) => `
       <div class="ex-row">
         <div class="ex-q"><div class="ex-num"><b>${esc(q.num)}</b><span>${fmtPts(q.points)}</span></div>${q.q}</div>
-        <div class="ex-c"><div class="ex-num"><b>Corrigé ${esc(q.num)}</b></div>${q.c}</div>
+        <div class="ex-c"><div class="ex-num"><b>Answer key ${esc(q.num)}</b></div>${q.c}</div>
       </div>`;
     const part = (p, withTitle) => `
       <section class="ex-part" id="part-${p.n}">
         ${withTitle ? `<h2>${esc(p.title)}</h2>` : ""}
-        <p class="ex-meta">${fmtPts(p.points)} · ${p.minutes} min conseillées</p>
-        ${p.data ? `<div class="ex-data"><div class="ex-label">Données de la partie</div>${p.data}</div>` : ""}
+        <p class="ex-meta">${fmtPts(p.points)} · ${p.minutes} min suggested</p>
+        ${p.data ? `<div class="ex-data"><div class="ex-label">Data</div>${p.data}</div>` : ""}
         ${p.questions.map(row).join("")}
       </section>`;
 
     const p = e.parts[pi];
     const body = full
       ? `<nav class="ex-toc">${e.parts.map((x) => `<a href="#" data-goto="part-${x.n}">${esc(x.n)}. ${esc(x.pill)} <span>${fmtPts(x.points)}</span></a>`).join("")}</nav>
-         <div class="ex-intro"><div class="ex-label">Énoncé</div>${e.intro}</div>
-         <div class="ex-method"><div class="ex-label">Méthode attendue</div>${e.method}</div>
+         <div class="ex-intro"><div class="ex-label">Instructions</div>${e.intro}</div>
+         <div class="ex-method"><div class="ex-label">Expected method</div>${e.method}</div>
          ${e.parts.map((x) => part(x, true)).join("")}`
       : `<div class="ex-pills">${e.parts.map((x, i) => `<a class="ex-pill ${i === pi ? "on" : ""}" href="${link("part", i + 1)}"><b>${esc(x.n)}</b> ${esc(x.pill)}</a>`).join("")}</div>
-         ${pi === 0 ? `<div class="ex-intro"><div class="ex-label">Énoncé</div>${e.intro}</div><div class="ex-method"><div class="ex-label">Méthode attendue</div>${e.method}</div>` : `<details class="ex-intro"><summary>Rappel du contexte</summary>${e.intro}</details>`}
+         ${pi === 0 ? `<div class="ex-intro"><div class="ex-label">Instructions</div>${e.intro}</div><div class="ex-method"><div class="ex-label">Expected method</div>${e.method}</div>` : `<details class="ex-intro"><summary>Case background</summary>${e.intro}</details>`}
          <h2 class="ex-ptitle">${esc(p.title)}</h2>
          ${part(p, false)}
          <div class="actions ex-nav">

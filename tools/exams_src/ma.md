@@ -1,41 +1,41 @@
 @exam
-title: Partiel type – Management Accounting
-subtitle: Biscuiterie Croc'Odile · 1h30 · 20 points · sujet en anglais, corrigé en français
+title: Mock exam – Management Accounting
+subtitle: Croc'Odile Biscuits · 1h30 · 20 points · exam and answer key in English
 disclaimer: Sujet d'entraînement construit à partir du cours de M. Aguir et de ses corrigés. Ce n'est pas un ancien partiel.
 @intro
 **Management Accounting – Mock final exam – 1h30 – 20 points.** Simple calculator allowed. Every result must be followed by one sentence of interpretation. Round break-even quantities up to the next whole unit.
 
 Croc'Odile is a family biscuit maker based in Brittany. It sells its biscuits in metal tins to supermarkets and delicatessens. The new CEO, Mrs Odile Beurre-Salé, asks you to help her understand her costs before the 2027 budget.
 @method
-Chaque réponse suit l'ordre des corrigés du prof : **formule, calcul, puis une phrase d'interprétation**. Le syllabus demande aussi de relier chaque chiffre à sa cause, ses conséquences et la personne responsable. Un calcul juste sans phrase ne rapporte pas tous les points.
+Every answer follows the order of the professor's answer keys: **formula, calculation, then one sentence of interpretation**. The syllabus also asks you to link each figure to its cause, its consequences and the person responsible. A correct calculation without a sentence does not earn full marks.
 
-@part 1 | Cours | Part 1 – Course questions | 2 | 10
+@part 1 | Course | Part 1 – Course questions | 2 | 10
 @q 1.1 | 1
 Mrs Beurre-Salé says: "We already have an accountant who prepares our financial statements, why would we need management accounting?" Give her three differences between financial accounting and management accounting.
 @c
-Trois différences parmi celles-ci (0,33 pt chacune) :
+Any three of these differences (0.33 pt each):
 
-| Critère | Financial accounting | Management accounting |
+| Criterion | Financial accounting | Management accounting |
 | --- | --- | --- |
-| Destinataires | Externes : actionnaires, banques, État | Internes : managers |
-| Orientation | Le passé | Le futur (décisions, budgets) |
-| Règles | Obligatoires (normes comptables) | Aucune norme imposée, l'utilité prime |
-| Précision | Exacte, vérifiable | La pertinence et la rapidité priment |
-| Niveau | L'entreprise dans son ensemble | Segments : produits, clients, départements |
-| Obligation | Légale | Facultative |
+| Users | External: shareholders, banks, the State | Internal: managers |
+| Focus | The past | The future (decisions, budgets) |
+| Rules | Mandatory (accounting standards) | No imposed standard, usefulness comes first |
+| Precision | Exact, verifiable | Relevance and timeliness come first |
+| Level | The company as a whole | Segments: products, customers, departments |
+| Obligation | Legal requirement | Optional |
 
-**Phrase attendue :** la comptabilité financière dit à l'extérieur ce que l'entreprise a gagné ; le management accounting aide Mrs Beurre-Salé à décider (prix, produits à garder, budget 2027) en suivant les trois responsabilités du manager : planning, directing et controlling.
+**Expected sentence:** financial accounting tells outsiders what the company earned; management accounting helps Mrs Beurre-Salé make decisions (prices, products to keep, the 2027 budget) through the manager's three responsibilities: planning, directing and controlling.
 @q 1.2 | 1
 Before using the CVP model in Part 3, give two assumptions of this model that limit its use in real life.
 @c
-Deux hypothèses parmi celles-ci (0,5 pt chacune) :
+Any two of these assumptions (0.5 pt each):
 
-- Le prix de vente et le coût variable unitaire sont constants, quel que soit le volume (relation linéaire).
-- Les coûts fixes restent fixes, mais seulement dans le *relevant range* : au-delà, il faut un nouveau four ou un nouvel atelier.
-- Tout ce qui est produit est vendu (pas de variation de stock).
-- Quand il y a plusieurs produits, le *sales mix* est constant.
+- The selling price and the unit variable cost are constant whatever the volume (linear relationship).
+- Fixed costs stay fixed, but only within the *relevant range*: beyond it, a new oven or a new workshop is needed.
+- Everything produced is sold (no change in inventory).
+- With several products, the *sales mix* is constant.
 
-@part 2 | Coûts | Part 2 – Cost behaviour | 2.5 | 10
+@part 2 | Costs | Part 2 – Cost behaviour | 2.5 | 10
 @q 2.1 | 1
 For each cost below, say whether it is direct or indirect to a tin of biscuits, fixed or variable, and an inventoriable (product) cost or a period cost.
 
@@ -46,31 +46,31 @@ For each cost below, say whether it is direct or indirect to a tin of biscuits, 
 - Metal tin used to pack the biscuits
 - Commission paid to sales reps per tin sold
 @c
-1/6 pt par ligne.
+1/6 pt per line.
 
-| Coût | Direct / indirect | Fixe / variable | Product / period |
+| Cost | Direct / indirect | Fixed / variable | Product / period |
 | --- | --- | --- | --- |
-| Beurre et farine | Direct | Variable | Product cost |
-| Salaire du directeur d'usine | Indirect | Fixe | Product cost (MOH) |
-| Amortissement des fours | Indirect | Fixe | Product cost (MOH) |
-| Campagne de pub TV | Indirect | Fixe | Period cost |
-| Boîte en métal | Direct | Variable | Product cost |
-| Commission par boîte vendue | Direct | Variable | Period cost (selling) |
+| Butter and flour | Direct | Variable | Product cost |
+| Factory manager's salary | Indirect | Fixed | Product cost (MOH) |
+| Depreciation of the ovens | Indirect | Fixed | Product cost (MOH) |
+| TV advertising campaign | Indirect | Fixed | Period cost |
+| Metal tin | Direct | Variable | Product cost |
+| Commission per tin sold | Direct | Variable | Period cost (selling) |
 
-**Piège :** la commission est variable et directe, mais c'est un coût commercial, donc un *period cost* et non un *product cost*.
+**Trap:** the commission is variable and direct, but it is a selling cost, so it is a *period cost*, not a *product cost*.
 @q 2.2 | 1.5
 Energy and maintenance costs vary a lot with activity. Last year, the lowest month was January: 4,000 tins produced for 31,000 € of energy and maintenance costs. The highest month was October: 10,000 tins for 58,000 €.
 
 Using the high-low method, find the variable cost per tin and the monthly fixed cost. How much would these costs be, in total and per tin, for a month of 12,000 tins? Comment.
 @c
 ```latex
-v = \frac{58\,000 - 31\,000}{10\,000 - 4\,000} = \frac{27\,000}{6\,000} = 4{,}50\ \text{€ par boîte}
+v = \frac{58{,}000 - 31{,}000}{10{,}000 - 4{,}000} = \frac{27{,}000}{6{,}000} = 4.50\ \text{€ per tin}
 ```
 
-- F = 31 000 − 4 000 × 4,50 = **13 000 € par mois**.
-- Pour 12 000 boîtes : TC = 13 000 + 12 000 × 4,50 = **67 000 €**, soit **5,58 € par boîte**.
+- F = 31,000 − 4,000 × 4.50 = **13,000 € per month**.
+- For 12,000 tins: TC = 13,000 + 12,000 × 4.50 = **67,000 €**, i.e. **5.58 € per tin**.
 
-**Interprétation :** le coût unitaire baisse quand le volume monte (7,75 € en janvier, 5,80 € en octobre, 5,58 € à 12 000) parce que les 13 000 € de coûts fixes sont répartis sur plus de boîtes. **Limite :** 12 000 boîtes sort de la plage observée (4 000 à 10 000), la prévision est donc moins fiable.
+**Interpretation:** the unit cost falls as volume rises (7.75 € in January, 5.80 € in October, 5.58 € at 12,000 tins) because the 13,000 € of fixed costs are spread over more tins. **Limit:** 12,000 tins is outside the observed range (4,000 to 10,000), so the forecast is less reliable.
 
 @part 3 | CVP | Part 3 – Cost-Volume-Profit analysis of the Classic tin | 5 | 20
 @data
@@ -87,41 +87,41 @@ Data for the Classic tin, for next year:
 @q 3.1 | 1
 Compute the unit contribution margin, the CM ratio and the annual fixed costs.
 @c
-- uVC = 3,20 + 1,80 + 0,50 = **5,50 €**
-- uCM = 12 − 5,50 = **6,50 €** ; CM ratio = 6,50 / 12 = **54,17 %**
-- FC = 9 000 × 12 + 252 000 + 600 000 / 6 = 108 000 + 252 000 + 100 000 = **460 000 € par an**
+- uVC = 3.20 + 1.80 + 0.50 = **5.50 €**
+- uCM = 12 − 5.50 = **6.50 €**; CM ratio = 6.50 / 12 = **54.17 %**
+- FC = 9,000 × 12 + 252,000 + 600,000 / 6 = 108,000 + 252,000 + 100,000 = **460,000 € per year**
 
-**Pièges :** ne pas oublier les matières premières ni les frais de distribution variables dans l'uVC ; le loyer est mensuel.
+**Traps:** do not forget raw materials or variable distribution costs in the uVC; the rent is monthly.
 @q 3.2 | 1.5
 Compute the break-even point in units and in turnover. At what date is it reached? Comment.
 @c
 ```latex
-Q^* = \frac{FC}{uCM} = \frac{460\,000}{6{,}50} = 70\,769{,}23 \;\Rightarrow\; 70\,770\ \text{boîtes}
+Q^* = \frac{FC}{uCM} = \frac{460{,}000}{6.50} = 70{,}769.23 \;\Rightarrow\; 70{,}770\ \text{tins}
 ```
 
-- BEP(TO) = 460 000 / (6,50 / 12) = **849 231 €** (ou 70 770 × 12 = 849 240 € si on part du Q arrondi : préciser lequel).
-- Date : 70 769,23 / 100 000 × 12 = 8,49 mois, soit environ **le 15 septembre**.
+- BEP(TO) = 460,000 / (6.50 / 12) = **849,231 €** (or 70,770 × 12 = 849,240 € if you start from the rounded Q: say which one you use).
+- Date: 70,769.23 / 100,000 × 12 = 8.49 months, i.e. around **15 September**.
 
-**Interprétation :** la Classic tin est rentable, mais elle ne couvre ses coûts fixes qu'à la mi-septembre. Il reste peu de mois pour faire du profit, ce qui la rend sensible à une baisse des ventes : c'est au directeur commercial de sécuriser les volumes.
+**Interpretation:** the Classic tin is profitable, but it only covers its fixed costs in mid-September. Few months are left to make a profit, which makes it sensitive to a drop in sales: the sales director is responsible for securing volumes.
 @q 3.3 | 1
 Compute the expected profit, the margin of safety (in units and in %) and the operating leverage.
 @c
-- PM = 100 000 × 6,50 − 460 000 = 650 000 − 460 000 = **190 000 €**
-- Margin of safety = 100 000 − 70 770 = **29 230 boîtes**, soit **29,2 %** des ventes : elles peuvent baisser de 29 % avant de tomber en perte.
-- Operating leverage = CM / PM = 650 000 / 190 000 = **3,42**
+- PM = 100,000 × 6.50 − 460,000 = 650,000 − 460,000 = **190,000 €**
+- Margin of safety = 100,000 − 70,770 = **29,230 tins**, i.e. **29.2 %** of sales: sales can fall by 29 % before the product makes a loss.
+- Operating leverage = CM / PM = 650,000 / 190,000 = **3.42**
 @q 3.4 | 1
 Sales are expected to grow by 10 %. Without recomputing the whole income statement, by how much will profit grow? Check your answer.
 @c
-- Effet : +10 % × 3,42 = **+34,2 %** de profit.
-- Vérification : 110 000 × 6,50 − 460 000 = 255 000 €, et 255 000 / 190 000 − 1 = 34,2 %.
+- Effect: +10 % × 3.42 = **+34.2 %** profit.
+- Check: 110,000 × 6.50 − 460,000 = 255,000 €, and 255,000 / 190,000 − 1 = 34.2 %.
 
-**Interprétation :** le profit monte plus vite que les ventes parce que les coûts fixes ne bougent pas. Le levier joue aussi à la baisse : −10 % de ventes ferait perdre 34 % du profit.
+**Interpretation:** profit grows faster than sales because fixed costs do not move. Leverage also works the other way: −10 % in sales would cut profit by 34 %.
 @q 3.5 | 0.5
 How many tins must be sold to reach a profit of 250,000 €?
 @c
-Q = (460 000 + 250 000) / 6,50 = 109 230,77, donc **109 231 boîtes**, soit 9,2 % de plus que la prévision.
+Q = (460,000 + 250,000) / 6.50 = 109,230.77, so **109,231 tins**, 9.2 % above the forecast.
 
-@part 4 | Seuil | Part 4 – Make or subcontract the packing? | 2.5 | 10
+@part 4 | Threshold | Part 4 – Make or subcontract the packing? | 2.5 | 10
 @data
 Tins are currently packed by hand. Croc'Odile hesitates between two options for next year:
 
@@ -131,19 +131,19 @@ Tins are currently packed by hand. Croc'Odile hesitates between two options for 
 Compute the indifference threshold.
 @c
 ```latex
-36\,000 + 0{,}40\,Q = 6\,000 + 0{,}75\,Q \;\Rightarrow\; Q = \frac{36\,000 - 6\,000}{0{,}75 - 0{,}40} = 85\,714{,}29 \;\Rightarrow\; 85\,715\ \text{boîtes}
+36{,}000 + 0.40\,Q = 6{,}000 + 0.75\,Q \;\Rightarrow\; Q = \frac{36{,}000 - 6{,}000}{0.75 - 0.40} = 85{,}714.29 \;\Rightarrow\; 85{,}715\ \text{tins}
 ```
 
-Sous 85 715 boîtes, l'option B (coûts fixes les plus bas) coûte moins cher ; au-dessus, l'option A (coût variable le plus bas) coûte moins cher.
+Below 85,715 tins, option B (lowest fixed costs) is cheaper; above it, option A (lowest variable cost) is cheaper.
 @q 4.2 | 1.5
 With the 100,000 tins expected in Part 3, which option do you recommend? Check with the total cost of each option, then discuss the risk of your choice.
 @c
-- 100 000 boîtes est au-dessus du seuil : **option A**.
-- Vérification : A = 36 000 + 40 000 = **76 000 €** ; B = 6 000 + 75 000 = **81 000 €**. A économise 5 000 €.
+- 100,000 tins is above the threshold: **option A**.
+- Check: A = 36,000 + 40,000 = **76,000 €**; B = 6,000 + 75,000 = **81,000 €**. A saves 5,000 €.
 
-**Risque :** la prévision ne dépasse le seuil que de 14 285 boîtes. Si les ventes baissent de plus de 14,3 %, B redevient meilleure. A a aussi 30 000 € de coûts fixes de plus que B, donc un risque opérationnel plus élevé.
+**Risk:** the forecast is only 14,285 tins above the threshold. If sales fall by more than 14.3 %, B becomes the better option again. A also carries 30,000 € more fixed costs than B, so a higher operating risk.
 
-**Recommandation :** A si la prévision de 100 000 boîtes est solide ; B si la demande est incertaine, car elle garde de la flexibilité. La décision revient au directeur de production, avec la prévision de ventes du directeur commercial.
+**Recommendation:** A if the 100,000-tin forecast is solid; B if demand is uncertain, because it keeps flexibility. The decision belongs to the production director, based on the sales director's forecast.
 
 @part 5 | Full costing | Part 5 – Full costing of the Premium box | 5 | 25
 @data
@@ -168,72 +168,72 @@ Croc'Odile also sells a Premium box at 9 €. The marketing director thinks it l
 @q 5.1 | 2
 Complete the cost centres table: primary allocation of the auxiliary centres, total of each main centre, unit cost of each cost driver.
 @c
-uCD des auxiliaires : Administration = 240 000 / 40 salariés = **6 000 € par salarié** ; Maintenance = 180 000 / 1 500 h = **120 € par heure**.
+Unit cost drivers of the auxiliary centres: Administration = 240,000 / 40 employees = **6,000 € per employee**; Maintenance = 180,000 / 1,500 h = **120 € per hour**.
 
 | | Admin. | Maint. | Mixing | Baking | Packing | Total |
 | --- | --- | --- | --- | --- | --- | --- |
-| Indirect costs | 240 000 | 180 000 | 310 000 | 520 000 | 250 000 | 1 500 000 |
-| Administration | −240 000 | | 60 000 | 120 000 | 60 000 | 0 |
-| Maintenance | | −180 000 | 48 000 | 120 000 | 12 000 | 0 |
-| **Total** | 0 | 0 | **418 000** | **760 000** | **322 000** | 1 500 000 |
+| Indirect costs | 240,000 | 180,000 | 310,000 | 520,000 | 250,000 | 1,500,000 |
+| Administration | −240,000 | | 60,000 | 120,000 | 60,000 | 0 |
+| Maintenance | | −180,000 | 48,000 | 120,000 | 12,000 | 0 |
+| **Total** | 0 | 0 | **418,000** | **760,000** | **322,000** | 1,500,000 |
 | Cost driver | | | kg of dough | oven hours | boxes packed | |
-| Amount of CD | | | 209 000 | 3 800 | 230 000 | |
-| **Unit cost driver** | | | **2,00 €** | **200 €** | **1,40 €** | |
+| Amount of CD | | | 209,000 | 3,800 | 230,000 | |
+| **Unit cost driver** | | | **2.00 €** | **200 €** | **1.40 €** | |
 
-**Contrôle :** les centres auxiliaires sont à 0 et le total reste 1 500 000 €.
+**Check:** the auxiliary centres are at 0 and the total is still 1,500,000 €.
 @q 5.2 | 1.5
 Compute the full cost per unit and the profit margin per unit of the Premium box.
 @c
-| Premium box, par unité | € |
+| Premium box, per unit | € |
 | --- | --- |
-| Raw materials | 4,10 |
-| Direct labour | 1,20 |
-| **Direct costs** | **5,30** |
-| Mixing : 0,8 kg × 2,00 | 1,60 |
-| Baking : 0,005 h × 200 | 1,00 |
-| Packing : 1 × 1,40 | 1,40 |
-| **Indirect costs** | **4,00** |
-| **Full cost** | **9,30** |
-| Selling price | 9,00 |
-| **Profit margin** | **−0,30** |
+| Raw materials | 4.10 |
+| Direct labour | 1.20 |
+| **Direct costs** | **5.30** |
+| Mixing: 0.8 kg × 2.00 | 1.60 |
+| Baking: 0.005 h × 200 | 1.00 |
+| Packing: 1 × 1.40 | 1.40 |
+| **Indirect costs** | **4.00** |
+| **Full cost** | **9.30** |
+| Selling price | 9.00 |
+| **Profit margin** | **−0.30** |
 
-La Premium box perd 0,30 € par boîte, soit 15 000 € sur 50 000 boîtes.
+The Premium box loses 0.30 € per box, i.e. 15,000 € on 50,000 boxes.
 @q 5.3 | 1.5
 Should Croc'Odile drop the Premium box? Justify with the decision tree seen in class, give the effect of dropping it on the company's total profit and say who should act.
 @c
-1. **PM/u positive ?** Non (−0,30 €) : on passe à l'étape 2.
-2. **MDC/u positive ?** MDC/u = SP − direct costs = 9,00 − 5,30 = **+3,70 €** : oui, donc **on n'abandonne pas**. La perte vient de l'allocation des coûts indirects, pas du produit lui-même.
+1. **Is PM/u positive?** No (−0.30 €): go to step 2.
+2. **Is MDC/u positive?** MDC/u = SP − direct costs = 9.00 − 5.30 = **+3.70 €**: yes, so **do not drop the product**. The loss comes from the allocation of indirect costs, not from the product itself.
 
-**Effet d'un abandon :** Croc'Odile perdrait la MDC de 3,70 × 50 000 = **185 000 €**, alors que les 200 000 € de coûts indirects alloués (4,00 × 50 000) resteraient et retomberaient sur les autres produits. En supposant que les matières et la main-d'œuvre directe disparaissent avec le produit, le profit total baisserait de **185 000 €**.
+**Effect of dropping it:** Croc'Odile would lose an MDC of 3.70 × 50,000 = **185,000 €**, while the 200,000 € of allocated indirect costs (4.00 × 50,000) would remain and fall on the other products. Assuming raw materials and direct labour disappear with the product, total profit would fall by **185,000 €**.
 
-**Solutions et responsables :**
+**Solutions and responsibilities:**
 
-- le contrôleur de gestion revoit la clé de répartition des coûts indirects ;
-- le directeur marketing étudie une hausse de prix d'au moins 0,30 € ou une hausse du volume ;
-- les responsables des centres Mixing, Baking et Packing cherchent à réduire leurs coûts indirects.
+- the management controller reviews the allocation keys of indirect costs;
+- the marketing director studies a price increase of at least 0.30 € or higher volumes;
+- the managers of the Mixing, Baking and Packing centres look for ways to cut their indirect costs.
 
-@part 6 | Limites | Part 6 – Limits of costing | 3 | 15
+@part 6 | Limits | Part 6 – Limits of costing | 3 | 15
 @q 6.1 | 1.5
 A pool of 1,000 € of indirect costs is shared by two products. Product X uses 4 hours of direct labour and 2 kg of raw materials; product Y uses 1 hour and 8 kg.
 
 Allocate the pool using direct labour hours, then using kg of raw materials. Is this cost pool homogeneous? What is the risk for the company?
 @c
-| Clé de répartition | X | Y |
+| Allocation key | X | Y |
 | --- | --- | --- |
-| Heures de MOD (5 h) | 4/5 × 1 000 = **800 €** | **200 €** |
-| Kg de matières (10 kg) | 2/10 × 1 000 = **200 €** | **800 €** |
+| Direct labour hours (5 h) | 4/5 × 1,000 = **800 €** | **200 €** |
+| Kg of raw materials (10 kg) | 2/10 × 1,000 = **200 €** | **800 €** |
 
-- Le pool n'est **pas homogène** : X consomme 4 h pour 2 kg (ratio 2), Y 1 h pour 8 kg (ratio 1/8). Les ressources ne sont pas consommées dans les mêmes proportions, donc le choix du cost driver change complètement le résultat.
-- **Risque :** la *cross-subsidization*, un produit reçoit trop de coûts indirects et l'autre pas assez. On peut alors abandonner le mauvais produit ou mal fixer un prix.
-- Il n'existe pas de « vrai coût » : un coût est une construction qui dépend des choix de calcul.
+- The pool is **not homogeneous**: X uses 4 h for 2 kg (ratio 2), Y uses 1 h for 8 kg (ratio 1/8). Resources are not consumed in the same proportions, so the choice of cost driver completely changes the result.
+- **Risk:** *cross-subsidization*, where one product receives too much indirect cost and the other too little. The company may then drop the wrong product or set the wrong price.
+- There is no "true cost": a cost is a construction that depends on the choices made to calculate it.
 @q 6.2 | 1
 Last year Croc'Odile produced 12,000 Gift tins and sold 10,000. Fixed manufacturing overhead was 60,000 €. Which profit is higher, under absorption costing or under variable costing, and by how much? Why?
 @c
-- Fixed MOH par boîte = 60 000 / 12 000 **produites** = 5 €. Stock en hausse de 12 000 − 10 000 = 2 000 boîtes.
-- Le profit en **absorption costing est plus élevé de 2 000 × 5 = 10 000 €**.
+- Fixed MOH per tin = 60,000 / 12,000 tins **produced** = 5 €. Inventory rises by 12,000 − 10,000 = 2,000 tins.
+- **Absorption costing profit is higher by 2,000 × 5 = 10,000 €**.
 
-**Pourquoi :** en absorption, 10 000 € de fixed MOH restent dans le stock et ne passent pas en charge cette année. En variable costing, les 60 000 € sont en charge sur la période.
+**Why:** under absorption costing, 10,000 € of fixed MOH stay in inventory and are not expensed this year. Under variable costing, the full 60,000 € is expensed in the period.
 @q 6.3 | 0.5
 In ABC, what is an activity? Give two examples at Croc'Odile.
 @c
-Une activité est un ensemble de tâches décrit par **un verbe et un résultat**. Exemples : régler les fours avant un lot, contrôler la qualité des biscuits, traiter les commandes des supermarchés, acheter le beurre et la farine.
+An activity is a set of tasks described by **a verb and an output**. Examples: setting up the ovens before a batch, inspecting biscuit quality, processing supermarket orders, purchasing butter and flour.
