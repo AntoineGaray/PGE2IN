@@ -21,9 +21,9 @@ A. Freeman, 1984 · B. Bowen, 1953 · C. Rachel Carson, 1962 · D. Brundtland, 1
 @q 1.2 | 0.5
 How many of the 9 planetary boundaries have already been crossed?
 
-A. 3 · B. 5 · C. 7 · D. 9
+A. 7 · B. 3 · C. 5 · D. 9
 @c
-**C. 7 out of 9.** The boundaries were proposed by Johan Rockström and 28 scientists in 2009.
+**A. 7 out of 9.** The boundaries were proposed by Johan Rockström and 28 scientists in 2009.
 @q 1.3 | 0.5
 What is the CO2 concentration in the atmosphere in 2025?
 
@@ -39,9 +39,9 @@ A. The UN · B. The Club of Rome · C. The OECD · D. The IPCC
 @q 1.5 | 0.5
 How many needs make up the social foundation of Kate Raworth's Doughnut?
 
-A. 7 · B. 9 · C. 12 · D. 17
+A. 7 · B. 9 · C. 17 · D. 12
 @c
-**C. 12 needs.** The ecological ceiling corresponds to the 9 planetary boundaries.
+**D. 12 needs.** The ecological ceiling corresponds to the 9 planetary boundaries.
 @q 1.6 | 0.5
 How many goals and targets do the SDGs adopted in 2015 include?
 
@@ -57,9 +57,9 @@ A. It is mandatory for large companies · B. It is certifiable, like ISO 14001 �
 @q 1.8 | 0.5
 What share of species is threatened with extinction?
 
-A. 5 % · B. 10 % · C. 25 % · D. 50 %
+A. 25 % · B. 5 % · C. 10 % · D. 50 %
 @c
-**C. 25 %.** Species are disappearing 100 to 1,000 times faster than the natural rate: this is called the 6th mass extinction.
+**A. 25 %.** Species are disappearing 100 to 1,000 times faster than the natural rate: this is called the 6th mass extinction.
 @q 1.9 | 0.5
 How much did the summer 2026 drought cost insurers in France?
 
@@ -69,15 +69,15 @@ A. 500 million euros · B. 1 billion euros · C. More than 5.6 billion euros · 
 @q 1.10 | 0.5
 What target did the Kyoto Protocol (1997) set for industrialised countries?
 
-A. Carbon neutrality by 2050 · B. At least −5 % of GHG compared with 1990, over 2008-2012 · C. −55 % of GHG by 2030 · D. Stay below +1.5 °C
+A. At least −5 % of GHG compared with 1990, over 2008-2012 · B. Carbon neutrality by 2050 · C. −55 % of GHG by 2030 · D. Stay below +1.5 °C
 @c
-**B. At least −5 % of GHG** (5.2 % on average) compared with 1990, over 2008-2012, for 6 gases. Neutrality by 2050 and −55 % by 2030 are the targets of the European Green Deal; 1.5 °C is the Paris Agreement.
+**A. At least −5 % of GHG** (5.2 % on average) compared with 1990, over 2008-2012, for 6 gases. Neutrality by 2050 and −55 % by 2030 are the targets of the European Green Deal; 1.5 °C is the Paris Agreement.
 @q 1.11 | 0.5
 What share of its turnover in France did Mustela give up by stopping baby wipes?
 
-A. 2 % · B. 5 % · C. 20 % · D. 50 %
+A. 2 % · B. 5 % · C. 50 % · D. 20 %
 @c
-**C. 20 %.** This is the course example of a company giving up a product for its regenerative strategy, impACT 2030.
+**D. 20 %.** This is the course example of a company giving up a product for its regenerative strategy, impACT 2030.
 @q 1.12 | 0.5
 What results did Interface achieve with Mission Zero, launched in 1994?
 
