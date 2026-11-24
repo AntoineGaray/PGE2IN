@@ -1,7 +1,7 @@
 {
   "id": "mq",
   "exam": "1h30 · calculatrice classique autorisée",
-  "warning": "Seul le chapitre 6 de Davenport et Kim (Keeping Up with the Quants) est dans le Drive. La partie calcul du partiel n'est pas encore couverte : il manque les slides, TD et corrigés.",
+  "warning": "⚠️ Attention : les quiz et flashcards de MQ ne portent que sur le texte de Davenport et Kim (chapitre 6). La partie calcul du partiel (calculatrice autorisée) n'est pas encore couverte, faute de slides, TD et corrigés. Un bon score ici ne veut pas dire que tu es prêt pour l'épreuve : travaille aussi tes exercices de TD.",
   "chapters": [
     { "id": "m1", "title": "Les 3 étapes : attitude, habitudes, analyste" },
     { "id": "m2", "title": "Les habitudes quantitatives et les 10 questions" },
