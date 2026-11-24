@@ -375,3 +375,14 @@ details.ex-intro summary { cursor: pointer; font-weight: 600; color: var(--ink-2
   .ex-q, .ex-c, .ex-intro, .ex-method, .ex-data { border-color: #bbb; }
   .exam[data-show="both"] .ex-row { grid-template-columns: 2fr 3fr; }
 }
+
+/* ---------- Vocabulaire ---------- */
+.vocab-btn { background: #6b4e9b; border-color: #6b4e9b; color: #fff; }
+.vocab { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; background: #fff; }
+.vocab table { border-collapse: collapse; width: 100%; font-size: 15px; }
+.vocab th, .vocab td { padding: 8px 12px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+.vocab th { background: #f4f0e6; }
+.vocab tr:last-child td { border-bottom: 0; }
+.vocab-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 34px 20px; text-align: center; margin: 8px 0 14px; box-shadow: var(--shadow); }
+.vocab-card .vq { font-size: 22px; font-weight: 600; }
+.vocab-card .va { font-size: 20px; color: var(--good); margin-top: 14px; font-weight: 600; }

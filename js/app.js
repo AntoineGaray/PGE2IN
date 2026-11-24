@@ -245,6 +245,7 @@
       if (parts[0] === "s" && parts[2] === "cards") return viewCards(parts[1], params);
       if (parts[0] === "s" && parts[2] === "fiche") return viewFiche(parts[1], params);
       if (parts[0] === "s" && parts[2] === "exam") return viewExam(parts[1], params);
+      if (parts[0] === "s" && parts[2] === "vocab") return viewVocab(parts[1], params);
       if (parts[0] === "errors" && parts[1] === "quiz") return viewErrorQuiz(params);
       if (parts[0] === "errors") return viewErrors();
       if (parts[0] === "lb") return viewLeaderboard(params);
@@ -415,6 +416,7 @@
         <div class="actions">
           ${s.fiche ? `<a class="btn fiche-btn" href="#/s/${id}/fiche">📄 Fiche de cours</a>` : ""}
           ${s.exam ? `<a class="btn exam-btn" href="#/s/${id}/exam">📝 Partiel type</a>` : ""}
+          ${(await getGlossary())[id] ? `<a class="btn vocab-btn" href="#/s/${id}/vocab">🔤 Vocabulaire FR → EN</a>` : ""}
           <a class="btn accent" href="#/s/${id}/quiz">Quiz de ${Math.min(CFG.quizLength, d.quiz.length)} questions</a>
           <a class="btn" href="#/s/${id}/cards">Flashcards ${due ? "(" + Math.min(due, CFG.cardsPerSession) + " à revoir)" : ""}</a>
           <a class="btn secondary" href="#/s/${id}/quiz?all=1">Les ${d.quiz.length} questions</a>
@@ -948,6 +950,70 @@
     });
     const pr = document.getElementById("ex-print"); if (pr) pr.onclick = () => window.print();
     document.getElementById("ex-top").onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+
+  // ---------- Vue : vocabulaire français → anglais ----------
+  let glossaryCache = null;
+  async function getGlossary() {
+    if (glossaryCache) return glossaryCache;
+    try { const r = await fetch("data/glossary.json", { cache: "no-cache" }); glossaryCache = r.ok ? await r.json() : {}; }
+    catch (e) { glossaryCache = {}; }
+    return glossaryCache;
+  }
+
+  async function viewVocab(id, params) {
+    const s = subjOf(id);
+    const list = (await getGlossary())[id];
+    if (!s || !list) { location.hash = "#/"; return; }
+    const practice = params.get("mode") === "train";
+    const head = `
+      <p><a href="#/s/${id}" class="small muted">← ${esc(s.short)}</a></p>
+      <div class="ex-head"><div><h1>Vocabulaire – ${esc(s.short)}</h1>
+      <p class="muted">${list.length} termes clés à savoir écrire en anglais le jour du partiel.</p></div>
+      <div class="tabs" role="tablist">
+        <button data-m="list" class="${practice ? "" : "on"}">Liste</button>
+        <button data-m="train" class="${practice ? "on" : ""}">S'entraîner</button>
+      </div></div>`;
+    if (!practice) {
+      $app.innerHTML = head + `
+        <input type="search" id="vq" placeholder="Chercher un terme (français ou anglais)" style="margin:12px 0">
+        <div class="table-wrap vocab"><table><thead><tr><th>Français</th><th>English</th></tr></thead>
+        <tbody id="vb">${list.map((t) => `<tr><td>${esc(t.fr)}</td><td><b>${esc(t.en)}</b></td></tr>`).join("")}</tbody></table></div>`;
+      const norm = (x) => x.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+      document.getElementById("vq").oninput = (e) => {
+        const q = norm(e.target.value);
+        document.querySelectorAll("#vb tr").forEach((tr) => { tr.style.display = norm(tr.textContent).includes(q) ? "" : "none"; });
+      };
+    } else {
+      let dir = store.get("vocabDir", "fr");
+      let deck = shuffle(list.slice()), i = 0, ok = 0, again = [];
+      const render = () => {
+        if (i >= deck.length) {
+          $app.querySelector("#vt").innerHTML = `<div class="panel empty"><h3>${ok}/${deck.length} sus du premier coup</h3>
+            <div class="actions" style="justify-content:center">${again.length ? `<button class="btn accent" id="v-again">Revoir les ${again.length} ratés</button>` : ""}<button class="btn secondary" id="v-restart">Recommencer</button></div></div>`;
+          const a = document.getElementById("v-again"); if (a) a.onclick = () => { deck = shuffle(again); again = []; i = 0; ok = 0; render(); };
+          document.getElementById("v-restart").onclick = () => { deck = shuffle(list.slice()); again = []; i = 0; ok = 0; render(); };
+          return;
+        }
+        const t = deck[i], q = dir === "fr" ? t.fr : t.en, a = dir === "fr" ? t.en : t.fr;
+        $app.querySelector("#vt").innerHTML = `<p class="muted small">${i + 1} / ${deck.length} · ${dir === "fr" ? "français → anglais" : "anglais → français"}</p>
+          <div class="card vocab-card"><div class="vq">${esc(q)}</div><div class="va" id="va" hidden>${esc(a)}</div></div>
+          <div class="actions" style="justify-content:center" id="vbtn"><button class="btn accent" id="v-show">Afficher la traduction</button></div>`;
+        document.getElementById("v-show").onclick = () => {
+          document.getElementById("va").hidden = false;
+          document.getElementById("vbtn").innerHTML = `<button class="btn secondary" id="v-ko">À revoir</button><button class="btn accent" id="v-ok">Je savais</button>`;
+          document.getElementById("v-ok").onclick = () => { ok++; i++; render(); };
+          document.getElementById("v-ko").onclick = () => { again.push(t); i++; render(); };
+        };
+      };
+      $app.innerHTML = head + `<div class="actions" style="margin:12px 0"><div class="tabs" id="vdir"><button data-d="fr">FR → EN</button><button data-d="en">EN → FR</button></div></div><div id="vt"></div>
+        <p class="small muted">Sans points ni classement : c'est juste pour fixer le vocabulaire.</p>`;
+      const setDir = (d) => { dir = d; store.set("vocabDir", d); document.querySelectorAll("#vdir button").forEach((b) => b.classList.toggle("on", b.dataset.d === d)); deck = shuffle(list.slice()); i = 0; ok = 0; again = []; render(); };
+      document.querySelectorAll("#vdir button").forEach((b) => { b.onclick = () => setDir(b.dataset.d); });
+      setDir(dir);
+    }
+    document.querySelectorAll(".ex-head [data-m]").forEach((b) => { b.onclick = () => { location.hash = `#/s/${id}/vocab${b.dataset.m === "train" ? "?mode=train" : ""}`; }; });
   }
 
   // ---------- Vue : classement ----------
