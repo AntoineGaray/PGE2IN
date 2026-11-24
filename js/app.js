@@ -132,21 +132,47 @@
   // ---------- Révision espacée ----------
   function srsGet() { return store.get("srs", {}); }
   function srsSet(srs) { store.set("srs", srs); }
+  // État synchronisé entre appareils : chaque entrée porte un horodatage u, la plus récente gagne.
+  const SYNC_KEYS = ["srs", "conf", "check"];
   async function srsSync() {
     if (!online()) return;
     try {
       const remote = (await rpc("rpc_state_get", { p_token: session.token })) || {};
-      const r = remote.srs || {};
-      const l = srsGet();
-      Object.keys(r).forEach((k) => { if (!l[k] || (r[k].u || 0) > (l[k].u || 0)) l[k] = r[k]; });
-      srsSet(l);
+      SYNC_KEYS.forEach((key) => {
+        const r = remote[key] || {};
+        const l = store.get(key, {});
+        Object.keys(r).forEach((k) => { if (!l[k] || (r[k].u || 0) > (l[k].u || 0)) l[k] = r[k]; });
+        store.set(key, l);
+      });
     } catch (e) { /* hors ligne */ }
   }
-  async function srsPush() {
+  async function pushState(key) {
     if (!online()) return;
-    try { await rpc("rpc_state_set", { p_token: session.token, p_key: "srs", p_value: srsGet() }); } catch (e) { /* plus tard */ }
+    try { await rpc("rpc_state_set", { p_token: session.token, p_key: key, p_value: store.get(key, {}) }); } catch (e) { /* plus tard */ }
   }
+  const srsPush = () => pushState("srs");
   const isDue = (c, srs) => { const x = srs[c.id]; return !x || x.d <= now(); };
+
+  // ---------- Confiance (n°8) ----------
+  // conf[qid] = { c: "sure" | "doubt" | "guess", ok: 1 | 0, u }
+  const CONF = { sure: "Sûr", doubt: "Hésitant", guess: "Au hasard" };
+  const askConf = () => store.get("askConf", true);
+  const isSureWrong = (x) => x && x.c === "sure" && x.ok === 0;
+
+  // ---------- Checklist par chapitre (n°29) ----------
+  function chapterStatus(sid, d, ch) {
+    const srs = srsGet(), conf = store.get("conf", {}), check = store.get("check", {});
+    const qs = d.quiz.filter((q) => q.ch === ch.id);
+    const cs = d.cards.filter((c) => c.ch === ch.id);
+    const answered = qs.filter((q) => conf[q.id] || store.get("qres", {})[q.id] !== undefined);
+    const items = [
+      { key: "fiche", label: "Fiche lue", done: !!(check[sid + ":" + ch.id] && check[sid + ":" + ch.id].v), manual: true },
+      { key: "cards", label: "Cartes à jour", done: cs.length > 0 && cs.every((c) => srs[c.id] && srs[c.id].d > now()) },
+      { key: "quiz", label: "Quiz ≥ 80 %", done: qs.length > 0 && mastery(qs) >= 0.8 },
+      { key: "sure", label: "Aucun « sûr et faux »", done: answered.length > 0 && !qs.some((q) => isSureWrong(conf[q.id])) }
+    ];
+    return { items, n: items.filter((x) => x.done).length };
+  }
 
   // ---------- Statistiques locales par question ----------
   function qresUpdate(results) { const q = store.get("qres", {}); Object.assign(q, results); store.set("qres", q); }
@@ -264,7 +290,7 @@
     document.getElementById("logout").onclick = () => { session = null; store.del("session"); leaderboardCache = null; location.hash = "#/"; route(); };
     document.getElementById("reset").onclick = () => {
       if (!confirm("Effacer toutes les données de révision de ce navigateur ?")) return;
-      ["srs", "errors", "qres", "log", "queue"].forEach(store.del); toast("Données locales effacées.");
+      ["srs", "errors", "qres", "log", "queue", "conf", "check"].forEach(store.del); toast("Données locales effacées.");
     };
   }
 
@@ -281,12 +307,15 @@
         return `<div class="subject locked" style="--c:${s.color}"><h3>${esc(s.name)}</h3><div class="prof">${esc(s.prof)}</div>
           <div class="meta"><span class="pill warn">Supports manquants</span></div></div>`;
       }
-      let due = 0, m = 0, nq = 0;
-      try { const d = await loadSubject(s.id); due = d.cards.filter((c) => isDue(c, srs)).length; m = mastery(d.quiz); nq = d.quiz.length; } catch (e) { /* */ }
+      let due = 0, m = 0, nq = 0, ready = 0, nch = 0;
+      try {
+        const d = await loadSubject(s.id); due = d.cards.filter((c) => isDue(c, srs)).length; m = mastery(d.quiz); nq = d.quiz.length;
+        nch = d.chapters.length; ready = d.chapters.filter((ch) => { const st = chapterStatus(s.id, d, ch); return st.n === st.items.length; }).length;
+      } catch (e) { /* */ }
       return `<a class="subject" href="#/s/${s.id}" style="--c:${s.color}"><h3>${esc(s.name)}</h3><div class="prof">${esc(s.prof)}</div>
         <div class="meta"><span class="pill ${m >= .8 ? "ok" : ""}">Quiz maîtrisé ${Math.round(m * 100)} %</span>
         <span class="pill ${due ? "due" : "ok"}">${due ? due + " cartes à revoir" : "Cartes à jour"}</span>
-        <span class="pill">${nq} questions</span></div></a>`;
+        <span class="pill ${nch && ready === nch ? "ok" : ""}">${ready}/${nch} chapitres prêts</span></div></a>`;
     }));
 
     $app.innerHTML = `
@@ -323,14 +352,21 @@
     const d = await loadSubject(id);
     const srs = srsGet();
     const errs = store.get("errors", {});
+    let ready = 0;
     const chapRows = d.chapters.map((ch) => {
       const qs = d.quiz.filter((q) => q.ch === ch.id);
       const cs = d.cards.filter((c) => c.ch === ch.id);
       const m = mastery(qs);
       const due = cs.filter((c) => isDue(c, srs)).length;
-      return `<div class="chap"><div class="t"><b>${esc(ch.title)}</b><br><span class="muted small">${qs.length} questions · ${cs.length} cartes${due ? " · " + due + " à revoir" : ""}</span></div>
-        <div style="display:flex;gap:8px;align-items:center"><div class="bar" title="Maîtrise du quiz"><i style="width:${Math.round(m * 100)}%"></i></div>
-        <a class="pill" href="#/s/${id}/quiz?ch=${ch.id}">Quiz</a><a class="pill" href="#/s/${id}/cards?ch=${ch.id}">Cartes</a></div></div>`;
+      const st = chapterStatus(id, d, ch);
+      if (st.n === st.items.length) ready++;
+      const checks = st.items.map((it) => it.manual
+        ? `<label class="ck ${it.done ? "done" : ""}"><input type="checkbox" data-check="${id}:${ch.id}" ${it.done ? "checked" : ""}> ${it.label}</label>`
+        : `<span class="ck ${it.done ? "done" : ""}">${it.done ? "✓" : "○"} ${it.label}</span>`).join("");
+      return `<div class="chap ${st.n === st.items.length ? "ready" : ""}"><div class="chap-main"><div class="t"><b>${esc(ch.title)}</b><br><span class="muted small">${qs.length} questions · ${cs.length} cartes${due ? " · " + due + " à revoir" : ""}</span></div>
+        <div style="display:flex;gap:8px;align-items:center"><span class="chap-score">${st.n}/${st.items.length}</span><div class="bar" title="Maîtrise du quiz"><i style="width:${Math.round(m * 100)}%"></i></div>
+        <a class="pill" href="#/s/${id}/quiz?ch=${ch.id}">Quiz</a><a class="pill" href="#/s/${id}/cards?ch=${ch.id}">Cartes</a></div></div>
+        <div class="checks">${checks}</div></div>`;
     }).join("");
     const due = d.cards.filter((c) => isDue(c, srs)).length;
     const nErr = d.quiz.filter((q) => isOpenError(errs[q.id])).length;
@@ -350,9 +386,17 @@
           ${nErr ? `<a class="btn secondary" href="#/errors/quiz?s=${id}">Mes ${nErr} erreurs</a>` : ""}
         </div>
       </div>
-      <h2>Par chapitre</h2>
+      <h2>Par chapitre <span class="pill ${ready === d.chapters.length ? "ok" : ""}">${ready}/${d.chapters.length} prêts</span></h2>
       <div class="chapters">${chapRows}</div>
-      <p class="small muted" style="margin-top:16px">La barre verte montre la part des questions du chapitre réussies à ta dernière tentative. Les questions marquées « Complément » viennent de la fiche mais pas directement des slides du prof.</p>`;
+      <p class="small muted" style="margin-top:16px">Un chapitre est prêt quand ses 4 cases sont cochées. « Fiche lue » se coche à la main, les trois autres se cochent toutes seules : toutes les cartes revues et pas à revoir aujourd'hui, au moins 80 % des questions réussies sans répondre au hasard, et aucune réponse fausse donnée en étant sûr·e. Les questions marquées « Complément » viennent de la fiche mais pas directement des slides du prof.</p>`;
+    $app.querySelectorAll("[data-check]").forEach((cb) => {
+      cb.onchange = () => {
+        const check = store.get("check", {});
+        check[cb.dataset.check] = { v: cb.checked ? 1 : 0, u: now() };
+        store.set("check", check); pushState("check");
+        viewSubject(id);
+      };
+    });
   }
 
   // ---------- Signaler une question ou une carte ----------
@@ -403,29 +447,51 @@
       const q = prepared[i];
       $app.innerHTML = `
         <p><a href="${back}" class="small muted">← Quitter</a></p>
-        <div class="qhead"><span>${esc(title)}</span><span>Question ${i + 1} / ${prepared.length} · ${correct} juste${correct > 1 ? "s" : ""}</span></div>
+        <div class="qhead"><span>${esc(title)}</span><span>Question ${i + 1} / ${prepared.length} · ${correct} juste${correct > 1 ? "s" : ""} · <button class="linkbtn small" id="conf-toggle" title="Demander si tu étais sûr avant de corriger">Confiance : ${askConf() ? "oui" : "non"}</button></span></div>
         <div class="progress"><i style="width:${(i / prepared.length) * 100}%"></i></div>
         <div class="panel">
           <div class="question">${esc(q.q)}${q.flag ? `<span class="flag">${esc(q.flag)}</span>` : ""}</div>
           <div class="choices">${q.order.map((k, n) => `<button class="choice" data-k="${k}"><span class="k">${"ABCD"[n]}</span><span>${esc(q.choices[k])}</span></button>`).join("")}</div>
           <div id="after"></div>
         </div>`;
-      $app.querySelectorAll(".choice").forEach((b) => { b.onclick = () => answer(+b.dataset.k); });
+      $app.querySelectorAll(".choice").forEach((b) => { b.onclick = () => pick(+b.dataset.k, b); });
+      document.getElementById("conf-toggle").onclick = () => {
+        store.set("askConf", !askConf());
+        document.getElementById("conf-toggle").textContent = "Confiance : " + (askConf() ? "oui" : "non");
+      };
     }
 
-    function answer(k) {
+    function pick(k, btn) {
+      if (!askConf()) return answer(k, null);
+      $app.querySelectorAll(".choice").forEach((b) => { b.disabled = true; });
+      btn.classList.add("picked");
+      document.getElementById("after").innerHTML = `
+        <div class="confbar"><span>Avant de voir la correction : tu étais…</span>
+          <div class="conf-btns">${Object.entries(CONF).map(([c, l]) => `<button class="btn secondary conf-${c}" data-c="${c}">${l}</button>`).join("")}</div>
+          <button class="linkbtn small" id="conf-undo">Changer de réponse</button></div>`;
+      document.querySelectorAll(".conf-btns button").forEach((b) => { b.onclick = () => answer(k, b.dataset.c); });
+      document.getElementById("conf-undo").onclick = () => {
+        $app.querySelectorAll(".choice").forEach((b) => { b.disabled = false; b.classList.remove("picked"); });
+        document.getElementById("after").innerHTML = "";
+      };
+    }
+
+    function answer(k, c) {
       const q = prepared[i];
       const ok = k === q.answer;
-      if (ok) { correct++; right.push(q.id); } else wrong.push(q.id);
-      answers.push({ q, k, ok });
+      if (ok) { correct++; if (c !== "guess") right.push(q.id); } else wrong.push(q.id);
+      answers.push({ q, k, ok, c });
       $app.querySelectorAll(".choice").forEach((b) => {
         b.disabled = true;
         const bk = +b.dataset.k;
+        b.classList.remove("picked");
         if (bk === q.answer) b.classList.add("correct");
         else if (bk === k) b.classList.add("wrong");
       });
       const last = i === prepared.length - 1;
-      document.getElementById("after").innerHTML = `
+      const confNote = c === "sure" && !ok ? `<div class="conf-alert">⚠️ Faux alors que tu étais sûr·e : c'est le type d'erreur le plus dangereux à l'examen, elle est mise de côté dans « Mes erreurs ».</div>`
+        : c === "guess" && ok ? `<div class="conf-note">Juste, mais au hasard : elle reviendra dans tes prochains quiz.</div>` : "";
+      document.getElementById("after").innerHTML = `${confNote}
         <div class="explain"><b class="${ok ? "ok" : "ko"}">${ok ? "Juste." : "Faux."}</b> ${esc(q.explain || "")}</div>
         <div class="actions" style="align-items:center;justify-content:space-between"><button class="btn accent" id="next">${last ? "Voir mon score" : "Question suivante →"}</button>${reportLink(q.id)}</div>`;
       wireReports(document.getElementById("after"));
@@ -438,14 +504,22 @@
       if (finished) return;
       finished = true;
       $app.innerHTML = `<p class="muted">Calcul du score…</p>`;
-      const qr = {}; answers.forEach((a) => { qr[a.q.id] = a.ok ? 1 : 0; });
+      const qr = {}; answers.forEach((a) => { qr[a.q.id] = a.ok && a.c !== "guess" ? 1 : 0; });
       qresUpdate(qr);
+      const withConf = answers.filter((a) => a.c);
+      const conf = store.get("conf", {});
+      let confChanged = false;
+      answers.forEach((a) => {
+        if (a.c) { conf[a.q.id] = { c: a.c, ok: a.ok ? 1 : 0, u: now() }; confChanged = true; }
+        else if (a.ok && conf[a.q.id] && conf[a.q.id].ok === 0) { conf[a.q.id] = Object.assign({}, conf[a.q.id], { ok: 1, u: now() }); confChanged = true; }
+      });
+      if (confChanged) { store.set("conf", conf); pushState("conf"); }
       // Par matière (le quiz d'erreurs peut mélanger les matières)
       const bySubj = {};
       answers.forEach((a) => {
         const s = a.q.subject;
         bySubj[s] = bySubj[s] || { c: 0, n: 0, w: [], r: [] };
-        bySubj[s].n++; if (a.ok) { bySubj[s].c++; bySubj[s].r.push(a.q.id); } else bySubj[s].w.push(a.q.id);
+        bySubj[s].n++; if (a.ok) { bySubj[s].c++; if (a.c !== "guess") bySubj[s].r.push(a.q.id); } else bySubj[s].w.push(a.q.id);
       });
       let pts = 0;
       for (const s of Object.keys(bySubj)) {
@@ -454,6 +528,13 @@
         pts += await recordSession(s, mode, b.c, b.n, b.w, b.r);
       }
       const pct = Math.round((correct / prepared.length) * 100);
+      const cell = (c, ok) => withConf.filter((a) => a.c === c && a.ok === ok).length;
+      const sureWrong = cell("sure", false), luckyRight = cell("guess", true);
+      const matrix = withConf.length ? `<div class="panel"><h3>Ta confiance</h3>
+        <table class="conf-matrix"><thead><tr><th></th><th>Juste</th><th>Faux</th></tr></thead><tbody>
+        ${Object.entries(CONF).map(([c, l]) => `<tr><th>${l}</th><td class="${c === "sure" ? "good" : ""}">${cell(c, true)}</td><td class="${c === "sure" && cell(c, false) ? "danger" : ""}">${cell(c, false)}</td></tr>`).join("")}
+        </tbody></table>
+        <p class="small muted">${sureWrong ? `<b style="color:var(--bad)">${sureWrong} erreur${sureWrong > 1 ? "s" : ""} « sûr et faux »</b> : ce sont celles que tu ne vérifierais pas le jour J. Elles sont regroupées dans Mes erreurs. ` : "Aucune erreur « sûr et faux », bon signe. "}${luckyRight ? `${luckyRight} bonne${luckyRight > 1 ? "s" : ""} réponse${luckyRight > 1 ? "s" : ""} au hasard : pas encore acquise${luckyRight > 1 ? "s" : ""}, elle${luckyRight > 1 ? "s" : ""} reviendra dans tes prochains quiz.` : ""}</p></div>` : "";
       const verdict = pct >= 80 ? "Excellent, c'est maîtrisé." : pct >= 60 ? "Pas mal, revois les erreurs ci-dessous." : "À retravailler : relis la fiche puis refais le quiz.";
       $app.innerHTML = `
         <p><a href="${back}" class="small muted">← Retour</a></p>
@@ -467,9 +548,10 @@
             ${online() ? `<a class="btn secondary" href="#/lb">Classement</a>` : ""}
           </div>
         </div>
+        ${matrix}
         ${answers.some((a) => !a.ok) ? `<h2>À revoir</h2><div class="panel">${answers.filter((a) => !a.ok).map((a) => `
           <div class="review-item"><div><b>${esc(a.q.q)}</b></div>
-          <div class="small">Ta réponse : <span style="color:var(--bad)">${esc(a.q.choices[a.k])}</span></div>
+          <div class="small">Ta réponse : <span style="color:var(--bad)">${esc(a.q.choices[a.k])}</span>${a.c ? ` <span class="pill ${a.c === "sure" ? "warn" : ""}">${CONF[a.c]}</span>` : ""}</div>
           <div class="small">Bonne réponse : <span class="a">${esc(a.q.choices[a.q.answer])}</span></div>
           <div class="small muted">${esc(a.q.explain || "")}</div><div style="margin-top:4px">${reportLink(a.q.id)}</div></div>`).join("")}</div>` : ""}`;
       wireReports();
@@ -501,6 +583,8 @@
     const errs = await getErrors();
     const open = Object.entries(errs).filter(([, x]) => isOpenError(x));
     const solved = Object.entries(errs).filter(([, x]) => !isOpenError(x)).length;
+    const conf = store.get("conf", {});
+    const nSure = open.filter(([qid]) => isSureWrong(conf[qid])).length;
     if (!open.length) {
       $app.innerHTML = `<h1>Mes erreurs</h1><div class="panel empty">${Object.keys(errs).length ? "Toutes tes erreurs sont réglées. Bravo." : "Aucune erreur enregistrée pour l'instant. Fais un quiz : chaque question ratée arrivera ici."}</div>`;
       return;
@@ -520,10 +604,13 @@
           <div class="review-item"><div><b>${esc(q.q)}</b></div>
           <div class="small">Réponse : <span class="a">${esc(q.choices[q.answer])}</span></div>
           <div class="small muted">${esc(q.explain || "")}</div>
-          <div class="small" style="margin-top:4px"><span class="pill warn">ratée ${x.w} fois</span> ${x.r ? `<span class="pill ok">${x.r}/2 bonne réponse</span>` : ""} ${reportLink(q.id)}</div></div>`).join("")}</div>`);
+          <div class="small" style="margin-top:4px">${isSureWrong(conf[q.id]) ? `<span class="pill warn">⚠️ sûr et faux</span> ` : ""}<span class="pill warn">ratée ${x.w} fois</span> ${x.r ? `<span class="pill ok">${x.r}/2 bonne réponse</span>` : ""} ${reportLink(q.id)}</div></div>`).join("")}</div>`);
     }
     $app.innerHTML = `<h1>Mes erreurs</h1>
       <p class="muted">Une question sort de la liste quand tu y réponds juste 2 fois d'affilée. ${solved ? solved + " erreur" + (solved > 1 ? "s" : "") + " déjà réglée" + (solved > 1 ? "s" : "") + "." : ""}</p>
+      ${nSure ? `<div class="panel sure-panel"><h3>⚠️ ${nSure} erreur${nSure > 1 ? "s" : ""} « sûr et faux »</h3>
+        <p class="small">Tu étais sûr·e de ta réponse et elle était fausse. À l'examen, ce sont celles que tu ne vérifies pas : retravaille-les en premier.</p>
+        <div class="actions" style="margin-top:6px"><a class="btn bad" href="#/errors/quiz?sure=1">Retravailler ces ${nSure} questions</a></div></div>` : ""}
       <div class="actions"><a class="btn" href="#/errors/quiz">Quiz sur toutes mes erreurs (${open.length})</a></div>
       ${blocks.join("")}`;
     wireReports();
@@ -532,7 +619,9 @@
   async function viewErrorQuiz(params) {
     const errs = await getErrors();
     const only = params.get("s");
-    const ids = Object.entries(errs).filter(([qid, x]) => isOpenError(x) && (!only || (x.s || qSubject(qid)) === only)).map(([qid]) => qid);
+    const sureOnly = params.get("sure") === "1";
+    const conf = store.get("conf", {});
+    const ids = Object.entries(errs).filter(([qid, x]) => isOpenError(x) && (!only || (x.s || qSubject(qid)) === only) && (!sureOnly || isSureWrong(conf[qid]))).map(([qid]) => qid);
     const qs = [];
     for (const qid of ids) {
       const sid = errs[qid].s || qSubject(qid); const s = subjOf(sid);
@@ -541,7 +630,7 @@
       if (q) qs.push(q);
     }
     if (!qs.length) { location.hash = "#/errors"; return; }
-    runQuiz({ title: "Mes erreurs" + (only ? " · " + subjOf(only).short : ""), back: "#/errors", questions: shuffle(qs).slice(0, 20), subject: only, mode: "errors" });
+    runQuiz({ title: (sureOnly ? "Mes erreurs « sûr et faux »" : "Mes erreurs") + (only ? " · " + subjOf(only).short : ""), back: "#/errors", questions: shuffle(qs).slice(0, 20), subject: only, mode: "errors" });
   }
 
   // ---------- Vue : flashcards ----------

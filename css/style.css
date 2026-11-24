@@ -271,3 +271,37 @@ main.container:has(.fiche-layout) { max-width: 1120px; }
   .fiche-head .tabs { width: 100%; }
   .fiche-head .tabs button { flex: 1; }
 }
+
+/* ---------- Confiance (n°8) ---------- */
+.choice.picked { border-color: var(--ink); background: #eef1f7; }
+.choice.picked .k { background: var(--ink); color: #fff; }
+.confbar { margin-top: 14px; padding: 12px 14px; border-radius: 12px; background: #f7f4ec; display: grid; gap: 8px; }
+.confbar > span { font-weight: 600; font-size: 15px; }
+.conf-btns { display: flex; gap: 8px; flex-wrap: wrap; }
+.conf-btns .btn { flex: 1 1 110px; justify-content: center; }
+.conf-btns .conf-sure { border-color: var(--good); color: var(--good); }
+.conf-btns .conf-doubt { border-color: #b7791f; color: #8a5a10; }
+.conf-btns .conf-guess { border-color: var(--muted); color: var(--ink-2); }
+.confbar .linkbtn { justify-self: start; }
+.conf-alert { margin-top: 14px; padding: 10px 14px; border-radius: 12px; background: var(--bad-bg); color: var(--bad); font-weight: 600; font-size: 15px; }
+.conf-note { margin-top: 14px; padding: 10px 14px; border-radius: 12px; background: #fff6e3; color: var(--accent-ink); font-size: 15px; }
+table.conf-matrix { border-collapse: collapse; margin: 6px 0 4px; font-size: 15px; }
+table.conf-matrix th, table.conf-matrix td { padding: 7px 16px; border: 1px solid var(--line); text-align: center; }
+table.conf-matrix thead th { background: #f4f0e6; }
+table.conf-matrix tbody th { text-align: left; background: #faf8f2; }
+table.conf-matrix td.good { background: var(--good-bg); color: var(--good); font-weight: 700; }
+table.conf-matrix td.danger { background: var(--bad-bg); color: var(--bad); font-weight: 700; }
+.sure-panel { border-color: #f1c4bb; background: #fff8f6; }
+.sure-panel h3 { color: var(--bad); }
+
+/* ---------- Checklist par chapitre (n°29) ---------- */
+.chap { flex-direction: column; align-items: stretch; }
+.chap-main { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; }
+.chap.ready { border-color: #b9dfc9; background: #f3fbf6; }
+.chap-score { font-weight: 700; font-size: 13px; color: var(--ink-2); min-width: 26px; text-align: right; }
+.chap.ready .chap-score { color: var(--good); }
+.checks { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.ck { display: inline-flex; align-items: center; gap: 5px; font-size: 12.5px; padding: 3px 9px; border-radius: 999px; background: #f0ece2; color: var(--ink-2); font-weight: 500; margin: 0; }
+.ck.done { background: var(--good-bg); color: var(--good); }
+label.ck { cursor: pointer; }
+label.ck input { margin: 0; accent-color: var(--good); }
