@@ -906,7 +906,7 @@
          <div class="ex-method"><div class="ex-label">Expected method</div>${e.method}</div>
          ${e.parts.map((x) => part(x, true)).join("")}`
       : `<div class="ex-pills">${e.parts.map((x, i) => `<a class="ex-pill ${i === pi ? "on" : ""}" href="${link("part", i + 1)}"><b>${esc(x.n)}</b> ${esc(x.pill)}</a>`).join("")}</div>
-         ${pi === 0 ? `<div class="ex-intro"><div class="ex-label">Instructions</div>${e.intro}</div><div class="ex-method"><div class="ex-label">Expected method</div>${e.method}</div>` : `<details class="ex-intro"><summary>Case background</summary>${e.intro}</details>`}
+         ${pi === 0 ? `<div class="ex-intro"><div class="ex-label">Instructions</div>${e.intro}</div><div class="ex-method"><div class="ex-label">Expected method</div>${e.method}</div>` : `<details class="ex-intro" open><summary>Case background</summary>${e.intro}</details>`}
          <h2 class="ex-ptitle">${esc(p.title)}</h2>
          ${part(p, false)}
          <div class="actions ex-nav">
