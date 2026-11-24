@@ -77,14 +77,17 @@
 
   async function recordSession(subject, mode, correct, total, wrongIds, rightIds) {
     // Points locaux (mode invité) et journal d'activité
-    const pts = mode === "cards" ? 2 * correct : 10 * correct;
+    const pts = mode === "cards" ? 2 * correct : mode === "daily" ? 20 * correct : 10 * correct;
     const log = store.get("log", []);
     log.push({ t: now(), s: subject, m: mode, c: correct, n: total, p: pts });
     store.set("log", log.slice(-500));
     if (!online() || total === 0) return pts;
     const payload = { p_subject: subject, p_mode: mode, p_correct: correct, p_total: Math.min(total, 60), p_wrong: wrongIds.slice(0, 60), p_right: rightIds.slice(0, 60) };
     try { await rpc("rpc_record", Object.assign({ p_token: session.token }, payload)); leaderboardCache = null; }
-    catch (e) { if (!e.server) { queuePush(payload); toast("Hors ligne : résultat gardé, il sera envoyé plus tard."); } else toast(e.message); }
+    catch (e) {
+      if (!e.server) { queuePush(payload); toast("Hors ligne : résultat gardé, il sera envoyé plus tard."); }
+      else { toast(e.message, 4000); if (mode === "daily") return 0; }
+    }
     return pts;
   }
 
@@ -120,7 +123,7 @@
         const rows = await rpc("rpc_errors", { p_token: session.token });
         rows.forEach((r) => {
           const l = local[r.question_id];
-          local[r.question_id] = { s: r.subject, w: Math.max(r.wrong_count, l ? l.w : 0), r: r.right_streak, t: Date.parse(r.last_wrong) || (l && l.t) || 0 };
+          local[r.question_id] = { s: qSubject(r.question_id), w: Math.max(r.wrong_count, l ? l.w : 0), r: r.right_streak, t: Date.parse(r.last_wrong) || (l && l.t) || 0 };
         });
         store.set("errors", local);
       } catch (e) { /* on garde le local */ }
@@ -182,6 +185,30 @@
     return list.filter((x) => q[x.id] === 1).length / list.length;
   }
 
+  // ---------- Défi du jour (n°33) ----------
+  // Le même défi pour toute la classe : 2 questions par matière, tirées dans un ordre fixe propre à chaque matière.
+  const DAILY_START = "2026-11-25";
+  const DAILY_PER_SUBJECT = 2;
+  const todayKey = () => { const d = new Date(); return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0"); };
+  const dayIndex = (key) => Math.max(0, Math.round((Date.parse(key + "T12:00:00") - Date.parse(DAILY_START + "T12:00:00")) / DAY));
+  function seeded(seedStr) {
+    let h = 1779033703 ^ seedStr.length;
+    for (let i = 0; i < seedStr.length; i++) { h = Math.imul(h ^ seedStr.charCodeAt(i), 3432918353); h = (h << 13) | (h >>> 19); }
+    return function () { h = Math.imul(h ^ (h >>> 16), 2246822507); h = Math.imul(h ^ (h >>> 13), 3266489909); h ^= h >>> 16; return (h >>> 0) / 4294967296; };
+  }
+  async function dailyQuestions(key) {
+    const idx = dayIndex(key), out = [];
+    for (const s of subjects.filter((x) => x.file)) {
+      const d = await loadSubject(s.id);
+      const rnd = seeded("pge2-defi-" + s.id);
+      const pool = d.quiz.slice().sort((a, b) => a.id.localeCompare(b.id));
+      for (let i = pool.length - 1; i > 0; i--) { const j = Math.floor(rnd() * (i + 1)); [pool[i], pool[j]] = [pool[j], pool[i]]; }
+      for (let k = 0; k < DAILY_PER_SUBJECT; k++) out.push(pool[(idx * DAILY_PER_SUBJECT + k) % pool.length]);
+    }
+    return shuffle(out);
+  }
+  const dailyDone = (key) => store.get("daily", {})[key || todayKey()];
+
   // ---------- Navigation ----------
   function setNav() {
     const h = location.hash || "#/";
@@ -219,7 +246,8 @@
       if (parts[0] === "s" && parts[2] === "fiche") return viewFiche(parts[1], params);
       if (parts[0] === "errors" && parts[1] === "quiz") return viewErrorQuiz(params);
       if (parts[0] === "errors") return viewErrors();
-      if (parts[0] === "lb") return viewLeaderboard();
+      if (parts[0] === "lb") return viewLeaderboard(params);
+      if (parts[0] === "daily") return viewDaily();
       location.hash = "#/";
     } catch (e) {
       $app.innerHTML = `<div class="notice err">${esc(e.message)}</div><a class="btn" href="#/">Retour</a>`;
@@ -329,6 +357,11 @@
         <a class="stat" href="#/errors" style="text-decoration:none"><b>${openErr}</b><span>erreurs à retravailler →</span></a>
       </div>
       ${!online() ? `<div class="notice">Mode invité : rien n'est envoyé au classement. <a href="#/account">Rejoindre la classe</a></div>` : ""}
+      ${(() => { const dd = dailyDone(); const label = new Date().toLocaleDateString("fr-FR", { weekday: "long", day: "numeric", month: "long" });
+        return `<div class="daily ${dd ? "done" : ""}"><div><div class="daily-k">🎯 Défi du jour · ${label}</div>
+          ${dd ? `<div class="daily-t">Fait : ${dd.c}/${dd.n} · +${dd.p} points</div><div class="small">Un nouveau défi demain. Le même pour toute la classe.</div>`
+               : `<div class="daily-t">10 questions, toutes matières · <b>points ×2</b></div><div class="small">Le même défi pour toute la classe, une seule tentative par jour.</div>`}</div>
+          <div class="daily-a">${dd ? (online() ? `<a class="btn secondary" href="#/lb?p=daily">Classement du jour</a>` : "") : `<a class="btn accent" href="#/daily">Relever le défi</a>`}</div></div>`; })()}
       <h2>Matières</h2>
       <div class="grid">${cards.join("")}</div>`;
 
@@ -522,10 +555,18 @@
         bySubj[s].n++; if (a.ok) { bySubj[s].c++; if (a.c !== "guess") bySubj[s].r.push(a.q.id); } else bySubj[s].w.push(a.q.id);
       });
       let pts = 0;
-      for (const s of Object.keys(bySubj)) {
-        const b = bySubj[s];
-        localErrorsUpdate(b.w, b.r, s);
-        pts += await recordSession(s, mode, b.c, b.n, b.w, b.r);
+      if (mode === "daily") {
+        Object.keys(bySubj).forEach((s) => localErrorsUpdate(bySubj[s].w, bySubj[s].r, s));
+        const allW = answers.filter((a) => !a.ok).map((a) => a.q.id);
+        const allR = answers.filter((a) => a.ok && a.c !== "guess").map((a) => a.q.id);
+        pts = await recordSession("daily", "daily", correct, prepared.length, allW, allR);
+        const dd = store.get("daily", {}); dd[todayKey()] = { c: correct, n: prepared.length, p: pts }; store.set("daily", dd);
+      } else {
+        for (const s of Object.keys(bySubj)) {
+          const b = bySubj[s];
+          localErrorsUpdate(b.w, b.r, s);
+          pts += await recordSession(s, mode, b.c, b.n, b.w, b.r);
+        }
       }
       const pct = Math.round((correct / prepared.length) * 100);
       const cell = (c, ok) => withConf.filter((a) => a.c === c && a.ok === ok).length;
@@ -543,7 +584,7 @@
           <p><b>${pct} %</b> · +${pts} points${online() ? "" : " (mode invité)"}</p>
           <p class="muted">${verdict}</p>
           <div class="actions" style="justify-content:center">
-            <button class="btn accent" id="again">Nouveau quiz</button>
+            ${mode === "daily" ? (online() ? `<a class="btn accent" href="#/lb?p=daily">Classement du jour</a>` : "") : `<button class="btn accent" id="again">Nouveau quiz</button>`}
             <a class="btn secondary" href="#/errors">Mes erreurs</a>
             ${online() ? `<a class="btn secondary" href="#/lb">Classement</a>` : ""}
           </div>
@@ -555,7 +596,7 @@
           <div class="small">Bonne réponse : <span class="a">${esc(a.q.choices[a.q.answer])}</span></div>
           <div class="small muted">${esc(a.q.explain || "")}</div><div style="margin-top:4px">${reportLink(a.q.id)}</div></div>`).join("")}</div>` : ""}`;
       wireReports();
-      document.getElementById("again").onclick = () => route();
+      const ag = document.getElementById("again"); if (ag) ag.onclick = () => route();
     }
 
     renderQ();
@@ -575,6 +616,16 @@
     const list = all ? shuffle(pool) : pool.map((q) => [weight(q), q]).sort((a, b) => a[0] - b[0]).map((x) => x[1]).slice(0, CFG.quizLength);
     const chap = ch ? d.chapters.find((c) => c.id === ch) : null;
     runQuiz({ title: s.short + (chap ? " · " + chap.title : ""), back: "#/s/" + id, questions: shuffle(list), subject: id, mode: "quiz" });
+  }
+
+  // ---------- Vue : défi du jour ----------
+  async function viewDaily() {
+    const key = todayKey();
+    if (dailyDone(key)) { location.hash = "#/"; return; }
+    $app.innerHTML = `<p class="muted">Préparation du défi…</p>`;
+    const qs = await dailyQuestions(key);
+    const label = new Date().toLocaleDateString("fr-FR", { weekday: "long", day: "numeric", month: "long" });
+    runQuiz({ title: "🎯 Défi du jour · " + label + " · points ×2", back: "#/", questions: qs, subject: null, mode: "daily" });
   }
 
   // ---------- Vue : erreurs ----------
@@ -816,7 +867,7 @@
     return rows;
   }
 
-  async function viewLeaderboard() {
+  async function viewLeaderboard(params) {
     if (!online()) {
       $app.innerHTML = `<h1>Classement</h1><div class="panel empty">Le classement est réservé aux camarades qui ont rejoint la classe.<div class="actions" style="justify-content:center"><a class="btn accent" href="#/account">Rejoindre la classe</a></div></div>`;
       return;
@@ -825,8 +876,26 @@
     let rows;
     try { await flushQueue(); leaderboardCache = null; rows = await getLeaderboard(); }
     catch (e) { $app.innerHTML = `<h1>Classement</h1><div class="notice err">${esc(e.server ? e.message : "Serveur injoignable pour le moment. Tes résultats sont gardés et seront envoyés plus tard.")}</div>`; return; }
-    let period = "all";
+    let period = params && params.get("p") === "daily" ? "daily" : "all";
+    let dailyRows = null;
+    const drawDaily = async () => {
+      const tb = document.getElementById("lb");
+      document.getElementById("lb-head").innerHTML = `<tr><th>#</th><th>Pseudo</th><th class="num">Score</th><th class="num">Points</th><th class="num hide-sm">Heure</th></tr>`;
+      tb.innerHTML = `<tr><td colspan="5" class="muted">Chargement…</td></tr>`;
+      try { dailyRows = dailyRows || await rpc("rpc_daily_board", { p_token: session.token }); }
+      catch (e) { tb.innerHTML = `<tr><td colspan="5" class="muted">${e.server && /rpc_daily_board/.test(e.message) ? "Le défi du jour n'est pas encore activé." : esc(e.message)}</td></tr>`; return; }
+      let rank = 0, prev = null;
+      tb.innerHTML = dailyRows.map((r, n) => {
+        if (r.correct !== prev) { rank = n + 1; prev = r.correct; }
+        const medal = rank === 1 ? "🥇" : rank === 2 ? "🥈" : rank === 3 ? "🥉" : rank;
+        return `<tr class="${r.is_me ? "me" : ""}"><td class="rank">${medal}</td><td>${esc(r.pseudo)}</td><td class="num"><b>${r.correct}/${r.total}</b></td><td class="num">${r.points}</td>
+          <td class="num hide-sm">${new Date(r.done_at).toLocaleTimeString("fr-FR", { hour: "2-digit", minute: "2-digit" })}</td></tr>`;
+      }).join("") || `<tr><td colspan="5" class="empty">Personne n'a encore relevé le défi aujourd'hui.${dailyDone() ? "" : ` <a href="#/daily">Sois le premier !</a>`}</td></tr>`;
+      document.querySelectorAll(".tabs button").forEach((b) => b.classList.toggle("on", b.dataset.p === period));
+    };
     const draw = () => {
+      if (period === "daily") return drawDaily();
+      document.getElementById("lb-head").innerHTML = `<tr><th>#</th><th>Pseudo</th><th class="num">Points</th><th class="num hide-sm">Réussite quiz</th><th class="num">Série</th><th class="num hide-sm">Sessions</th></tr>`;
       const key = period === "all" ? "points" : "points_7d";
       const sorted = rows.slice().sort((a, b) => b[key] - a[key] || a.pseudo.localeCompare(b.pseudo));
       let rank = 0, prev = null;
@@ -841,10 +910,10 @@
       document.querySelectorAll(".tabs button").forEach((b) => b.classList.toggle("on", b.dataset.p === period));
     };
     $app.innerHTML = `<h1>Classement</h1>
-      <p class="muted">10 points par bonne réponse en quiz, 2 points par flashcard sue. La série compte les jours d'affilée avec au moins une session.</p>
-      <div class="tabs" role="tablist"><button data-p="all">Depuis le début</button><button data-p="7d">7 derniers jours</button></div>
+      <p class="muted">10 points par bonne réponse en quiz, 20 au défi du jour, 2 points par flashcard sue. La série compte les jours d'affilée avec au moins une session.</p>
+      <div class="tabs" role="tablist"><button data-p="all">Depuis le début</button><button data-p="7d">7 derniers jours</button><button data-p="daily">🎯 Défi du jour</button></div>
       <div class="panel" style="margin-top:12px;padding:6px 12px">
-        <table class="lb"><thead><tr><th>#</th><th>Pseudo</th><th class="num">Points</th><th class="num hide-sm">Réussite quiz</th><th class="num">Série</th><th class="num hide-sm">Sessions</th></tr></thead>
+        <table class="lb"><thead id="lb-head"></thead>
         <tbody id="lb"></tbody></table></div>`;
     document.querySelectorAll(".tabs button").forEach((b) => { b.onclick = () => { period = b.dataset.p; draw(); }; });
     draw();

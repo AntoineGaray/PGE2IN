@@ -305,3 +305,12 @@ table.conf-matrix td.danger { background: var(--bad-bg); color: var(--bad); font
 .ck.done { background: var(--good-bg); color: var(--good); }
 label.ck { cursor: pointer; }
 label.ck input { margin: 0; accent-color: var(--good); }
+
+/* ---------- Défi du jour (n°33) ---------- */
+.daily { display: flex; justify-content: space-between; align-items: center; gap: 14px; flex-wrap: wrap; margin: 16px 0 4px;
+  padding: 16px 18px; border-radius: var(--radius); background: linear-gradient(120deg, #1d2433, #34405c); color: #fff; box-shadow: var(--shadow); }
+.daily .daily-k { font-size: 13px; color: var(--accent); font-weight: 700; text-transform: capitalize; }
+.daily .daily-t { font-family: var(--serif); font-size: 20px; margin: 2px 0; }
+.daily .small { color: #c9cfdc; }
+.daily.done { background: linear-gradient(120deg, #1f5a45, #2f7a5e); }
+.daily .btn.secondary { color: #fff; border-color: #fff; }
