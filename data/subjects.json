@@ -17,7 +17,8 @@
       "prof": "M. Fally",
       "color": "#c2412d",
       "file": "strat.json",
-      "fiche": "fiches/strat.json"
+      "fiche": "fiches/strat.json",
+      "exam": "exams/strat.json"
     },
     {
       "id": "mq",
