@@ -314,3 +314,64 @@ label.ck input { margin: 0; accent-color: var(--good); }
 .daily .small { color: #c9cfdc; }
 .daily.done { background: linear-gradient(120deg, #1f5a45, #2f7a5e); }
 .daily .btn.secondary { color: #fff; border-color: #fff; }
+
+/* ---------- Partiel type ---------- */
+.exam-btn { background: #3b4a7a; border-color: #3b4a7a; color: #fff; }
+main.container:has(.exam) { max-width: 1180px; }
+.ex-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 14px; flex-wrap: wrap; }
+.ex-head h1 { margin-bottom: 2px; }
+.ex-head p { margin: 0; }
+.ex-disclaimer { margin: 12px 0; }
+.ex-bar { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; margin: 4px 0 16px; }
+.ex-label { font-size: 11px; text-transform: uppercase; letter-spacing: .07em; font-weight: 700; color: var(--muted); margin-bottom: 6px; }
+.ex-pills { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 14px; }
+.ex-pill { text-decoration: none; padding: 6px 12px; border-radius: 999px; background: #ece7db; color: var(--ink-2); font-size: 14px; }
+.ex-pill b { margin-right: 2px; }
+.ex-pill.on { background: var(--ink); color: #fff; }
+.ex-toc { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 14px; }
+.ex-toc a { text-decoration: none; padding: 6px 12px; border-radius: 999px; background: #ece7db; font-size: 14px; }
+.ex-toc a span { color: var(--muted); font-size: 12px; }
+.ex-intro, .ex-method, .ex-data { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 18px; margin-bottom: 12px; }
+.ex-method { background: #fff8ea; border-color: #f3dfb5; }
+details.ex-intro summary { cursor: pointer; font-weight: 600; color: var(--ink-2); }
+.ex-ptitle, .ex-part h2 { font-family: var(--serif); font-size: 22px; margin: 22px 0 2px; padding-bottom: 6px; border-bottom: 2px solid var(--accent); scroll-margin-top: 70px; }
+.ex-part { scroll-margin-top: 70px; }
+.ex-meta { color: var(--muted); font-size: 14px; margin: 4px 0 12px; }
+.ex-row { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: 12px; margin-bottom: 12px; align-items: start; }
+.ex-q, .ex-c { border-radius: var(--radius); padding: 14px 18px; min-width: 0; line-height: 1.55; }
+.ex-q { background: var(--card); border: 1px solid var(--line); }
+.ex-c { background: var(--good-bg); border: 1px solid #c4e5d2; }
+.ex-num { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px; }
+.ex-num b { font-size: 15px; }
+.ex-c .ex-num b { color: var(--good); }
+.ex-num span { font-size: 12px; color: var(--muted); background: #f4f0e6; padding: 2px 8px; border-radius: 999px; }
+.exam p { margin: .45em 0; }
+.exam ul, .exam ol { padding-left: 1.3em; margin: .4em 0; }
+.exam li { margin: .2em 0; }
+.exam .table-wrap { overflow-x: auto; margin: .7em 0; border: 1px solid var(--line); border-radius: 10px; background: #fff; }
+.exam table { border-collapse: collapse; width: 100%; font-size: 14px; line-height: 1.4; font-variant-numeric: lining-nums tabular-nums; }
+.exam th, .exam td { padding: 7px 9px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+.exam th { background: #f4f0e6; font-weight: 700; white-space: nowrap; }
+.exam tr:last-child td { border-bottom: 0; }
+.exam td.num, .exam th.num { white-space: nowrap; }
+.exam td + td, .exam th + th { border-left: 1px solid #efe9dc; }
+.exam .math { overflow-x: auto; margin: .6em 0; padding: 8px 10px; background: rgba(255,255,255,.7); border-radius: 8px; }
+.exam[data-show="q"] .ex-c { display: none; }
+.exam[data-show="c"] .ex-q, .exam[data-show="c"] .ex-data, .exam[data-show="c"] .ex-intro { display: none; }
+.exam[data-show="q"] .ex-row, .exam[data-show="c"] .ex-row { grid-template-columns: minmax(0, 1fr); }
+.exam[data-show="q"] .ex-method { display: none; }
+.ex-nav { margin-top: 16px; }
+@media (max-width: 760px) {
+  .ex-row { grid-template-columns: minmax(0, 1fr); gap: 6px; margin-bottom: 18px; }
+  .ex-q, .ex-c { padding: 12px 14px; }
+  .ex-head .tabs, .ex-bar .tabs { width: 100%; }
+  .ex-head .tabs button, .ex-bar .tabs button { flex: 1; font-size: 13px; padding: 6px 6px; }
+}
+@media print {
+  .topbar, .foot, .no-print, .ex-toc, .ex-pills, .ex-nav { display: none !important; }
+  body { background: #fff; }
+  main.container { max-width: none; padding: 0; }
+  .ex-row, .ex-data, .math, .exam table { break-inside: avoid; }
+  .ex-q, .ex-c, .ex-intro, .ex-method, .ex-data { border-color: #bbb; }
+  .exam[data-show="both"] .ex-row { grid-template-columns: 2fr 3fr; }
+}

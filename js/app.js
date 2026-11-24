@@ -244,6 +244,7 @@
       if (parts[0] === "s" && parts[2] === "quiz") return viewQuiz(parts[1], params);
       if (parts[0] === "s" && parts[2] === "cards") return viewCards(parts[1], params);
       if (parts[0] === "s" && parts[2] === "fiche") return viewFiche(parts[1], params);
+      if (parts[0] === "s" && parts[2] === "exam") return viewExam(parts[1], params);
       if (parts[0] === "errors" && parts[1] === "quiz") return viewErrorQuiz(params);
       if (parts[0] === "errors") return viewErrors();
       if (parts[0] === "lb") return viewLeaderboard(params);
@@ -413,6 +414,7 @@
         <h3>Réviser toute la matière</h3>
         <div class="actions">
           ${s.fiche ? `<a class="btn fiche-btn" href="#/s/${id}/fiche">📄 Fiche de cours</a>` : ""}
+          ${s.exam ? `<a class="btn exam-btn" href="#/s/${id}/exam">📝 Partiel type</a>` : ""}
           <a class="btn accent" href="#/s/${id}/quiz">Quiz de ${Math.min(CFG.quizLength, d.quiz.length)} questions</a>
           <a class="btn" href="#/s/${id}/cards">Flashcards ${due ? "(" + Math.min(due, CFG.cardsPerSession) + " à revoir)" : ""}</a>
           <a class="btn secondary" href="#/s/${id}/quiz?all=1">Les ${d.quiz.length} questions</a>
@@ -857,6 +859,95 @@
       document.querySelectorAll("#fiche h2, #fiche h3").forEach((h) => obs.observe(h));
       leaveGuard = () => obs.disconnect();
     }
+  }
+
+
+  // ---------- Vue : partiel type (énoncé et corrigé en parallèle) ----------
+  const examCache = {};
+  const EXAM_SHOW = { both: "Énoncé + corrigé", q: "Énoncé seul", c: "Corrigé seul" };
+  const fmtPts = (n) => String(n).replace(".", ",") + (n > 1 ? " pts" : " pt");
+
+  async function viewExam(id, params) {
+    const s = subjOf(id);
+    if (!s || !s.exam) { location.hash = "#/"; return; }
+    $app.innerHTML = `<p class="muted">Chargement du partiel type…</p>`;
+    if (!examCache[id]) {
+      const r = await fetch("data/" + s.exam, { cache: "no-cache" });
+      if (!r.ok) throw new Error("Partiel type introuvable");
+      examCache[id] = await r.json();
+    }
+    const e = examCache[id];
+    ensureKatexCss();
+    const full = params.get("mode") === "full";
+    const pi = Math.min(Math.max(parseInt(params.get("p") || "1", 10) - 1, 0), e.parts.length - 1);
+    const prefs = store.get("examShow", {});
+    let show = EXAM_SHOW[prefs[id]] ? prefs[id] : "both";
+    const link = (mode, p) => `#/s/${id}/exam?mode=${mode}${p ? "&p=" + p : ""}`;
+
+    const row = (q) => `
+      <div class="ex-row">
+        <div class="ex-q"><div class="ex-num"><b>${esc(q.num)}</b><span>${fmtPts(q.points)}</span></div>${q.q}</div>
+        <div class="ex-c"><div class="ex-num"><b>Corrigé ${esc(q.num)}</b></div>${q.c}</div>
+      </div>`;
+    const part = (p, withTitle) => `
+      <section class="ex-part" id="part-${p.n}">
+        ${withTitle ? `<h2>${esc(p.title)}</h2>` : ""}
+        <p class="ex-meta">${fmtPts(p.points)} · ${p.minutes} min conseillées</p>
+        ${p.data ? `<div class="ex-data"><div class="ex-label">Données de la partie</div>${p.data}</div>` : ""}
+        ${p.questions.map(row).join("")}
+      </section>`;
+
+    const p = e.parts[pi];
+    const body = full
+      ? `<nav class="ex-toc">${e.parts.map((x) => `<a href="#" data-goto="part-${x.n}">${esc(x.n)}. ${esc(x.pill)} <span>${fmtPts(x.points)}</span></a>`).join("")}</nav>
+         <div class="ex-intro"><div class="ex-label">Énoncé</div>${e.intro}</div>
+         <div class="ex-method"><div class="ex-label">Méthode attendue</div>${e.method}</div>
+         ${e.parts.map((x) => part(x, true)).join("")}`
+      : `<div class="ex-pills">${e.parts.map((x, i) => `<a class="ex-pill ${i === pi ? "on" : ""}" href="${link("part", i + 1)}"><b>${esc(x.n)}</b> ${esc(x.pill)}</a>`).join("")}</div>
+         ${pi === 0 ? `<div class="ex-intro"><div class="ex-label">Énoncé</div>${e.intro}</div><div class="ex-method"><div class="ex-label">Méthode attendue</div>${e.method}</div>` : `<details class="ex-intro"><summary>Rappel du contexte</summary>${e.intro}</details>`}
+         <h2 class="ex-ptitle">${esc(p.title)}</h2>
+         ${part(p, false)}
+         <div class="actions ex-nav">
+           ${pi > 0 ? `<a class="btn secondary" href="${link("part", pi)}">← Partie ${esc(e.parts[pi - 1].n)}</a>` : ""}
+           ${pi < e.parts.length - 1 ? `<a class="btn accent" href="${link("part", pi + 2)}">Partie ${esc(e.parts[pi + 1].n)} →</a>` : `<a class="btn accent" href="${link("full")}">Voir le sujet complet</a>`}
+         </div>`;
+
+    $app.innerHTML = `
+      <p class="no-print"><a href="#/s/${id}" class="small muted">← ${esc(s.short)}</a></p>
+      <div class="ex-head">
+        <div><h1>${esc(e.title)}</h1><p class="muted">${esc(e.subtitle)}</p></div>
+        <div class="tabs no-print" role="tablist">
+          <button data-mode="part" class="${full ? "" : "on"}">Par partie</button>
+          <button data-mode="full" class="${full ? "on" : ""}">Sujet complet</button>
+        </div>
+      </div>
+      <div class="notice ex-disclaimer">${esc(e.disclaimer)} Pas de points au classement : regarde le corrigé autant que tu veux.</div>
+      <div class="ex-bar no-print">
+        <div class="tabs" id="ex-show">${Object.entries(EXAM_SHOW).map(([k, v]) => `<button data-show="${k}">${v}</button>`).join("")}</div>
+        ${full ? `<button class="btn secondary" id="ex-print">🖨 Imprimer / PDF</button>` : ""}
+      </div>
+      <div class="exam" id="exam">${body}</div>
+      <div class="actions no-print" style="margin-top:18px">
+        ${s.fiche ? `<a class="btn secondary" href="#/s/${id}/fiche">📄 Fiche de cours</a>` : ""}
+        <button class="btn secondary" id="ex-top">↑ Haut de page</button>
+      </div>`;
+
+    const $exam = document.getElementById("exam");
+    const setShow = (k) => {
+      show = k; prefs[id] = k; store.set("examShow", prefs);
+      $exam.dataset.show = k;
+      document.querySelectorAll("#ex-show button").forEach((b) => b.classList.toggle("on", b.dataset.show === k));
+    };
+    setShow(show);
+    document.querySelectorAll("#ex-show button").forEach((b) => { b.onclick = () => setShow(b.dataset.show); });
+    document.querySelectorAll(".ex-head [data-mode]").forEach((b) => {
+      b.onclick = () => { location.hash = link(b.dataset.mode, b.dataset.mode === "part" ? pi + 1 : 0); };
+    });
+    document.querySelectorAll("[data-goto]").forEach((a) => {
+      a.onclick = (ev) => { ev.preventDefault(); const el = document.getElementById(a.dataset.goto); if (el) el.scrollIntoView({ behavior: "smooth", block: "start" }); };
+    });
+    const pr = document.getElementById("ex-print"); if (pr) pr.onclick = () => window.print();
+    document.getElementById("ex-top").onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
   // ---------- Vue : classement ----------

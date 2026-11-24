@@ -7,7 +7,8 @@
       "prof": "M. Sabeur · Environnement comptable et financier II",
       "color": "#3b6fd8",
       "file": "ma.json",
-      "fiche": "fiches/ma.json"
+      "fiche": "fiches/ma.json",
+      "exam": "exams/ma.json"
     },
     {
       "id": "strat",
