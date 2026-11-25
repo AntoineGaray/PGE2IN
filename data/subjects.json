@@ -29,7 +29,8 @@
       "prof": "Mme Levavasseur",
       "color": "#7b4fc9",
       "file": "mq.json",
-      "fiche": "fiches/mq.json"
+      "fiche": "fiches/mq.json",
+      "path": "path/mq.json"
     },
     {
       "id": "art",
@@ -39,7 +40,8 @@
       "color": "#c98a12",
       "file": "art.json",
       "fiche": "fiches/art.json",
-      "exam": "exams/art.json"
+      "exam": "exams/art.json",
+      "path": "path/art.json"
     },
     {
       "id": "rse",

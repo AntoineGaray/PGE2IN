@@ -1,0 +1,355 @@
+{
+ "subject": "mq",
+ "updated": "2026-11-25",
+ "steps": [
+  {
+   "id": "mq-p01",
+   "part": "Davenport et Kim, chapitre 6 : devenir un bon analyste quantitatif",
+   "anchor": "le-schema-de-depart",
+   "title": "Le schéma de départ",
+   "qcm": [
+    {
+     "id": "mq-p01-q1",
+     "q": "Quelles sont les trois étapes pour devenir un bon analyste selon Davenport et Kim ?",
+     "choices": [
+      "Quantitative attitude, quantitative habits, quantitative analyst",
+      "Maths, statistiques, informatique",
+      "Collecte, analyse, présentation",
+      "Lire, calculer, publier"
+     ],
+     "answer": 0,
+     "explain": "L'attitude forme les habitudes, et la répétition fait l'analyste compétent."
+    },
+    {
+     "id": "mq-p01-q2",
+     "q": "De quel penseur les auteurs partent-ils (pensées → actions → habitudes → caractère → destin) ?",
+     "choices": [
+      "Aristote",
+      "Voltaire",
+      "Henry Ford",
+      "Taleb"
+     ],
+     "answer": 0,
+     "explain": "Pour l'analyste : l'attitude quantitative forme les habitudes quantitatives."
+    },
+    {
+     "id": "mq-p01-q3",
+     "q": "Quel livre de vulgarisation est cité pour l'étape 1 ?",
+     "choices": [
+      "How to Lie with Statistics (Huff, 1954)",
+      "Moneyball",
+      "The Invisible Gorilla",
+      "Statistics for Business and Economics"
+     ],
+     "answer": 0,
+     "explain": "Kohler (Statistics for Business and Economics) est le manuel conseillé pour l'étape 2."
+    }
+   ],
+   "open": {
+    "q": "Selon la thèse du chapitre, devenir un bon analyste est-il d'abord une question de niveau en maths ?",
+    "a": "Non : c'est une attitude (ne pas avoir peur des chiffres), des habitudes (exiger des chiffres et s'en méfier) et des connaissances qui progressent ensemble."
+   }
+  },
+  {
+   "id": "mq-p02",
+   "part": "Davenport et Kim, chapitre 6 : devenir un bon analyste quantitatif",
+   "anchor": "etape-1-l-attitude-quantitative",
+   "title": "Étape 1 – L'attitude quantitative",
+   "qcm": [
+    {
+     "id": "mq-p02-q1",
+     "q": "Emily Rosa obtient 122 bonnes réponses sur 280 essais. Pourquoi cela ne prouve-t-il rien en faveur du therapeutic touch ?",
+     "choices": [
+      "44 % de réussite, c'est moins que le hasard (50 %)",
+      "L'échantillon est trop grand",
+      "Elle avait 9 ans",
+      "Il n'y avait pas d'assignation aléatoire"
+     ],
+     "answer": 0,
+     "explain": "21 praticiens, assignation aléatoire à pile ou face, publié dans le JAMA en 1998."
+    },
+    {
+     "id": "mq-p02-q2",
+     "q": "Avec combien de personnes la probabilité que deux aient le même anniversaire dépasse-t-elle 50 % ?",
+     "choices": [
+      "23",
+      "183",
+      "50",
+      "365"
+     ],
+     "answer": 0,
+     "explain": "Le paradoxe des anniversaires : on est « fooled by randomness »."
+    },
+    {
+     "id": "mq-p02-q3",
+     "q": "Usain Bolt court 100 m en environ 10 s. Quelle vitesse ?",
+     "choices": [
+      "Environ 36 km/h",
+      "Environ 10 km/h",
+      "Environ 60 km/h",
+      "Environ 20 km/h"
+     ],
+     "answer": 0,
+     "explain": "0,1 km en 1/360 d'heure = 36 km/h."
+    },
+    {
+     "id": "mq-p02-q4",
+     "q": "Si ton revenu est très au-dessus de la moyenne, celui de ton enfant sera probablement plus bas. C'est…",
+     "choices": [
+      "La régression vers la moyenne",
+      "La marche aléatoire",
+      "Le paradoxe des anniversaires",
+      "Une corrélation causale"
+     ],
+     "answer": 0,
+     "explain": "Penser en probabilités, base de la statistique inférentielle."
+    }
+   ],
+   "open": {
+    "q": "Que montre l'exemple de DJ Patil ?",
+    "a": "Qu'on peut toujours rattraper un mauvais départ : il a échoué en maths au collège et au lycée, s'est rattrapé seul jusqu'à un doctorat et a inventé le terme data scientist chez LinkedIn."
+   }
+  },
+  {
+   "id": "mq-p03",
+   "part": "Davenport et Kim, chapitre 6 : devenir un bon analyste quantitatif",
+   "anchor": "etape-2-les-habitudes-quantitatives",
+   "title": "Étape 2 – Les habitudes quantitatives",
+   "qcm": [
+    {
+     "id": "mq-p03-q1",
+     "q": "« The plural of anecdote is not data » illustre l'habitude…",
+     "choices": [
+      "Demand numbers",
+      "Never trust numbers",
+      "Practice",
+      "Ask questions"
+     ],
+     "answer": 0,
+     "explain": "Face à une intuition : avez-vous des données ?"
+    },
+    {
+     "id": "mq-p03-q2",
+     "q": "Que faut-il pour conclure à une causalité ?",
+     "choices": [
+      "Une expérience avec groupe test, groupe contrôle et assignation aléatoire",
+      "Une forte corrélation",
+      "Un grand échantillon",
+      "Une moyenne élevée"
+     ],
+     "answer": 0,
+     "explain": "Correlation is not causation."
+    },
+    {
+     "id": "mq-p03-q3",
+     "q": "Comment s'appelle le sophisme « c'est arrivé en même temps, donc c'est la cause » ?",
+     "choices": [
+      "Cum hoc ergo propter hoc",
+      "Fooled by randomness",
+      "Moneyball",
+      "Régression vers la moyenne"
+     ],
+     "answer": 0,
+     "explain": "Exemple : boire et cancer, avec une variable cachée (le tabac)."
+    },
+    {
+     "id": "mq-p03-q4",
+     "q": "Devant une moyenne, que faut-il demander ?",
+     "choices": [
+      "La dispersion, les outliers, les données manquantes et la médiane",
+      "Seulement l'échantillon",
+      "Seulement la source",
+      "Rien, la moyenne suffit"
+     ],
+     "answer": 0,
+     "explain": "Devant une enquête : qui, comment, quelle formulation."
+    }
+   ],
+   "open": {
+    "q": "Quels sont les trois angles de doute de « never trust numbers » ?",
+    "a": "Relevance (le chiffre répond-il à la question, représente-t-il le groupe ?), accuracy (qui l'a produit, comment ?), correct interpretation (un même chiffre peut se lire dans deux sens)."
+   }
+  },
+  {
+   "id": "mq-p04",
+   "part": "Davenport et Kim, chapitre 6 : devenir un bon analyste quantitatif",
+   "anchor": "les-10-questions-a-poser-sur-une-analyse-quantitative",
+   "title": "Les 10 questions à poser",
+   "qcm": [
+    {
+     "id": "mq-p04-q1",
+     "q": "Laquelle fait partie des 10 questions à poser sur une analyse ?",
+     "choices": [
+      "L'échantillon est-il représentatif de la population ?",
+      "Combien a coûté l'étude ?",
+      "Quel logiciel a été utilisé ?",
+      "Combien de pages fait le rapport ?"
+     ],
+     "answer": 0,
+     "explain": "Avec : la source, les outliers, les hypothèses, les approches écartées…"
+    },
+    {
+     "id": "mq-p04-q2",
+     "q": "Quelle est la première des 10 questions ?",
+     "choices": [
+      "Avez-vous des données pour appuyer cette hypothèse ?",
+      "Quelle est la source des données ?",
+      "Pourquoi cette approche ?",
+      "Y a-t-il des outliers ?"
+     ],
+     "answer": 0,
+     "explain": "Le réflexe « demand numbers »."
+    }
+   ],
+   "open": {
+    "q": "Cite au moins cinq des 10 questions à poser.",
+    "a": "Données pour appuyer l'hypothèse ? Source ? Échantillon représentatif ? Outliers et leur poids ? Hypothèses de l'analyse ? Conditions où elles seraient invalides ? Pourquoi cette approche ? Transformations des données ? Autres approches écartées ? Probabilité que les variables indépendantes causent vraiment les variations ?"
+   }
+  },
+  {
+   "id": "mq-p05",
+   "part": "Davenport et Kim, chapitre 6 : devenir un bon analyste quantitatif",
+   "anchor": "les-6-etapes-d-une-analyse-quantitative",
+   "title": "Les 6 étapes d'une analyse",
+   "qcm": [
+    {
+     "id": "mq-p05-q1",
+     "q": "Quelle étape détermine la méthode statistique à utiliser plus tard ?",
+     "choices": [
+      "Problem recognition (and framing)",
+      "Data analysis",
+      "Data collection",
+      "Results presentation"
+     ],
+     "answer": 0,
+     "explain": "Comprendre quel est le problème et pourquoi il compte."
+    },
+    {
+     "id": "mq-p05-q2",
+     "q": "Selon les auteurs, une question bien définie et des travaux bien revus, c'est…",
+     "choices": [
+      "Plus de la moitié du travail",
+      "Un dixième du travail",
+      "Inutile si on a les données",
+      "La dernière étape"
+     ],
+     "answer": 0,
+     "explain": "Étapes 1 et 2."
+    },
+    {
+     "id": "mq-p05-q3",
+     "q": "Pour une relation de dépendance entre variables, quelle méthode ?",
+     "choices": [
+      "La régression",
+      "Les tests de comparaison",
+      "Une enquête",
+      "La visualisation"
+     ],
+     "answer": 0,
+     "explain": "Pour comparer des groupes : les tests de comparaison."
+    },
+    {
+     "id": "mq-p05-q4",
+     "q": "Combien de temps consacrer à la présentation des résultats ?",
+     "choices": [
+      "Autant qu'aux cinq autres étapes",
+      "Quelques minutes",
+      "La moitié de l'étape 1",
+      "Aucun, les chiffres parlent seuls"
+     ],
+     "answer": 0,
+     "explain": "Référence : les livres d'Edward Tufte."
+    }
+   ],
+   "open": {
+    "q": "Donne les 6 étapes dans l'ordre.",
+    "a": "1. Problem recognition (framing), 2. Review of previous findings, 3. Modeling (variable selection), 4. Data collection (measurement), 5. Data analysis, 6. Results presentation and action."
+   }
+  },
+  {
+   "id": "mq-p06",
+   "part": "Davenport et Kim, chapitre 6 : devenir un bon analyste quantitatif",
+   "anchor": "etape-3-l-analyste-quantitatif",
+   "title": "Étape 3 – L'analyste quantitatif",
+   "qcm": [
+    {
+     "id": "mq-p06-q1",
+     "q": "Pourquoi rédiger un rapport, selon les auteurs ?",
+     "choices": [
+      "Pour apprendre à « raconter une histoire avec des données »",
+      "Pour obtenir une certification",
+      "Pour remplacer les séminaires",
+      "Pour éviter les calculs"
+     ],
+     "answer": 0,
+     "explain": "Progresser, aider l'entreprise, diffuser une culture analytique."
+    },
+    {
+     "id": "mq-p06-q2",
+     "q": "Quel auteur est cité : on juge les gens à leurs questions plus qu'à leurs réponses ?",
+     "choices": [
+      "Voltaire",
+      "Aristote",
+      "Henry Ford",
+      "Taleb"
+     ],
+     "answer": 0,
+     "explain": "Henry Ford est cité sur le travail en communauté."
+    }
+   ],
+   "open": {
+    "q": "Quelles sont les trois actions de l'étape 3 ?",
+    "a": "Rédiger un rapport, former une communauté d'analystes (prioriser, se répartir les 6 étapes, se présenter les travaux), organiser des séminaires réguliers, dont certains pour les non-techniciens."
+   }
+  },
+  {
+   "id": "mq-p07",
+   "part": "Davenport et Kim, chapitre 6 : devenir un bon analyste quantitatif",
+   "anchor": "les-deux-exemples-finaux-analyses-avec-les-6-etapes",
+   "title": "Les deux exemples finaux",
+   "qcm": [
+    {
+     "id": "mq-p07-q1",
+     "q": "Sur quelles étapes Nuri s'est-elle préparée pour obtenir sa bourse ?",
+     "choices": [
+      "La collecte (4) et l'analyse (5)",
+      "Le framing (1) et la revue (2)",
+      "La présentation (6)",
+      "Toutes sauf l'analyse"
+     ],
+     "answer": 0,
+     "explain": "Ce sont les étapes que font surtout les doctorants : stats, SPSS, lecture de 20 articles."
+    },
+    {
+     "id": "mq-p07-q2",
+     "q": "Quelle statistique Morey utilise-t-il pour évaluer Battier ?",
+     "choices": [
+      "Le plus/minus ajusté par régression",
+      "Les points par match",
+      "Les rebonds",
+      "Le salaire"
+     ],
+     "answer": 0,
+     "explain": "+8 en 2006-2007, 17e de la ligue, pour un salaire moyen."
+    },
+    {
+     "id": "mq-p07-q3",
+     "q": "Quel a été le résultat du transfert de Battier ?",
+     "choices": [
+      "Les Rockets passent de 34-48 à 52-30",
+      "Les Rockets perdent plus de matchs",
+      "Battier est renvoyé",
+      "Aucun effet mesurable"
+     ],
+     "answer": 0,
+     "explain": "Puis 55-27 avec 22 victoires d'affilée."
+    }
+   ],
+   "open": {
+    "q": "Pourquoi les statistiques individuelles de Battier étaient-elles trompeuses ?",
+    "a": "Il tournait autour de 10 points et moins de 5 rebonds par match, mais son équipe jouait mieux quand il était sur le terrain : au basket, la performance individuelle explique mal celle de l'équipe."
+   }
+  }
+ ],
+ "retired": []
+}

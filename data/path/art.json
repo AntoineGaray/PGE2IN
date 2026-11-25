@@ -1,0 +1,871 @@
+{
+ "subject": "art",
+ "updated": "2026-11-25",
+ "steps": [
+  {
+   "id": "art-p01",
+   "part": "Chine : des origines aux Han",
+   "anchor": "les-origines-mythiques",
+   "title": "Les origines mythiques",
+   "qcm": [
+    {
+     "id": "art-p01-q1",
+     "q": "Que signifie Zhong Guo (中国), le nom de la Chine ?",
+     "choices": [
+      "Le Royaume du Milieu",
+      "L'Empire céleste",
+      "La terre jaune",
+      "Le pays des Han"
+     ],
+     "answer": 0,
+     "explain": "La Chine se définit par sa culture plutôt que par un territoire."
+    },
+    {
+     "id": "art-p01-q2",
+     "q": "Qui est Huang Di ?",
+     "choices": [
+      "L'Empereur jaune, empereur mythique vers 2700 av. J.-C.",
+      "Le premier empereur Qin",
+      "Le fondateur des Han",
+      "Un philosophe taoïste"
+     ],
+     "answer": 0,
+     "explain": "Les slides le présentent avec Yan Di et montrent son mausolée."
+    },
+    {
+     "id": "art-p01-q3",
+     "q": "Comment considère-t-on aujourd'hui la dynastie Xia ?",
+     "choices": [
+      "Comme semi-légendaire",
+      "Comme la plus longue dynastie",
+      "Comme la première dynastie non Han",
+      "Comme une dynastie mongole"
+     ],
+     "answer": 0,
+     "explain": "Vers 2000-1600 av. J.-C."
+    }
+   ],
+   "open": {
+    "q": "Pourquoi parle-t-on de « 5 000 ans de civilisation » chinoise plutôt que d'un territoire ?",
+    "a": "Parce que les frontières ont changé en permanence : la Chine se définit par sa culture plutôt que par un territoire."
+   }
+  },
+  {
+   "id": "art-p02",
+   "part": "Chine : des origines aux Han",
+   "anchor": "dynastie-shang-1600-xie-s-av-j-c-la-civilisation-de-l-ecritu",
+   "title": "Dynastie Shang",
+   "qcm": [
+    {
+     "id": "art-p02-q1",
+     "q": "Sur quoi trouve-t-on la plus ancienne trace d'écriture chinoise ?",
+     "choices": [
+      "Des carapaces de tortue et des omoplates de bœuf (inscriptions oraculaires)",
+      "Des rouleaux de soie",
+      "Des lamelles de bambou",
+      "Des tablettes d'argile"
+     ],
+     "answer": 0,
+     "explain": "Sous les Shang (1600 – XIe s. av. J.-C.)."
+    },
+    {
+     "id": "art-p02-q2",
+     "q": "Quels arts caractérisent les Shang ?",
+     "choices": [
+      "Les bronzes et le jade sculpté",
+      "La céramique bleu et blanc",
+      "L'Opéra de Pékin",
+      "Les laques et la peinture sur soie"
+     ],
+     "answer": 0,
+     "explain": "Ils révèlent des progrès techniques et une main-d'œuvre spécialisée nombreuse."
+    },
+    {
+     "id": "art-p02-q3",
+     "q": "Que prouve le fait que l'écriture Shang soit encore lisible aujourd'hui ?",
+     "choices": [
+      "Une culture commune très ancienne",
+      "Que l'écriture n'a jamais changé de forme",
+      "Que les Shang étaient tous alphabétisés",
+      "Que l'écriture vient du Japon"
+     ],
+     "answer": 0,
+     "explain": "Les caractères, d'abord très pictographiques, sont devenus abstraits."
+    }
+   ],
+   "open": {
+    "q": "Que révèle l'art des Shang sur leur société ?",
+    "a": "Des progrès techniques (extraction minière, assemblage du bronze) et une main-d'œuvre spécialisée nombreuse."
+   }
+  },
+  {
+   "id": "art-p03",
+   "part": "Chine : des origines aux Han",
+   "anchor": "dynastie-zhou-vers-1050-256-av-j-c-la-plus-longue",
+   "title": "Dynastie Zhou",
+   "qcm": [
+    {
+     "id": "art-p03-q1",
+     "q": "Qu'est-ce que le Mandat du Ciel (Tian) ?",
+     "choices": [
+      "La justification du pouvoir par un mandat céleste, au nom de la supériorité morale",
+      "Un traité de paix avec les Shang",
+      "Le nom de la capitale Zhou",
+      "Un code de lois écrit"
+     ],
+     "answer": 0,
+     "explain": "Ce principe légitimera le pouvoir impérial jusqu'au XXe siècle."
+    },
+    {
+     "id": "art-p03-q2",
+     "q": "Combien de temps les Zhou restent-ils au pouvoir ?",
+     "choices": [
+      "Près de 8 siècles",
+      "Environ 4 siècles",
+      "Moins de 40 ans",
+      "15 ans"
+     ],
+     "answer": 0,
+     "explain": "C'est la plus longue dynastie."
+    },
+    {
+     "id": "art-p03-q3",
+     "q": "Qui fonde le taoïsme, avec le yin et le yang ?",
+     "choices": [
+      "Lao Zi",
+      "Confucius",
+      "Qin Shi Huang",
+      "Liu Bang"
+     ],
+     "answer": 0,
+     "explain": "Il faut suivre le Dao, la voie. C'est encore la plus grande religion née en Chine."
+    },
+    {
+     "id": "art-p03-q4",
+     "q": "La pensée de Confucius fonde…",
+     "choices": [
+      "Une forme de méritocratie au cœur du système social chinois",
+      "Le taoïsme",
+      "Le bouddhisme chinois",
+      "L'école légiste des Qin"
+     ],
+     "answer": 0,
+     "explain": "Attention : Confucius (551-479 av. J.-C.) a vécu juste avant la période des Royaumes combattants."
+    }
+   ],
+   "open": {
+    "q": "Pourquoi la période des Royaumes combattants est-elle un paradoxe ?",
+    "a": "Le pouvoir central s'affaiblit et les seigneurs s'affrontent, et pourtant c'est un âge d'or de la philosophie."
+   }
+  },
+  {
+   "id": "art-p04",
+   "part": "Chine : des origines aux Han",
+   "anchor": "dynastie-qin-221-206-av-j-c-le-modele-de-l-empire",
+   "title": "Dynastie Qin",
+   "qcm": [
+    {
+     "id": "art-p04-q1",
+     "q": "En quelle année Ying Zheng devient-il Qin Shi Huang Di, « le premier empereur » ?",
+     "choices": [
+      "221 av. J.-C.",
+      "246 av. J.-C.",
+      "206 av. J.-C.",
+      "202 av. J.-C."
+     ],
+     "answer": 0,
+     "explain": "En 246 il devient roi à 13 ans ; en 221 il soumet le dernier État (Qi)."
+    },
+    {
+     "id": "art-p04-q2",
+     "q": "Quel héritage de sa quête d'immortalité a été découvert au XXe siècle ?",
+     "choices": [
+      "L'armée de terre cuite, près de Xi'an",
+      "La Cité interdite",
+      "Le Grand Canal",
+      "Le mausolée de l'Empereur jaune"
+     ],
+     "answer": 0,
+     "explain": "La quête est un échec, mais elle laisse ce site."
+    },
+    {
+     "id": "art-p04-q3",
+     "q": "Quelle mesure des Qin favorise aussi le commerce ?",
+     "choices": [
+      "L'unification de l'écriture",
+      "La route de la soie",
+      "L'ouverture aux Européens",
+      "L'interdiction du commerce"
+     ],
+     "answer": 0,
+     "explain": "L'écriture Qin est imposée partout."
+    }
+   ],
+   "open": {
+    "q": "Quel est l'héritage politique des Qin ?",
+    "a": "Une administration ultra-centralisée et efficace (grands travaux, Grande Muraille), la méritocratie et l'école légiste, et l'unification de l'écriture."
+   }
+  },
+  {
+   "id": "art-p05",
+   "part": "Chine : des origines aux Han",
+   "anchor": "dynastie-han-202-av-j-c-220-apr-j-c-le-cur-de-la-culture-chi",
+   "title": "Dynastie Han",
+   "qcm": [
+    {
+     "id": "art-p05-q1",
+     "q": "Sous quel empereur le confucianisme devient-il l'idéologie officielle unique ?",
+     "choices": [
+      "Wu",
+      "Liu Bang",
+      "Qin Shi Huang",
+      "Kangxi"
+     ],
+     "answer": 0,
+     "explain": "Jusqu'à la chute des Qing en 1912."
+    },
+    {
+     "id": "art-p05-q2",
+     "q": "Qui sont les Xiongnu ?",
+     "choices": [
+      "Une fédération de tribus semi-nomades du nord",
+      "Les fondateurs des Han",
+      "Des marchands de la route de la soie",
+      "Des moines bouddhistes"
+     ],
+     "answer": 0,
+     "explain": "Ils battent les Han et leur imposent de lourds tributs."
+    },
+    {
+     "id": "art-p05-q3",
+     "q": "Par quelle voie le bouddhisme entre-t-il en Chine ?",
+     "choices": [
+      "La route de la soie",
+      "La mer, avec Zheng He",
+      "Le Japon",
+      "La Corée"
+     ],
+     "answer": 0,
+     "explain": "Il se diffuse ensuite dans toute l'Asie de l'Est."
+    },
+    {
+     "id": "art-p05-q4",
+     "q": "Comment s'appelle le vêtement traditionnel Han, revenu à la mode ?",
+     "choices": [
+      "Le Hanfu",
+      "Le Hanzi",
+      "Le Hanyu",
+      "Le kimono"
+     ],
+     "answer": 0,
+     "explain": "Hanzi = les caractères ; Hanyu = la langue."
+    }
+   ],
+   "open": {
+    "q": "Pourquoi la route de la soie est-elle qualifiée de « première mondialisation » ?",
+    "a": "Parce que c'est un réseau de commerce à grande échelle, centré sur la Chine, ouvert vers l'Asie centrale sous l'empereur Wu ; il fait aussi circuler les idées, comme le bouddhisme."
+   }
+  },
+  {
+   "id": "art-p06",
+   "part": "Chine : des Six Dynasties aux Ming",
+   "anchor": "de-la-chute-des-han-aux-song",
+   "title": "De la chute des Han aux Song",
+   "qcm": [
+    {
+     "id": "art-p06-q1",
+     "q": "Quelle dynastie construit le Grand Canal ?",
+     "choices": [
+      "Sui",
+      "Tang",
+      "Song",
+      "Han"
+     ],
+     "answer": 0,
+     "explain": "Les Sui réunifient vite par les armes, comme les Qin."
+    },
+    {
+     "id": "art-p06-q2",
+     "q": "Quelle dynastie connaît l'imprimerie et le théâtre ?",
+     "choices": [
+      "Song",
+      "Sui",
+      "Tang",
+      "Yuan"
+     ],
+     "answer": 0,
+     "explain": "Les Song sont ensuite vaincus par les Mongols."
+    },
+    {
+     "id": "art-p06-q3",
+     "q": "Pourquoi les Tang déclinent-ils ?",
+     "choices": [
+      "Les empereurs se désintéressent du pouvoir",
+      "Une invasion mongole",
+      "L'hyperinflation",
+      "Les guerres de l'opium"
+     ],
+     "answer": 0,
+     "explain": "Ils avaient connu un nouvel âge d'or des arts."
+    }
+   ],
+   "open": {
+    "q": "Décris le cycle de l'histoire chinoise vu en cours.",
+    "a": "Un empire unifié et brillant, un déclin, une division, puis une réunification par la force. Les Sui répètent les Qin, les Tang répètent les Han."
+   }
+  },
+  {
+   "id": "art-p07",
+   "part": "Chine : des Six Dynasties aux Ming",
+   "anchor": "dynastie-yuan-1279-1368-la-chine-sous-les-mongols",
+   "title": "Dynastie Yuan",
+   "qcm": [
+    {
+     "id": "art-p07-q1",
+     "q": "Qui fonde la dynastie Yuan en battant les Song en 1279 ?",
+     "choices": [
+      "Kubilaï Khan, petit-fils de Gengis Khan",
+      "Gengis Khan",
+      "Hongwu",
+      "Marco Polo"
+     ],
+     "answer": 0,
+     "explain": "C'est la première dynastie non Han."
+    },
+    {
+     "id": "art-p07-q2",
+     "q": "Pourquoi les peintres s'isolent-ils du pouvoir sous les Yuan ?",
+     "choices": [
+      "Ils refusent de travailler pour l'envahisseur",
+      "L'art est interdit",
+      "Ils partent en Europe",
+      "Ils deviennent moines"
+     ],
+     "answer": 0,
+     "explain": "Sous les Tang et les Song, l'art était contrôlé et encouragé par l'État."
+    },
+    {
+     "id": "art-p07-q3",
+     "q": "Quelle céramique apparaît sous les Yuan ?",
+     "choices": [
+      "La céramique bleu et blanc",
+      "Les céladons",
+      "La porcelaine kraak de Delft",
+      "Le jade sculpté"
+     ],
+     "answer": 0,
+     "explain": "Elle deviendra un succès mondial sous les Ming."
+    }
+   ],
+   "open": {
+    "q": "Quel rôle joue Marco Polo ?",
+    "a": "Il visite la Chine et devient conseiller et ambassadeur de Kubilaï."
+   }
+  },
+  {
+   "id": "art-p08",
+   "part": "Chine : des Six Dynasties aux Ming",
+   "anchor": "dynastie-ming-1368-1644-les-derniers-empereurs-han",
+   "title": "Dynastie Ming",
+   "qcm": [
+    {
+     "id": "art-p08-q1",
+     "q": "Quel empereur Ming installe la capitale à Pékin et construit la Cité interdite ?",
+     "choices": [
+      "Yongle",
+      "Hongwu",
+      "Wanli",
+      "Kangxi"
+     ],
+     "answer": 0,
+     "explain": "Il reconstruit aussi la Grande Muraille et lance les expéditions de Zheng He."
+    },
+    {
+     "id": "art-p08-q2",
+     "q": "Qui mène les expéditions maritimes vers l'Asie du Sud-Est et l'Afrique de l'Est ?",
+     "choices": [
+      "L'eunuque Zheng He",
+      "Marco Polo",
+      "Kubilaï Khan",
+      "Le commodore Perry"
+     ],
+     "answer": 0,
+     "explain": "Sous Yongle."
+    },
+    {
+     "id": "art-p08-q3",
+     "q": "Quelle cause du déclin des Ming apparaît sous Wanli ?",
+     "choices": [
+      "L'hyperinflation due à la dépendance à l'argent métal importé",
+      "La guerre de l'opium",
+      "L'invasion japonaise",
+      "La fermeture totale du pays"
+     ],
+     "answer": 0,
+     "explain": "Puis famines au XVIIe siècle et montée des Mandchous."
+    }
+   ],
+   "open": {
+    "q": "Pourquoi la céramique est-elle un enjeu économique sous les Ming ?",
+    "a": "Au XVIe siècle, les Ming ouvrent des comptoirs aux Espagnols, Portugais et Hollandais, et la céramique (bleu et blanc) est l'un des produits chinois les plus vendus en Europe."
+   }
+  },
+  {
+   "id": "art-p09",
+   "part": "Chine : des Six Dynasties aux Ming",
+   "anchor": "complement-pour-l-expose-ming-hors-resume-du-prof",
+   "title": "Complément : la porcelaine bleu et blanc",
+   "qcm": [
+    {
+     "id": "art-p09-q1",
+     "q": "Avec quoi décore-t-on la porcelaine bleu et blanc ?",
+     "choices": [
+      "Le bleu de cobalt, importé de Perse au départ",
+      "L'indigo",
+      "Le lapis-lazuli",
+      "Le bleu de Prusse"
+     ],
+     "answer": 0,
+     "explain": "Sous une glaçure transparente.",
+     "flag": "Complément"
+    },
+    {
+     "id": "art-p09-q2",
+     "q": "Où est-elle produite en masse ?",
+     "choices": [
+      "Dans les fours impériaux de Jingdezhen",
+      "À Delft",
+      "À Xi'an",
+      "À Canton"
+     ],
+     "answer": 0,
+     "explain": "Delft la copiera en Europe.",
+     "flag": "Complément"
+    }
+   ],
+   "open": {
+    "q": "Comment la porcelaine arrive-t-elle en Europe ?",
+    "a": "Par les Portugais, puis par la Compagnie néerlandaise des Indes orientales (porcelaine « kraak ») ; elle est ensuite copiée en Europe, par exemple à Delft."
+   },
+   "flag": "Complément"
+  },
+  {
+   "id": "art-p10",
+   "part": "Chine : des Qing à aujourd'hui",
+   "anchor": "dynastie-qing-1644-1912-la-derniere-dynastie",
+   "title": "Dynastie Qing",
+   "qcm": [
+    {
+     "id": "art-p10-q1",
+     "q": "Qui fonde la dynastie Qing en 1644 ?",
+     "choices": [
+      "Les Mandchous",
+      "Les Mongols",
+      "Les Han",
+      "Les Japonais"
+     ],
+     "answer": 0,
+     "explain": "Ils prennent Pékin et la Cité interdite."
+    },
+    {
+     "id": "art-p10-q2",
+     "q": "Sous quel empereur les Qing atteignent-ils leur apogée (10 grandes campagnes) ?",
+     "choices": [
+      "Qianlong",
+      "Shunzhi",
+      "Kangxi",
+      "Cixi"
+     ],
+     "answer": 0,
+     "explain": "La population atteint 400 millions à sa mort."
+    },
+    {
+     "id": "art-p10-q3",
+     "q": "Pourquoi les Qing pratiquent-ils l'isolationnisme économique ?",
+     "choices": [
+      "Pour éviter la dépendance qui a fait tomber les Ming",
+      "Par manque de produits à vendre",
+      "Sur ordre des Britanniques",
+      "À cause du bouddhisme"
+     ],
+     "answer": 0,
+     "explain": "Le commerce n'est autorisé que dans des zones contrôlées comme Canton."
+    },
+    {
+     "id": "art-p10-q4",
+     "q": "Pourquoi les guerres de l'opium (1839-1842 et 1856-1860) ?",
+     "choices": [
+      "Les Britanniques veulent vendre leur opium, les Qing refusent",
+      "Les Qing envahissent l'Inde",
+      "Le Japon attaque la Chine",
+      "Une révolte paysanne"
+     ],
+     "answer": 0,
+     "explain": "Le déséquilibre commercial irritait déjà la Grande-Bretagne."
+    }
+   ],
+   "open": {
+    "q": "Comment et quand tombent les Qing ?",
+    "a": "En 1912, après la révolution Xinhai et la proclamation de la République de Chine ; la Chine entre dans le XXe siècle isolée et en retard."
+   }
+  },
+  {
+   "id": "art-p11",
+   "part": "Chine : des Qing à aujourd'hui",
+   "anchor": "republique-et-revolution-communiste",
+   "title": "République et révolution communiste",
+   "qcm": [
+    {
+     "id": "art-p11-q1",
+     "q": "Qui préside la République de Chine et tente un régime parlementaire ?",
+     "choices": [
+      "Sun Yat-sen",
+      "Mao Zedong",
+      "Cixi",
+      "Xi Jinping"
+     ],
+     "answer": 0,
+     "explain": "Les nationalistes affrontent ensuite le mouvement communiste de Mao."
+    },
+    {
+     "id": "art-p11-q2",
+     "q": "Que se passe-t-il en 1949 ?",
+     "choices": [
+      "Victoire des communistes, les nationalistes se replient à Taïwan",
+      "Le Japon envahit la Mandchourie",
+      "Fin de la Révolution culturelle",
+      "Chute des Qing"
+     ],
+     "answer": 0,
+     "explain": "La Chine est dirigée depuis par le PCC."
+    },
+    {
+     "id": "art-p11-q3",
+     "q": "Contre quoi luttent les Gardes rouges pendant la Révolution culturelle ?",
+     "choices": [
+      "Les « Quatre Vieilleries »",
+      "Les Japonais",
+      "Les nationalistes",
+      "Les Britanniques"
+     ],
+     "answer": 0,
+     "explain": "Vieilles idées, culture, coutumes et habitudes. Dates 1966-1976 : complément classique.",
+     "flag": "Complément"
+    }
+   ],
+   "open": {
+    "q": "Pourquoi la guerre civile est-elle mise en pause en 1936 ?",
+    "a": "Pour faire face au Japon, qui a envahi la Mandchourie en 1931 ; elle reprend après 1945."
+   }
+  },
+  {
+   "id": "art-p12",
+   "part": "Chine : des Qing à aujourd'hui",
+   "anchor": "la-chine-d-aujourd-hui",
+   "title": "La Chine d'aujourd'hui",
+   "qcm": [
+    {
+     "id": "art-p12-q1",
+     "q": "Quel artiste contemporain chinois est cité dans les slides ?",
+     "choices": [
+      "Yue Minjun, et ses autoportraits au rire figé",
+      "Hokusai",
+      "PSY",
+      "Zheng He"
+     ],
+     "answer": 0,
+     "explain": "Une scène qui mêle modernité, style ancien et critique sociale légère."
+    },
+    {
+     "id": "art-p12-q2",
+     "q": "Que se passe-t-il depuis 2013 avec Xi Jinping ?",
+     "choices": [
+      "Le retour du contrôle et une tentation isolationniste",
+      "Une ouverture totale",
+      "Le retour de l'Empire",
+      "La fin du PCC"
+     ],
+     "answer": 0,
+     "explain": "Après la période de réforme et d'ouverture."
+    }
+   ],
+   "open": {
+    "q": "Donne deux exemples de réappropriation de la culture ou de soft power chinois aujourd'hui.",
+    "a": "La mode du Hanfu (culture ancienne teintée de nationalisme), la science-fiction et le cinéma (soft power), l'art contemporain."
+   }
+  },
+  {
+   "id": "art-p13",
+   "part": "Japon : des Jomon à aujourd'hui",
+   "anchor": "les-grandes-periodes",
+   "title": "Les grandes périodes du Japon",
+   "qcm": [
+    {
+     "id": "art-p13-q1",
+     "q": "Que signifie « jomon » ?",
+     "choices": [
+      "Marque de corde",
+      "Terre du soleil",
+      "Peuple de l'île",
+      "Bronze ancien"
+     ],
+     "answer": 0,
+     "explain": "La poterie Jomon porte des motifs de cordes dans l'argile."
+    },
+    {
+     "id": "art-p13-q2",
+     "q": "Quelle période voit l'arrivée du bouddhisme au Japon ?",
+     "choices": [
+      "Asuka (538 – 794)",
+      "Heian (794 – 1185)",
+      "Yayoi",
+      "Edo"
+     ],
+     "answer": 0,
+     "explain": "Avec l'explosion de l'alphabétisation par les idéogrammes chinois."
+    },
+    {
+     "id": "art-p13-q3",
+     "q": "L'emaki de l'époque Heian est considéré comme…",
+     "choices": [
+      "L'ancêtre du manga",
+      "L'ancêtre du kabuki",
+      "Une céramique",
+      "Un château"
+     ],
+     "answer": 0,
+     "explain": "Rouleau peint qui intègre textes et dialogues au XIIe siècle."
+    },
+    {
+     "id": "art-p13-q4",
+     "q": "Quel shogunat gouverne pendant l'époque Edo ?",
+     "choices": [
+      "Tokugawa",
+      "Yamato",
+      "Meiji",
+      "Heian"
+     ],
+     "answer": 0,
+     "explain": "Basé à Edo (Tokyo), fermeture totale des années 1630 aux années 1850."
+    }
+   ],
+   "open": {
+    "q": "Explique le paradoxe d'Edo.",
+    "a": "La fermeture au monde a dopé l'art local : les artistes étaient soutenus par une classe marchande enrichie, et la gravure sur bois rendait les œuvres accessibles à grande échelle."
+   }
+  },
+  {
+   "id": "art-p14",
+   "part": "Japon : des Jomon à aujourd'hui",
+   "anchor": "la-fin-d-edo-et-meiji",
+   "title": "La fin d'Edo et Meiji",
+   "qcm": [
+    {
+     "id": "art-p14-q1",
+     "q": "Que se passe-t-il en 1853 ?",
+     "choices": [
+      "Une flotte américaine impose l'ouverture commerciale du Japon",
+      "Le Japon envahit la Corée",
+      "Début du shogunat Tokugawa",
+      "Hiroshima"
+     ],
+     "answer": 0,
+     "explain": "C'est le commodore Perry (complément classique)."
+    },
+    {
+     "id": "art-p14-q2",
+     "q": "Qu'est-ce que l'ère Meiji ?",
+     "choices": [
+      "Le retour de l'empereur et la modernisation du Japon",
+      "Une fermeture totale du pays",
+      "L'occupation américaine",
+      "Un shogunat militaire"
+     ],
+     "answer": 0,
+     "explain": "Le shogunat humilié rend le pouvoir à l'empereur."
+    }
+   ],
+   "open": {
+    "q": "Pourquoi le shogunat Tokugawa perd-il le pouvoir ?",
+    "a": "Humilié par l'ouverture imposée par la flotte américaine en 1853 (dans une économie déjà en déclin), il rend le pouvoir à l'empereur et à ses alliés : c'est le début de l'ère Meiji."
+   }
+  },
+  {
+   "id": "art-p15",
+   "part": "Japon : des Jomon à aujourd'hui",
+   "anchor": "l-expansion-militaire",
+   "title": "L'expansion militaire",
+   "qcm": [
+    {
+     "id": "art-p15-q1",
+     "q": "En 1894, le Japon bat la Chine des Qing et annexe…",
+     "choices": [
+      "Taïwan",
+      "La Corée",
+      "La Mandchourie",
+      "Hong Kong"
+     ],
+     "answer": 0,
+     "explain": "La Corée est contrôlée en 1910, la Mandchourie envahie en 1931."
+    },
+    {
+     "id": "art-p15-q2",
+     "q": "Quel événement de 1941 scelle l'avenir du Japon ?",
+     "choices": [
+      "L'attaque de Pearl Harbor",
+      "L'invasion de la Mandchourie",
+      "La victoire contre la Russie",
+      "Hiroshima"
+     ],
+     "answer": 0,
+     "explain": "Extension maximale en 1942, défaite en 1945."
+    }
+   ],
+   "open": {
+    "q": "Donne dans l'ordre 4 étapes de l'expansion militaire japonaise.",
+    "a": "1894 victoire contre les Qing (Taïwan), 1904-1905 victoire contre la Russie, 1910 contrôle de la Corée, 1931 Mandchourie, 1937 guerre sino-japonaise, 1941 Pearl Harbor, 1945 défaite."
+   }
+  },
+  {
+   "id": "art-p16",
+   "part": "Japon : des Jomon à aujourd'hui",
+   "anchor": "le-japon-sous-influence-americaine",
+   "title": "Le Japon sous influence américaine",
+   "qcm": [
+    {
+     "id": "art-p16-q1",
+     "q": "Quelle trace politique de l'influence américaine est inscrite dans la Constitution ?",
+     "choices": [
+      "Le pacifisme",
+      "Le fédéralisme",
+      "Le régime présidentiel",
+      "Le bipartisme"
+     ],
+     "answer": 0,
+     "explain": "Fortes influences politiques, économiques et culturelles."
+    },
+    {
+     "id": "art-p16-q2",
+     "q": "Quel exemple de soft power japonais cite le cours ?",
+     "choices": [
+      "Nintendo",
+      "Toyota",
+      "Sony",
+      "Uniqlo"
+     ],
+     "answer": 0,
+     "explain": "Avec la culture manga."
+    }
+   ],
+   "open": {
+    "q": "Quel exposé de la classe porte sur cette période ?",
+    "a": "« Manga Culture and US occupation after WWII » (séance 6)."
+   }
+  },
+  {
+   "id": "art-p17",
+   "part": "Corée et Inde",
+   "anchor": "coree-grandir-entre-la-chine-et-le-japon",
+   "title": "Corée",
+   "qcm": [
+    {
+     "id": "art-p17-q1",
+     "q": "Quelle dynastie donne son nom à la « Corée » ?",
+     "choices": [
+      "Goryeo",
+      "Joseon",
+      "Yamato",
+      "Silla"
+     ],
+     "answer": 0,
+     "explain": "918 – 1392, le bouddhisme est religion d'État.",
+     "flag": "Complément"
+    },
+    {
+     "id": "art-p17-q2",
+     "q": "Qui crée l'alphabet hangeul ?",
+     "choices": [
+      "Le roi Sejong, sous Joseon",
+      "Kubilaï Khan",
+      "Le roi Goryeo",
+      "PSY"
+     ],
+     "answer": 0,
+     "explain": "1443-1446 ; le néo-confucianisme remplace le bouddhisme.",
+     "flag": "Complément"
+    },
+    {
+     "id": "art-p17-q3",
+     "q": "Comment s'appelle la vague culturelle coréenne ?",
+     "choices": [
+      "La Hallyu",
+      "La K-wave",
+      "Le Hanfu",
+      "Le Joseon"
+     ],
+     "answer": 0,
+     "explain": "Gangnam Style, K-pop, cinéma (Parasite).",
+     "flag": "Complément"
+    }
+   ],
+   "open": {
+    "q": "Quelle est la question du syllabus sur la Corée ?",
+    "a": "Comment la Corée est-elle devenue l'un des pays les plus influents du divertissement mondial ?"
+   },
+   "flag": "Complément"
+  },
+  {
+   "id": "art-p18",
+   "part": "Corée et Inde",
+   "anchor": "inde-un-geant-culturel-et-artistique",
+   "title": "Inde",
+   "qcm": [
+    {
+     "id": "art-p18-q1",
+     "q": "Quel empereur Maurya diffuse le bouddhisme dans toute l'Asie ?",
+     "choices": [
+      "Ashoka",
+      "Shah Jahan",
+      "Siddhartha Gautama",
+      "Gandhi"
+     ],
+     "answer": 0,
+     "explain": "Piliers et édits, stupa de Sanchi.",
+     "flag": "Complément"
+    },
+    {
+     "id": "art-p18-q2",
+     "q": "Qui fait construire le Taj Mahal ?",
+     "choices": [
+      "Shah Jahan, pour son épouse Mumtaz Mahal",
+      "Ashoka",
+      "La East India Company",
+      "Le sultan de Delhi"
+     ],
+     "answer": 0,
+     "explain": "XVIIe siècle, empire moghol ; les slides le placent dans la partie sultanat.",
+     "flag": "Complément"
+    },
+    {
+     "id": "art-p18-q3",
+     "q": "Comment McDonald's s'est-il adapté à l'Inde ?",
+     "choices": [
+      "Un menu sans bœuf ni porc, des options végétariennes, le Maharaja Mac au poulet",
+      "Des prix plus élevés qu'en Europe",
+      "Le même menu qu'aux États-Unis",
+      "Uniquement des livraisons"
+     ],
+     "answer": 0,
+     "explain": "Exposé de la séance 7, lien culture-business.",
+     "flag": "Complément"
+    }
+   ],
+   "open": {
+    "q": "Quelle période couvre le British Raj, et comment se termine-t-il ?",
+    "a": "1858 – 1947 : la couronne britannique gouverne directement l'Inde, jusqu'à l'indépendance avec Gandhi (non-violence, marche du sel en 1930), puis la partition Inde-Pakistan."
+   },
+   "flag": "Complément"
+  }
+ ],
+ "retired": []
+}
