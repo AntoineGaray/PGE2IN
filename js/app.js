@@ -77,13 +77,19 @@
 
   async function recordSession(subject, mode, correct, total, wrongIds, rightIds) {
     // Points locaux (mode invité) et journal d'activité
-    const pts = mode === "cards" ? 2 * correct : mode === "daily" ? 20 * correct : 10 * correct;
+    // Parcours guidé : 10 pts par question réussie pour la première fois (le serveur fait foi)
+    const scored = store.get("pathScored", {});
+    const pts = mode === "cards" ? 2 * correct : mode === "daily" ? 20 * correct
+      : mode === "path" ? 10 * rightIds.filter((id) => !scored[id]).length : 10 * correct;
     const log = store.get("log", []);
     log.push({ t: now(), s: subject, m: mode, c: correct, n: total, p: pts });
     store.set("log", log.slice(-500));
     if (!online() || total === 0) return pts;
     const payload = { p_subject: subject, p_mode: mode, p_correct: correct, p_total: Math.min(total, 60), p_wrong: wrongIds.slice(0, 60), p_right: rightIds.slice(0, 60) };
-    try { await rpc("rpc_record", Object.assign({ p_token: session.token }, payload)); leaderboardCache = null; }
+    try {
+      const srv = await rpc("rpc_record", Object.assign({ p_token: session.token }, payload)); leaderboardCache = null;
+      if (mode === "path" && typeof srv === "number") return srv;
+    }
     catch (e) {
       if (!e.server) { queuePush(payload); toast("Hors ligne : résultat gardé, il sera envoyé plus tard."); }
       else { toast(e.message, 4000); if (mode === "daily") return 0; }
@@ -136,7 +142,7 @@
   function srsGet() { return store.get("srs", {}); }
   function srsSet(srs) { store.set("srs", srs); }
   // État synchronisé entre appareils : chaque entrée porte un horodatage u, la plus récente gagne.
-  const SYNC_KEYS = ["srs", "conf", "check"];
+  const SYNC_KEYS = ["srs", "conf", "check", "path"];
   async function srsSync() {
     if (!online()) return;
     try {
@@ -246,6 +252,7 @@
       if (parts[0] === "s" && parts[2] === "fiche") return viewFiche(parts[1], params);
       if (parts[0] === "s" && parts[2] === "exam") return viewExam(parts[1], params);
       if (parts[0] === "s" && parts[2] === "vocab") return viewVocab(parts[1], params);
+      if (parts[0] === "s" && parts[2] === "path") return params.get("step") ? viewPathStep(parts[1], params.get("step")) : viewPath(parts[1]);
       if (parts[0] === "errors" && parts[1] === "quiz") return viewErrorQuiz(params);
       if (parts[0] === "errors") return viewErrors();
       if (parts[0] === "lb") return viewLeaderboard(params);
@@ -413,7 +420,9 @@
       ${d.warning ? `<div class="notice">${esc(d.warning)}</div>` : ""}
       <div class="panel">
         <h3>Réviser toute la matière</h3>
+        ${s.path ? `<p class="small muted steps-line">Méthode en 3 étapes : <b>1. Parcours guidé</b> (lire puis se tester, sous-partie par sous-partie) → <b>2. Quiz et flashcards</b> → <b>3. Partiel type</b> avec corrigé.</p>` : ""}
         <div class="actions">
+          ${s.path ? `<a class="btn path-btn" href="#/s/${id}/path">🧭 Parcours guidé · étape 1</a>` : ""}
           ${s.fiche ? `<a class="btn fiche-btn" href="#/s/${id}/fiche">📄 Fiche de cours</a>` : ""}
           ${s.exam ? `<a class="btn exam-btn" href="#/s/${id}/exam">📝 Partiel type</a>` : ""}
           ${(await getGlossary())[id] ? `<a class="btn vocab-btn" href="#/s/${id}/vocab">🔤 Vocabulaire FR → EN</a>` : ""}
@@ -785,6 +794,238 @@
     render();
   }
 
+  // ---------- Parcours guidé (étape 1 de révision) ----------
+  // data/path/<matière>.json : { steps: [{ id, part, anchor, title, qcm: [{id, q, choices, answer, explain, flag?}], open: {q, a} }] }
+  // Chaque question rapporte 10 pts une seule fois, à la première bonne réponse (règle vérifiée par le serveur).
+  // pge2.path[stepId] = { best, n, self, u } · pge2.pathScored[qid] = 1
+  const pathCache = {};
+  async function loadPath(id) {
+    if (pathCache[id]) return pathCache[id];
+    const s = subjOf(id);
+    if (!s || !s.path) throw new Error("Parcours introuvable");
+    const r = await fetch("data/" + s.path, { cache: "no-cache" });
+    if (!r.ok) throw new Error("Parcours introuvable");
+    pathCache[id] = await r.json();
+    return pathCache[id];
+  }
+  async function loadFicheData(id) {
+    const s = subjOf(id);
+    if (!s || !s.fiche) return null;
+    if (!ficheCache[id]) {
+      const r = await fetch("data/" + s.fiche, { cache: "no-cache" });
+      if (!r.ok) return null;
+      ficheCache[id] = await r.json();
+    }
+    return ficheCache[id];
+  }
+  let pathScoredSynced = false;
+  async function syncPathScored() {
+    if (!online() || pathScoredSynced) return;
+    try {
+      const ids = await rpc("rpc_path_scored", { p_token: session.token });
+      const sc = store.get("pathScored", {});
+      (ids || []).forEach((q) => { sc[q] = 1; });
+      store.set("pathScored", sc); pathScoredSynced = true;
+    } catch (e) { /* pas encore activé ou hors ligne */ }
+  }
+  // Extrait de la fiche détaillée : du titre de la sous-partie jusqu'au titre suivant
+  function ficheExcerpt(f, anchor) {
+    if (!f) return null;
+    const tab = f.tabs.find((t) => t.key === "detaillee") || f.tabs[0];
+    const box = document.createElement("div"); box.innerHTML = tab.html;
+    const h = box.querySelector("#" + CSS.escape(anchor));
+    if (!h) return null;
+    const out = document.createElement("div");
+    let n = h.nextElementSibling;
+    while (n && !/^H[23]$/.test(n.tagName)) { out.appendChild(n.cloneNode(true)); n = n.nextElementSibling; }
+    if (/class="katex/.test(out.innerHTML)) ensureKatexCss();
+    return { html: out.innerHTML, words: (out.textContent || "").split(/\s+/).filter(Boolean).length };
+  }
+  // Temps de lecture conseillé : environ 2 fois le temps de lecture, entre 2 et 8 minutes, arrondi à 30 s
+  const readSeconds = (words) => Math.min(480, Math.max(120, Math.round((words / 200) * 2 * 60 / 30) * 30));
+  const stepDone = (st, scored) => st.qcm.every((q) => scored[q.id]);
+
+  async function viewPath(id) {
+    const s = subjOf(id);
+    if (!s || !s.path) { location.hash = "#/s/" + id; return; }
+    $app.innerHTML = `<p class="muted">Chargement du parcours…</p>`;
+    const p = await loadPath(id);
+    await syncPathScored();
+    const scored = store.get("pathScored", {}), prog = store.get("path", {});
+    const total = p.steps.length, done = p.steps.filter((st) => stepDone(st, scored)).length;
+    const nQ = p.steps.reduce((a, st) => a + st.qcm.length, 0);
+    const won = p.steps.reduce((a, st) => a + st.qcm.filter((q) => scored[q.id]).length, 0);
+    const next = p.steps.find((st) => !stepDone(st, scored));
+    const parts = [];
+    p.steps.forEach((st, n) => {
+      let g = parts.find((x) => x.part === st.part);
+      if (!g) { g = { part: st.part, steps: [] }; parts.push(g); }
+      g.steps.push([st, n]);
+    });
+    $app.innerHTML = `
+      <p><a href="#/s/${id}" class="small muted">← ${esc(s.short)}</a></p>
+      <h1>🧭 Parcours guidé</h1>
+      <p class="muted">${esc(s.name)} · étape 1 de révision. Pour chaque sous-partie, dans l'ordre du cours : tu lis l'extrait de la fiche (temps conseillé, tu peux passer), puis tu réponds sans le texte sous les yeux.</p>
+      <div class="panel path-summary">
+        <div><b>${done} / ${total}</b> sous-parties terminées · <b>${won} / ${nQ}</b> questions gagnées</div>
+        <div class="progress" style="margin:10px 0"><i style="width:${total ? (done / total) * 100 : 0}%"></i></div>
+        <p class="small muted" style="margin:0 0 10px">Chaque question rapporte <b>10 points une seule fois</b>, la première fois que tu y réponds juste. Tu peux refaire une sous-partie autant que tu veux, sans points en plus.</p>
+        <div class="actions" style="margin-top:0">${next ? `<a class="btn accent" href="#/s/${id}/path?step=${next.id}">${done ? "Continuer" : "Commencer"} : ${esc(next.title)} →</a>` : `<span class="pill ok">Parcours terminé ✓</span> <a class="btn" href="#/s/${id}/quiz">Passer à l'étape 2 : quiz</a>`}</div>
+      </div>
+      ${parts.map((g) => `<h2 class="path-part">${esc(g.part)}</h2><div class="chapters">${g.steps.map(([st, n]) => {
+        const ok = st.qcm.filter((q) => scored[q.id]).length, fin = ok === st.qcm.length, pr = prog[st.id];
+        return `<a class="chap path-row ${fin ? "ready" : ""}" href="#/s/${id}/path?step=${st.id}">
+          <div class="t"><span class="path-n">${n + 1}</span> <b>${esc(st.title)}</b>${st.flag ? `<span class="flag">${esc(st.flag)}</span>` : ""}<br>
+          <span class="muted small">${st.qcm.length} questions${pr ? " · déjà faite" : ""}</span></div>
+          <span class="pill ${fin ? "ok" : ok ? "due" : ""}">${fin ? "✓ " : ""}${ok}/${st.qcm.length}</span></a>`;
+      }).join("")}</div>`).join("")}
+      <p class="small muted" style="margin-top:16px">Les questions viennent de la fiche de cours. Celles marquées « Complément » portent sur un élément de la fiche qui n'est pas directement dans les slides du prof.</p>`;
+  }
+
+  async function viewPathStep(id, stepId) {
+    const s = subjOf(id);
+    if (!s || !s.path) { location.hash = "#/s/" + id; return; }
+    $app.innerHTML = `<p class="muted">Chargement…</p>`;
+    const p = await loadPath(id);
+    const idx = p.steps.findIndex((st) => st.id === stepId);
+    if (idx < 0) { location.hash = "#/s/" + id + "/path"; return; }
+    const st = p.steps[idx], nextSt = p.steps[idx + 1];
+    const ex = ficheExcerpt(await loadFicheData(id), st.anchor);
+    const back = "#/s/" + id + "/path";
+    const head = (sub) => `<p><a href="${back}" class="small muted">← Parcours guidé</a></p>
+      <div class="qhead"><span>${esc(s.short)} · ${esc(st.part)}</span><span>Sous-partie ${idx + 1} / ${p.steps.length}</span></div>
+      <h1 class="path-title">${esc(st.title)}</h1>${sub || ""}`;
+    let timer = null;
+    leaveGuard = () => { if (timer) clearInterval(timer); };
+
+    // 1. Lecture minutée
+    function renderRead() {
+      const secs = readSeconds(ex ? ex.words : 150);
+      let left = secs;
+      const fmt = (t) => Math.floor(t / 60) + ":" + String(t % 60).padStart(2, "0");
+      $app.innerHTML = head(`<p class="muted small">1. Lis et retiens · 2. Réponds sans le texte</p>`) + `
+        <div class="read-bar panel"><div><b id="read-left">${fmt(left)}</b> <span class="muted small">temps conseillé (${Math.round(secs / 60 * 2) / 2} min)</span></div>
+          <div class="progress" style="margin:8px 0 0"><i id="read-prog" style="width:0%"></i></div></div>
+        <div class="panel fiche path-excerpt">${ex ? ex.html : `<p class="muted">Extrait introuvable : ouvre la <a href="#/s/${id}/fiche">fiche de cours</a> à la partie « ${esc(st.title)} ».</p>`}</div>
+        <div class="actions"><button class="btn accent" id="go-q">J'ai fini, je passe aux questions →</button>
+          <button class="btn secondary" id="skip-q" title="Si tu connais déjà ou si tu veux seulement t'entraîner">Passer la lecture</button></div>`;
+      timer = setInterval(() => {
+        left--;
+        const el = document.getElementById("read-left");
+        if (!el) { clearInterval(timer); return; }
+        el.textContent = left > 0 ? fmt(left) : "Temps écoulé";
+        document.getElementById("read-prog").style.width = Math.min(100, ((secs - left) / secs) * 100) + "%";
+        if (left <= 0) { clearInterval(timer); timer = null; document.getElementById("go-q").classList.add("pulse"); }
+      }, 1000);
+      const go = () => { if (timer) clearInterval(timer); timer = null; runQcm(st.qcm.slice()); };
+      document.getElementById("go-q").onclick = go;
+      document.getElementById("skip-q").onclick = go;
+    }
+
+    // 2. QCM texte caché
+    function runQcm(list) {
+      let i = 0;
+      const res = [];
+      const scoredAtStart = Object.assign({}, store.get("pathScored", {}));
+      const prepared = list.map((q) => Object.assign({}, q, { order: shuffle(q.choices.map((_, k) => k)) }));
+      function renderQ() {
+        const q = prepared[i];
+        const already = scoredAtStart[q.id];
+        $app.innerHTML = head() + `
+          <div class="qhead"><span>Question ${i + 1} / ${prepared.length}</span><span>${already ? `<span class="pill ok">déjà gagnée</span>` : `<span class="pill due">+10 pts si juste</span>`}</span></div>
+          <div class="progress"><i style="width:${(i / prepared.length) * 100}%"></i></div>
+          <div class="panel">
+            <div class="question">${esc(q.q)}${q.flag ? `<span class="flag">${esc(q.flag)}</span>` : ""}</div>
+            <div class="choices">${q.order.map((k, n) => `<button class="choice" data-k="${k}"><span class="k">${"ABCD"[n]}</span><span>${esc(q.choices[k])}</span></button>`).join("")}</div>
+            <div id="after"></div>
+          </div>`;
+        $app.querySelectorAll(".choice").forEach((b) => { b.onclick = () => answer(+b.dataset.k); });
+      }
+      function answer(k) {
+        const q = prepared[i], ok = k === q.answer;
+        res.push({ q, k, ok });
+        $app.querySelectorAll(".choice").forEach((b) => {
+          b.disabled = true; const bk = +b.dataset.k;
+          if (bk === q.answer) b.classList.add("correct"); else if (bk === k) b.classList.add("wrong");
+        });
+        const last = i === prepared.length - 1;
+        document.getElementById("after").innerHTML = `
+          <div class="explain"><b class="${ok ? "ok" : "ko"}">${ok ? (scoredAtStart[q.id] ? "Juste." : "Juste, +10 pts.") : "Faux."}</b> ${esc(q.explain || "")}</div>
+          <div class="actions" style="align-items:center;justify-content:space-between"><button class="btn accent" id="next">${last ? (st.open ? "Dernière question : réponse libre →" : "Voir le résultat") : "Question suivante →"}</button>${reportLink(q.id)}</div>`;
+        wireReports(document.getElementById("after"));
+        const nb = document.getElementById("next");
+        nb.focus({ preventScroll: true });
+        nb.onclick = () => { if (last) finishQcm(); else { i++; renderQ(); window.scrollTo(0, 0); } };
+      }
+      async function finishQcm() {
+        $app.innerHTML = `<p class="muted">Enregistrement…</p>`;
+        const right = res.filter((r) => r.ok).map((r) => r.q.id);
+        const pts = await recordSession(id, "path", right.length, res.length, [], right);
+        const sc = store.get("pathScored", {}); right.forEach((q) => { sc[q] = 1; }); store.set("pathScored", sc);
+        const pr = store.get("path", {}); const prev = pr[st.id] || {};
+        pr[st.id] = Object.assign({}, prev, { n: (prev.n || 0) + 1, best: Math.max(prev.best || 0, right.length), u: now() });
+        store.set("path", pr); pushState("path");
+        const summary = { res, pts };
+        if (st.open) runOpen(summary); else renderResult(summary, null);
+      }
+      renderQ();
+    }
+
+    // 3. Question à réponse libre, auto-évaluée (sans points)
+    function runOpen(summary) {
+      $app.innerHTML = head() + `
+        <div class="qhead"><span>Réponse libre · sans points</span><span class="small muted">Réponds de tête, puis compare</span></div>
+        <div class="panel">
+          <div class="question">${esc(st.open.q)}</div>
+          <textarea id="open-a" rows="4" placeholder="Écris ta réponse (facultatif, rien n'est envoyé)"></textarea>
+          <div class="actions"><button class="btn accent" id="reveal">Voir la réponse attendue</button></div>
+          <div id="open-after"></div>
+        </div>`;
+      document.getElementById("reveal").onclick = () => {
+        document.getElementById("reveal").remove();
+        document.getElementById("open-after").innerHTML = `
+          <div class="explain"><b>Réponse attendue.</b> ${esc(st.open.a)}</div>
+          <p class="small muted" style="margin:12px 0 6px">Honnêtement, tu avais :</p>
+          <div class="conf-btns">${[["yes", "Bon"], ["half", "À moitié"], ["no", "Pas su"]].map(([k, l]) => `<button class="btn secondary" data-self="${k}">${l}</button>`).join("")}</div>`;
+        document.querySelectorAll("[data-self]").forEach((b) => {
+          b.onclick = () => {
+            const pr = store.get("path", {}); pr[st.id] = Object.assign({}, pr[st.id] || {}, { self: b.dataset.self, u: now() });
+            store.set("path", pr); pushState("path");
+            renderResult(summary, b.dataset.self);
+          };
+        });
+      };
+    }
+
+    function renderResult({ res, pts }, self) {
+      const ok = res.filter((r) => r.ok).length, wrong = res.filter((r) => !r.ok);
+      const scored = store.get("pathScored", {});
+      const fin = stepDone(st, scored);
+      $app.innerHTML = head() + `
+        <div class="panel" style="text-align:center">
+          <div class="score">${ok} / ${res.length}</div>
+          <p>+${pts} point${pts > 1 ? "s" : ""}${online() ? "" : " (mode invité)"}${self ? ` · réponse libre : ${self === "yes" ? "bonne" : self === "half" ? "à moitié" : "pas sue"}` : ""}</p>
+          <p class="muted">${fin ? "Sous-partie terminée : toutes ses questions sont gagnées." : "Il reste des questions à gagner : retente-les quand tu veux."}</p>
+          <div class="actions" style="justify-content:center">
+            ${wrong.length ? `<button class="btn accent" id="retry">Retenter les ${wrong.length} question${wrong.length > 1 ? "s" : ""} ratée${wrong.length > 1 ? "s" : ""}</button>` : ""}
+            ${nextSt ? `<a class="btn ${wrong.length ? "" : "accent"}" href="#/s/${id}/path?step=${nextSt.id}">Sous-partie suivante →</a>` : `<a class="btn ${wrong.length ? "" : "accent"}" href="#/s/${id}/quiz">Étape 2 : quiz</a>`}
+            <button class="btn secondary" id="reread">Relire l'extrait</button>
+            <button class="btn secondary" id="redo">Tout refaire</button>
+          </div>
+        </div>
+        ${wrong.length ? `<h2>À revoir</h2><div class="panel">${wrong.map((a) => `
+          <div class="review-item"><div><b>${esc(a.q.q)}</b></div>
+          <div class="small">Ta réponse : <span style="color:var(--bad)">${esc(a.q.choices[a.k])}</span></div>
+          <div class="small">Bonne réponse : <span class="a">${esc(a.q.choices[a.q.answer])}</span></div>
+          <div class="small muted">${esc(a.q.explain || "")}</div></div>`).join("")}</div>` : ""}`;
+      const r = document.getElementById("retry"); if (r) r.onclick = () => runQcm(wrong.map((a) => st.qcm.find((q) => q.id === a.q.id)));
+      document.getElementById("reread").onclick = renderRead;
+      document.getElementById("redo").onclick = () => runQcm(st.qcm.slice());
+    }
+
+    renderRead();
+  }
+
   // ---------- Vue : fiche de cours ----------
   const ficheCache = {};
   let katexLoaded = false;
@@ -1067,7 +1308,7 @@
       document.querySelectorAll(".tabs button").forEach((b) => b.classList.toggle("on", b.dataset.p === period));
     };
     $app.innerHTML = `<h1>Classement</h1>
-      <p class="muted">10 points par bonne réponse en quiz, 20 au défi du jour, 2 points par flashcard sue. La série compte les jours d'affilée avec au moins une session.</p>
+      <p class="muted">10 points par bonne réponse en quiz, 20 au défi du jour, 2 points par flashcard sue, 10 par question du parcours guidé réussie pour la première fois. La série compte les jours d'affilée avec au moins une session.</p>
       <div class="tabs" role="tablist"><button data-p="all">Depuis le début</button><button data-p="7d">7 derniers jours</button><button data-p="daily">🎯 Défi du jour</button></div>
       <div class="panel" style="margin-top:12px;padding:6px 12px">
         <table class="lb"><thead id="lb-head"></thead>

@@ -16,3 +16,15 @@ Source : `tools/exams_src/<matiere>.md` (balises `@exam`, `@intro`, `@method`, `
 1. `python3 tools/build_exams.py tools/exams_src data/exams` (vérifie que les points de chaque partie s'additionnent).
 2. `node tools/katex_render.mjs data/exams/*.json`
 3. Ajouter `"exam": "exams/<matiere>.json"` à la matière dans `data/subjects.json`.
+
+# Parcours guidé (étape 1)
+
+Source : `tools/path_src/<matiere>.py` (liste `STEPS` : ancre de la sous-partie dans la fiche détaillée, partie, titre, QCM, question libre).
+
+1. `python3 tools/build_path.py <matiere>` : vérifie que chaque ancre existe dans `data/fiches/<matiere>.json` et écrit `data/path/<matiere>.json`.
+   Les identifiants sont stables : une sous-partie garde son id tant que son ancre ne change pas, une question garde le sien tant que son texte ne change pas.
+   Une question réécrite reçoit un nouveau numéro et l'ancien passe dans `retired` (jamais réutilisé).
+2. Ajouter `"path": "path/<matiere>.json"` à la matière dans `data/subjects.json`.
+
+Points : 10 pts par question, une seule fois par joueur (table `path_scored`, script `supabase/004_parcours_guide.sql`).
+L'extrait affiché est lu directement dans la fiche : si la fiche est régénérée avec un titre de sous-partie modifié, relancer l'étape 1 (elle signale l'ancre manquante).

@@ -386,3 +386,20 @@ details.ex-intro summary { cursor: pointer; font-weight: 600; color: var(--ink-2
 .vocab-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 34px 20px; text-align: center; margin: 8px 0 14px; box-shadow: var(--shadow); }
 .vocab-card .vq { font-size: 22px; font-weight: 600; }
 .vocab-card .va { font-size: 20px; color: var(--good); margin-top: 14px; font-weight: 600; }
+
+/* ---------- Parcours guidé ---------- */
+.path-btn { background: #8a4b1f; border-color: #8a4b1f; color: #fff; }
+.steps-line { margin: -4px 0 10px; }
+.path-part { font-size: 18px; margin-top: 22px; }
+a.path-row { display: flex; flex-direction: row; justify-content: space-between; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); }
+a.path-row .pill { flex: 0 0 auto; }
+a.path-row:hover { border-color: var(--ink-2); }
+.path-n { display: inline-grid; place-items: center; min-width: 22px; height: 22px; border-radius: 6px; background: #f0ece2; font-size: 12px; font-weight: 700; margin-right: 4px; }
+.chap.ready .path-n { background: var(--good); color: #fff; }
+.path-title { margin: 4px 0 10px; }
+.read-bar { position: sticky; top: 58px; z-index: 5; padding: 12px 16px; }
+.path-excerpt { font-size: 16px; }
+.path-excerpt > :first-child { margin-top: 0; }
+#open-a { width: 100%; box-sizing: border-box; margin-top: 4px; resize: vertical; font: inherit; padding: 10px 12px; border: 1.5px solid var(--line); border-radius: 12px; }
+.btn.pulse { animation: pulse 1.2s ease-in-out 3; }
+@keyframes pulse { 50% { transform: scale(1.05); } }

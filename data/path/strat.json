@@ -1,0 +1,1359 @@
+{
+ "subject": "strat",
+ "updated": "2026-11-25",
+ "steps": [
+  {
+   "id": "strat-p01",
+   "part": "Séance 1 – L'évolution du concept de stratégie",
+   "anchor": "les-origines",
+   "title": "Les origines",
+   "qcm": [
+    {
+     "id": "strat-p01-q1",
+     "q": "D'où vient le mot « stratégie » ?",
+     "choices": [
+      "Du grec strategos, le général : l'art de conduire une armée",
+      "Du latin strata, la route",
+      "Du chinois, par Sun Tzu",
+      "De la théorie des jeux"
+     ],
+     "answer": 0,
+     "explain": "Strategos (le général) vient de stratos, l'armée en ordre de bataille, et ageîn, conduire."
+    },
+    {
+     "id": "strat-p01-q2",
+     "q": "Quelle est l'idée clé de Sun Tzu dans L'Art de la guerre ?",
+     "choices": [
+      "Forcer l'ennemi à abandonner, même sans combattre",
+      "Toujours attaquer en premier avec toutes ses forces",
+      "Planifier chaque bataille des années à l'avance",
+      "Ne jamais s'adapter à l'adversaire"
+     ],
+     "answer": 0,
+     "explain": "Ruse, espionnage, mobilité et adaptation à l'adversaire permettent de gagner sans forcément combattre."
+    },
+    {
+     "id": "strat-p01-q3",
+     "q": "Qu'étudie la théorie des jeux ?",
+     "choices": [
+      "Les décisions quand le résultat de chacun dépend des choix des autres",
+      "Les stratégies des jeux vidéo",
+      "Les probabilités de gagner au hasard",
+      "Les seules décisions militaires"
+     ],
+     "answer": 0,
+     "explain": "C'est l'interaction stratégique, formalisée au XXe siècle par les mathématiques et l'économie."
+    },
+    {
+     "id": "strat-p01-q4",
+     "q": "Lequel de ces facteurs n'est PAS cité parmi les trois qui ont rendu la stratégie indispensable en entreprise ?",
+     "choices": [
+      "La baisse des prix des matières premières",
+      "Le progrès technologique",
+      "La mondialisation",
+      "Des consommateurs plus informés et plus exigeants"
+     ],
+     "answer": 0,
+     "explain": "Les trois facteurs du cours : progrès technologique, mondialisation, consommateurs plus informés, connectés et exigeants."
+    }
+   ],
+   "open": {
+    "q": "Cite les trois étapes historiques de la naissance de la stratégie.",
+    "a": "Le militaire (Sun Tzu, IVe siècle av. J.-C.), la théorie des jeux (XXe siècle), puis l'environnement concurrentiel des entreprises (XXe et XXIe siècles)."
+   }
+  },
+  {
+   "id": "strat-p02",
+   "part": "Séance 1 – L'évolution du concept de stratégie",
+   "anchor": "les-quatre-grands-auteurs",
+   "title": "Les quatre grands auteurs",
+   "qcm": [
+    {
+     "id": "strat-p02-q1",
+     "q": "Quel auteur a écrit The Concept of Corporate Strategy (1971) ?",
+     "choices": [
+      "Kenneth Andrews",
+      "Igor Ansoff",
+      "Michael Porter",
+      "Henry Mintzberg"
+     ],
+     "answer": 0,
+     "explain": "Andrews (Harvard) : la stratégie définit la mission, les objectifs, les politiques et le type d'entreprise."
+    },
+    {
+     "id": "strat-p02-q2",
+     "q": "Le modèle LCAG d'Andrews est l'ancêtre de quel outil ?",
+     "choices": [
+      "Le SWOT",
+      "Le PESTEL",
+      "Les 5 forces",
+      "La matrice d'Ansoff"
+     ],
+     "answer": 0,
+     "explain": "LCAG = Learned, Christensen, Andrews, Guth : il croise compétences internes et environnement externe, comme le SWOT."
+    },
+    {
+     "id": "strat-p02-q3",
+     "q": "Lequel de ces outils n'est PAS de Porter ?",
+     "choices": [
+      "La synergie et l'analyse d'écarts",
+      "Les 5 forces (1980)",
+      "La value chain (1985)",
+      "Le diamant de la compétitivité des nations (1990)"
+     ],
+     "answer": 0,
+     "explain": "La synergie et l'analyse d'écarts sont des outils d'Ansoff (Corporate Strategy, 1965)."
+    },
+    {
+     "id": "strat-p02-q4",
+     "q": "Par quel terme « Corporate Strategy » a-t-il été remplacé au milieu des années 1970 ?",
+     "choices": [
+      "Strategic Management",
+      "Business Model",
+      "Strategic Planning",
+      "Competitive Advantage"
+     ],
+     "answer": 0,
+     "explain": "C'est le passage de la séance 1 à la séance 2 du cours."
+    }
+   ],
+   "open": {
+    "q": "Pour Andrews, quelles sont les deux idées clés et le lien entre formulation et mise en œuvre ?",
+    "a": "Le développement de long terme (objectifs clairs, stratégie délibérée) et l'unicité de chaque entreprise (son propre business model, la différenciation). Formulation et mise en œuvre sont séparées mais forment un cycle : la mise en œuvre nourrit la formulation suivante."
+   }
+  },
+  {
+   "id": "strat-p03",
+   "part": "Séance 1 – L'évolution du concept de stratégie",
+   "anchor": "la-matrice-d-ansoff",
+   "title": "La matrice d'Ansoff",
+   "qcm": [
+    {
+     "id": "strat-p03-q1",
+     "q": "Vendre davantage les produits existants sur les marchés existants (promotions, marketing agressif), c'est…",
+     "choices": [
+      "La pénétration",
+      "Le développement de produits",
+      "Le développement de marchés",
+      "La diversification"
+     ],
+     "answer": 0,
+     "explain": "Pénétration = produits existants × marchés existants : gagner des parts de marché."
+    },
+    {
+     "id": "strat-p03-q2",
+     "q": "Quelle option de la matrice d'Ansoff est la plus risquée ?",
+     "choices": [
+      "La diversification",
+      "La pénétration",
+      "Le développement de produits",
+      "Le développement de marchés"
+     ],
+     "answer": 0,
+     "explain": "Nouveaux produits sur de nouveaux marchés : l'entreprise ne maîtrise ni l'un ni l'autre."
+    },
+    {
+     "id": "strat-p03-q3",
+     "q": "Une marque française vend ses produits actuels dans de nouvelles zones géographiques. C'est…",
+     "choices": [
+      "Le développement de marchés",
+      "Le développement de produits",
+      "La diversification",
+      "La pénétration"
+     ],
+     "answer": 0,
+     "explain": "Produits existants × marchés nouveaux (nouvelles zones ou nouvelles cibles)."
+    }
+   ],
+   "open": {
+    "q": "Dessine de tête la matrice d'Ansoff : quels sont les deux axes et les quatre cases ?",
+    "a": "Axes : produits (existants / nouveaux) et marchés (existants / nouveaux). Cases : pénétration (existant × existant), développement de produits (nouveaux produits, marchés existants), développement de marchés (produits existants, nouveaux marchés), diversification (nouveau × nouveau)."
+   }
+  },
+  {
+   "id": "strat-p04",
+   "part": "Séance 1 – L'évolution du concept de stratégie",
+   "anchor": "les-5-forces-de-porter",
+   "title": "Les 5 forces de Porter",
+   "qcm": [
+    {
+     "id": "strat-p04-q1",
+     "q": "À quoi servent les 5 forces de Porter ?",
+     "choices": [
+      "Évaluer l'attractivité de long terme d'une industrie",
+      "Mesurer la rentabilité d'un produit",
+      "Analyser le macroenvironnement",
+      "Classer les salariés"
+     ],
+     "answer": 0,
+     "explain": "Le modèle évalue la pression concurrentielle d'un secteur et donc son attractivité à long terme."
+    },
+    {
+     "id": "strat-p04-q2",
+     "q": "Walmart et Target obtiennent des remises massives de leurs fournisseurs. Quelle force est illustrée ?",
+     "choices": [
+      "Le pouvoir des clients",
+      "Le pouvoir des fournisseurs",
+      "La menace des substituts",
+      "La rivalité entre concurrents"
+     ],
+     "answer": 0,
+     "explain": "Des acheteurs concentrés et puissants imposent leurs prix."
+    },
+    {
+     "id": "strat-p04-q3",
+     "q": "Netflix et Spotify qui remplacent la location physique illustrent…",
+     "choices": [
+      "La menace des substituts",
+      "La menace des nouveaux entrants",
+      "Le pouvoir des fournisseurs",
+      "La rivalité entre concurrents"
+     ],
+     "answer": 0,
+     "explain": "Une fonction comparable apparaît avec une technologie de rupture."
+    },
+    {
+     "id": "strat-p04-q4",
+     "q": "Dans l'automobile, la menace des nouveaux entrants est faible parce que…",
+     "choices": [
+      "Le capital requis, les marques fortes et les normes de sécurité sont élevés",
+      "Les clients sont peu exigeants",
+      "Il y a peu de concurrents",
+      "Les fournisseurs sont dispersés"
+     ],
+     "answer": 0,
+     "explain": "Des barrières à l'entrée élevées (économies d'échelle, fidélité, capital, réglementation) protègent les acteurs en place."
+    }
+   ],
+   "open": {
+    "q": "Pourquoi la rivalité est-elle forte dans la restauration ?",
+    "a": "Peu de barrières à l'entrée, des offres proches (peu différenciées) et une forte volatilité de la clientèle."
+   }
+  },
+  {
+   "id": "strat-p05",
+   "part": "Séance 1 – L'évolution du concept de stratégie",
+   "anchor": "mintzberg-en-detail",
+   "title": "Mintzberg en détail",
+   "qcm": [
+    {
+     "id": "strat-p05-q1",
+     "q": "Selon Mintzberg, la stratégie réalisée est…",
+     "choices": [
+      "Un mélange de stratégie délibérée et de stratégie émergente",
+      "Uniquement le plan décidé à l'avance",
+      "Uniquement ce qui émerge au quotidien",
+      "Toujours identique à la stratégie voulue"
+     ],
+     "answer": 0,
+     "explain": "Une partie de la stratégie voulue ne se réalise jamais, et une autre émerge des décisions quotidiennes."
+    },
+    {
+     "id": "strat-p05-q2",
+     "q": "Parmi les 5 P de Mintzberg, « Ploy » désigne…",
+     "choices": [
+      "Une manœuvre pour déjouer un concurrent",
+      "Un plan d'action délibéré",
+      "La place sur le marché",
+      "La culture de l'organisation"
+     ],
+     "answer": 0,
+     "explain": "Les 5 P : Plan, Ploy (manœuvre), Pattern (cohérence dans le temps), Position (place sur le marché), Perspective (vision et culture)."
+    },
+    {
+     "id": "strat-p05-q3",
+     "q": "L'erreur de « detachment » signifie que…",
+     "choices": [
+      "Les stratèges ne doivent pas être coupés des opérations",
+      "On ne peut pas prévoir parfaitement l'avenir",
+      "La stratégie ne peut pas être une simple procédure",
+      "L'entreprise est détachée de son environnement"
+     ],
+     "answer": 0,
+     "explain": "Les 3 erreurs : predetermination (prévoir l'avenir), detachment (coupure avec le terrain), formalization (procédure au lieu de synthèse et d'intuition)."
+    },
+    {
+     "id": "strat-p05-q4",
+     "q": "Combien d'écoles de stratégie Mintzberg décrit-il dans Strategy Safari ?",
+     "choices": [
+      "10",
+      "5",
+      "3",
+      "4"
+     ],
+     "answer": 0,
+     "explain": "Design, Planning, Positioning, Entrepreneurial, Cognitive, Learning, Power, Cultural, Environmental, Configuration. Aucune ne suffit seule."
+    }
+   ],
+   "open": {
+    "q": "Cite les 5 P de Mintzberg avec une définition courte pour chacun.",
+    "a": "Plan (plan d'action délibéré), Ploy (manœuvre contre un concurrent), Pattern (cohérence de comportement dans le temps), Position (place sur le marché), Perspective (vision du monde et culture de l'organisation)."
+   }
+  },
+  {
+   "id": "strat-p06",
+   "part": "Séance 1 – L'évolution du concept de stratégie",
+   "anchor": "vocabulaire-et-definition-de-la-strategie",
+   "title": "Vocabulaire et définition de la stratégie",
+   "qcm": [
+    {
+     "id": "strat-p06-q1",
+     "q": "« L'état futur désiré, ce que l'organisation veut devenir » définit…",
+     "choices": [
+      "La vision (strategic intent)",
+      "La mission",
+      "Les objectives",
+      "Les goals"
+     ],
+     "answer": 0,
+     "explain": "La mission est le but général ; la vision est l'état futur visé."
+    },
+    {
+     "id": "strat-p06-q2",
+     "q": "Quelle différence entre goals et objectives ?",
+     "choices": [
+      "Les goals sont souvent qualitatifs, les objectives plus précis et chiffrés",
+      "Les goals sont chiffrés, les objectives qualitatifs",
+      "C'est la même chose",
+      "Les objectives concernent uniquement la finance"
+     ],
+     "answer": 0,
+     "explain": "Goals = intention alignée sur la mission ; objectives = plus précis, souvent chiffrés."
+    },
+    {
+     "id": "strat-p06-q3",
+     "q": "Lequel n'est PAS une des quatre caractéristiques de la stratégie selon le cours ?",
+     "choices": [
+      "La réduction des coûts à court terme",
+      "La performance de long terme",
+      "Le périmètre d'activité",
+      "L'avantage concurrentiel"
+     ],
+     "answer": 0,
+     "explain": "Les quatre : performance de long terme, périmètre d'activité, avantage concurrentiel, ressources et compétences."
+    },
+    {
+     "id": "strat-p06-q4",
+     "q": "Lequel n'est PAS une des quatre conséquences de la stratégie ?",
+     "choices": [
+      "La certitude",
+      "La complexité",
+      "Une approche globale",
+      "Des changements organisationnels et culturels"
+     ],
+     "answer": 0,
+     "explain": "C'est l'inverse : l'incertitude fait partie des quatre conséquences."
+    }
+   ],
+   "open": {
+    "q": "Reformule la définition de la stratégie donnée en cours.",
+    "a": "La stratégie alloue des ressources sur le long terme et façonne le périmètre d'activité. Elle vise un avantage concurrentiel en adaptant ressources et compétences aux changements de l'environnement, pour répondre aux attentes des parties prenantes."
+   }
+  },
+  {
+   "id": "strat-p07",
+   "part": "Séance 1 – L'évolution du concept de stratégie",
+   "anchor": "exercice-renault-contrat-2009-reuters-2006",
+   "title": "Exercice Renault Contrat 2009",
+   "qcm": [
+    {
+     "id": "strat-p07-q1",
+     "q": "Dans l'exercice Renault, « devenir le constructeur généraliste européen le plus rentable » relève de…",
+     "choices": [
+      "La vision / mission",
+      "Les objectives",
+      "Les resources",
+      "Les results"
+     ],
+     "answer": 0,
+     "explain": "C'est l'état futur désiré, pas un objectif chiffré.",
+     "flag": "Complément"
+    },
+    {
+     "id": "strat-p07-q2",
+     "q": "La marge opérationnelle de 6 % en 2009 est classée dans…",
+     "choices": [
+      "Les objectives",
+      "La vision",
+      "Les resources",
+      "Les results"
+     ],
+     "answer": 0,
+     "explain": "Un objectif précis et chiffré.",
+     "flag": "Complément"
+    },
+    {
+     "id": "strat-p07-q3",
+     "q": "Les 26 nouveaux modèles en 4 ans et la plateforme Logan relèvent de…",
+     "choices": [
+      "Les resources",
+      "Les objectives",
+      "La mission",
+      "Les results"
+     ],
+     "answer": 0,
+     "explain": "Ce sont les moyens pour exécuter la stratégie.",
+     "flag": "Complément"
+    }
+   ],
+   "open": {
+    "q": "Quel était le point de départ de Renault en 2005 (results) ?",
+    "a": "Une marge de 3,2 % et un dividende de 1,8 € (objectif 2009 : 6 % de marge et 4,5 € de dividende)."
+   },
+   "flag": "Complément"
+  },
+  {
+   "id": "strat-p08",
+   "part": "Séance 2 – La montée du strategic management",
+   "anchor": "les-quatre-familles-de-theories-des-organisations",
+   "title": "Les quatre familles de théories des organisations",
+   "qcm": [
+    {
+     "id": "strat-p08-q1",
+     "q": "Taylor et Ford appartiennent à…",
+     "choices": [
+      "Les classical theories",
+      "Les motivation theories",
+      "Les modern & contingency theories",
+      "Les open systems theories"
+     ],
+     "answer": 0,
+     "explain": "Unité de production rationnelle : taylorisme, division du travail, fordisme."
+    },
+    {
+     "id": "strat-p08-q2",
+     "q": "Elton Mayo, Herzberg et Maslow ont influencé la stratégie vers…",
+     "choices": [
+      "Les stratégies RH, le leadership et l'engagement des salariés",
+      "L'optimisation des process",
+      "La veille de l'environnement",
+      "Les privatisations"
+     ],
+     "answer": 0,
+     "explain": "Motivation theories (années 1930) : l'entreprise est un groupe humain."
+    },
+    {
+     "id": "strat-p08-q3",
+     "q": "Pour Herbert Simon, une décision est…",
+     "choices": [
+      "Satisfaisante plutôt qu'optimale (rationalité limitée)",
+      "Toujours optimale",
+      "Prise par un seul décideur",
+      "Purement intuitive"
+     ],
+     "answer": 0,
+     "explain": "Plusieurs décideurs, la recherche d'un consensus et des objectifs pas toujours rationnels empêchent l'optimum."
+    },
+    {
+     "id": "strat-p08-q4",
+     "q": "Von Bertalanffy voit l'entreprise comme…",
+     "choices": [
+      "Un système ouvert qui tire ses ressources de l'environnement",
+      "Une machine à produire",
+      "Une bureaucratie hiérarchique",
+      "Un simple groupe humain"
+     ],
+     "answer": 0,
+     "explain": "Open systems theories : marché, clients, fournisseurs, État ; d'où des stratégies centrées sur les parties prenantes."
+    }
+   ],
+   "open": {
+    "q": "Quel exemple le cours donne-t-il pour illustrer la rationalité limitée de Simon ?",
+    "a": "Le Parlement et les référendums : plusieurs décideurs et la recherche d'un consensus mènent à une décision satisfaisante, pas optimale."
+   }
+  },
+  {
+   "id": "strat-p09",
+   "part": "Séance 2 – La montée du strategic management",
+   "anchor": "definition-du-strategic-management",
+   "title": "Définition du strategic management",
+   "qcm": [
+    {
+     "id": "strat-p09-q1",
+     "q": "Le strategic management est…",
+     "choices": [
+      "La fonction de la direction générale",
+      "La somme des fonctions opérationnelles",
+      "La fonction marketing",
+      "Le contrôle de gestion"
+     ],
+     "answer": 0,
+     "explain": "Ce n'est pas la somme marketing + finance + production + RH."
+    },
+    {
+     "id": "strat-p09-q2",
+     "q": "Quelle métaphore le cours utilise-t-il pour une entreprise sans direction générale ?",
+     "choices": [
+      "Un équipage sans capitaine",
+      "Une voiture sans moteur",
+      "Une armée sans général",
+      "Un orchestre sans partition"
+     ],
+     "answer": 0,
+     "explain": "Ou un équipage où chacun se croit capitaine."
+    },
+    {
+     "id": "strat-p09-q3",
+     "q": "Selon David (2011), le strategic management consiste à…",
+     "choices": [
+      "Formuler, mettre en œuvre et évaluer des décisions transversales",
+      "Gérer les tâches routinières de chaque service",
+      "Fixer uniquement le budget annuel",
+      "Recruter les dirigeants"
+     ],
+     "answer": 0,
+     "explain": "Il gère les situations ambiguës et non routinières au niveau de toute l'organisation."
+    }
+   ],
+   "open": {
+    "q": "Donne la définition de David (2011) du strategic management.",
+    "a": "L'art et la science de formuler, mettre en œuvre et évaluer des décisions transversales qui permettent à une organisation d'atteindre ses objectifs."
+   }
+  },
+  {
+   "id": "strat-p10",
+   "part": "Séance 2 – La montée du strategic management",
+   "anchor": "le-processus-en-trois-etapes",
+   "title": "Le processus en trois étapes",
+   "qcm": [
+    {
+     "id": "strat-p10-q1",
+     "q": "Quelles sont les trois étapes du processus de strategic management ?",
+     "choices": [
+      "Formulation, implementation, evaluation",
+      "Diagnostic, décision, contrôle",
+      "Plan, ploy, pattern",
+      "Analyse, budget, recrutement"
+     ],
+     "answer": 0,
+     "explain": "Formuler, mettre en œuvre (la phase d'action), évaluer."
+    },
+    {
+     "id": "strat-p10-q2",
+     "q": "« Fixer des objectifs annuels, allouer les ressources, préparer les budgets » relève de…",
+     "choices": [
+      "L'implementation",
+      "La formulation",
+      "L'evaluation",
+      "Le diagnostic externe"
+     ],
+     "answer": 0,
+     "explain": "C'est la phase d'action."
+    },
+    {
+     "id": "strat-p10-q3",
+     "q": "« Évaluer les forces et faiblesses internes, générer des alternatives, choisir les stratégies » relève de…",
+     "choices": [
+      "La formulation",
+      "L'implementation",
+      "L'evaluation",
+      "Le contrôle"
+     ],
+     "answer": 0,
+     "explain": "La formulation engage l'organisation sur le long terme."
+    }
+   ],
+   "open": {
+    "q": "Que fait-on à l'étape d'evaluation ?",
+    "a": "On examine les facteurs internes et externes, on mesure la performance et on prend des actions correctives."
+   }
+  },
+  {
+   "id": "strat-p11",
+   "part": "Séance 2 – La montée du strategic management",
+   "anchor": "le-strategic-management-selon-le-contexte",
+   "title": "Le strategic management selon le contexte",
+   "qcm": [
+    {
+     "id": "strat-p11-q1",
+     "q": "Qu'est-ce qui limite les options stratégiques des PME ?",
+     "choices": [
+      "La sous-capitalisation (difficulté à lever des fonds propres)",
+      "Un trop grand nombre de marchés",
+      "Le contrôle de l'État",
+      "Les relations maison mère et filiales"
+     ],
+     "answer": 0,
+     "explain": "Peu de marchés et de produits, les valeurs des fondateurs persistent, et le manque de fonds propres réduit les options."
+    },
+    {
+     "id": "strat-p11-q2",
+     "q": "Dans le secteur public, sur quoi porte la concurrence ?",
+     "choices": [
+      "L'obtention de ressources auprès des autorités de tutelle",
+      "Les parts de marché",
+      "Le prix de vente",
+      "Le recrutement des dirigeants"
+     ],
+     "answer": 0,
+     "explain": "Financement limité à la sphère publique, poids de l'idéologie et du contrôle de l'État."
+    },
+    {
+     "id": "strat-p11-q3",
+     "q": "Qui fixe les objectifs de long terme ?",
+     "choices": [
+      "La direction générale",
+      "Les directions opérationnelles",
+      "Les actionnaires seuls",
+      "Les clients"
+     ],
+     "answer": 0,
+     "explain": "Les objectifs de court terme qui les mettent en œuvre relèvent des directions opérationnelles."
+    }
+   ],
+   "open": {
+    "q": "Quel exemple illustre le strategic management des multinationales ?",
+    "a": "DaimlerChrysler et Renault-Nissan, qui choisissent entre une usine dédiée par modèle et des usines communes de moteurs et de châssis (contrôle, allocation des ressources, coordination logistique)."
+   }
+  },
+  {
+   "id": "strat-p12",
+   "part": "Séance 2 – La montée du strategic management",
+   "anchor": "les-defis-actuels-du-strategic-management",
+   "title": "Les défis actuels du strategic management",
+   "qcm": [
+    {
+     "id": "strat-p12-q1",
+     "q": "Lequel de ces éléments fait partie des défis actuels cités en cours ?",
+     "choices": [
+      "L'économie collaborative",
+      "La disparition de la concurrence",
+      "La fin de la mondialisation",
+      "Le retour du taylorisme"
+     ],
+     "answer": 0,
+     "explain": "Mondialisation, technoscience, concurrence plus intense, RSE, crise, entrepreneuriat et économie collaborative."
+    },
+    {
+     "id": "strat-p12-q2",
+     "q": "La « responsabilité globale » parmi les défis renvoie à…",
+     "choices": [
+      "La RSE",
+      "La comptabilité",
+      "La sécurité informatique",
+      "La gestion des stocks"
+     ],
+     "answer": 0,
+     "explain": "Responsabilité sociale et environnementale de l'entreprise."
+    }
+   ],
+   "open": {
+    "q": "Cite au moins cinq défis actuels du strategic management.",
+    "a": "La mondialisation, la technoscience, l'intensification de la concurrence, la responsabilité globale (RSE), un environnement en crise et le déplacement des forces économiques, l'essor de l'entrepreneuriat et l'économie collaborative."
+   }
+  },
+  {
+   "id": "strat-p13",
+   "part": "Séance 3 – Le macroenvironnement : PESTEL et scénarios",
+   "anchor": "caracteriser-l-environnement",
+   "title": "Caractériser l'environnement",
+   "qcm": [
+    {
+     "id": "strat-p13-q1",
+     "q": "Selon De Bruecker (1995), l'environnement c'est…",
+     "choices": [
+      "Tout ce qui est extérieur à l'entreprise, qu'elle subit sans contrôler",
+      "Uniquement les concurrents",
+      "Les salariés et les actionnaires",
+      "Ce que l'entreprise contrôle"
+     ],
+     "answer": 0,
+     "explain": "Technologie, produits, clients, concurrents, climat politique et économique."
+    },
+    {
+     "id": "strat-p13-q2",
+     "q": "Quels sont les trois critères pour décrire l'environnement ?",
+     "choices": [
+      "Turbulence, complexité, hostilité",
+      "Prix, produit, place",
+      "Forces, faiblesses, opportunités",
+      "Politique, économie, société"
+     ],
+     "answer": 0,
+     "explain": "Turbulence (changements), complexité (facteurs et relations), hostilité (intensité de la concurrence, ressources, climat social)."
+    },
+    {
+     "id": "strat-p13-q3",
+     "q": "Chez Emery et Trist, l'environnement de type IV est…",
+     "choices": [
+      "Complexe et turbulent",
+      "Placide et aléatoire",
+      "Placide mais la survie dépend de la connaissance de l'environnement",
+      "Celui où l'on tient compte des autres firmes"
+     ],
+     "answer": 0,
+     "explain": "Type IV : il faut suivre les concurrents, l'économie et le marché."
+    },
+    {
+     "id": "strat-p13-q4",
+     "q": "Selon Desreumaux (1992), un environnement instable appelle…",
+     "choices": [
+      "Des entreprises flexibles et décentralisées",
+      "Des petites entreprises",
+      "Des grandes entreprises",
+      "Des entreprises publiques"
+     ],
+     "answer": 0,
+     "explain": "Stable et incertain : petites ; stable et structuré : grandes ; turbulent et très complexe : entreprises aussi complexes que lui."
+    }
+   ],
+   "open": {
+    "q": "Qu'est-ce qui rend un environnement hostile, et quelle conséquence pour l'entreprise ?",
+    "a": "L'intensité de la concurrence, la disponibilité des ressources, le climat social et la stabilité politique. Un environnement hostile oblige à réagir vite."
+   }
+  },
+  {
+   "id": "strat-p14",
+   "part": "Séance 3 – Le macroenvironnement : PESTEL et scénarios",
+   "anchor": "macro-et-micro",
+   "title": "Macro et micro",
+   "qcm": [
+    {
+     "id": "strat-p14-q1",
+     "q": "Le macroenvironnement (Thompson, 1967)…",
+     "choices": [
+      "S'impose à toutes les entreprises et fixe le cadre de leur activité",
+      "Regroupe les clients, concurrents et fournisseurs",
+      "Concerne uniquement l'économie",
+      "Dépend de chaque entreprise"
+     ],
+     "answer": 0,
+     "explain": "Cadre juridique, conjoncture, société, international, technique."
+    },
+    {
+     "id": "strat-p14-q2",
+     "q": "Les fournisseurs d'une entreprise font partie de…",
+     "choices": [
+      "Son microenvironnement",
+      "Son macroenvironnement",
+      "Son PESTEL",
+      "Sa mission"
+     ],
+     "answer": 0,
+     "explain": "Le microenvironnement regroupe les acteurs en contact direct : clients, concurrents, fournisseurs."
+    }
+   ],
+   "open": {
+    "q": "Explique la différence entre macro et microenvironnement.",
+    "a": "Le macroenvironnement s'impose à toutes les entreprises et fixe le cadre (juridique, conjoncture, société, international, technique). Le microenvironnement regroupe les acteurs en contact direct avec l'entreprise : clients, concurrents, fournisseurs."
+   }
+  },
+  {
+   "id": "strat-p15",
+   "part": "Séance 3 – Le macroenvironnement : PESTEL et scénarios",
+   "anchor": "la-matrice-pestel",
+   "title": "La matrice PESTEL",
+   "qcm": [
+    {
+     "id": "strat-p15-q1",
+     "q": "Dans le PESTEL, le taux de change relève du facteur…",
+     "choices": [
+      "Economic",
+      "Political",
+      "Legal",
+      "Socio-cultural"
+     ],
+     "answer": 0,
+     "explain": "Economic : cycles, politique monétaire, inflation, chômage, taux d'intérêt, revenu disponible, taux de change."
+    },
+    {
+     "id": "strat-p15-q2",
+     "q": "Le droit de la concurrence et la propriété intellectuelle relèvent du facteur…",
+     "choices": [
+      "Legal",
+      "Political",
+      "Environmental",
+      "Technological"
+     ],
+     "answer": 0,
+     "explain": "Legal : droit de la concurrence, droit du travail, législation sanitaire, normes de sécurité, propriété intellectuelle."
+    },
+    {
+     "id": "strat-p15-q3",
+     "q": "Comment appelle-t-on les composantes du PESTEL qui ont le plus d'effet sur la stratégie ?",
+     "choices": [
+      "Les key drivers for change",
+      "Les key success factors",
+      "Les core competences",
+      "Les strategic groups"
+     ],
+     "answer": 0,
+     "explain": "On note l'impact de chaque composante ; les plus fortes sont les key drivers for change."
+    },
+    {
+     "id": "strat-p15-q4",
+     "q": "Le PESTEL sert en général à préparer…",
+     "choices": [
+      "Un SWOT (opportunités et menaces)",
+      "Une matrice d'Ansoff",
+      "Un compte de résultat",
+      "Une segmentation"
+     ],
+     "answer": 0,
+     "explain": "Il alimente la partie externe du SWOT, dans une démarche de veille stratégique."
+    }
+   ],
+   "open": {
+    "q": "Quels sont les trois points de méthode du PESTEL donnés en cours ?",
+    "a": "1. Regarder la combinaison des tendances de fond, pas un facteur isolé (démarche de veille). 2. Noter l'impact de chaque composante et repérer les key drivers for change. 3. S'en servir pour préparer le SWOT."
+   }
+  },
+  {
+   "id": "strat-p16",
+   "part": "Séance 3 – Le macroenvironnement : PESTEL et scénarios",
+   "anchor": "la-methode-des-scenarios",
+   "title": "La méthode des scénarios",
+   "qcm": [
+    {
+     "id": "strat-p16-q1",
+     "q": "Pourquoi utilise-t-on la méthode des scénarios ?",
+     "choices": [
+      "Parce que l'avenir est imprévisible",
+      "Pour prédire l'avenir avec certitude",
+      "Pour remplacer le PESTEL",
+      "Pour fixer le budget"
+     ],
+     "answer": 0,
+     "explain": "On construit quelques hypothèses globales sur les variables clés."
+    },
+    {
+     "id": "strat-p16-q2",
+     "q": "Quel est l'ordre de la méthode ?",
+     "choices": [
+      "Variables clés → hypothèses → scénarios → stratégies",
+      "Stratégies → scénarios → hypothèses → variables",
+      "Hypothèses → variables → stratégies → scénarios",
+      "Scénarios → variables → stratégies → hypothèses"
+     ],
+     "answer": 0,
+     "explain": "On part de ce qui affecte le plus l'activité, on fait des hypothèses, on construit des récits, puis une réponse par scénario."
+    },
+    {
+     "id": "strat-p16-q3",
+     "q": "Quelles hypothèses fait-on pour chaque variable clé ?",
+     "choices": [
+      "Optimiste, probable, pessimiste",
+      "Haute et basse seulement",
+      "Une seule hypothèse probable",
+      "Politique, économique, sociale"
+     ],
+     "answer": 0,
+     "explain": "Trois hypothèses qui forment ensuite des scénarios alternatifs."
+    }
+   ],
+   "open": {
+    "q": "Raconte l'exemple de la fête en plein air du cours.",
+    "a": "Soleil et beaucoup d'invités (optimiste : jeux dehors) ; nuageux et invités moyens (probable : plan B en intérieur) ; pluie et peu d'invités (pessimiste : location d'une tente)."
+   }
+  },
+  {
+   "id": "strat-p17",
+   "part": "Séance 3 – Le macroenvironnement : PESTEL et scénarios",
+   "anchor": "exercice-d-application-le-transport-aerien",
+   "title": "Exercice : le transport aérien",
+   "qcm": [
+    {
+     "id": "strat-p17-q1",
+     "q": "Dans les pistes de l'exercice, le prix du kérosène est un facteur…",
+     "choices": [
+      "Economic",
+      "Political",
+      "Technological",
+      "Legal"
+     ],
+     "answer": 0,
+     "explain": "Avec le pouvoir d'achat et les taux de change.",
+     "flag": "Complément"
+    },
+    {
+     "id": "strat-p17-q2",
+     "q": "La « honte de prendre l'avion » et le télétravail relèvent du facteur…",
+     "choices": [
+      "Socio-cultural",
+      "Environmental",
+      "Economic",
+      "Legal"
+     ],
+     "answer": 0,
+     "explain": "Ce sont des évolutions des comportements et des modes de vie.",
+     "flag": "Complément"
+    },
+    {
+     "id": "strat-p17-q3",
+     "q": "Quels sont les key drivers probables à 5 ans retenus dans les pistes ?",
+     "choices": [
+      "Le prix du carburant et la régulation carbone",
+      "Les droits des passagers et la réservation en ligne",
+      "Le tourisme de masse et les taux de change",
+      "Les règles de sécurité et les taxes sur les billets"
+     ],
+     "answer": 0,
+     "explain": "Ce sont les deux facteurs qui pèsent le plus sur la stratégie des compagnies.",
+     "flag": "Complément"
+    }
+   ],
+   "open": {
+    "q": "Quelles sont les trois questions que pose l'exercice du transport aérien ?",
+    "a": "Quels facteurs PESTEL ? Quels key drivers à 5 ans ? Quels scénarios ?"
+   },
+   "flag": "Complément"
+  },
+  {
+   "id": "strat-p18",
+   "part": "Séance 4 – Acteurs et concurrents du secteur",
+   "anchor": "industrie-secteur-marche",
+   "title": "Industrie, secteur, marché",
+   "qcm": [
+    {
+     "id": "strat-p18-q1",
+     "q": "Une industrie est…",
+     "choices": [
+      "Un ensemble d'entreprises qui produisent des biens ou services très proches",
+      "Un groupe de clients ayant le même besoin",
+      "Uniquement une activité manufacturière",
+      "Un segment stratégique"
+     ],
+     "answer": 0,
+     "explain": "Elle peut être manufacturière (biens tangibles) ou de services (biens intangibles)."
+    },
+    {
+     "id": "strat-p18-q2",
+     "q": "Un marché est défini comme…",
+     "choices": [
+      "Un groupe de clients qui cherchent des produits quasi identiques",
+      "Un ensemble de producteurs",
+      "Un synonyme exact d'industrie",
+      "Une zone de production"
+     ],
+     "answer": 0,
+     "explain": "Défini par une zone géographique ou un besoin commun. Une industrie contient plusieurs marchés."
+    },
+    {
+     "id": "strat-p18-q3",
+     "q": "Le mot « secteur » s'emploie surtout pour…",
+     "choices": [
+      "Les services publics (santé, éducation)",
+      "L'automobile",
+      "Les start-up",
+      "Les marchés financiers"
+     ],
+     "answer": 0,
+     "explain": "C'est un synonyme d'industrie, surtout utilisé pour les services publics."
+    }
+   ],
+   "open": {
+    "q": "Quelle est la relation entre industrie et marché ?",
+    "a": "Une industrie regroupe les entreprises qui produisent des biens ou services très proches ; elle contient plusieurs marchés, chacun étant un groupe de clients avec un besoin commun ou une zone géographique."
+   }
+  },
+  {
+   "id": "strat-p19",
+   "part": "Séance 4 – Acteurs et concurrents du secteur",
+   "anchor": "les-quatre-structures-d-industrie",
+   "title": "Les quatre structures d'industrie",
+   "qcm": [
+    {
+     "id": "strat-p19-q1",
+     "q": "Une industrie avec quelques acteurs seulement est…",
+     "choices": [
+      "Oligopolistique",
+      "Monopolistique",
+      "Hypercompétitive",
+      "En concurrence parfaite"
+     ],
+     "answer": 0,
+     "explain": "Monopolistique : un acteur dominant ; oligopolistique : quelques acteurs."
+    },
+    {
+     "id": "strat-p19-q2",
+     "q": "« Beaucoup de rivaux égaux » décrit…",
+     "choices": [
+      "La concurrence parfaite",
+      "L'hypercompétition",
+      "L'oligopole",
+      "Le monopole"
+     ],
+     "answer": 0,
+     "explain": "L'hypercompétition désigne une concurrence très intense."
+    }
+   ],
+   "open": {
+    "q": "Cite les quatre structures d'industrie.",
+    "a": "Monopolistique (un acteur dominant), oligopolistique (quelques acteurs), hypercompétitive (concurrence très intense), concurrence parfaite (beaucoup de rivaux égaux)."
+   }
+  },
+  {
+   "id": "strat-p20",
+   "part": "Séance 4 – Acteurs et concurrents du secteur",
+   "anchor": "le-modele-des-5-1-forces-porter-1979-puis-1980",
+   "title": "Le modèle des 5 + 1 forces",
+   "qcm": [
+    {
+     "id": "strat-p20-q1",
+     "q": "Quelle est la « +1 » force ajoutée après Porter ?",
+     "choices": [
+      "L'État",
+      "Les salariés",
+      "Les complémenteurs",
+      "Les actionnaires"
+     ],
+     "answer": 0,
+     "explain": "Impôts, lois, subventions, diplomatie : l'État augmente ou réduit l'avantage concurrentiel."
+    },
+    {
+     "id": "strat-p20-q2",
+     "q": "Pour Porter, comment se mesure l'avantage concurrentiel ?",
+     "choices": [
+      "Par la capacité à faire du profit (ou à capter des ressources pour une organisation publique)",
+      "Par le nombre de salariés",
+      "Par la part de marché seule",
+      "Par la notoriété de la marque"
+     ],
+     "answer": 0,
+     "explain": "Le modèle vaut pour tous les types d'organisations."
+    },
+    {
+     "id": "strat-p20-q3",
+     "q": "Qui sont les acheteurs puissants dans le modèle ?",
+     "choices": [
+      "Les grands distributeurs, pas le consommateur final",
+      "Le consommateur final",
+      "Les fournisseurs",
+      "L'État"
+     ],
+     "answer": 0,
+     "explain": "Leur concentration et des coûts de changement faibles leur donnent du pouvoir."
+    },
+    {
+     "id": "strat-p20-q4",
+     "q": "Un substitut est…",
+     "choices": [
+      "Une offre d'une autre industrie qui apporte autre chose, pas forcément moins chère",
+      "Toujours un produit moins cher de la même industrie",
+      "Un nouveau concurrent direct",
+      "Un fournisseur alternatif"
+     ],
+     "answer": 0,
+     "explain": "Il dépend de la technologie et d'un meilleur rapport qualité-prix."
+    }
+   ],
+   "open": {
+    "q": "Cite trois barrières à l'entrée du modèle.",
+    "a": "Parmi : les économies d'échelle, l'accès à la distribution, les représailles des acteurs en place, les lois, la différenciation."
+   }
+  },
+  {
+   "id": "strat-p21",
+   "part": "Séance 4 – Acteurs et concurrents du secteur",
+   "anchor": "groupes-strategiques",
+   "title": "Groupes stratégiques",
+   "qcm": [
+    {
+     "id": "strat-p21-q1",
+     "q": "Un groupe stratégique rassemble…",
+     "choices": [
+      "Les entreprises d'un même secteur qui ont des stratégies proches",
+      "Les filiales d'une même multinationale",
+      "Les fournisseurs d'un secteur",
+      "Toutes les entreprises d'un pays"
+     ],
+     "answer": 0,
+     "explain": "On les identifie à l'intérieur d'un même secteur."
+    },
+    {
+     "id": "strat-p21-q2",
+     "q": "Lequel n'est PAS un intérêt d'identifier les groupes stratégiques ?",
+     "choices": [
+      "Fixer le prix de vente",
+      "Comprendre la stratégie des autres",
+      "Repérer les facteurs clés de succès de chaque groupe",
+      "Étudier l'intérêt de changer de groupe"
+     ],
+     "answer": 0,
+     "explain": "Les trois intérêts du cours : comprendre les autres, repérer les KSF de chaque groupe, étudier un changement de groupe."
+    }
+   ],
+   "open": {
+    "q": "À quoi sert l'analyse des groupes stratégiques ?",
+    "a": "À comprendre la stratégie des autres entreprises, repérer les facteurs clés de succès de chaque groupe et étudier l'intérêt de changer de groupe."
+   }
+  },
+  {
+   "id": "strat-p22",
+   "part": "Séance 4 – Acteurs et concurrents du secteur",
+   "anchor": "objectifs-de-l-analyse-externe",
+   "title": "Objectifs de l'analyse externe",
+   "qcm": [
+    {
+     "id": "strat-p22-q1",
+     "q": "L'analyse externe sert d'abord à identifier…",
+     "choices": [
+      "Les opportunités et les menaces",
+      "Les forces et les faiblesses",
+      "Les coûts de production",
+      "Les compétences des salariés"
+     ],
+     "answer": 0,
+     "explain": "Forces et faiblesses relèvent du diagnostic interne."
+    },
+    {
+     "id": "strat-p22-q2",
+     "q": "Laquelle de ces décisions l'analyse externe aide-t-elle à éclairer ?",
+     "choices": [
+      "Entrer sur un marché",
+      "Choisir le logo",
+      "Fixer les horaires des salariés",
+      "Changer de comptable"
+     ],
+     "answer": 0,
+     "explain": "Entrer sur un marché, développer un produit, allouer les ressources ; et renforcer la compétitivité."
+    }
+   ],
+   "open": {
+    "q": "Quels sont les trois objectifs de l'analyse externe ?",
+    "a": "Identifier les opportunités et menaces, éclairer les décisions (entrer sur un marché, développer un produit, allouer les ressources) et renforcer la compétitivité."
+   }
+  },
+  {
+   "id": "strat-p23",
+   "part": "Séance 4 – Acteurs et concurrents du secteur",
+   "anchor": "key-success-factors-et-segmentation-strategique",
+   "title": "KSF et segmentation stratégique",
+   "qcm": [
+    {
+     "id": "strat-p23-q1",
+     "q": "Les KSF (key success factors) sont…",
+     "choices": [
+      "Les caractéristiques nécessaires pour atteindre ses objectifs dans un environnement donné",
+      "Les objectifs chiffrés de l'entreprise",
+      "Les forces de Porter",
+      "Les résultats financiers"
+     ],
+     "answer": 0,
+     "explain": "Ils varient selon les secteurs et les segments."
+    },
+    {
+     "id": "strat-p23-q2",
+     "q": "Un segment stratégique est…",
+     "choices": [
+      "Un ensemble d'activités qui utilisent les mêmes compétences et la même combinaison de KSF",
+      "Un groupe de clients du même âge",
+      "Une zone géographique",
+      "Un groupe de concurrents"
+     ],
+     "answer": 0,
+     "explain": "Ne pas confondre avec la segmentation marketing des clients."
+    },
+    {
+     "id": "strat-p23-q3",
+     "q": "Quelles sont les deux conditions pour valider une segmentation ?",
+     "choices": [
+      "Homogénéité intra-segment et hétérogénéité inter-segments",
+      "Hétérogénéité intra-segment et homogénéité inter-segments",
+      "Taille et rentabilité",
+      "Croissance et part de marché"
+     ],
+     "answer": 0,
+     "explain": "Mêmes KSF dans un segment, KSF différents d'un segment à l'autre."
+    },
+    {
+     "id": "strat-p23-q4",
+     "q": "Que reproche-t-on à la segmentation d'Ansoff (1965) ?",
+     "choices": [
+      "Elle privilégie le savoir-faire commercial au détriment du savoir-faire technologique",
+      "Elle oublie les clients",
+      "Elle est trop récente",
+      "Elle ignore les produits"
+     ],
+     "answer": 0,
+     "explain": "Abell et Hammond (1979) l'élargissent en ajoutant la fonction remplie par l'offre."
+    }
+   ],
+   "open": {
+    "q": "Compare les segmentations d'Ansoff et d'Abell et Hammond.",
+    "a": "Ansoff (1965) segmente par couple produit-marché, critiqué car il privilégie le savoir-faire commercial au détriment du technologique. Abell et Hammond (1979) élargissent en ajoutant la fonction remplie par l'offre."
+   }
+  },
+  {
+   "id": "strat-p24",
+   "part": "Business cases et méthode pour répondre à un cas",
+   "anchor": "cas-free-mobile-seances-1-et-2-corrige-du-prof",
+   "title": "Cas Free Mobile",
+   "qcm": [
+    {
+     "id": "strat-p24-q1",
+     "q": "Dans le business model de Free, la vente directe par internet sans boutiques relève de…",
+     "choices": [
+      "L'architecture de valeur",
+      "La proposition de valeur",
+      "L'équation de profit",
+      "La mission"
+     ],
+     "answer": 0,
+     "explain": "Architecture de valeur : vente directe, sans boutiques, infrastructure externalisée."
+    },
+    {
+     "id": "strat-p24-q2",
+     "q": "Pourquoi un nouvel entrant a-t-il pu changer les règles du jeu ?",
+     "choices": [
+      "Les opérateurs en place, payés à la minute, ne voulaient pas de l'illimité",
+      "Free avait le meilleur réseau",
+      "L'État a interdit les forfaits illimités aux autres",
+      "Les clients refusaient les opérateurs historiques"
+     ],
+     "answer": 0,
+     "explain": "Leur dogme : maîtrise du réseau et facturation à la minute. Un entrant sans base installée était plus libre."
+    },
+    {
+     "id": "strat-p24-q3",
+     "q": "Quelle part de marché Free a-t-il prise très vite ?",
+     "choices": [
+      "13 %",
+      "33 %",
+      "50 %",
+      "5 %"
+     ],
+     "answer": 0,
+     "explain": "C'est pour cela que les opérateurs ont dû copier."
+    },
+    {
+     "id": "strat-p24-q4",
+     "q": "Free a-t-il créé un marché ?",
+     "choices": [
+      "Oui en volume, non en valeur",
+      "Oui en volume et en valeur",
+      "Non en volume, oui en valeur",
+      "Ni l'un ni l'autre"
+     ],
+     "answer": 0,
+     "explain": "Plus de clients, mais le revenu moyen par abonné a chuté de 33 %, et la valeur du marché avec."
+    }
+   ],
+   "open": {
+    "q": "Décris l'équation de profit de Free.",
+    "a": "Une faible marge unitaire, compensée par de gros volumes, avec des coûts et un capital employé faibles."
+   }
+  },
+  {
+   "id": "strat-p25",
+   "part": "Business cases et méthode pour répondre à un cas",
+   "anchor": "les-trois-cas-fally-2025-apple-uber-tsmc",
+   "title": "Les trois cas 2025 : Apple, Uber, TSMC",
+   "qcm": [
+    {
+     "id": "strat-p25-q1",
+     "q": "Quel est le dilemme commun aux trois cas 2025 ?",
+     "choices": [
+      "Faire seul, s'allier ou se protéger",
+      "Baisser ou augmenter les prix",
+      "Recruter ou licencier",
+      "Entrer en Bourse ou non"
+     ],
+     "answer": 0,
+     "explain": "Apple (intégration verticale), Uber (robotaxis), TSMC (concentration à Taïwan)."
+    },
+    {
+     "id": "strat-p25-q2",
+     "q": "Quelle menace pèse sur Uber en 2025 ?",
+     "choices": [
+      "Les robotaxis de Tesla et Waymo, qui pourraient remplacer son modèle de plateforme",
+      "La hausse du prix des smartphones",
+      "La fin de l'économie collaborative",
+      "Le rachat par Apple"
+     ],
+     "answer": 0,
+     "explain": "Une menace de substitution, avec des coûts de chauffeurs d'environ 19 milliards USD par an."
+    },
+    {
+     "id": "strat-p25-q3",
+     "q": "Quel est le principal risque de TSMC ?",
+     "choices": [
+      "Une capacité concentrée à Taïwan, zone à risque",
+      "Une part de marché trop faible",
+      "Des clients trop nombreux",
+      "Une marge brute négative"
+     ],
+     "answer": 0,
+     "explain": "Plus de 70 % du marché de la fonderie, d'où les options de diversification géographique et d'alliances."
+    },
+    {
+     "id": "strat-p25-q4",
+     "q": "Pour le cas TSMC, quels outils mobiliser en priorité ?",
+     "choices": [
+      "PESTEL (P et L), scénarios géopolitiques, 5 + 1 forces (rôle de l'État)",
+      "Matrice d'Ansoff seule",
+      "Les 5 P de Mintzberg",
+      "La segmentation d'Abell et Hammond"
+     ],
+     "answer": 0,
+     "explain": "Le risque est géopolitique et réglementaire."
+    }
+   ],
+   "open": {
+    "q": "Cite les trois options du cas Apple 2025.",
+    "a": "Acquisitions ciblées (IA, modem, packaging, cloud), partenariats approfondis (TSMC, équipementiers) et croissance organique (Apple Intelligence, SDK AR/VR)."
+   }
+  },
+  {
+   "id": "strat-p26",
+   "part": "Business cases et méthode pour répondre à un cas",
+   "anchor": "trame-de-reponse-a-un-cas-1h30",
+   "title": "Trame de réponse à un cas (1h30)",
+   "qcm": [
+    {
+     "id": "strat-p26-q1",
+     "q": "Par quoi commence la réponse à un cas ?",
+     "choices": [
+      "Le problème en une phrase : le dilemme du dirigeant",
+      "La recommandation",
+      "Le PESTEL complet",
+      "La liste de tous les outils du cours"
+     ],
+     "answer": 0,
+     "explain": "Ensuite : diagnostic externe, diagnostic interne, options, recommandation."
+    },
+    {
+     "id": "strat-p26-q2",
+     "q": "Dans le diagnostic externe, comment utiliser le PESTEL ?",
+     "choices": [
+      "Le limiter aux 3 ou 4 key drivers",
+      "Remplir les 6 facteurs en détail",
+      "Le remplacer par le SWOT",
+      "Ne pas l'utiliser"
+     ],
+     "answer": 0,
+     "explain": "Puis les 5 + 1 forces sur le secteur."
+    },
+    {
+     "id": "strat-p26-q3",
+     "q": "Qu'est-ce qui fait perdre des points dans un cas ?",
+     "choices": [
+      "Lister des outils sans conclure",
+      "Citer un auteur",
+      "Faire un tableau des options",
+      "Donner une condition de réussite"
+     ],
+     "answer": 0,
+     "explain": "Il faut finir par une recommandation argumentée."
+    },
+    {
+     "id": "strat-p26-q4",
+     "q": "Quel auteur citer si la stratégie a évolué de façon émergente ?",
+     "choices": [
+      "Mintzberg",
+      "Porter",
+      "Ansoff",
+      "Taylor"
+     ],
+     "answer": 0,
+     "explain": "Porter pour les forces, Ansoff pour la croissance, Mintzberg pour l'émergent."
+    }
+   ],
+   "open": {
+    "q": "Donne les 5 étapes de la trame de réponse à un cas.",
+    "a": "1. Le problème en une phrase. 2. Le diagnostic externe (PESTEL limité aux key drivers, 5 + 1 forces). 3. Le diagnostic interne (forces, faiblesses, compétences clés, business model). 4. Les options (avantages, risques, coûts, en tableau). 5. La recommandation justifiée, avec risques et condition de réussite."
+   }
+  }
+ ],
+ "retired": []
+}

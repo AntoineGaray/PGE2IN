@@ -18,7 +18,8 @@
       "color": "#c2412d",
       "file": "strat.json",
       "fiche": "fiches/strat.json",
-      "exam": "exams/strat.json"
+      "exam": "exams/strat.json",
+      "path": "path/strat.json"
     },
     {
       "id": "mq",
