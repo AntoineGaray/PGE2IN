@@ -1,0 +1,1204 @@
+{
+ "subject": "rse",
+ "updated": "2026-11-25",
+ "steps": [
+  {
+   "id": "rse-p01",
+   "part": "Séance 1 – Les grands enjeux actuels",
+   "anchor": "l-economie-regenerative-definition",
+   "title": "L'économie régénérative (définition)",
+   "qcm": [
+    {
+     "id": "rse-p01-q1",
+     "q": "Que signifie « régénérer » au sens du cours ?",
+     "choices": [
+      "Créer des impacts nets positifs pour les écosystèmes et la société",
+      "Réduire ses impacts négatifs de moitié",
+      "Neutraliser ses émissions par la compensation",
+      "Respecter la réglementation environnementale"
+     ],
+     "answer": 0,
+     "explain": "C'est aller au-delà de la réduction ou de la neutralisation des impacts négatifs."
+    },
+    {
+     "id": "rse-p01-q2",
+     "q": "Quel outil de la séance 1 sert à voir les dépendances et impacts tout au long de la value chain ?",
+     "choices": [
+      "La fresque de l'entreprise régénérative",
+      "Le Donut",
+      "ISO 26000",
+      "Le bilan carbone"
+     ],
+     "answer": 0,
+     "explain": "C'est l'outil clé de la séance 1."
+    }
+   ],
+   "open": {
+    "q": "Explique la différence entre réduire, neutraliser et régénérer.",
+    "a": "Réduire et neutraliser limitent ou annulent les impacts négatifs ; régénérer va au-delà : s'engager à créer des impacts nets positifs pour les écosystèmes et la société."
+   }
+  },
+  {
+   "id": "rse-p02",
+   "part": "Séance 1 – Les grands enjeux actuels",
+   "anchor": "les-constats",
+   "title": "Les constats",
+   "qcm": [
+    {
+     "id": "rse-p02-q1",
+     "q": "Quel pourcentage des espèces est menacé d'extinction ?",
+     "choices": [
+      "25 %",
+      "10 %",
+      "50 %",
+      "75 %"
+     ],
+     "answer": 0,
+     "explain": "Et 75 % de la surface terrestre est fortement altérée."
+    },
+    {
+     "id": "rse-p02-q2",
+     "q": "Quelle est la première des 5 causes du déclin de la biodiversité (IPBES) ?",
+     "choices": [
+      "Le changement d'usage des terres et des mers",
+      "Le changement climatique",
+      "Les pollutions",
+      "Les espèces exotiques envahissantes"
+     ],
+     "answer": 0,
+     "explain": "Puis l'exploitation directe des espèces, le climat, les pollutions, les espèces exotiques envahissantes."
+    },
+    {
+     "id": "rse-p02-q3",
+     "q": "Coût de la sécheresse de l'été 2026 pour les assurances ?",
+     "choices": [
+      "Plus de 5,6 milliards d'euros",
+      "Environ 1 milliard d'euros",
+      "10 à 12 milliards d'euros",
+      "500 millions d'euros"
+     ],
+     "answer": 0,
+     "explain": "Surtout le retrait-gonflement des argiles, au-dessus du record de 2022. 10 à 12 Md€ = total des dommages et pertes."
+    },
+    {
+     "id": "rse-p02-q4",
+     "q": "Que désigne la « Grande Accélération » ?",
+     "choices": [
+      "L'envolée de tous les indicateurs depuis 1950",
+      "La révolution industrielle de 1850",
+      "La hausse des renouvelables",
+      "La croissance de la population au XVIIe siècle"
+     ],
+     "answer": 0,
+     "explain": "Liée au jour du dépassement : on utilise plus d'une planète par an."
+    }
+   ],
+   "open": {
+    "q": "Qu'est-ce que le « triangle de l'inaction » ?",
+    "a": "Entreprises, citoyens et État attendent chacun que les autres bougent. Il faut passer au triangle de l'action."
+   }
+  },
+  {
+   "id": "rse-p03",
+   "part": "Séance 2 – Le Donut",
+   "anchor": "le-rapport-meadows-1972",
+   "title": "Le rapport Meadows (1972)",
+   "qcm": [
+    {
+     "id": "rse-p03-q1",
+     "q": "Qui a commandé le rapport Meadows ?",
+     "choices": [
+      "Le Club de Rome, à des chercheurs du MIT",
+      "L'ONU",
+      "Le GIEC",
+      "La Commission européenne"
+     ],
+     "answer": 0,
+     "explain": "Commandé en 1970, publié en 1972 sous le titre The Limits to Growth."
+    },
+    {
+     "id": "rse-p03-q2",
+     "q": "Sur quel modèle informatique repose-t-il ?",
+     "choices": [
+      "World3",
+      "Donut",
+      "GHG Protocol",
+      "SDG Compass"
+     ],
+     "answer": 0,
+     "explain": "Population, industrie, alimentation, limites des écosystèmes."
+    },
+    {
+     "id": "rse-p03-q3",
+     "q": "Quelle est sa conclusion ?",
+     "choices": [
+      "Sans changement, les limites seront atteintes dans les 100 ans",
+      "La croissance peut continuer sans limite",
+      "L'effondrement a déjà eu lieu",
+      "Seule la technologie peut résoudre le problème"
+     ],
+     "answer": 0,
+     "explain": "Une stabilité durable reste possible, et plus on commence tôt, mieux c'est."
+    }
+   ],
+   "open": {
+    "q": "Quelle phrase du rapport Meadows faut-il retenir ?",
+    "a": "« Une croissance infinie dans un monde fini n'est pas viable. »"
+   }
+  },
+  {
+   "id": "rse-p04",
+   "part": "Séance 2 – Le Donut",
+   "anchor": "les-9-limites-planetaires",
+   "title": "Les 9 limites planétaires",
+   "qcm": [
+    {
+     "id": "rse-p04-q1",
+     "q": "Qui a proposé les 9 limites planétaires, et quand ?",
+     "choices": [
+      "Johan Rockström et 28 scientifiques, en 2009",
+      "Kate Raworth, en 2017",
+      "Donella Meadows, en 1972",
+      "Le GIEC, en 2023"
+     ],
+     "answer": 0,
+     "explain": "Stockholm Resilience Centre."
+    },
+    {
+     "id": "rse-p04-q2",
+     "q": "Combien de limites sur 9 sont dépassées ?",
+     "choices": [
+      "7",
+      "5",
+      "9",
+      "3"
+     ],
+     "answer": 0,
+     "explain": "Les dépasser augmente le risque de points de bascule."
+    },
+    {
+     "id": "rse-p04-q3",
+     "q": "Les « novel entities » désignent…",
+     "choices": [
+      "Les plastiques et produits chimiques",
+      "Les nouvelles espèces",
+      "Les start-up vertes",
+      "Les aérosols"
+     ],
+     "answer": 0,
+     "explain": "Nouvelles entités introduites par l'homme."
+    }
+   ],
+   "open": {
+    "q": "Cite au moins six des 9 limites planétaires.",
+    "a": "Novel entities, couche d'ozone, aérosols, acidification des océans, cycles de l'azote et du phosphore, eau douce, usage des sols, intégrité de la biosphère (biodiversité), changement climatique."
+   }
+  },
+  {
+   "id": "rse-p05",
+   "part": "Séance 2 – Le Donut",
+   "anchor": "l-exemple-du-changement-climatique",
+   "title": "L'exemple du changement climatique",
+   "qcm": [
+    {
+     "id": "rse-p05-q1",
+     "q": "Concentration de CO2 en 2025 ?",
+     "choices": [
+      "426 ppm",
+      "350 ppm",
+      "280 ppm",
+      "450 ppm"
+     ],
+     "answer": 0,
+     "explain": "280 en 1850, limite recommandée 350, seuil critique 450."
+    },
+    {
+     "id": "rse-p05-q2",
+     "q": "Réchauffement déjà constaté par rapport à 1850-1900 ?",
+     "choices": [
+      "+1,1 °C",
+      "+2 °C",
+      "+0,5 °C",
+      "+1,5 °C"
+     ],
+     "answer": 0,
+     "explain": "L'Accord de Paris vise bien en dessous de 2 °C, si possible 1,5 °C."
+    },
+    {
+     "id": "rse-p05-q3",
+     "q": "Qu'est-ce que le forçage radiatif ?",
+     "choices": [
+      "La différence entre l'énergie qui entre dans l'atmosphère et celle qui en sort",
+      "La force des vents",
+      "La quantité de CO2 émise par an",
+      "Le rayonnement du soleil seul"
+     ],
+     "answer": 0,
+     "explain": "S'il est positif, la planète se réchauffe."
+    }
+   ],
+   "open": {
+    "q": "Cite trois impacts négatifs et trois impacts positifs du changement climatique pour une entreprise.",
+    "a": "Négatifs, parmi : ruptures d'approvisionnement, assurances plus chères, dégâts physiques, taxe carbone, risque de réputation, stress hydrique, volatilité des prix, accès au financement… Positifs, parmi : marchés bas carbone, avantage pionnier, investisseurs ESG, innovation, économies d'énergie, subventions, différenciation…"
+   }
+  },
+  {
+   "id": "rse-p06",
+   "part": "Séance 2 – Le Donut",
+   "anchor": "biodiversite-et-pollution-slides-non-vues-en-cours-mais-dans",
+   "title": "Biodiversité et pollution",
+   "qcm": [
+    {
+     "id": "rse-p06-q1",
+     "q": "La pollinisation relève de quelle famille de services écosystémiques ?",
+     "choices": [
+      "Régulation",
+      "Approvisionnement",
+      "Culturels",
+      "Support"
+     ],
+     "answer": 0,
+     "explain": "Approvisionnement : nourriture, eau, bois ; support : photosynthèse, formation des sols.",
+     "flag": "Complément"
+    },
+    {
+     "id": "rse-p06-q2",
+     "q": "Quelle part du PIB mondial dépend de la nature (réponse attendue au quiz) ?",
+     "choices": [
+      "55 %",
+      "10 %",
+      "25 %",
+      "33 %"
+     ],
+     "answer": 0,
+     "explain": "Chiffre de l'IPBES et du WEF : plus de la moitié du PIB.",
+     "flag": "Complément"
+    },
+    {
+     "id": "rse-p06-q3",
+     "q": "Combien de plastique ingère-t-on environ par semaine ?",
+     "choices": [
+      "5 g, une carte de crédit",
+      "50 g",
+      "0,5 g",
+      "1 kg"
+     ],
+     "answer": 0,
+     "explain": "Autres chiffres : 33 % des stocks de poissons surexploités, forêts naturelles −42 % depuis 1700.",
+     "flag": "Complément"
+    }
+   ],
+   "open": {
+    "q": "Cite les 4 familles de services écosystémiques avec un exemple chacune.",
+    "a": "Approvisionnement (nourriture, eau, bois), régulation (climat, air, pollinisation), culturels (tourisme, biomimétisme), support (photosynthèse, formation des sols)."
+   },
+   "flag": "Complément"
+  },
+  {
+   "id": "rse-p07",
+   "part": "Séance 2 – Le Donut",
+   "anchor": "le-donut-kate-raworth-oxfam-2017",
+   "title": "Le Donut (Kate Raworth)",
+   "qcm": [
+    {
+     "id": "rse-p07-q1",
+     "q": "Que forme le plafond du Donut ?",
+     "choices": [
+      "Les 9 limites planétaires",
+      "Les 12 besoins sociaux",
+      "Les 17 ODD",
+      "Les 7 questions centrales"
+     ],
+     "answer": 0,
+     "explain": "Le plancher social = 12 besoins sous lesquels commence la privation."
+    },
+    {
+     "id": "rse-p07-q2",
+     "q": "Combien de personnes sont sous-alimentées selon le cours ?",
+     "choices": [
+      "800 millions",
+      "2 milliards",
+      "250 millions",
+      "70 millions"
+     ],
+     "answer": 0,
+     "explain": "250 millions = enfants non scolarisés ; 70 millions = déplacés forcés."
+    },
+    {
+     "id": "rse-p07-q3",
+     "q": "Comment mesure-t-on la social equity dans le Donut ?",
+     "choices": [
+      "Par l'indice de Palma, seuil de 2",
+      "Par le PIB par habitant",
+      "Par l'indice de Gini",
+      "Par le taux de chômage"
+     ],
+     "answer": 0,
+     "explain": "Part des 10 % les plus riches sur celle des 40 % les plus pauvres."
+    }
+   ],
+   "open": {
+    "q": "Quelles sont les trois perspectives ouvertes par le Donut ?",
+    "a": "1) Une vision intégrée du social, de l'environnement et de l'économie. 2) Un recentrage : le social et l'environnement ne sont plus des « externalités ». 3) Des indicateurs au-delà du PIB."
+   }
+  },
+  {
+   "id": "rse-p08",
+   "part": "Séance 2 – Le Donut",
+   "anchor": "la-methode-du-devoir-donut-reutilisable-pour-un-cas-d-examen",
+   "title": "La méthode du devoir Donut",
+   "qcm": [
+    {
+     "id": "rse-p08-q1",
+     "q": "Par quoi commence la méthode du devoir Donut ?",
+     "choices": [
+      "Présenter l'entreprise et sa value chain",
+      "Lister les risques",
+      "Calculer le bilan carbone",
+      "Choisir 3 ODD"
+     ],
+     "answer": 0,
+     "explain": "Puis impacts sur les 9 limites, impacts sur les 12 planchers, risques et opportunités."
+    },
+    {
+     "id": "rse-p08-q2",
+     "q": "Pour L'Oréal, une réglementation sur la déforestation est un risque…",
+     "choices": [
+      "De transition",
+      "Physique",
+      "De réputation",
+      "Financier"
+     ],
+     "answer": 0,
+     "explain": "Physique = pénurie de matières ; réputation = greenwashing."
+    },
+    {
+     "id": "rse-p08-q3",
+     "q": "Lequel est un impact positif de L'Oréal cité en cours ?",
+     "choices": [
+      "Les emballages éco-conçus (plastique recyclé, carton FSC)",
+      "Les microplastiques rejetés au rinçage",
+      "La pression agricole",
+      "L'empreinte carbone indirecte"
+     ],
+     "answer": 0,
+     "explain": "Autres : sourcing traçable, restauration d'écosystèmes, outil SPOT."
+    }
+   ],
+   "open": {
+    "q": "Donne la typologie des risques à retenir, avec l'exemple L'Oréal.",
+    "a": "Physique (pénurie de matières), de transition (réglementation sur la déforestation), de réputation (greenwashing)."
+   }
+  },
+  {
+   "id": "rse-p09",
+   "part": "Séance 3 – Histoire, définitions, normes et outils",
+   "anchor": "la-frise-de-la-rse",
+   "title": "La frise de la RSE",
+   "qcm": [
+    {
+     "id": "rse-p09-q1",
+     "q": "Qui invente le terme « social responsibility » en 1953 ?",
+     "choices": [
+      "Bowen",
+      "Freeman",
+      "Rachel Carson",
+      "Brundtland"
+     ],
+     "answer": 0,
+     "explain": "Social Responsibilities of the Businessman."
+    },
+    {
+     "id": "rse-p09-q2",
+     "q": "En quelle année Freeman propose-t-il la théorie des parties prenantes ?",
+     "choices": [
+      "1984",
+      "1962",
+      "1987",
+      "1999"
+     ],
+     "answer": 0,
+     "explain": "L'entreprise doit créer de la valeur pour toutes ses parties prenantes."
+    },
+    {
+     "id": "rse-p09-q3",
+     "q": "Quel texte remplace la NFRD en 2022 ?",
+     "choices": [
+      "La CSRD",
+      "ISO 26000",
+      "Le Green Deal",
+      "La loi PACTE"
+     ],
+     "answer": 0,
+     "explain": "La NFRD (2014) visait les grandes entreprises d'intérêt public de plus de 500 salariés."
+    },
+    {
+     "id": "rse-p09-q4",
+     "q": "Le protocole de Kyoto (1997) impose aux pays industrialisés…",
+     "choices": [
+      "Au moins −5 % de GES par rapport à 1990, sur 2008-2012",
+      "La neutralité carbone en 2050",
+      "−55 % de GES en 2030",
+      "Un réchauffement limité à 1,5 °C"
+     ],
+     "answer": 0,
+     "explain": "COP 3, 6 gaz. −55 % en 2030 = Green Deal européen."
+    }
+   ],
+   "open": {
+    "q": "Cite les quatre phases de l'histoire de la RSE.",
+    "a": "1) Les débuts du développement durable, 2) l'essor de la RSE dans le monde économique, 3) l'institutionnalisation et la réglementation, 4) une RSE stratégique et intégrée."
+   }
+  },
+  {
+   "id": "rse-p10",
+   "part": "Séance 3 – Histoire, définitions, normes et outils",
+   "anchor": "les-definitions",
+   "title": "Les définitions",
+   "qcm": [
+    {
+     "id": "rse-p10-q1",
+     "q": "D'où vient la définition « répondre aux besoins du présent sans compromettre ceux des générations futures » ?",
+     "choices": [
+      "Du rapport Brundtland (1987)",
+      "D'ISO 26000 (2010)",
+      "De la Commission européenne (2011)",
+      "Du Global Compact"
+     ],
+     "answer": 0,
+     "explain": "C'est la première définition du développement durable."
+    },
+    {
+     "id": "rse-p10-q2",
+     "q": "Le Global Compact repose sur…",
+     "choices": [
+      "10 principes universels en 4 domaines",
+      "17 objectifs et 169 cibles",
+      "7 questions centrales",
+      "27 principes en 4 thèmes"
+     ],
+     "answer": 0,
+     "explain": "Droits humains, travail, environnement, lutte contre la corruption."
+    },
+    {
+     "id": "rse-p10-q3",
+     "q": "Que la CSRD ajoute-t-elle à la définition européenne de la RSE ?",
+     "choices": [
+      "Identifier, prévenir et atténuer les impacts négatifs, rendre compte des impacts ESG, aller au-delà de la conformité",
+      "Une certification obligatoire ISO 26000",
+      "Un label B Corp",
+      "La suppression du reporting"
+     ],
+     "answer": 0,
+     "explain": "Trois exigences en plus."
+    }
+   ],
+   "open": {
+    "q": "Donne la définition de la RSE selon ISO 26000.",
+    "a": "La responsabilité d'une organisation vis-à-vis des impacts de ses décisions et activités sur la société et l'environnement, par un comportement éthique et transparent qui contribue au développement durable, prend en compte les parties prenantes, respecte les lois et normes internationales, et est intégré dans toute l'organisation."
+   }
+  },
+  {
+   "id": "rse-p11",
+   "part": "Séance 3 – Histoire, définitions, normes et outils",
+   "anchor": "l-exemple-traite-en-cours-les-odd",
+   "title": "Les ODD",
+   "qcm": [
+    {
+     "id": "rse-p11-q1",
+     "q": "Combien d'objectifs, de cibles et d'indicateurs comptent les ODD ?",
+     "choices": [
+      "17 objectifs, 169 cibles, 244 indicateurs",
+      "8 objectifs, 21 cibles, 60 indicateurs",
+      "17 objectifs, 244 cibles, 169 indicateurs",
+      "10 objectifs, 100 cibles, 200 indicateurs"
+     ],
+     "answer": 0,
+     "explain": "Adoptés en septembre 2015 par les 193 États de l'ONU."
+    },
+    {
+     "id": "rse-p11-q2",
+     "q": "Quelle est la force juridique des ODD ?",
+     "choices": [
+      "Aucune : cadre purement volontaire, sans sanction",
+      "Obligatoires pour les grandes entreprises",
+      "Contraignants pour les États",
+      "Audit externe obligatoire"
+     ],
+     "answer": 0,
+     "explain": "Chacun choisit ses priorités."
+    },
+    {
+     "id": "rse-p11-q3",
+     "q": "Combien d'ODD prioritaires une entreprise retient-elle en général ?",
+     "choices": [
+      "3 à 5, selon la matérialité",
+      "Les 17",
+      "1 seul",
+      "10"
+     ],
+     "answer": 0,
+     "explain": "Carrefour se concentre sur 8 ODD."
+    }
+   ],
+   "open": {
+    "q": "Qu'est-ce que le SDG washing, et quelle autre limite des ODD le cours cite-t-il ?",
+    "a": "Le SDG washing : utiliser les logos comme des autocollants marketing. Autres limites : la sélection opportuniste (afficher l'ODD 8 et ignorer l'ODD 12) et des cibles conçues pour les États, pas pour les entreprises."
+   }
+  },
+  {
+   "id": "rse-p12",
+   "part": "Séance 3 – Histoire, définitions, normes et outils",
+   "anchor": "les-7-outils-des-exposes-de-groupe",
+   "title": "Les 7 outils des exposés",
+   "qcm": [
+    {
+     "id": "rse-p12-q1",
+     "q": "Combien de points faut-il au minimum au B Impact Assessment pour être B Corp ?",
+     "choices": [
+      "80 sur 200",
+      "50 sur 100",
+      "100 sur 200",
+      "150 sur 200"
+     ],
+     "answer": 0,
+     "explain": "Label privé (B Lab, 2006), recertification tous les 3 ans.",
+     "flag": "Complément"
+    },
+    {
+     "id": "rse-p12-q2",
+     "q": "Le scope 3 du bilan carbone désigne…",
+     "choices": [
+      "Toute la chaîne, souvent plus de 80 % du total",
+      "Les émissions directes",
+      "L'énergie achetée",
+      "Les émissions des salariés seulement"
+     ],
+     "answer": 0,
+     "explain": "Scope 1 = direct ; scope 2 = énergie achetée.",
+     "flag": "Complément"
+    },
+    {
+     "id": "rse-p12-q3",
+     "q": "Le devoir de vigilance (2017) concerne les entreprises de plus de…",
+     "choices": [
+      "5 000 salariés en France ou 10 000 dans le monde",
+      "500 salariés",
+      "250 salariés",
+      "50 000 salariés"
+     ],
+     "answer": 0,
+     "explain": "Loi votée après le Rana Plaza ; version européenne : CSDDD (2024).",
+     "flag": "Complément"
+    },
+    {
+     "id": "rse-p12-q4",
+     "q": "Qu'est-ce que la double matérialité de la CSRD ?",
+     "choices": [
+      "L'impact de l'entreprise sur le monde et l'impact du monde sur l'entreprise",
+      "Le coût et le bénéfice d'une action",
+      "Les scopes 1 et 2",
+      "Le social et l'environnemental"
+     ],
+     "answer": 0,
+     "explain": "Rapport selon les normes ESRS, audité par un tiers.",
+     "flag": "Complément"
+    }
+   ],
+   "open": {
+    "q": "Qu'apporte la loi PACTE (2019) ?",
+    "a": "Elle impose à toutes les sociétés de prendre en compte les enjeux sociaux et environnementaux ; on peut aller plus loin avec une raison d'être dans les statuts, puis la société à mission (comité de mission, vérification par un tiers). Exemple : Danone en 2020."
+   },
+   "flag": "Complément"
+  },
+  {
+   "id": "rse-p13",
+   "part": "Séance 4 – ISO 26000 et le plan stratégique RSE",
+   "anchor": "les-3-piliers-de-la-rse",
+   "title": "Les 3 piliers de la RSE",
+   "qcm": [
+    {
+     "id": "rse-p13-q1",
+     "q": "Les pratiques loyales (anticorruption, concurrence loyale) relèvent du pilier…",
+     "choices": [
+      "Économique",
+      "Social",
+      "Environnemental",
+      "Gouvernance"
+     ],
+     "answer": 0,
+     "explain": "Avec la rentabilité, l'innovation et la chaîne d'approvisionnement éthique."
+    },
+    {
+     "id": "rse-p13-q2",
+     "q": "Diversité, inclusion et engagement local relèvent du pilier…",
+     "choices": [
+      "Social",
+      "Économique",
+      "Environnemental",
+      "Juridique"
+     ],
+     "answer": 0,
+     "explain": "Avec le bien-être des salariés et les droits humains."
+    }
+   ],
+   "open": {
+    "q": "Quel est l'objectif des 3 piliers ?",
+    "a": "Équilibrer l'économique, l'environnemental et le social, à l'intersection des trois cercles du développement durable."
+   }
+  },
+  {
+   "id": "rse-p14",
+   "part": "Séance 4 – ISO 26000 et le plan stratégique RSE",
+   "anchor": "iso-26000-la-norme",
+   "title": "ISO 26000 : la norme",
+   "qcm": [
+    {
+     "id": "rse-p14-q1",
+     "q": "Peut-on être certifié ISO 26000 ?",
+     "choices": [
+      "Non : volontaire et non certifiable, on peut seulement être évalué ou aligné",
+      "Oui, comme ISO 9001",
+      "Oui, mais seulement pour les multinationales",
+      "Oui, par l'AFNOR uniquement"
+     ],
+     "answer": 0,
+     "explain": "Elle donne des lignes directrices, pas des exigences."
+    },
+    {
+     "id": "rse-p14-q2",
+     "q": "Combien de pays ont négocié ISO 26000 ?",
+     "choices": [
+      "99",
+      "193",
+      "178",
+      "28"
+     ],
+     "answer": 0,
+     "explain": "5 ans de négociations, publiée en 2010."
+    },
+    {
+     "id": "rse-p14-q3",
+     "q": "Qui est concerné par ISO 26000 ?",
+     "choices": [
+      "Toutes les organisations",
+      "Seulement les entreprises cotées",
+      "Seulement les PME",
+      "Seulement le secteur public"
+     ],
+     "answer": 0,
+     "explain": "Multinationales, PME, start-up, administrations, universités, associations…"
+    }
+   ],
+   "open": {
+    "q": "Pourquoi appelle-t-on ISO 26000 le « dictionnaire universel » de la RSE ?",
+    "a": "Parce que c'est un cadre mondial unique, holistique (économique, social, environnemental), applicable à toutes les organisations, qui sert à diagnostiquer puis bâtir un plan d'action."
+   }
+  },
+  {
+   "id": "rse-p15",
+   "part": "Séance 4 – ISO 26000 et le plan stratégique RSE",
+   "anchor": "les-7-questions-centrales",
+   "title": "Les 7 questions centrales",
+   "qcm": [
+    {
+     "id": "rse-p15-q1",
+     "q": "Le taux de fréquence des accidents relève de quelle question centrale ?",
+     "choices": [
+      "Relations et conditions de travail",
+      "Droits humains",
+      "Gouvernance",
+      "Communautés"
+     ],
+     "answer": 0,
+     "explain": "Avec le burn-out, les accords CSE, le turnover, l'absentéisme."
+    },
+    {
+     "id": "rse-p15-q2",
+     "q": "Où chercher l'info sur les rappels de produits (questions consommateurs) ?",
+     "choices": [
+      "RappelConso",
+      "La plateforme BEGES",
+      "La HATVP",
+      "Glassdoor"
+     ],
+     "answer": 0,
+     "explain": "BEGES = environnement ; HATVP = loyauté des pratiques (lobbying)."
+    },
+    {
+     "id": "rse-p15-q3",
+     "q": "Une cartographie des fournisseurs de rang 1, 2 et 3 relève de…",
+     "choices": [
+      "Droits humains",
+      "Environnement",
+      "Loyauté des pratiques",
+      "Consommateurs"
+     ],
+     "answer": 0,
+     "explain": "Avec le plan de vigilance."
+    }
+   ],
+   "open": {
+    "q": "Cite les 7 questions centrales d'ISO 26000.",
+    "a": "Gouvernance, droits humains, relations et conditions de travail, environnement, loyauté des pratiques, questions relatives aux consommateurs, communautés et développement local."
+   }
+  },
+  {
+   "id": "rse-p16",
+   "part": "Séance 4 – ISO 26000 et le plan stratégique RSE",
+   "anchor": "comment-l-entreprise-l-utilise",
+   "title": "Comment l'entreprise utilise ISO 26000",
+   "qcm": [
+    {
+     "id": "rse-p16-q1",
+     "q": "Puisque ISO 26000 n'est pas certifiable, comment être évalué de l'extérieur ?",
+     "choices": [
+      "Par des labels comme AFNOR Engagé RSE ou Lucie 26000",
+      "Par un audit ISO 9001",
+      "Par la CSRD",
+      "On ne peut pas"
+     ],
+     "answer": 0,
+     "explain": "Ils donnent un niveau : initial, progression, confirmé, exemplaire."
+    },
+    {
+     "id": "rse-p16-q2",
+     "q": "Laquelle est une limite d'ISO 26000 ?",
+     "choices": [
+      "Aucun contrôle contraignant, d'où un risque de washing",
+      "Elle se limite au « vert »",
+      "Elle n'existe qu'en France",
+      "Elle est trop courte"
+     ],
+     "answer": 0,
+     "explain": "Autres limites : texte lourd (plus de 100 pages), labels coûteux pour les PME."
+    }
+   ],
+   "open": {
+    "q": "En quoi consiste l'autodiagnostic ISO 26000 ?",
+    "a": "Cartographier les parties prenantes et hiérarchiser les enjeux (la matérialité)."
+   }
+  },
+  {
+   "id": "rse-p17",
+   "part": "Séance 4 – ISO 26000 et le plan stratégique RSE",
+   "anchor": "la-methode-de-diagnostic-a-appliquer-dans-un-cas-d-examen",
+   "title": "La méthode de diagnostic",
+   "qcm": [
+    {
+     "id": "rse-p17-q1",
+     "q": "Quelles sont les trois questions à poser pour chacune des 7 questions centrales ?",
+     "choices": [
+      "Que fait l'entreprise ? Quelles faiblesses ? Quelles preuves ?",
+      "Combien ça coûte ? Qui décide ? Quand ?",
+      "Quel risque ? Quelle opportunité ? Quel ODD ?",
+      "Quel scope ? Quel label ? Quelle loi ?"
+     ],
+     "answer": 0,
+     "explain": "Avec des données concrètes : rapport RSE, presse, site, témoignages."
+    },
+    {
+     "id": "rse-p17-q2",
+     "q": "Quelles notes utilise le tableau de maturité ?",
+     "choices": [
+      "Insufficient, Intermediate, Advanced",
+      "A, B, C, D",
+      "Défensif, correctif, stratégique",
+      "Initial, confirmé, exemplaire"
+     ],
+     "answer": 0,
+     "explain": "Insufficient = risque majeur ; Intermediate = peut mieux faire ; Advanced = bonnes pratiques."
+    },
+    {
+     "id": "rse-p17-q3",
+     "q": "Marque de mode fictive : pourquoi « Consommateurs » est-il Insufficient ?",
+     "choices": [
+      "Campagne « 100 % verte » sanctionnée alors que 5 % des produits sont en coton bio",
+      "Délais de paiement de 65 jours",
+      "60 % des usines dans des pays à risque",
+      "Le scope 3 explose"
+     ],
+     "answer": 0,
+     "explain": "Les délais de paiement relèvent de la loyauté des pratiques."
+    }
+   ],
+   "open": {
+    "q": "Que contient le tableau de maturité pour chaque question centrale ?",
+    "a": "Une note (Insufficient, Intermediate, Advanced), un résumé de 2 ou 3 phrases et la liste des preuves."
+   }
+  },
+  {
+   "id": "rse-p18",
+   "part": "Séance 4 – ISO 26000 et le plan stratégique RSE",
+   "anchor": "construire-le-plan-strategique-le-volet-environnement-sur-la",
+   "title": "Le plan stratégique : volet environnement",
+   "qcm": [
+    {
+     "id": "rse-p18-q1",
+     "q": "Quel est l'ordre de la séquence ERC + R ?",
+     "choices": [
+      "Éviter, réduire, compenser, régénérer",
+      "Réduire, éviter, régénérer, compenser",
+      "Compenser, réduire, éviter, régénérer",
+      "Régénérer, compenser, réduire, éviter"
+     ],
+     "answer": 0,
+     "explain": "La compensation n'intervient qu'en dernier recours."
+    },
+    {
+     "id": "rse-p18-q2",
+     "q": "Quelle part de l'impact d'un produit se décide à la conception ?",
+     "choices": [
+      "80 %",
+      "20 %",
+      "50 %",
+      "95 %"
+     ],
+     "answer": 0,
+     "explain": "D'où l'ACV multicritère, la conception démontable, Cradle to Cradle."
+    },
+    {
+     "id": "rse-p18-q3",
+     "q": "Louer plutôt que vendre relève de…",
+     "choices": [
+      "L'économie de la fonctionnalité (usage et fin de vie)",
+      "La compensation",
+      "La logistique",
+      "Les achats de matières"
+     ],
+     "answer": 0,
+     "explain": "Maillon aval, avec la seconde main et le recyclage en boucle fermée."
+    }
+   ],
+   "open": {
+    "q": "Quand la compensation est-elle acceptable, et sous quelle forme ?",
+    "a": "Uniquement pour l'impact résiduel : crédits carbone de séquestration (reforestation, mangroves) ou d'évitement, compensation de la biodiversité."
+   }
+  },
+  {
+   "id": "rse-p19",
+   "part": "Séance 4 – ISO 26000 et le plan stratégique RSE",
+   "anchor": "le-volet-social-et-societal-selon-iso-26000",
+   "title": "Le volet social et sociétal",
+   "qcm": [
+    {
+     "id": "rse-p19-q1",
+     "q": "Le living wage et les audits contre le travail forcé relèvent de l'axe…",
+     "choices": [
+      "Achats et fournisseurs",
+      "Capital humain",
+      "Communautés",
+      "Consommateurs"
+     ],
+     "answer": 0,
+     "explain": "Avec la liberté syndicale et les délais de paiement."
+    },
+    {
+     "id": "rse-p19-q2",
+     "q": "Quelle loi encadre l'anticorruption dans l'axe gouvernance ?",
+     "choices": [
+      "La loi Sapin 2",
+      "La loi AGEC",
+      "La loi PACTE",
+      "REACH"
+     ],
+     "answer": 0,
+     "explain": "Avec l'alerte anonyme et la transparence fiscale."
+    }
+   ],
+   "open": {
+    "q": "Qui porte souvent les sujets sociaux et sociétaux dans l'entreprise ?",
+    "a": "D'autres directions que l'équipe RSE : RH, direction générale, communication interne."
+   }
+  },
+  {
+   "id": "rse-p20",
+   "part": "Séance 4 – ISO 26000 et le plan stratégique RSE",
+   "anchor": "les-4-niveaux-de-maturite-rse",
+   "title": "Les 4 niveaux de maturité RSE",
+   "qcm": [
+    {
+     "id": "rse-p20-q1",
+     "q": "Une entreprise qui respecte la loi pour éviter les amendes et le bad buzz est au niveau…",
+     "choices": [
+      "Défensif",
+      "Correctif",
+      "Stratégique",
+      "Transformatif"
+     ],
+     "answer": 0,
+     "explain": "La RSE y est vécue comme une contrainte."
+    },
+    {
+     "id": "rse-p20-q2",
+     "q": "Réduire ses coûts d'énergie et faire du mécénat ponctuel, c'est le niveau…",
+     "choices": [
+      "Correctif",
+      "Défensif",
+      "Stratégique",
+      "Transformatif"
+     ],
+     "answer": 0,
+     "explain": "Optimisation."
+    },
+    {
+     "id": "rse-p20-q3",
+     "q": "Au niveau transformatif…",
+     "choices": [
+      "La RSE pilote le business model, avec un impact net positif",
+      "La RSE est une contrainte",
+      "La RSE réduit les coûts",
+      "La RSE est déléguée à la communication"
+     ],
+     "answer": 0,
+     "explain": "C'est le niveau régénératif."
+    }
+   ],
+   "open": {
+    "q": "Cite les 4 niveaux de maturité dans l'ordre.",
+    "a": "Défensif (conformité), correctif (optimisation), stratégique (intégrée à la stratégie), transformatif (régénératif)."
+   }
+  },
+  {
+   "id": "rse-p21",
+   "part": "Séance 4 – ISO 26000 et le plan stratégique RSE",
+   "anchor": "l-exemple-shein-devoir-de-groupe-faire-passer-une-entreprise",
+   "title": "L'exemple Shein",
+   "qcm": [
+    {
+     "id": "rse-p21-q1",
+     "q": "Quel règlement européen encadre les substances chimiques toxiques ?",
+     "choices": [
+      "REACH",
+      "AGEC",
+      "CSRD",
+      "Sapin 2"
+     ],
+     "answer": 0,
+     "explain": "La loi AGEC (France) : affichage environnemental, interdiction de détruire les invendus."
+    },
+    {
+     "id": "rse-p21-q2",
+     "q": "Quel est le niveau de maturité de Shein sur les achats de matières ?",
+     "choices": [
+      "Défensif",
+      "Correctif",
+      "Stratégique",
+      "Transformatif"
+     ],
+     "answer": 0,
+     "explain": "Les tests chimiques servent seulement à éviter les saisies en douane."
+    },
+    {
+     "id": "rse-p21-q3",
+     "q": "Quelles entreprises servent de benchmark best-in-class ?",
+     "choices": [
+      "Patagonia et Veja",
+      "Zara et H&M",
+      "Danone et L'Oréal",
+      "Interface et Renault Trucks"
+     ],
+     "answer": 0,
+     "explain": "Patagonia : 100 % coton bio, polyester recyclé."
+    }
+   ],
+   "open": {
+    "q": "Donne la trame du devoir Shein, réutilisable à l'examen.",
+    "a": "Le périmètre, le cadre réglementaire, le diagnostic ISO 26000, un benchmark best-in-class, 3 actions concrètes, mesurables et réalistes."
+   }
+  },
+  {
+   "id": "rse-p22",
+   "part": "Séance 5 – L'économie régénérative",
+   "anchor": "durabilite-faible-et-durabilite-forte",
+   "title": "Durabilité faible et durabilité forte",
+   "qcm": [
+    {
+     "id": "rse-p22-q1",
+     "q": "En durabilité faible, le capital naturel et le capital humain sont…",
+     "choices": [
+      "Substituables : il suffit que le stock total ne baisse pas",
+      "Irremplaçables",
+      "Sans valeur",
+      "Sans lien"
+     ],
+     "answer": 0,
+     "explain": "La durabilité forte dit l'inverse : le capital naturel a des fonctions irremplaçables."
+    },
+    {
+     "id": "rse-p22-q2",
+     "q": "Comment représente-t-on la durabilité forte ?",
+     "choices": [
+      "Des cercles imbriqués : le Profit dans le People, le People dans la Planet",
+      "Trois cercles au même niveau qui se chevauchent",
+      "Un donut",
+      "Une pyramide"
+     ],
+     "answer": 0,
+     "explain": "Sans planète, pas de peuple ; sans peuple, pas de profit."
+    },
+    {
+     "id": "rse-p22-q3",
+     "q": "Quelle critique vise la durabilité faible ?",
+     "choices": [
+      "Elle ignore les seuils et l'irréversible",
+      "Elle est trop prudente",
+      "Elle refuse la technologie",
+      "Elle oublie le profit"
+     ],
+     "answer": 0,
+     "explain": "Extinctions, points de bascule, épuisement du capital naturel critique."
+    }
+   ],
+   "open": {
+    "q": "Quelles sont les hypothèses de la durabilité faible ?",
+    "a": "La technologie remplace la nature, la croissance compense la dégradation, on peut donner un prix à la nature (analyse coûts-bénéfices)."
+   }
+  },
+  {
+   "id": "rse-p23",
+   "part": "Séance 5 – L'économie régénérative",
+   "anchor": "l-entreprise-regenerative",
+   "title": "L'entreprise régénérative",
+   "qcm": [
+    {
+     "id": "rse-p23-q1",
+     "q": "À quoi le cours compare-t-il l'entreprise régénérative ?",
+     "choices": [
+      "À un arbre, qui purifie son environnement par sa seule existence",
+      "À une machine",
+      "À un équipage",
+      "À un organisme en compétition"
+     ],
+     "answer": 0,
+     "explain": "Elle génère plus de bénéfices pour les écosystèmes et la société qu'elle n'en consomme."
+    },
+    {
+     "id": "rse-p23-q2",
+     "q": "Le biomimétisme signifie que…",
+     "choices": [
+      "Le déchet n'existe pas : l'entreprise fonctionne en boucle fermée",
+      "L'entreprise imite ses concurrents",
+      "Les produits ressemblent à des animaux",
+      "On compense ses émissions"
+     ],
+     "answer": 0,
+     "explain": "C'est l'un des 4 piliers."
+    },
+    {
+     "id": "rse-p23-q3",
+     "q": "Dans la gouvernance partagée, la valeur est redistribuée…",
+     "choices": [
+      "Aux salariés, aux fournisseurs et à des projets écologiques locaux",
+      "Uniquement aux actionnaires",
+      "Uniquement à l'État",
+      "Uniquement aux clients"
+     ],
+     "answer": 0,
+     "explain": "Pas seulement aux actionnaires."
+    }
+   ],
+   "open": {
+    "q": "Cite les 4 piliers de l'entreprise régénérative.",
+    "a": "Viser l'impact net positif, s'inspirer du vivant (biomimétisme), la vision systémique (organe de son territoire), la gouvernance partagée."
+   }
+  },
+  {
+   "id": "rse-p24",
+   "part": "Séance 5 – L'économie régénérative",
+   "anchor": "les-4-etapes-pour-devenir-regeneratif-cec-convention-des-ent",
+   "title": "Les 4 étapes pour devenir régénératif (CEC)",
+   "qcm": [
+    {
+     "id": "rse-p24-q1",
+     "q": "Pour un constructeur de camions, quel est le vrai problème selon la CEC ?",
+     "choices": [
+      "Réduire le nombre de camions et de kilomètres",
+      "Décarboner la flotte seulement",
+      "Vendre plus de camions électriques",
+      "Augmenter le réseau routier"
+     ],
+     "answer": 0,
+     "explain": "Le réseau routier a grandi de plus de 12 % en 20 ans, les poids lourds de 56 %."
+    },
+    {
+     "id": "rse-p24-q2",
+     "q": "Combien de leviers de réorientation identifier ?",
+     "choices": [
+      "3 à 5",
+      "1",
+      "17",
+      "10"
+     ],
+     "answer": 0,
+     "explain": "Repenser l'offre, fonctionnalité, influencer l'écosystème, coopérer, transformer le management, régénérer."
+    }
+   ],
+   "open": {
+    "q": "Donne les 4 étapes de la CEC.",
+    "a": "1. Comprendre ses pressions. 2. Questionner le besoin essentiel satisfait. 3. Définir un nouveau cap pour 2030. 4. Identifier 3 à 5 leviers de réorientation et les plans d'action."
+   }
+  },
+  {
+   "id": "rse-p25",
+   "part": "Séance 5 – L'économie régénérative",
+   "anchor": "les-trois-etudes-de-cas-du-cours",
+   "title": "Les trois études de cas",
+   "qcm": [
+    {
+     "id": "rse-p25-q1",
+     "q": "Quelle action phare Mustela a-t-elle prise ?",
+     "choices": [
+      "L'arrêt des lingettes pour bébé (20 % du CA en France)",
+      "Le passage à 100 % d'énergies renouvelables",
+      "La location de dalles",
+      "La vente de camions électriques"
+     ],
+     "answer": 0,
+     "explain": "Avec un transport 100 % maritime et une coopération avec des concurrents pour le vrac."
+    },
+    {
+     "id": "rse-p25-q2",
+     "q": "Quel programme a lancé Interface en 1994 ?",
+     "choices": [
+      "Mission Zero",
+      "impACT 2030",
+      "Net-Works",
+      "ReEntry"
+     ],
+     "answer": 0,
+     "explain": "Résultats : −95 % de GES, −94 % de moquettes en décharge."
+    },
+    {
+     "id": "rse-p25-q3",
+     "q": "Quel est le message du DG de Renault Trucks ?",
+     "choices": [
+      "Vendre moins de camions",
+      "Vendre plus de camions électriques",
+      "Compenser toutes les émissions",
+      "Délocaliser la production"
+     ],
+     "answer": 0,
+     "explain": "Christophe Martin."
+    },
+    {
+     "id": "rse-p25-q4",
+     "q": "Le Floor as a Service d'Interface relève de quelle étape ?",
+     "choices": [
+      "Réduire",
+      "Renoncer",
+      "Compenser",
+      "Régénérer"
+     ],
+     "answer": 0,
+     "explain": "Avec le recyclage ReEntry et 60 % de matières biosourcées ou recyclées."
+    }
+   ],
+   "open": {
+    "q": "Cite les 4 leviers du cap 2030 de Renault Trucks.",
+    "a": "La transition énergétique, la productivité logistique, l'économie circulaire, la transition territoriale."
+   }
+  }
+ ],
+ "retired": []
+}
