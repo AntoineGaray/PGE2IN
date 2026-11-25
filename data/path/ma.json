@@ -1,0 +1,1803 @@
+{
+ "subject": "ma",
+ "updated": "2026-11-25",
+ "steps": [
+  {
+   "id": "ma-p01",
+   "part": "Chap 1 – Introduction to Management Accounting",
+   "anchor": "trois-types-d-entreprises",
+   "title": "Trois types d'entreprises",
+   "qcm": [
+    {
+     "id": "ma-p01-q1",
+     "q": "Combien de comptes de stocks tient une entreprise de merchandising ?",
+     "choices": [
+      "1 : Merchandise Inventory",
+      "Aucun",
+      "3 : Raw materials, WIP, Finished goods",
+      "2 : achats et ventes"
+     ],
+     "answer": 0,
+     "explain": "Le merchandiser achète et revend : un seul stock. Le service n'en a aucun, le manufacturer en a trois."
+    },
+    {
+     "id": "ma-p01-q2",
+     "q": "Le Work in process (WIP) contient…",
+     "choices": [
+      "Matières + main-d'œuvre + manufacturing overhead, produits pas encore terminés",
+      "Uniquement les matières premières",
+      "Les produits terminés pas encore vendus",
+      "Les marchandises achetées pour la revente"
+     ],
+     "answer": 0,
+     "explain": "Raw materials = matières sans main-d'œuvre ; Finished goods = terminés, pas encore vendus."
+    },
+    {
+     "id": "ma-p01-q3",
+     "q": "Danone, Peugeot ou ASUS sont des exemples d'entreprises…",
+     "choices": [
+      "Manufacturing",
+      "Merchandising",
+      "De service",
+      "Wholesalers"
+     ],
+     "answer": 0,
+     "explain": "Elles fabriquent des produits à partir de matières premières."
+    },
+    {
+     "id": "ma-p01-q4",
+     "q": "Quelle différence entre un retailer et un wholesaler ?",
+     "choices": [
+      "Le retailer vend au consommateur final, le wholesaler achète en gros et revend aux retailers",
+      "Le retailer fabrique, le wholesaler revend",
+      "Le wholesaler vend au consommateur final",
+      "Aucune, ce sont des synonymes"
+     ],
+     "answer": 0,
+     "explain": "Les deux sont des entreprises de merchandising."
+    }
+   ],
+   "open": {
+    "q": "Cite les trois stocks d'un manufacturer et ce que contient chacun.",
+    "a": "Raw materials (matières premières, sans main-d'œuvre), Work in process (matières + main-d'œuvre + manufacturing overhead, pas terminés), Finished goods (terminés, pas encore vendus, avec tous leurs coûts de production)."
+   }
+  },
+  {
+   "id": "ma-p02",
+   "part": "Chap 1 – Introduction to Management Accounting",
+   "anchor": "les-trois-responsabilites-du-manager",
+   "title": "Les trois responsabilités du manager",
+   "qcm": [
+    {
+     "id": "ma-p02-q1",
+     "q": "Comparer les ventes budgétées aux ventes réelles relève de…",
+     "choices": [
+      "Controlling",
+      "Planning",
+      "Directing",
+      "Reporting"
+     ],
+     "answer": 0,
+     "explain": "Controlling = comparer les résultats au plan et corriger."
+    },
+    {
+     "id": "ma-p02-q2",
+     "q": "Qu'est-ce que le budget ?",
+     "choices": [
+      "L'expression chiffrée du plan",
+      "Le compte de résultat de l'année passée",
+      "Le contrôle des écarts",
+      "Le pilotage au jour le jour"
+     ],
+     "answer": 0,
+     "explain": "Le budget appartient au planning."
+    },
+    {
+     "id": "ma-p02-q3",
+     "q": "Ajuster le marketing avec les rapports de ventes hebdomadaires relève de…",
+     "choices": [
+      "Directing",
+      "Planning",
+      "Controlling",
+      "Budgeting"
+     ],
+     "answer": 0,
+     "explain": "Directing = piloter les opérations au jour le jour."
+    }
+   ],
+   "open": {
+    "q": "Cite les trois responsabilités du manager avec un exemple chacune.",
+    "a": "Planning (fixer les objectifs : ouvrir des magasins, réduire les horaires), Directing (piloter au quotidien : ajuster le marketing avec les ventes hebdo), Controlling (comparer au plan : ventes ou coûts budgétés contre réels)."
+   }
+  },
+  {
+   "id": "ma-p03",
+   "part": "Chap 1 – Introduction to Management Accounting",
+   "anchor": "financial-accounting-et-management-accounting",
+   "title": "Financial et management accounting",
+   "qcm": [
+    {
+     "id": "ma-p03-q1",
+     "q": "À qui s'adresse le management accounting ?",
+     "choices": [
+      "Aux managers, en interne",
+      "Aux actionnaires et aux banques",
+      "À l'État",
+      "Aux clients"
+     ],
+     "answer": 0,
+     "explain": "Le financial accounting vise les destinataires externes.",
+     "flag": "Complément"
+    },
+    {
+     "id": "ma-p03-q2",
+     "q": "Quelle est l'orientation du management accounting ?",
+     "choices": [
+      "Le futur (décisions, budgets)",
+      "Le passé",
+      "Uniquement le présent",
+      "Les obligations fiscales"
+     ],
+     "answer": 0,
+     "explain": "Le financial accounting regarde le passé.",
+     "flag": "Complément"
+    },
+    {
+     "id": "ma-p03-q3",
+     "q": "Lequel de ces traits caractérise le financial accounting ?",
+     "choices": [
+      "Des règles obligatoires (IFRS, PCG) et une obligation légale",
+      "Aucune norme imposée",
+      "Une analyse par produit, client ou département",
+      "La rapidité prime sur la précision"
+     ],
+     "answer": 0,
+     "explain": "Le management accounting est facultatif, sans norme imposée, et raisonne par segments.",
+     "flag": "Complément"
+    }
+   ],
+   "open": {
+    "q": "Donne trois différences entre financial accounting et management accounting.",
+    "a": "Parmi : destinataires (externes / internes), orientation (passé / futur), règles (obligatoires / aucune norme), précision (exacte / pertinence et rapidité), niveau (entreprise entière / segments), obligation (légale / facultative)."
+   },
+   "flag": "Complément"
+  },
+  {
+   "id": "ma-p04",
+   "part": "Chap 1 – Introduction to Management Accounting",
+   "anchor": "role-et-ethique-du-management-accountant",
+   "title": "Rôle et éthique du management accountant",
+   "qcm": [
+    {
+     "id": "ma-p04-q1",
+     "q": "Lequel de ces comportements est cité en cours comme contraire à l'éthique ?",
+     "choices": [
+      "Manipuler le résultat",
+      "Préparer un budget prudent",
+      "Analyser les écarts",
+      "Utiliser un nouveau logiciel"
+     ],
+     "answer": 0,
+     "explain": "Autres exemples : rembourser de fausses notes de frais, faire un travail pour lequel on n'est pas qualifié."
+    },
+    {
+     "id": "ma-p04-q2",
+     "q": "Selon le cours, l'éthique consiste à…",
+     "choices": [
+      "Faire ce qui est juste quelles que soient les conséquences",
+      "Respecter uniquement la loi",
+      "Maximiser le profit",
+      "Obéir à sa hiérarchie"
+     ],
+     "answer": 0,
+     "explain": "C'est la définition donnée en cours."
+    }
+   ],
+   "open": {
+    "q": "Quelles sont les missions du management accountant ?",
+    "a": "Tenir des comptes justes, planifier, analyser et interpréter les données, aider à la décision."
+   }
+  },
+  {
+   "id": "ma-p05",
+   "part": "Chap 1 – Introduction to Management Accounting",
+   "anchor": "la-value-chain",
+   "title": "La value chain",
+   "qcm": [
+    {
+     "id": "ma-p05-q1",
+     "q": "Dans l'exercice du cours, l'amortissement des camions de livraison est classé en…",
+     "choices": [
+      "Distribution",
+      "Purchases",
+      "Marketing",
+      "Customer service"
+     ],
+     "answer": 0,
+     "explain": "La livraison au client est la distribution."
+    },
+    {
+     "id": "ma-p05-q2",
+     "q": "Le freight-in (transport des marchandises importées) est classé en…",
+     "choices": [
+      "Purchases",
+      "Distribution",
+      "Marketing",
+      "R&D"
+     ],
+     "answer": 0,
+     "explain": "C'est un coût pour acheter la marchandise, pas pour la livrer au client."
+    },
+    {
+     "id": "ma-p05-q3",
+     "q": "Le consultant sur l'emplacement d'un nouveau magasin est classé en…",
+     "choices": [
+      "R&D",
+      "Design",
+      "Marketing",
+      "Distribution"
+     ],
+     "answer": 0,
+     "explain": "Le réaménagement du magasin, lui, est en Design."
+    }
+   ],
+   "open": {
+    "q": "Cite dans l'ordre les six maillons de la value chain du cours.",
+    "a": "R&D, Design, Purchases/Production, Marketing, Distribution, Customer service."
+   }
+  },
+  {
+   "id": "ma-p06",
+   "part": "Chap 2 – Cost terminology",
+   "anchor": "cost-object",
+   "title": "Cost object",
+   "qcm": [
+    {
+     "id": "ma-p06-q1",
+     "q": "Qu'est-ce qu'un cost object ?",
+     "choices": [
+      "Tout ce dont le manager veut connaître le coût séparément",
+      "Uniquement un produit fini",
+      "Un coût fixe",
+      "Une clé de répartition"
+     ],
+     "answer": 0,
+     "explain": "Produit, service, projet, client, activité, département, canal de vente, zone…"
+    },
+    {
+     "id": "ma-p06-q2",
+     "q": "Lequel de ces éléments peut être un cost object ?",
+     "choices": [
+      "Tous : un client, une activité, un département",
+      "Seulement un produit",
+      "Seulement un département",
+      "Seulement un projet"
+     ],
+     "answer": 0,
+     "explain": "Exemples du cours : une BMW X6, la hotline, un concessionnaire, régler les machines, le département HSE."
+    }
+   ],
+   "open": {
+    "q": "Pourquoi dit-on qu'un coût se classe toujours par rapport à un cost object ?",
+    "a": "Parce que le même coût peut être direct pour un cost object (un département) et indirect pour un autre (un produit)."
+   }
+  },
+  {
+   "id": "ma-p07",
+   "part": "Chap 2 – Cost terminology",
+   "anchor": "direct-ou-indirect",
+   "title": "Direct ou indirect",
+   "qcm": [
+    {
+     "id": "ma-p07-q1",
+     "q": "Lequel de ces coûts est direct pour une voiture ?",
+     "choices": [
+      "Le volant",
+      "L'électricité de l'usine",
+      "Le loyer",
+      "La taxe foncière"
+     ],
+     "answer": 0,
+     "explain": "Le volant, les pièces et les salaires de la chaîne se rattachent facilement à la voiture."
+    },
+    {
+     "id": "ma-p07-q2",
+     "q": "Un coût indirect doit être…",
+     "choices": [
+      "Réparti de façon rationnelle et systématique (allocated)",
+      "Rattaché directement (traced)",
+      "Ignoré dans le coût total",
+      "Passé en stock"
+     ],
+     "answer": 0,
+     "explain": "Exemples : lubrifiants, électricité, loyer, frais administratifs de l'usine."
+    },
+    {
+     "id": "ma-p07-q3",
+     "q": "Comment obtient-on le coût total d'un cost object ?",
+     "choices": [
+      "Ses coûts directs + une part de ses coûts indirects",
+      "Ses coûts directs seulement",
+      "Ses coûts variables seulement",
+      "Ses coûts indirects seulement"
+     ],
+     "answer": 0,
+     "explain": "C'est la logique du full costing."
+    }
+   ],
+   "open": {
+    "q": "Explique la différence entre traced et allocated.",
+    "a": "Un coût direct est traced : il se rattache directement et facilement au cost object. Un coût indirect est allocated : il faut le répartir de façon rationnelle et systématique."
+   }
+  },
+  {
+   "id": "ma-p08",
+   "part": "Chap 2 – Cost terminology",
+   "anchor": "fixe-ou-variable",
+   "title": "Fixe ou variable",
+   "qcm": [
+    {
+     "id": "ma-p08-q1",
+     "q": "Le coût variable par unité…",
+     "choices": [
+      "Reste constant quel que soit le volume",
+      "Baisse quand le volume monte",
+      "Augmente avec le volume",
+      "Est nul au-delà d'un seuil"
+     ],
+     "answer": 0,
+     "explain": "C'est le coût variable total qui varie proportionnellement."
+    },
+    {
+     "id": "ma-p08-q2",
+     "q": "Que fait le coût fixe par unité quand le volume monte ?",
+     "choices": [
+      "Il baisse",
+      "Il monte",
+      "Il reste constant",
+      "Il devient variable"
+     ],
+     "answer": 0,
+     "explain": "Le même montant est réparti sur plus d'unités."
+    },
+    {
+     "id": "ma-p08-q3",
+     "q": "20 000 € de coûts fixes, 50 € de coût variable unitaire, 100 unités : coût total ?",
+     "choices": [
+      "25 000 €",
+      "20 050 €",
+      "70 000 €",
+      "5 000 €"
+     ],
+     "answer": 0,
+     "explain": "20 000 + 50 × 100 = 25 000 €."
+    }
+   ],
+   "open": {
+    "q": "Pourquoi dit-on qu'un coût n'est fixe ou variable que « par rapport à » quelque chose ?",
+    "a": "Parce qu'il n'est fixe ou variable que par rapport à une activité donnée et une période donnée."
+   }
+  },
+  {
+   "id": "ma-p09",
+   "part": "Chap 2 – Cost terminology",
+   "anchor": "inventoriable-product-costs-et-period-costs",
+   "title": "Inventoriable et period costs",
+   "qcm": [
+    {
+     "id": "ma-p09-q1",
+     "q": "Quand un inventoriable product cost passe-t-il en charge ?",
+     "choices": [
+      "À la vente, en Cost of Goods Sold",
+      "Dès qu'il est engagé",
+      "À la fin de l'année, quoi qu'il arrive",
+      "Jamais"
+     ],
+     "answer": 0,
+     "explain": "Il reste à l'actif, en stock, jusqu'à la vente."
+    },
+    {
+     "id": "ma-p09-q2",
+     "q": "Lequel est un period cost ?",
+     "choices": [
+      "Le marketing",
+      "Les direct materials",
+      "Le direct labor",
+      "Le manufacturing overhead"
+     ],
+     "answer": 0,
+     "explain": "Period costs : R&D, design, marketing, distribution, service client, administration."
+    },
+    {
+     "id": "ma-p09-q3",
+     "q": "Le salaire du chef d'atelier est…",
+     "choices": [
+      "De l'indirect labor, dans le manufacturing overhead",
+      "Du direct labor",
+      "Un period cost",
+      "Un direct material"
+     ],
+     "answer": 0,
+     "explain": "MOH = indirect materials (colle) + indirect labor (chef d'atelier) + autres coûts d'usine."
+    },
+    {
+     "id": "ma-p09-q4",
+     "q": "Coût d'achat inventoriable chez un merchandiser = …",
+     "choices": [
+      "Prix d'achat + préparation à la vente + freight-in + droits de douane",
+      "Prix d'achat seulement",
+      "Prix d'achat + publicité",
+      "Prix d'achat + salaires des vendeurs"
+     ],
+     "answer": 0,
+     "explain": "Tout ce qu'il faut pour amener la marchandise prête à la vente."
+    }
+   ],
+   "open": {
+    "q": "Quels sont les trois éléments du coût de production inventoriable d'un manufacturer ?",
+    "a": "Direct materials (DM), direct labor (DL) et manufacturing overhead (MOH : indirect materials, indirect labor, autres coûts d'usine comme l'amortissement et l'assurance de l'usine)."
+   }
+  },
+  {
+   "id": "ma-p10",
+   "part": "Chap 2 – Cost terminology",
+   "anchor": "exercice-dairy-plain-inventoriable-ou-period-cost",
+   "title": "Exercice Dairy Plain",
+   "qcm": [
+    {
+     "id": "ma-p10-q1",
+     "q": "Le lait acheté aux éleveurs est…",
+     "choices": [
+      "Inventoriable – DM",
+      "Inventoriable – MOH",
+      "Period",
+      "Inventoriable – DL"
+     ],
+     "answer": 0,
+     "explain": "C'est la matière première directe.",
+     "flag": "Complément"
+    },
+    {
+     "id": "ma-p10-q2",
+     "q": "L'essence des camions qui livrent les épiceries est…",
+     "choices": [
+      "Period (distribution)",
+      "Inventoriable – MOH",
+      "Inventoriable – DM",
+      "Inventoriable – DL"
+     ],
+     "answer": 0,
+     "explain": "Le produit est déjà sorti de l'usine.",
+     "flag": "Complément"
+    },
+    {
+     "id": "ma-p10-q3",
+     "q": "L'amortissement des camions qui collectent le lait cru est…",
+     "choices": [
+      "Inventoriable – MOH",
+      "Period (distribution)",
+      "Inventoriable – DM",
+      "Period (administration)"
+     ],
+     "answer": 0,
+     "explain": "C'est un coût pour amener la matière à l'usine.",
+     "flag": "Complément"
+    }
+   ],
+   "open": {
+    "q": "Quelle astuce permet de trancher entre inventoriable et period ?",
+    "a": "Tout ce qui se passe avant que le produit sorte de l'usine est inventoriable ; tout ce qui se passe après (vendre, livrer, administrer, chercher) est period."
+   },
+   "flag": "Complément"
+  },
+  {
+   "id": "ma-p11",
+   "part": "Chap 2 – Cost terminology",
+   "anchor": "controllable-ou-uncontrollable",
+   "title": "Controllable ou uncontrollable",
+   "qcm": [
+    {
+     "id": "ma-p11-q1",
+     "q": "Un coût uncontrollable est un coût que…",
+     "choices": [
+      "Le manager ne peut pas modifier à court terme",
+      "Personne ne connaît",
+      "Le manager peut influencer",
+      "L'État fixe"
+     ],
+     "answer": 0,
+     "explain": "Un coût controllable est un coût que le manager peut influencer ou modifier."
+    },
+    {
+     "id": "ma-p11-q2",
+     "q": "Un coût controllable est…",
+     "choices": [
+      "Un coût que le manager peut influencer ou modifier",
+      "Un coût toujours variable",
+      "Un coût toujours direct",
+      "Un coût vérifié par l'auditeur"
+     ],
+     "answer": 0,
+     "explain": "La distinction porte sur le pouvoir du manager, pas sur le comportement du coût."
+    }
+   ],
+   "open": {
+    "q": "Définis controllable et uncontrollable.",
+    "a": "Controllable : le manager peut influencer ou modifier le coût. Uncontrollable : il ne peut pas le modifier à court terme."
+   }
+  },
+  {
+   "id": "ma-p12",
+   "part": "Chap 3 – Cost behavior and cost techniques",
+   "anchor": "les-trois-comportements-de-couts",
+   "title": "Les trois comportements de coûts",
+   "qcm": [
+    {
+     "id": "ma-p12-q1",
+     "q": "Quelle équation décrit un coût mixte ?",
+     "choices": [
+      "y = vx + F",
+      "y = vx",
+      "y = F",
+      "y = F / x"
+     ],
+     "answer": 0,
+     "explain": "Variable : y = vx ; fixe : y = F ; mixte : y = vx + F."
+    },
+    {
+     "id": "ma-p12-q2",
+     "q": "Sur le graphique, la droite d'un coût fixe est…",
+     "choices": [
+      "Horizontale",
+      "Une droite qui part de 0",
+      "Une droite qui part de F",
+      "Une courbe décroissante"
+     ],
+     "answer": 0,
+     "explain": "Le coût variable part de 0 ; le coût mixte part de F."
+    },
+    {
+     "id": "ma-p12-q3",
+     "q": "Exemple de coût mixte cité en cours :",
+     "choices": [
+      "La rémunération des commerciaux (salaire de base + commissions)",
+      "Le loyer",
+      "Les matières premières",
+      "L'amortissement d'une machine"
+     ],
+     "answer": 0,
+     "explain": "Une partie fixe et une partie variable."
+    },
+    {
+     "id": "ma-p12-q4",
+     "q": "High-low : plus bas 2 000 u pour 24 000 €, plus haut 6 000 u pour 60 000 €. Que vaut v ?",
+     "choices": [
+      "9 € par unité",
+      "12 € par unité",
+      "10 € par unité",
+      "6 € par unité"
+     ],
+     "answer": 0,
+     "explain": "(60 000 − 24 000) / (6 000 − 2 000) = 9 €. La high-low method vient du manuel.",
+     "flag": "Complément"
+    }
+   ],
+   "open": {
+    "q": "Comment sépare-t-on v et F avec la high-low method ?",
+    "a": "v = (coût au plus haut − coût au plus bas) / (volume le plus haut − volume le plus bas), puis F = coût total − v × volume sur l'un des deux points."
+   }
+  },
+  {
+   "id": "ma-p13",
+   "part": "Chap 3 – Cost behavior and cost techniques",
+   "anchor": "pourquoi-calculer-des-couts-complets",
+   "title": "Pourquoi calculer des coûts complets",
+   "qcm": [
+    {
+     "id": "ma-p13-q1",
+     "q": "Laquelle n'est PAS une raison de calculer des coûts complets citée en cours ?",
+     "choices": [
+      "Calculer le seuil d'indifférence",
+      "Calculer le profit par produit",
+      "Aider à fixer les prix de vente",
+      "Le reporting externe l'exige"
+     ],
+     "answer": 0,
+     "explain": "Le seuil d'indifférence relève du CVP."
+    },
+    {
+     "id": "ma-p13-q2",
+     "q": "Pourquoi le reporting externe pousse-t-il au coût complet ?",
+     "choices": [
+      "Parce qu'il l'exige",
+      "Parce qu'il interdit les coûts variables",
+      "Parce que c'est plus rapide",
+      "Parce que les managers le demandent"
+     ],
+     "answer": 0,
+     "explain": "L'absorption costing est obligatoire pour le reporting externe."
+    }
+   ],
+   "open": {
+    "q": "Cite les quatre raisons de calculer des coûts complets.",
+    "a": "Calculer le profit par produit, aider à fixer les prix de vente, suivre les coûts budgétés et les écarts, et parce que le reporting externe l'exige."
+   }
+  },
+  {
+   "id": "ma-p14",
+   "part": "Chap 3 – Cost behavior and cost techniques",
+   "anchor": "absorption-full-costing-et-variable-costing",
+   "title": "Absorption costing et variable costing",
+   "qcm": [
+    {
+     "id": "ma-p14-q1",
+     "q": "Quelle est la seule différence entre absorption et variable costing ?",
+     "choices": [
+      "Le traitement du fixed manufacturing overhead",
+      "Le traitement des direct materials",
+      "Le prix de vente",
+      "Le traitement des frais commerciaux variables"
+     ],
+     "answer": 0,
+     "explain": "Stocké dans le premier, passé en charge immédiatement dans le second."
+    },
+    {
+     "id": "ma-p14-q2",
+     "q": "Le product cost en variable costing = …",
+     "choices": [
+      "DM + DL + Variable MOH",
+      "DM + DL + Variable MOH + Fixed MOH",
+      "DM + DL",
+      "DM + Fixed MOH"
+     ],
+     "answer": 0,
+     "explain": "En absorption, on ajoute le Fixed MOH."
+    },
+    {
+     "id": "ma-p14-q3",
+     "q": "Quel solde apparaît dans le compte de résultat en variable costing ?",
+     "choices": [
+      "La contribution margin",
+      "La gross margin",
+      "L'EBITDA",
+      "La MDC"
+     ],
+     "answer": 0,
+     "explain": "Coûts classés variable/fixe ; en absorption, coûts classés direct/indirect et solde = gross margin."
+    },
+    {
+     "id": "ma-p14-q4",
+     "q": "Quelle méthode est interdite pour le reporting externe ?",
+     "choices": [
+      "Le variable costing",
+      "L'absorption costing",
+      "Le full costing",
+      "Les deux sont autorisées"
+     ],
+     "answer": 0,
+     "explain": "Le variable costing sert aux décisions internes."
+    }
+   ],
+   "open": {
+    "q": "Donne les trois étapes de la méthode du coût complet (coût de revient).",
+    "a": "1) Coût d'achat des matières, 2) coût de production des produits finis, 3) coût total."
+   }
+  },
+  {
+   "id": "ma-p15",
+   "part": "Chap 3 – Cost behavior and cost techniques",
+   "anchor": "les-deux-comptes-de-resultat-exemple-o-neill-s-products",
+   "title": "Les deux comptes de résultat (O'Neill's)",
+   "qcm": [
+    {
+     "id": "ma-p15-q1",
+     "q": "O'Neill's : coût variable 35 €/u, fixed MOH 132 000 €, 12 000 unités. Coût unitaire en absorption ?",
+     "choices": [
+      "46 €",
+      "35 €",
+      "37 €",
+      "57 €"
+     ],
+     "answer": 0,
+     "explain": "35 + 132 000 / 12 000 = 35 + 11 = 46 €."
+    },
+    {
+     "id": "ma-p15-q2",
+     "q": "Quelle est la contribution margin d'O'Neill's (12 000 × 65, VC 35 + 2 par unité) ?",
+     "choices": [
+      "336 000 €",
+      "228 000 €",
+      "360 000 €",
+      "119 000 €"
+     ],
+     "answer": 0,
+     "explain": "780 000 − 420 000 − 24 000 = 336 000 €."
+    },
+    {
+     "id": "ma-p15-q3",
+     "q": "Pourquoi les deux méthodes donnent-elles le même résultat (119 000 €) ici ?",
+     "choices": [
+      "Parce que production = ventes : tout le fixed MOH passe en charge",
+      "Parce que le prix est élevé",
+      "Parce qu'il n'y a pas de coûts fixes",
+      "C'est toujours le cas"
+     ],
+     "answer": 0,
+     "explain": "Même chose dans l'exemple Lee Dress (40 000 €)."
+    }
+   ],
+   "open": {
+    "q": "Que vaut la gross profit d'O'Neill's en absorption, et comment l'obtient-on ?",
+    "a": "228 000 € = revenues 780 000 − COGS (12 000 × 46 = 552 000)."
+   }
+  },
+  {
+   "id": "ma-p16",
+   "part": "Chap 3 – Cost behavior and cost techniques",
+   "anchor": "quand-les-deux-resultats-different",
+   "title": "Quand les deux résultats diffèrent",
+   "qcm": [
+    {
+     "id": "ma-p16-q1",
+     "q": "Production > ventes (le stock monte) : quel résultat est le plus élevé ?",
+     "choices": [
+      "Absorption",
+      "Variable",
+      "Ils sont égaux",
+      "Impossible à dire"
+     ],
+     "answer": 0,
+     "explain": "Une partie du fixed MOH reste dans le stock.",
+     "flag": "Complément"
+    },
+    {
+     "id": "ma-p16-q2",
+     "q": "Production < ventes : quel résultat est le plus élevé ?",
+     "choices": [
+      "Variable",
+      "Absorption",
+      "Ils sont égaux",
+      "Impossible à dire"
+     ],
+     "answer": 0,
+     "explain": "Le stock vendu ramène du fixed MOH des périodes passées.",
+     "flag": "Complément"
+    },
+    {
+     "id": "ma-p16-q3",
+     "q": "L'écart de résultat entre les deux méthodes = …",
+     "choices": [
+      "Fixed MOH par unité × variation du stock en unités",
+      "Fixed MOH total",
+      "Prix × variation du stock",
+      "Coût variable × unités vendues"
+     ],
+     "answer": 0,
+     "explain": "Règle du manuel qui tombe souvent en exercice.",
+     "flag": "Complément"
+    }
+   ],
+   "open": {
+    "q": "Explique pourquoi l'absorption donne un résultat plus élevé quand le stock monte.",
+    "a": "Parce qu'une partie du fixed MOH est incorporée aux unités en stock : elle n'est pas passée en charge sur la période, alors qu'en variable costing tout le fixed MOH est en charge."
+   },
+   "flag": "Complément"
+  },
+  {
+   "id": "ma-p17",
+   "part": "Chap 3 – Cost behavior and cost techniques",
+   "anchor": "pourquoi-le-variable-costing-aide-a-decider",
+   "title": "Pourquoi le variable costing aide à décider",
+   "qcm": [
+    {
+     "id": "ma-p17-q1",
+     "q": "Pourquoi le variable costing aide-t-il à décider ?",
+     "choices": [
+      "Il sépare coûts fixes et variables, ce qui prépare l'analyse CVP",
+      "Il est obligatoire",
+      "Il donne toujours un résultat plus élevé",
+      "Il supprime les coûts fixes"
+     ],
+     "answer": 0,
+     "explain": "On calcule vite l'effet d'une variation des ventes sur le résultat."
+    },
+    {
+     "id": "ma-p17-q2",
+     "q": "Avec le variable costing, que peut-on calculer rapidement ?",
+     "choices": [
+      "L'effet d'une variation des ventes sur le résultat",
+      "La valeur fiscale des stocks",
+      "Le coût complet par produit",
+      "La gross margin"
+     ],
+     "answer": 0,
+     "explain": "C'est la base du modèle CVP."
+    }
+   ],
+   "open": {
+    "q": "Pourquoi le variable costing prépare-t-il l'analyse CVP ?",
+    "a": "Parce qu'il sépare coûts fixes et coûts variables : on obtient directement la contribution margin, base du calcul du break-even point et de l'effet d'une variation des ventes."
+   }
+  },
+  {
+   "id": "ma-p18",
+   "part": "Chap 4 – Contribution margin and break-even point",
+   "anchor": "notations-du-cours",
+   "title": "Notations du cours",
+   "qcm": [
+    {
+     "id": "ma-p18-q1",
+     "q": "Dans le cours, TO signifie…",
+     "choices": [
+      "Turnover, le chiffre d'affaires",
+      "Total output",
+      "Total overhead",
+      "Take-off"
+     ],
+     "answer": 0,
+     "explain": "SP = selling price, FC = fixed costs, Q = quantité."
+    },
+    {
+     "id": "ma-p18-q2",
+     "q": "PM signifie…",
+     "choices": [
+      "Profit margin, le résultat",
+      "Product margin",
+      "Price markup",
+      "Production MOH"
+     ],
+     "answer": 0,
+     "explain": "CM = contribution margin (marge sur coût variable)."
+    },
+    {
+     "id": "ma-p18-q3",
+     "q": "uVC est…",
+     "choices": [
+      "Le coût variable unitaire, constant quel que soit le volume",
+      "Le coût variable total",
+      "Le coût fixe unitaire",
+      "Le coût complet unitaire"
+     ],
+     "answer": 0,
+     "explain": "VC = coûts variables totaux."
+    }
+   ],
+   "open": {
+    "q": "Donne le sens de VC, FC, Q, SP, TO, CM et PM.",
+    "a": "Variable costs, fixed costs, quantité, selling price, turnover (CA), contribution margin (marge sur coût variable), profit margin (résultat)."
+   }
+  },
+  {
+   "id": "ma-p19",
+   "part": "Chap 4 – Contribution margin and break-even point",
+   "anchor": "contribution-margin",
+   "title": "Contribution margin",
+   "qcm": [
+    {
+     "id": "ma-p19-q1",
+     "q": "uCM = …",
+     "choices": [
+      "SP − uVC",
+      "SP − FC",
+      "TO − FC",
+      "uVC − SP"
+     ],
+     "answer": 0,
+     "explain": "La marge que chaque unité laisse après ses coûts variables."
+    },
+    {
+     "id": "ma-p19-q2",
+     "q": "CM ratio = …",
+     "choices": [
+      "1 − uVC / SP",
+      "uVC / SP",
+      "FC / SP",
+      "SP / uVC"
+     ],
+     "answer": 0,
+     "explain": "C'est aussi uCM / SP."
+    },
+    {
+     "id": "ma-p19-q3",
+     "q": "Que représente la uCM ?",
+     "choices": [
+      "Ce que chaque unité supplémentaire vendue ajoute au résultat, une fois les coûts fixes couverts",
+      "Le coût de chaque unité",
+      "Le profit total",
+      "Le prix de vente"
+     ],
+     "answer": 0,
+     "explain": "Avant d'avoir couvert les FC, elle sert à les couvrir."
+    }
+   ],
+   "open": {
+    "q": "Quelle égalité porte tout le modèle CVP ?",
+    "a": "Profit = CM − FC."
+   }
+  },
+  {
+   "id": "ma-p20",
+   "part": "Chap 4 – Contribution margin and break-even point",
+   "anchor": "break-even-point-bep",
+   "title": "Break-even point (BEP)",
+   "qcm": [
+    {
+     "id": "ma-p20-q1",
+     "q": "BEP en unités = …",
+     "choices": [
+      "FC / uCM",
+      "FC / SP",
+      "uCM / FC",
+      "FC × CM ratio"
+     ],
+     "answer": 0,
+     "explain": "Démonstration : PM = 0 → CM − FC = 0 → uCM × Q = FC → Q = FC / uCM."
+    },
+    {
+     "id": "ma-p20-q2",
+     "q": "Vol Paris–Dublin : FC 50 000 €, billet 100 €, coût variable 20 €. BEP ?",
+     "choices": [
+      "625 passagers",
+      "500 passagers",
+      "2 500 passagers",
+      "417 passagers"
+     ],
+     "answer": 0,
+     "explain": "50 000 / (100 − 20) = 625."
+    },
+    {
+     "id": "ma-p20-q3",
+     "q": "Un calcul donne 624,2 unités. Quel BEP retenir ?",
+     "choices": [
+      "625",
+      "624",
+      "624,2",
+      "620"
+     ],
+     "answer": 0,
+     "explain": "Toujours arrondir à l'entier supérieur, sinon on reste en perte."
+    },
+    {
+     "id": "ma-p20-q4",
+     "q": "BEP en chiffre d'affaires = …",
+     "choices": [
+      "FC / CM ratio",
+      "FC × SP",
+      "uCM × SP",
+      "FC / uVC"
+     ],
+     "answer": 0,
+     "explain": "Paris–Dublin : 50 000 / 0,8 = 62 500 €."
+    }
+   ],
+   "open": {
+    "q": "Décris le graphique du BEP.",
+    "a": "La droite TO = Q × SP part de 0 ; la droite TC = FC + Q × uVC part de FC avec une pente uVC. Le BEP est leur intersection : pertes à gauche, profits à droite."
+   }
+  },
+  {
+   "id": "ma-p21",
+   "part": "Chap 4 – Contribution margin and break-even point",
+   "anchor": "indifference-threshold-seuil-d-indifference",
+   "title": "Seuil d'indifférence",
+   "qcm": [
+    {
+     "id": "ma-p21-q1",
+     "q": "Le seuil d'indifférence est le volume où…",
+     "choices": [
+      "Les coûts totaux des deux solutions sont égaux",
+      "Le résultat est nul",
+      "Les coûts fixes sont couverts",
+      "Le prix égale le coût variable"
+     ],
+     "answer": 0,
+     "explain": "Il compare deux structures de coûts : acheter ou louer, faire ou sous-traiter…"
+    },
+    {
+     "id": "ma-p21-q2",
+     "q": "Scooter : option 1 = 8 000 € + 5 €/km, option 2 = 5 000 € + 6,5 €/km. Seuil ?",
+     "choices": [
+      "2 000 km",
+      "3 000 km",
+      "1 500 km",
+      "3 500 km"
+     ],
+     "answer": 0,
+     "explain": "(8 000 − 5 000) / (6,5 − 5) = 2 000 km."
+    },
+    {
+     "id": "ma-p21-q3",
+     "q": "Au-dessus du seuil, quelle solution choisir ?",
+     "choices": [
+      "Celle au coût variable unitaire le plus bas",
+      "Celle aux coûts fixes les plus bas",
+      "N'importe laquelle",
+      "Celle au prix le plus haut"
+     ],
+     "answer": 0,
+     "explain": "Sous le seuil : les coûts fixes les plus bas."
+    }
+   ],
+   "open": {
+    "q": "Pour 3 500 km par an, quelle option de scooter choisir, et comment le vérifier ?",
+    "a": "L'option 1, car on est au-dessus du seuil de 2 000 km. Vérification : option 1 = 8 000 + 17 500 = 25 500 € ; option 2 = 5 000 + 22 750 = 27 750 €."
+   }
+  },
+  {
+   "id": "ma-p22",
+   "part": "Chap 4 – Contribution margin and break-even point",
+   "anchor": "autres-usages-du-cvp-et-limites",
+   "title": "Autres usages du CVP et limites",
+   "qcm": [
+    {
+     "id": "ma-p22-q1",
+     "q": "Quantité pour atteindre un target profit = …",
+     "choices": [
+      "(FC + profit visé) / uCM",
+      "FC / uCM + profit visé",
+      "profit visé / uCM",
+      "(FC − profit visé) / uCM"
+     ],
+     "answer": 0,
+     "explain": "On ajoute le profit visé aux coûts fixes à couvrir.",
+     "flag": "Complément"
+    },
+    {
+     "id": "ma-p22-q2",
+     "q": "La margin of safety = …",
+     "choices": [
+      "Ventes réelles ou prévues − ventes au BEP",
+      "Ventes au BEP − coûts fixes",
+      "CM − FC",
+      "Ventes / BEP"
+     ],
+     "answer": 0,
+     "explain": "En pourcentage : margin of safety / ventes.",
+     "flag": "Complément"
+    },
+    {
+     "id": "ma-p22-q3",
+     "q": "Operating leverage = 3, les ventes montent de 10 %. Le résultat monte de…",
+     "choices": [
+      "30 %",
+      "10 %",
+      "13 %",
+      "3 %"
+     ],
+     "answer": 0,
+     "explain": "Operating leverage = CM / operating income ; variation du résultat = x % × levier.",
+     "flag": "Complément"
+    }
+   ],
+   "open": {
+    "q": "Cite les limites du modèle CVP.",
+    "a": "Prix de vente et coût variable unitaire constants (relation linéaire), coûts fixes constants dans le relevant range, production entièrement vendue, sales mix constant quand il y a plusieurs produits."
+   },
+   "flag": "Complément"
+  },
+  {
+   "id": "ma-p23",
+   "part": "Chap 5 – Full costing (parties I et II)",
+   "anchor": "principe-et-formules",
+   "title": "Full costing : principe et formules",
+   "qcm": [
+    {
+     "id": "ma-p23-q1",
+     "q": "La MDC est…",
+     "choices": [
+      "La margin on direct costs : TO − DC",
+      "La marge sur coût variable",
+      "Le résultat net",
+      "Le coût direct unitaire"
+     ],
+     "answer": 0,
+     "explain": "Margin on direct costs, marge sur coûts directs."
+    },
+    {
+     "id": "ma-p23-q2",
+     "q": "Quelle typologie de coûts utilise le full costing ?",
+     "choices": [
+      "Direct / indirect",
+      "Fixe / variable",
+      "Controllable / uncontrollable",
+      "Inventoriable / period"
+     ],
+     "answer": 0,
+     "explain": "Le CVP utilise fixe / variable."
+    },
+    {
+     "id": "ma-p23-q3",
+     "q": "Lequel n'est PAS un usage du full costing cité en cours ?",
+     "choices": [
+      "Calculer le seuil d'indifférence",
+      "Fixer les prix",
+      "Étudier la rentabilité",
+      "Valoriser les stocks"
+     ],
+     "answer": 0,
+     "explain": "Le seuil d'indifférence est un outil CVP."
+    }
+   ],
+   "open": {
+    "q": "Quel est le message central du prof sur le full costing ?",
+    "a": "Le « vrai coût » n'existe pas : le résultat dépend de la clé de répartition choisie."
+   }
+  },
+  {
+   "id": "ma-p24",
+   "part": "Chap 5 – Full costing (parties I et II)",
+   "anchor": "cost-driver-et-methode-d-allocation",
+   "title": "Cost driver et méthode d'allocation",
+   "qcm": [
+    {
+     "id": "ma-p24-q1",
+     "q": "Quel cost driver le cours recommande-t-il plutôt ?",
+     "choices": [
+      "Un CD physique : heures machine, heures de MOD, nombre de commandes",
+      "Le chiffre d'affaires",
+      "Le coût de la main-d'œuvre",
+      "Le résultat"
+     ],
+     "answer": 0,
+     "explain": "Les CD financiers sont trop éloignés des opérations."
+    },
+    {
+     "id": "ma-p24-q2",
+     "q": "uCD = …",
+     "choices": [
+      "IC / nombre total d'unités de CD",
+      "Nombre d'unités de CD / IC",
+      "IC × unités de CD",
+      "DC / unités produites"
+     ],
+     "answer": 0,
+     "explain": "Puis on multiplie uCD par les unités de CD consommées par chaque cost object."
+    },
+    {
+     "id": "ma-p24-q3",
+     "q": "Un bon cost driver doit être…",
+     "choices": [
+      "Corrélé à la consommation de ressources, pas forcément sa cause",
+      "Forcément la cause de la consommation",
+      "Financier",
+      "Le même pour tous les centres"
+     ],
+     "answer": 0,
+     "explain": "La corrélation suffit."
+    }
+   ],
+   "open": {
+    "q": "Donne les quatre étapes de la méthode d'allocation, valables pour tout CD.",
+    "a": "1. Compter les unités de CD consommées par chaque cost object. 2. Calculer le total des unités de CD. 3. Calculer uCD = IC / total des unités de CD. 4. Multiplier uCD par les unités consommées par chaque cost object."
+   }
+  },
+  {
+   "id": "ma-p25",
+   "part": "Chap 5 – Full costing (parties I et II)",
+   "anchor": "les-trois-methodes-d-allocation",
+   "title": "Les trois méthodes d'allocation",
+   "qcm": [
+    {
+     "id": "ma-p25-q1",
+     "q": "Quelle méthode regroupe tous les IC avec un seul CD ?",
+     "choices": [
+      "Simple allocation (méthode du coefficient)",
+      "Organisational cost centres",
+      "Activity-Based Costing",
+      "Variable costing"
+     ],
+     "answer": 0,
+     "explain": "Simple et rapide, adaptée aux petites entreprises peu diversifiées."
+    },
+    {
+     "id": "ma-p25-q2",
+     "q": "Quel est l'avantage des centres d'analyse ?",
+     "choices": [
+      "Ce sont des centres de responsabilité réels : on retrouve l'origine des écarts",
+      "C'est la méthode la plus simple",
+      "Les centres sont toujours homogènes",
+      "Il n'y a qu'un CD"
+     ],
+     "answer": 0,
+     "explain": "Beaucoup d'IC deviennent directs pour les centres."
+    },
+    {
+     "id": "ma-p25-q3",
+     "q": "Quelle est la limite de l'ABC ?",
+     "choices": [
+      "Lourd à mettre en place, et garde les problèmes de pertinence des CD et d'hétérogénéité",
+      "Trop peu précis",
+      "Pas de vision transversale",
+      "Un seul CD"
+     ],
+     "answer": 0,
+     "explain": "Son point fort : plus de CD, donc plus de précision."
+    }
+   ],
+   "open": {
+    "q": "Quel est le principe de l'ABC ?",
+    "a": "Les activités consomment les ressources, et les produits consomment les activités."
+   }
+  },
+  {
+   "id": "ma-p26",
+   "part": "Chap 5 – Full costing (parties I et II)",
+   "anchor": "exemple-simple-allocation-la-machine-lu",
+   "title": "Exemple : la machine LU",
+   "qcm": [
+    {
+     "id": "ma-p26-q1",
+     "q": "Machine LU (10 000 €) : avec le CD heures machine, combien paie Mikado (4 000 h sur 10 000) ?",
+     "choices": [
+      "4 000 €",
+      "1 000 €",
+      "3 000 €",
+      "2 000 €"
+     ],
+     "answer": 0,
+     "explain": "40 % des heures → 4 000 €."
+    },
+    {
+     "id": "ma-p26-q2",
+     "q": "Avec le CD quantités, quel produit paie la machine à la place de Mikado ?",
+     "choices": [
+      "Granola",
+      "Petit Lu",
+      "Mikado lui-même",
+      "Aucun"
+     ],
+     "answer": 0,
+     "explain": "Granola fait 70 % des quantités mais seulement 30 % des heures."
+    },
+    {
+     "id": "ma-p26-q3",
+     "q": "Quel est le bon cost driver ici ?",
+     "choices": [
+      "Le temps machine",
+      "Les quantités produites",
+      "Le chiffre d'affaires",
+      "Le nombre de salariés"
+     ],
+     "answer": 0,
+     "explain": "Il est lié à l'usage réel de la machine."
+    }
+   ],
+   "open": {
+    "q": "Que montre l'exemple de la machine LU ?",
+    "a": "Que le choix du cost driver change le coût de chaque produit : avec les quantités, Granola paie 7 000 € au lieu de 3 000 € et subventionne Mikado (1 000 € au lieu de 4 000 €). Le bon CD est le temps machine."
+   }
+  },
+  {
+   "id": "ma-p27",
+   "part": "Chap 5 – Full costing (parties I et II)",
+   "anchor": "compte-de-resultat-par-cost-object",
+   "title": "Compte de résultat par cost object",
+   "qcm": [
+    {
+     "id": "ma-p27-q1",
+     "q": "Dans le compte de résultat par cost object, que retire-t-on du turnover en premier ?",
+     "choices": [
+      "Les direct costs",
+      "Les allocated indirect costs",
+      "Les coûts fixes",
+      "Les impôts"
+     ],
+     "answer": 0,
+     "explain": "On obtient la margin on DC, puis on retire les IC alloués."
+    },
+    {
+     "id": "ma-p27-q2",
+     "q": "Profit margin d'un cost object = …",
+     "choices": [
+      "MDC − IC alloués",
+      "TO − DC",
+      "CM − FC",
+      "TO − IC"
+     ],
+     "answer": 0,
+     "explain": "TO − DC = MDC ; MDC − IC = PM."
+    }
+   ],
+   "open": {
+    "q": "Écris la structure du compte de résultat par cost object.",
+    "a": "Turnover − direct costs = margin on DC ; − allocated indirect costs = profit margin."
+   }
+  },
+  {
+   "id": "ma-p28",
+   "part": "Chap 5 – Full costing (parties I et II)",
+   "anchor": "homogeneite-et-cross-subsidization-partie-ii",
+   "title": "Homogénéité et cross-subsidization",
+   "qcm": [
+    {
+     "id": "ma-p28-q1",
+     "q": "Quand peut-on regrouper des IC dans un seul pool avec un seul CD ?",
+     "choices": [
+      "Quand le pool est homogène : tous ses éléments se comportent comme le CD",
+      "Toujours",
+      "Quand le CD est financier",
+      "Quand il n'y a qu'un produit"
+     ],
+     "answer": 0,
+     "explain": "Sinon, aucune clé ne donne le coût réel."
+    },
+    {
+     "id": "ma-p28-q2",
+     "q": "La cross-subsidization, c'est…",
+     "choices": [
+      "Une allocation abusive : certains produits reçoivent trop d'IC, d'autres pas assez",
+      "Une subvention de l'État",
+      "Un transfert entre filiales",
+      "Une baisse de prix croisée"
+     ],
+     "answer": 0,
+     "explain": "Exemple : Granola qui paie pour Mikado."
+    },
+    {
+     "id": "ma-p28-q3",
+     "q": "Cas 2 de Bouquin (A : 3 h DL, 3 kg ; B : 1 h DL, 9 kg). Que conclure ?",
+     "choices": [
+      "Les coûts sont hétérogènes : aucune clé ne donne le coût réel",
+      "Les deux CD donnent le même résultat",
+      "Il faut prendre la DL",
+      "Il faut prendre les matières"
+     ],
+     "answer": 0,
+     "explain": "Par DL : A 75 €, B 25 € ; par RM : A 25 €, B 75 € ; le coût réel est 45 € et 55 €."
+    }
+   ],
+   "open": {
+    "q": "Pourquoi dit-on qu'« un coût est une construction » ?",
+    "a": "Parce que c'est la réponse à une question, qui dépend de choix (périmètre, cost driver) souvent invisibles. Il faut toujours questionner la cohérence du calcul."
+   }
+  },
+  {
+   "id": "ma-p29",
+   "part": "Chap 5 – Full costing (parties I et II)",
+   "anchor": "organisational-cost-centres-l-allocation-en-deux-etapes",
+   "title": "Centres d'analyse : l'allocation en deux étapes",
+   "qcm": [
+    {
+     "id": "ma-p29-q1",
+     "q": "La maintenance ou les RH sont des…",
+     "choices": [
+      "Auxiliary centres",
+      "Main centres",
+      "Cost objects",
+      "Cost drivers"
+     ],
+     "answer": 0,
+     "explain": "Prestataires de service interne pour les centres principaux."
+    },
+    {
+     "id": "ma-p29-q2",
+     "q": "Que fait-on à l'étape 1 (primary allocation) ?",
+     "choices": [
+      "On répartit les IC des centres auxiliaires sur les centres principaux",
+      "On répartit les IC des centres principaux sur les produits",
+      "On calcule le prix de vente",
+      "On supprime les centres auxiliaires"
+     ],
+     "answer": 0,
+     "explain": "L'étape 2 répartit les centres principaux sur les produits."
+    },
+    {
+     "id": "ma-p29-q3",
+     "q": "Produit A : 100 € de matières, 5 h × 2,15 + 10 h × 3,80 + 10 h × 1,80. Coût complet ?",
+     "choices": [
+      "166,75 €",
+      "170 €",
+      "66,75 €",
+      "156,75 €"
+     ],
+     "answer": 0,
+     "explain": "100 + 10,75 + 38 + 18 = 166,75 € ; prix 170 €, PM/u = 3,25 €."
+    },
+    {
+     "id": "ma-p29-q4",
+     "q": "Quelle vérification faire après la répartition ?",
+     "choices": [
+      "Le total reste égal au total de départ et chaque centre auxiliaire finit à 0",
+      "Chaque centre principal finit à 0",
+      "Le total double",
+      "Le coût complet égale le prix"
+     ],
+     "answer": 0,
+     "explain": "Ici, 11,7 M€ avant et après."
+    }
+   ],
+   "open": {
+    "q": "Le produit A est-il rentable ? Interprète.",
+    "a": "Oui, mais de justesse : coût complet 166,75 € pour un prix de 170 €, soit PM/u = 3,25 €."
+   }
+  },
+  {
+   "id": "ma-p30",
+   "part": "Chap 5 – Full costing (parties I et II)",
+   "anchor": "faut-il-abandonner-un-produit",
+   "title": "Faut-il abandonner un produit ?",
+   "qcm": [
+    {
+     "id": "ma-p30-q1",
+     "q": "PM négative mais MDC positive : que faire ?",
+     "choices": [
+      "Ne pas abandonner : le problème vient de l'allocation des IC",
+      "Abandonner le produit",
+      "Baisser le prix",
+      "Regarder seulement la CM"
+     ],
+     "answer": 0,
+     "explain": "Questionner la clé, augmenter prix ou volume, baisser les IC."
+    },
+    {
+     "id": "ma-p30-q2",
+     "q": "PM et MDC négatives, CM positive : que faire ?",
+     "choices": [
+      "Ne pas abandonner : le produit contribue aux coûts fixes",
+      "Abandonner",
+      "Supprimer les coûts fixes",
+      "Changer de cost driver"
+     ],
+     "answer": 0,
+     "explain": "Augmenter le prix ou le volume, baisser les coûts directs."
+    },
+    {
+     "id": "ma-p30-q3",
+     "q": "Quand faut-il abandonner un produit ?",
+     "choices": [
+      "Quand sa CM est négative",
+      "Quand sa PM est négative",
+      "Quand sa MDC est négative",
+      "Quand il est moins rentable que les autres"
+     ],
+     "answer": 0,
+     "explain": "Il ne couvre même pas ses coûts variables."
+    }
+   ],
+   "open": {
+    "q": "Pourquoi abandonner un produit à PM négative peut-il aggraver la situation ?",
+    "a": "Parce que cela ne supprime pas les coûts indirects ou fixes qu'on lui avait affectés : ils se reportent sur les autres produits."
+   }
+  },
+  {
+   "id": "ma-p31",
+   "part": "Chap 5 – Full costing (parties I et II)",
+   "anchor": "activity-based-costing-abc",
+   "title": "Activity-Based Costing (ABC)",
+   "qcm": [
+    {
+     "id": "ma-p31-q1",
+     "q": "Exemple logistique : P2 fait 108 mouvements sur 120. Quelle part de la logistique consomme-t-il ?",
+     "choices": [
+      "90 %",
+      "33 %",
+      "50 %",
+      "67 %"
+     ],
+     "answer": 0,
+     "explain": "Par volume, il n'aurait reçu qu'un tiers (4 000 €)."
+    },
+    {
+     "id": "ma-p31-q2",
+     "q": "Quel est le problème de départ de l'ABC ?",
+     "choices": [
+      "Les CD basés sur le volume biaisent l'allocation",
+      "Il y a trop d'activités",
+      "Les coûts directs sont mal calculés",
+      "Le prix de vente est inconnu"
+     ],
+     "answer": 0,
+     "explain": "Les petits lots complexes consomment plus que leur volume."
+    },
+    {
+     "id": "ma-p31-q3",
+     "q": "Comment décrit-on une activité en ABC ?",
+     "choices": [
+      "Par un verbe et un résultat (ex. régler les machines)",
+      "Par un montant",
+      "Par un département",
+      "Par un produit"
+     ],
+     "answer": 0,
+     "explain": "Acheter, déplacer, planifier, régler, assembler, contrôler, visiter, traiter…"
+    }
+   ],
+   "open": {
+    "q": "Donne les quatre étapes de mise en place de l'ABC.",
+    "a": "1. Identifier les activités. 2. Affecter les coûts indirects aux activités. 3. Choisir le cost driver de chaque activité. 4. Répartir le coût des activités sur les cost objects."
+   }
+  },
+  {
+   "id": "ma-p32",
+   "part": "Méthode type d'exercice et pièges",
+   "anchor": "type-1-cout-total-et-cout-unitaire-15-pizza-de-ker",
+   "title": "Type 1 – Coût total et unitaire",
+   "qcm": [
+    {
+     "id": "ma-p32-q1",
+     "q": "De'Ker : une machine de 1 350 € (× 2), amortie sur 36 mois. Amortissement mensuel ?",
+     "choices": [
+      "75 €",
+      "37,50 €",
+      "1 350 €",
+      "2 700 €"
+     ],
+     "answer": 0,
+     "explain": "2 × 1 350 / 36 = 75 € par mois."
+    },
+    {
+     "id": "ma-p32-q2",
+     "q": "De'Ker : 1 € d'ingrédients pour 8 crêpes + 0,03 € de sucre par crêpe. uVC ?",
+     "choices": [
+      "0,155 €",
+      "1,03 €",
+      "0,125 €",
+      "0,13 €"
+     ],
+     "answer": 0,
+     "explain": "1 / 8 = 0,125 + 0,03 = 0,155 €."
+    },
+    {
+     "id": "ma-p32-q3",
+     "q": "Quand Q monte, le coût unitaire…",
+     "choices": [
+      "Baisse, car les coûts fixes sont répartis sur plus d'unités",
+      "Monte",
+      "Reste constant",
+      "Devient nul"
+     ],
+     "answer": 0,
+     "explain": "15' Pizza : 15,67 € pour 8 000 pizzas, 14,438 € pour 10 000."
+    }
+   ],
+   "open": {
+    "q": "Donne les étapes du type 1 (coût total et coût unitaire).",
+    "a": "Classer fixe ou variable, ramener tout à la même période, ramener tout à la même unité, TC = FC + Q × uVC puis coût unitaire = TC / Q, interpréter (le coût unitaire baisse quand Q monte)."
+   }
+  },
+  {
+   "id": "ma-p33",
+   "part": "Méthode type d'exercice et pièges",
+   "anchor": "type-2-high-low-varibole",
+   "title": "Type 2 – High-low (Varibole)",
+   "qcm": [
+    {
+     "id": "ma-p33-q1",
+     "q": "Varibole : v = 9 €, plus bas 2 000 unités pour 24 000 €. Que vaut F ?",
+     "choices": [
+      "6 000 €",
+      "24 000 €",
+      "18 000 €",
+      "12 000 €"
+     ],
+     "answer": 0,
+     "explain": "F = 24 000 − 2 000 × 9 = 6 000 €.",
+     "flag": "Complément"
+    },
+    {
+     "id": "ma-p33-q2",
+     "q": "Varibole : coût total pour 8 000 unités ?",
+     "choices": [
+      "78 000 €",
+      "72 000 €",
+      "84 000 €",
+      "66 000 €"
+     ],
+     "answer": 0,
+     "explain": "6 000 + 8 000 × 9 = 78 000 €, soit 9,75 € l'unité.",
+     "flag": "Complément"
+    }
+   ],
+   "open": {
+    "q": "Refais le calcul de v pour Varibole.",
+    "a": "v = (60 000 − 24 000) / (6 000 − 2 000) = 36 000 / 4 000 = 9 € par unité."
+   },
+   "flag": "Complément"
+  },
+  {
+   "id": "ma-p34",
+   "part": "Méthode type d'exercice et pièges",
+   "anchor": "type-3-cm-bep-et-resultat-nusbaum",
+   "title": "Type 3 – CM, BEP et résultat (Nusbaum)",
+   "qcm": [
+    {
+     "id": "ma-p34-q1",
+     "q": "Nusbaum : prix 1 200 €, uVC 840 €, FC 6 M€. BEP ?",
+     "choices": [
+      "16 667 unités",
+      "16 666 unités",
+      "5 000 unités",
+      "25 000 unités"
+     ],
+     "answer": 0,
+     "explain": "6 000 000 / 360 = 16 666,67, arrondi à l'entier supérieur."
+    },
+    {
+     "id": "ma-p34-q2",
+     "q": "Nusbaum vend 25 000 unités. Profit margin ?",
+     "choices": [
+      "3 M€",
+      "9 M€",
+      "6 M€",
+      "30 M€"
+     ],
+     "answer": 0,
+     "explain": "CM = 25 000 × 360 = 9 M€ ; PM = 9 − 6 = 3 M€."
+    },
+    {
+     "id": "ma-p34-q3",
+     "q": "Date du BEP avec des ventes régulières ?",
+     "choices": [
+      "8 mois, soit fin août",
+      "6 mois, fin juin",
+      "10 mois, fin octobre",
+      "12 mois"
+     ],
+     "answer": 0,
+     "explain": "16 666,67 / 25 000 × 12 = 8 mois."
+    },
+    {
+     "id": "ma-p34-q4",
+     "q": "Ventes + 20 % : le résultat passe de 3 à 4,8 M€. Pourquoi + 60 % ?",
+     "choices": [
+      "À cause du levier opérationnel",
+      "Parce que le prix augmente",
+      "Parce que les coûts fixes baissent",
+      "Par erreur d'arrondi"
+     ],
+     "answer": 0,
+     "explain": "Les coûts fixes ne bougent pas : chaque unité de plus ajoute toute sa uCM."
+    }
+   ],
+   "open": {
+    "q": "Interprète la situation de Nusbaum.",
+    "a": "L'entreprise est rentable (PM 3 M€), mais un BEP tardif (fin août) la rend vulnérable à une baisse des ventes."
+   }
+  },
+  {
+   "id": "ma-p35",
+   "part": "Méthode type d'exercice et pièges",
+   "anchor": "type-4-comparer-deux-options-inkomparable-pourkoipaplus",
+   "title": "Type 4 – Comparer deux options",
+   "qcm": [
+    {
+     "id": "ma-p35-q1",
+     "q": "Inkomparable : quelle option le corrigé recommande-t-il ?",
+     "choices": [
+      "Elite, si la demande pour un produit haut de gamme existe",
+      "Classic, car son prix est plus bas",
+      "Les deux",
+      "Aucune"
+     ],
+     "answer": 0,
+     "explain": "Elite : uCM 13 €, BEP 5 385 stylos ; Classic : uCM 6 €, BEP 10 334."
+    },
+    {
+     "id": "ma-p35-q2",
+     "q": "Pourkoipaplus Upper : BEP = 108 000 / 65 = 1 661,5. Que retenir ?",
+     "choices": [
+      "1 662 chapeaux",
+      "1 661 chapeaux",
+      "1 661,5 chapeaux",
+      "1 660 chapeaux"
+     ],
+     "answer": 0,
+     "explain": "Arrondi à l'entier supérieur."
+    },
+    {
+     "id": "ma-p35-q3",
+     "q": "Pourkoipaplus Elegant : matières 50 €, coûts variables de production 15 €. uVC ?",
+     "choices": [
+      "65 €",
+      "50 €",
+      "15 €",
+      "55 €"
+     ],
+     "answer": 0,
+     "explain": "Piège : ne pas oublier les matières dans l'uVC."
+    }
+   ],
+   "open": {
+    "q": "Que doit toujours mentionner une recommandation entre deux options ?",
+    "a": "La demande du marché, la concurrence et le risque, pas seulement le BEP le plus bas."
+   }
+  },
+  {
+   "id": "ma-p36",
+   "part": "Méthode type d'exercice et pièges",
+   "anchor": "type-5-full-costing-en-centres-d-analyse",
+   "title": "Type 5 – Full costing en centres d'analyse",
+   "qcm": [
+    {
+     "id": "ma-p36-q1",
+     "q": "Dans quel ordre construit-on le tableau des centres ?",
+     "choices": [
+      "Centres auxiliaires, puis centres principaux",
+      "Centres principaux, puis auxiliaires",
+      "Produits, puis centres",
+      "Dans l'ordre alphabétique"
+     ],
+     "answer": 0,
+     "explain": "On vide d'abord les auxiliaires sur les principaux."
+    },
+    {
+     "id": "ma-p36-q2",
+     "q": "Coût complet unitaire = …",
+     "choices": [
+      "Coûts directs + somme (unités de CD × uCD) pour chaque centre",
+      "Coûts directs seulement",
+      "Somme des uCD",
+      "IC total / unités produites"
+     ],
+     "answer": 0,
+     "explain": "Puis PM/u = prix − coût complet."
+    },
+    {
+     "id": "ma-p36-q3",
+     "q": "Que fait-on après avoir calculé la PM/u ?",
+     "choices": [
+      "On applique l'arbre de décision « abandonner ou pas »",
+      "On calcule le BEP",
+      "On change de cost driver",
+      "On recommence le tableau"
+     ],
+     "answer": 0,
+     "explain": "PM, puis MDC, puis CM."
+    }
+   ],
+   "open": {
+    "q": "Donne les 6 étapes du type 5.",
+    "a": "Construire le tableau (auxiliaires puis principaux) ; calculer le uCD des auxiliaires et les répartir ; vérifier auxiliaires à 0 et total inchangé ; calculer le uCD des principaux ; coût complet = directs + Σ (unités de CD × uCD) ; PM/u = prix − coût complet, puis arbre « abandonner ou pas »."
+   }
+  },
+  {
+   "id": "ma-p37",
+   "part": "Méthode type d'exercice et pièges",
+   "anchor": "pieges-frequents",
+   "title": "Pièges fréquents",
+   "qcm": [
+    {
+     "id": "ma-p37-q1",
+     "q": "Un BEP donne 5 384,62. Que retenir ?",
+     "choices": [
+      "5 385",
+      "5 384",
+      "5 384,62",
+      "5 380"
+     ],
+     "answer": 0,
+     "explain": "Jamais arrondir vers le bas."
+    },
+    {
+     "id": "ma-p37-q2",
+     "q": "En absorption, comment traiter le fixed MOH ?",
+     "choices": [
+      "Le diviser par les unités produites, puis multiplier par les unités vendues",
+      "Le diviser par les unités vendues",
+      "Le passer en charge en entier",
+      "L'ignorer"
+     ],
+     "answer": 0,
+     "explain": "Piège fréquent."
+    },
+    {
+     "id": "ma-p37-q3",
+     "q": "Lequel n'est PAS un piège listé ?",
+     "choices": [
+      "Citer un auteur",
+      "Mélanger les périodes (loyer mensuel dans un calcul annuel)",
+      "Oublier de diviser un coût donné pour 8 unités",
+      "Oublier l'interprétation"
+     ],
+     "answer": 0,
+     "explain": "Chaque résultat demande une phrase d'interprétation."
+    }
+   ],
+   "open": {
+    "q": "Dans quel ordre le prof rédige-t-il ses corrigés ?",
+    "a": "Données, puis formule, puis calcul, puis une phrase d'interprétation (rentable ou pas, risqué ou pas, quelle décision)."
+   }
+  }
+ ],
+ "retired": []
+}
