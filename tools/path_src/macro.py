@@ -1,0 +1,235 @@
+# Parcours guidé – Macroéconomie (M. Zumer)
+# Source : la fiche détaillée v5 (data/fiches/macro.json), parties tirées du cours uniquement
+# (notes de révision, PowerPoint V20, document n°6). Les compléments hors cours ne sont pas dans le parcours.
+# Ne jamais renommer ni réutiliser un identifiant (macro-pNN-qN) : les points en dépendent.
+# Construction : python3 tools/build_path.py macro
+
+C1 = "Chapitre 1 – Les mystères du développement économique"
+C2 = "Chapitre 2 – Le mystère de la croissance économique"
+
+STEPS = [
+ ("1-qui-est-hernando-de-soto", C1, "Qui est Hernando de Soto ?", None, [
+   ("Quelle fonction de Soto a-t-il occupée au Pérou ?",
+    ["Gouverneur de la banque centrale", "Président de la République", "Ministre de la Culture", "Maire de Lima"], 0,
+    "Il a aussi travaillé au GATT et à la Swiss Bank Corporation."),
+   ("Combien de chefs d'État ont sollicité l'ILD ?",
+    ["Plus de 35", "3", "Plus de 150", "Aucun"], 0,
+    "Trente pays l'invitent à mettre en place ses plans."),
+   ("En 2014, que reproche de Soto à Thomas Piketty ?",
+    ["D'ignorer les 90 % de la population mondiale qui vivent dans l'informel", "De surestimer la croissance américaine", "D'oublier les États-Unis", "De défendre le consensus de Washington"], 0,
+    "C'est le sujet du document n°6."),
+  ], ("Présente de Soto en trois phrases (origine, institut, livres).",
+      "Économiste libéral péruvien né en 1941 à Arequipa. Il fonde l'ILD à Lima en 1980 pour promouvoir les réformes qui permettent aux pays pauvres de se développer. Ses deux livres majeurs : L'Autre Sentier (1986) et Le Mystère du capital (2000).")),
+
+ ("2-le-point-de-depart-le-mystere-du-developpement", C1, "Le mystère du développement", None, [
+   ("Comment de Soto décrit-il la richesse dans beaucoup de pays en développement ?",
+    ["Des poches de richesse dans un océan de pauvreté", "Une richesse partagée par tous", "Une pauvreté uniforme", "Une classe moyenne majoritaire"], 0,
+    "Pourquoi le capitalisme marche-t-il pour certains et pas pour d'autres ?"),
+   ("Avec quoi de Soto a-t-il monté son entreprise à Lima ?",
+    ["Deux machines à coudre", "Un prêt de la Banque mondiale", "Un camion de livraison", "Une imprimante 3D"], 0,
+    "Une petite entreprise textile, vite rentable."),
+   ("Qui, comme de Soto, insiste sur la nécessité pour les économistes d'aller sur le terrain ?",
+    ["Coase", "Weber", "Piketty", "Gordon"], 0,
+    "Ce que font plus souvent les sociologues et les anthropologues."),
+  ], ("Pourquoi de Soto refuse-t-il l'explication culturelle (Weber) ?",
+      "Parce qu'il constate sur le terrain des centaines de milliers d'entrepreneurs talentueux dans les grandes villes du Sud : le problème n'est pas la mentalité mais l'accès à la légalité.")),
+
+ ("3-les-illustrations-le-parcours-du-combattant-perou-philippi", C1, "Le parcours du combattant", None, [
+   ("Quelle part du transport urbain de Lima est assurée par des entreprises non légalisées ?",
+    ["85 %", "10 %", "50 %", "100 %"], 0,
+    "Et 60 % de la distribution alimentaire."),
+   ("En Haïti, combien d'étapes et de jours pour obtenir l'acte de vente après le bail ?",
+    ["111 étapes et 4 112 jours", "728 étapes et 289 jours", "207 étapes et 2 ans", "65 étapes et 5 ans"], 0,
+    "Soit 19 ans au total pour légaliser un terrain acquis."),
+   ("Quelle part des citadins des Philippines vit sans titre de propriété ?",
+    ["57 %", "5 %", "90 %", "25 %"], 0,
+    "67 % des ruraux."),
+  ], ("Que montre le laisser-passer A 38 dans le cours ?",
+      "Le cas de la France : la bureaucratie existe aussi dans un pays riche, mais en version comique (Astérix), pas au point de bloquer toute l'économie comme au Pérou ou en Haïti.")),
+
+ ("4-le-cur-de-l-affaire-le-capital-mort", C1, "Le capital mort", None, [
+   ("Pourquoi les biens des pauvres sont-ils du « capital mort » ?",
+    ["Sans titre, ils ne peuvent ni circuler, ni être vendus à un inconnu, ni servir de garantie", "Ils sont détruits", "Ils appartiennent à l'État", "Ils sont taxés à 100 %"], 0,
+    "Ils restent statiques, paralysés, utilisés localement."),
+   ("Que devient un bien quand il est représenté par un titre de propriété ?",
+    ["Fongible : on peut le diviser, le vendre, l'hypothéquer", "Invendable", "Public", "Gratuit"], 0,
+    "Le titre « fixe le potentiel économique » du bien."),
+   ("Pour de Soto, le virtuel de la finance…",
+    ["N'empêche pas que la richesse créée soit réelle", "Prouve que le capitalisme est une illusion", "Doit être interdit", "N'a aucun lien avec la propriété"], 0,
+    "Les moyens sont abstraits, la richesse est réelle."),
+  ], ("Explique la chaîne titre → hypothèque → crédit → entreprise avec le chiffre du cours.",
+      "Un titre de propriété permet d'hypothéquer son bien ; l'hypothèque permet d'obtenir un crédit bancaire ; le crédit finance la création d'une entreprise. Aux États-Unis, 70 % des créations d'entreprises passent par un emprunt gagé sur une hypothèque.")),
+
+ ("5-pourquoi-les-systemes-juridiques-des-pays-pauvres-sont-ils", C1, "Pourquoi le droit est défaillant", None, [
+   ("Pourquoi le droit colonial ne crée-t-il pas de richesse ?",
+    ["Il était fait pour extraire les richesses et protéger les colons", "Il était trop moderne", "Il n'existait pas", "Il interdisait le commerce"], 0,
+    "Le droit de propriété doit être un droit de circulation du capital."),
+   ("Quelle période de l'histoire française de Soto compare-t-il aux pays pauvres d'aujourd'hui ?",
+    ["L'ère Colbert au XVIIIe siècle", "La Révolution de 1789", "Les Trente Glorieuses", "La Belle Époque"], 0,
+    "Avec ses nombreux interdits juridiques."),
+  ], ("Que nous apprend la conquête de l'Ouest américain sur la propriété ?",
+      "Les colons se sont installés sur des terres et les juges fédéraux ont mis plus d'un siècle à unifier les règles et à donner des droits de propriété définitifs à tous : les pays riches sont passés par la même étape que les pays pauvres aujourd'hui.")),
+
+ ("6-le-debat-la-legalisation-des-proprietes-une-condition-nece", C1, "Le débat : nécessaire mais pas suffisant", None, [
+   ("Par quoi de Soto veut-il commencer la réforme ?",
+    ["Recenser les droits de propriété existants, y compris coutumiers", "Expulser les occupants illégaux", "Supprimer tous les titres", "Copier le droit américain"], 0,
+    "Puis bâtir un nouveau système légal, sous l'égide des gouvernements."),
+   ("Quel auteur cité par de Soto insiste aussi sur des chefs d'État courageux et réformateurs ?",
+    ["Myerson", "Gordon", "Kremer", "Maddison"], 0,
+    "Entourés d'une petite équipe de juristes compétents."),
+   ("Quel est l'objectif final selon de Soto ?",
+    ["Une démocratie économique et juridique", "La suppression de l'État", "Le retour au consensus de Washington", "La nationalisation des terres"], 0,
+    "« La démocratie ne se réduit pas au seul vote. »"),
+  ], ("Pourquoi la légalisation est-elle nécessaire mais pas suffisante ?",
+      "Nécessaire parce que sans titres le capital reste mort. Pas suffisante parce qu'il faut aussi des dirigeants courageux, des juristes ouverts (les juristes étant très conservateurs), l'adhésion de la population et une réforme progressive.")),
+
+ ("7-conclusion-du-chapitre-une-mondialisation-pour-tous-et-la-", C1, "Le contrat social et les extensions", None, [
+   ("Pour de Soto, quel est le vrai contrat social ?",
+    ["Le système juridique", "L'impôt", "La sécurité sociale", "Le service militaire"], 0,
+    "D'où l'équivalence droits sociaux = droits juridiques."),
+   ("Que pense de Soto de la pensée marxiste ?",
+    ["Elle est plus utile que la pensée « mainstream » pour comprendre le capitalisme, mais il n'est pas marxiste", "Il est marxiste", "Elle est inutile", "Il ne l'a jamais lue"], 0,
+    "Il va plus loin que Marx sur le rapport au capital."),
+   ("Que montre la grille de de Soto appliquée aux printemps arabes ?",
+    ["Les « révolutionnaires » étaient souvent de petits commerçants sans titre, exposés aux confiscations", "Des révoltes contre la propriété", "Des révoltes religieuses uniquement", "Des grèves d'ouvriers d'usine"], 0,
+    "Article : « The Economic Roots of the Arab Spring »."),
+  ], ("Cite les quatre extensions de la grille de de Soto.",
+      "La France (le laisser-passer A 38, la France de Colbert) ; l'Europe (pas de marché juridique unifié, donc pas de vrai marché unique) ; les printemps arabes (petits commerçants sans titres) ; la crise des subprimes (un tiers-monde de la finance en Occident).")),
+
+ ("8-le-document-n-6-du-cours-les-pauvres-contre-piketty", C1, "Document n°6 : de Soto contre Piketty", None, [
+   ("Combien de chercheurs l'ILD a-t-il mobilisés en Égypte ?",
+    ["120", "12", "1 200", "35"], 0,
+    "À la demande du ministère égyptien des Finances."),
+   ("Quelle valeur d'immobilier possèdent les Égyptiens selon l'ILD ?",
+    ["Près de 360 milliards de dollars", "36 millions de dollars", "9 300 milliards de dollars", "1 230 dollars"], 0,
+    "8 fois tous les investissements étrangers reçus depuis l'expédition de Napoléon."),
+   ("Combien d'autres entrepreneurs ont tenté de se suicider après Bouazizi, dans les deux mois ?",
+    ["63", "6", "300", "37"], 0,
+    "37 ont survécu ; quatre gouvernements sont tombés."),
+   ("Quel économiste français du XIXe siècle de Soto cite-t-il ?",
+    ["Charles Coquelin", "Jean-Baptiste Say", "Frédéric Bastiat", "Thomas Piketty"], 0,
+    "Sur l'enregistrement des titres de propriété en France depuis la Révolution."),
+  ], ("Explique la phrase « du papier sans actifs, des actifs sans papier ».",
+      "En Occident, le problème est le capital fictif : des titres (comme les produits dérivés) qui ne correspondent plus à aucune valeur réelle. Ailleurs, c'est l'inverse : des biens réels (maisons, terrains) sans titres, donc du capital mort.")),
+
+ ("1-existe-t-il-une-nouvelle-economie-les-definitions", C2, "Existe-t-il une nouvelle économie ?", None, [
+   ("Pour la presse, la nouvelle économie, c'est…",
+    ["Le secteur des NTIC", "Le secteur agricole", "L'économie informelle", "Le secteur public"], 0,
+    "10 à 15 % du PIB américain, 5 à 6 % du PIB français."),
+   ("Quelles inventions caractérisent la 2e révolution industrielle ?",
+    ["Le moteur à explosion et l'électricité", "La machine à vapeur et le train", "L'ordinateur et Internet", "L'imprimante 3D"], 0,
+    "Vers 1860-1900, en Europe et aux États-Unis."),
+   ("Qu'a reconstitué Maddison sur ses graphiques semi-logarithmiques ?",
+    ["Le PIB par tête sur le très long terme", "Le nombre de brevets", "Les salaires de Ford", "Le prix du pétrole"], 0,
+    "Le décollage coïncide avec les révolutions industrielles."),
+  ], ("Quelles sont les deux conditions d'une 3e révolution industrielle ?",
+      "Une révolution technique (l'informatique au sens large) qui imprègne toute l'économie, et un changement dans l'organisation du travail des entreprises. Elle doit se voir dans la productivité du travail.")),
+
+ ("2-le-paradoxe-de-solow-1987", C2, "Le paradoxe de Solow", None, [
+   ("Dans quel contexte Solow formule-t-il son paradoxe ?",
+    ["Une forte croissance américaine sans hausse visible de la productivité", "Une récession mondiale", "La chute de l'URSS", "La crise des subprimes"], 0,
+    "Les économistes ont d'abord cru à la chance (baisse du pétrole, policy mix)."),
+   ("Que se passe-t-il pour le paradoxe dans les années 2000 ?",
+    ["Il devient obsolète : la productivité augmente enfin", "Il se confirme définitivement", "Il est oublié", "Solow le renforce"], 0,
+    "Solow lui-même le reconnaît en 2000."),
+  ], ("Pourquoi le paradoxe de Solow est-il le fondement du débat sur la nouvelle économie ?",
+      "Parce que si l'ordinateur était une vraie révolution, il devrait augmenter la productivité du travail, donc le niveau de vie. Quand la productivité augmente dans les années 2000, cela suggère qu'une 3e révolution industrielle est en marche.")),
+
+ ("3-gordon-et-jesus-le-sceptique", C2, "Gordon et Jésus", None, [
+   ("Selon l'étude Olfeo 2015, combien de temps les salariés passent-ils sur Internet au bureau ?",
+    ["1 h 53 par jour", "10 minutes par jour", "6 heures par jour", "1 heure par semaine"], 0,
+    "Dont 44 % de surf personnel."),
+   ("Quelle part du PIB américain pèse la 3e révolution selon Gordon (Le Monde, 2016) ?",
+    ["7 %", "50 %", "15 %", "1 %"], 0,
+    "Une sphère étroite : divertissement et information-communication."),
+   ("Que résume la formule « indoor plumbing beats iPads » ?",
+    ["La thèse de Gordon, selon Krugman : la 2e RI valait plus que le numérique", "La thèse de Krugman", "Le paradoxe de Solow", "Le modèle O-ring"], 0,
+    "Krugman répond avec les androïdes."),
+  ], ("Pourquoi le prof parle-t-il de « Gordon et Jésus », et que lui répond-il ?",
+      "Pour Gordon, ceux qui croient à la 3e révolution attendent un messie qui ne viendra pas. Le prof et la plupart des économistes répondent que Gordon oublie les usages des NTIC, qui irriguent toutes les sciences : pas de vaccin Covid en un an sans ordinateurs.")),
+
+ ("4-la-nette-economie-le-secteur-des-ntic", C2, "Le secteur des NTIC", None, [
+   ("D'où vient surtout l'écart entre les NTIC américaines et françaises ?",
+    ["Des composants (puces, microprocesseurs)", "Du nombre d'utilisateurs", "Des prix", "Des impôts"], 0,
+    "15 % de l'économie américaine, 8 % de la française."),
+   ("Que désigne le « first mover advantage » ?",
+    ["L'avantage du premier entrant sur un marché", "Le premier ordinateur", "La première révolution industrielle", "Le premier prix Nobel"], 0,
+    "Une partie de la rente des pays producteurs de NTIC."),
+   ("Comment la rente des NTIC sert-elle d'amortisseur aux États-Unis ?",
+    ["Les ménages détiennent des actions des géants du secteur", "L'État la redistribue en allocations", "Elle baisse les prix du pétrole", "Elle finance les syndicats"], 0,
+    "Notamment pour la classe moyenne en temps de crise."),
+  ], ("Faut-il produire des NTIC si ce n'est pas un avantage comparatif ? Résume la réponse du cours.",
+      "En théorie non, mais le secteur est à très haute valeur ajoutée et procure une rente (bénéfices, amortisseur, réinvestissement en recherche, meilleure connaissance des usages) : ne pas y être est donc inquiétant.")),
+
+ ("5-un-nouveau-regime-de-production", C2, "Un nouveau régime de production", None, [
+   ("Pourquoi un logiciel illustre-t-il les économies d'échelle ?",
+    ["Le coût est dans la conception, le coût d'une copie de plus est quasi nul", "Il coûte plus cher à chaque copie", "Il ne coûte rien à concevoir", "Il est produit par des sous-traitants"], 0,
+    "Coûts fixes élevés, coûts variables faibles ou nuls."),
+   ("Quelle entreprise le cours cite-t-il comme grande acheteuse de start-up ?",
+    ["Microsoft", "Renault", "Dassault", "Carrefour"], 0,
+    "Le jeu des rachats rend la recherche rentable."),
+   ("Quelle conclusion le cours tire-t-il de la nouvelle organisation du travail ?",
+    ["Le recours massif et généralisé à la sous-traitance", "Le retour à la grande usine", "La fin des entreprises", "La baisse des salaires des cadres"], 0,
+    "Avec polyvalence, délégation, flexibilité et mise en réseau."),
+  ], ("Qu'est-ce qu'un effet de réseau ? Donne un exemple de ta vie quotidienne.",
+      "L'utilité d'un produit augmente avec le nombre de ses utilisateurs (loi de Metcalfe : la valeur croît avec le carré du nombre d'utilisateurs). Exemple : un groupe de messagerie de la classe est inutile seul, indispensable quand toute la promo y est.")),
+
+ ("6-le-modele-o-ring-michael-kremer", C2, "Le modèle O-ring", None, [
+   ("De quand date le modèle O-ring ?",
+    ["Des années 1990", "De 1913", "De 1760", "De 2019"], 0,
+    "Kremer a reçu le Nobel en 2019."),
+   ("Que montre le puzzle du Boeing 787 ?",
+    ["Des pièces fabriquées par des fournisseurs nord-américains, asiatiques et européens", "Un avion entièrement fabriqué à Seattle", "Un avion sans sous-traitants", "Un échec du modèle O-ring"], 0,
+    "Ailes à Nagoya, portes à Toulouse, fuselage central en Italie…"),
+   ("Pourquoi la chaîne de production est-elle plus sensible qu'à l'époque de la production de masse ?",
+    ["L'assemblage est plus flexible et fragmenté entre de nombreux sous-traitants", "Les machines sont plus lentes", "Les salariés sont moins qualifiés", "Il y a moins d'informatique"], 0,
+    "Un seul maillon faible menace tout."),
+  ], ("Compare l'organisation fordiste et l'organisation O-ring (schémas du cours).",
+      "Fordisme : trois pyramides séparées au Nord (direction, cadres, ingénieurs, employés, usines), le Sud exclu (Renault Billancourt). O-ring : un réseau où chaque direction au Nord est reliée à des sous-traitants, usines et centres d'appel au Nord, au Sud et dans les pays très pauvres (Boeing 787, Falcon 7X, Volvo S40).")),
+
+ ("7-un-nouveau-type-d-inegalites", C2, "Un nouveau type d'inégalités", None, [
+   ("Quel exemple illustre les nouvelles inégalités dans le cours ?",
+    ["Deux informaticiens de la même école : l'un sur une navette spatiale, l'autre chez Carrefour", "Un ouvrier et un patron", "Un Français et un Américain", "Un retraité et un étudiant"], 0,
+    "De petits écarts de performance, de grands écarts de revenus."),
+   ("Comment change la nature de la lutte sociale ?",
+    ["On passe d'une lutte entre classes à une lutte intra-classes", "La lutte disparaît", "On revient à la lutte des classes", "La lutte devient internationale uniquement"], 0,
+    "Les inégalités explosent à l'intérieur de chaque groupe."),
+  ], ("Pourquoi les carrières deviennent-elles plus incertaines dans le modèle O-ring ?",
+      "L'entreprise ne protège plus ses salariés comme dans l'après-guerre : chacun peut être exclu d'une chaîne de production, et de faibles écarts de performance entraînent de grands écarts de revenus.")),
+
+ ("8-revolution-industrielle-et-mondialisation-l-emergence-du-s", C2, "L'émergence du Sud", None, [
+   ("Pour le cours, qu'est-ce qui vient en premier ?",
+    ["La révolution industrielle, qui permet la mondialisation", "La mondialisation, qui cause la révolution industrielle", "Le protectionnisme", "La crise de 2008"], 0,
+    "Comme pour la première mondialisation."),
+   ("Quel est le « grand espoir du XXIe siècle » ?",
+    ["Résorber par le haut l'écart entre pays riches et pays pauvres", "Fermer les frontières", "Revenir au fordisme", "Supprimer les NTIC"], 0,
+    "Avec l'émergence de classes moyennes dans les pays pauvres."),
+   ("Que montre le graphique de Maddison sur l'Angleterre depuis 1270 ?",
+    ["Un PIB par habitant presque plat pendant 500 ans, puis une explosion après 1800", "Une baisse continue", "Une croissance régulière depuis 1270", "Un pic au Moyen Âge"], 0,
+    "Le rôle décisif des révolutions industrielles."),
+  ], ("Quelle erreur de raisonnement le cours dénonce-t-il, et pourquoi est-elle dangereuse ?",
+      "Partir de la mondialisation pour expliquer les difficultés des pays riches. Elle nourrit le protectionnisme, qui briserait l'espoir des pays pauvres de réduire les écarts de richesse par le commerce.")),
+
+ ("9-les-makers-vers-une-4e-revolution-industrielle", C2, "Les Makers", None, [
+   ("Qui a écrit Makers : la nouvelle révolution industrielle (2012) ?",
+    ["Chris Anderson", "Michael Kremer", "Robert Gordon", "Paul Krugman"], 0,
+    "Certains y voient une 4e révolution industrielle."),
+   ("Qu'a dit Obama le 12 février 2013 ?",
+    ["Que l'impression 3D peut révolutionner la façon de produire presque tout", "Que les ordinateurs sont inutiles", "Qu'il faut fermer les FabLabs", "Que la mondialisation est finie"], 0,
+    "Il voulait une révolution « made in America »."),
+  ], ("Quel lien le prof fait-il entre engagement dans la nouvelle économie et résultats macroéconomiques ?",
+      "Plus un pays innove et investit en R&D dans les secteurs d'avenir, plus son PIB par tête est élevé et son chômage des jeunes faible ; les pays en retard risquent d'être déclassés, comme ceux qui ont raté les révolutions précédentes.")),
+
+ ("10-conclusion-la-fin-du-fordisme", C2, "La fin du fordisme", None, [
+   ("Pourquoi Ford a-t-il augmenté les salaires ?",
+    ["Pour fidéliser sa main-d'œuvre", "Pour obéir à l'État", "Parce que la productivité baissait", "Pour délocaliser"], 0,
+    "Une partie des gains de productivité allait aux ouvriers."),
+   ("Qui souffre le plus de la fin de la protection fordiste ?",
+    ["Le travail non qualifié", "Les dirigeants", "Les actionnaires", "Les professions libérales"], 0,
+    "D'où le nouveau contrat social que demande Rodrik."),
+   ("Sur quoi repose la productivité selon la conclusion du cours ?",
+    ["La qualité des institutions et l'absence de déperdition (inefficacité, corruption)", "Uniquement la technologie", "La taille du pays", "Le prix du pétrole"], 0,
+    "Une sorte de démocratie économique."),
+  ], ("Que signifie la citation finale « The fault... is not in our stars, but in ourselves » ?",
+      "Notre destin économique ne dépend pas de la fatalité mais de nos choix et de nos institutions : c'est le lien entre les deux chapitres.")),
+]

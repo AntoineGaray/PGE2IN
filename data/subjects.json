@@ -62,7 +62,8 @@
       "color": "#0e5e6f",
       "file": "macro.json",
       "fiche": "fiches/macro.json",
-      "exam": "exams/macro.json"
+      "exam": "exams/macro.json",
+      "path": "path/macro.json"
     },
     {
       "id": "geo",
