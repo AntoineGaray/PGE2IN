@@ -61,7 +61,8 @@
       "prof": "M. Zumer · Macroéconomie contemporaine",
       "color": "#0e5e6f",
       "file": "macro.json",
-      "fiche": "fiches/macro.json"
+      "fiche": "fiches/macro.json",
+      "exam": "exams/macro.json"
     },
     {
       "id": "geo",

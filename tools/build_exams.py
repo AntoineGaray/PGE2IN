@@ -53,8 +53,13 @@ def build(src):
         assert abs(s - p["points"]) < 1e-9, f"partie {p['n']} : {s} != {p['points']}"
         for q in p["questions"]:
             assert q.get("q") and q.get("c"), f"question {q['num']} incomplète"
-    exam["points"] = sum(p["points"] for p in parts)
-    exam["minutes"] = sum(p["minutes"] for p in parts)
+    if exam.get("choose") == "one":
+        # Sujets au choix (ex. macro) : on n'en traite qu'un, le total est celui d'un sujet
+        exam["points"] = max(p["points"] for p in parts)
+        exam["minutes"] = max(p["minutes"] for p in parts)
+    else:
+        exam["points"] = sum(p["points"] for p in parts)
+        exam["minutes"] = sum(p["minutes"] for p in parts)
     exam["parts"] = parts
     return exam
 
