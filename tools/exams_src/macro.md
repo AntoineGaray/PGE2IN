@@ -1,7 +1,7 @@
 @exam
 title: Mock exam – Contemporary Macroeconomics
 subtitle: Two mock exams (A1 or B1, then A2 or B2) · choose one subject · 1h30 · 20 points · exam and answer key in English
-disclaimer: Sujet d'entraînement construit à partir du cours de M. Zumer (notes de révision, PowerPoint V20, document n°6) et des consignes qu'il a confirmées le 26/11. Deux partiels types au vrai format : le 1 (A1 ou B1) et le 2 (A2 ou B2). Les deux sujets d'un même chapitre se complètent pour couvrir tout le chapitre. Ce sont des hypothèses, pas les sujets du partiel. Ce n'est pas un ancien partiel.
+disclaimer: Sujet d'entraînement construit à partir du cours de M. Zumer (notes de révision, PowerPoint V20, document n°6) et des consignes qu'il a confirmées le 26/11. Deux partiels types au vrai format : le 1 (A1 ou B1) et le 2 (A2 ou B2). Les sujets A1 et A2 portent sur le chapitre 1, les sujets B1 et B2 sur le chapitre 2. Les deux sujets d'un même chapitre se complètent pour couvrir tout le chapitre. Ce sont des hypothèses, pas les sujets du partiel. Ce n'est pas un ancien partiel.
 choose: one
 @intro
 **Contemporary Macroeconomics – Mock final exam – 1h30 – 20 points.** This page contains **two mock exams** in the real format. **Mock exam 1**: choose Subject A1 (Chapter 1) or B1 (Chapter 2). **Mock exam 2**: choose Subject A2 (Chapter 1) or B2 (Chapter 2). On the day, you will choose **one** subject out of two. A1 and A2 together cover the whole of Chapter 1; B1 and B2 the whole of Chapter 2.
@@ -14,8 +14,10 @@ There is no need for a formal introduction or a detailed outline. Write a **chai
 
 The model answers below are written in full so you can see the expected level. Your own answer can be shorter: what counts is the chain of reasoning, the examples and the links.
 
-@part A1 | Chapter 1 | Mock exam 1 – Subject A1 – The mysteries of economic development | 20 | 90
+@part A1 | Chapter 1 | Mock exam 1 – Subject A1 · Chapter 1: The mysteries of economic development | 20 | 90
 @q A1 | 20
+*Subject on **Chapter 1** (Hernando de Soto, the mysteries of economic development).*
+
 **"Why do poor countries stay poor when their people own so much?"**
 
 Discuss, using Hernando de Soto's analysis and the other authors and documents studied in class.
@@ -54,8 +56,10 @@ Discuss, using Hernando de Soto's analysis and the other authors and documents s
 
 **What this subject covers in Chapter 1:** sections 2 to 6 of the course (the mystery, the field approach, the cost of legality in Peru, the Philippines, Egypt and Haiti, dead capital, colonial law, legalisation as a necessary condition), plus a first look at the social contract and document n°6. Subject A2 covers the rest.
 
-@part B1 | Chapter 2 | Mock exam 1 – Subject B1 – The mystery of economic growth | 20 | 90
+@part B1 | Chapter 2 | Mock exam 1 – Subject B1 · Chapter 2: The mystery of economic growth | 20 | 90
 @q B1 | 20
+*Subject on **Chapter 2** (the new economy, the sources of productivity).*
+
 **"Are computers really a third industrial revolution?"**
 
 Discuss, using the debate on the "new economy" and the other authors and documents studied in class.
@@ -93,8 +97,10 @@ Discuss, using the debate on the "new economy" and the other authors and documen
 
 **What this subject covers in Chapter 2:** sections 1 to 6 of the course (definitions, the two industrial revolutions, Solow's paradox, Gordon and Krugman, the economics of ICT, the O-ring model), plus a first look at the consequences. Subject B2 covers the rest.
 
-@part A2 | Chapter 1 | Mock exam 2 – Subject A2 – Capital, inequality and the social contract | 20 | 90
+@part A2 | Chapter 1 | Mock exam 2 – Subject A2 · Chapter 1: Capital, inequality and the social contract | 20 | 90
 @q A2 | 20
+*Subject on **Chapter 1** (Hernando de Soto, document n°6, the social contract).*
+
 **"Is capital the cause of inequality or the cure for poverty?"**
 
 Discuss, using the debate between Thomas Piketty and Hernando de Soto (document n°6) and the other authors studied in class.
@@ -133,8 +139,10 @@ Discuss, using the debate between Thomas Piketty and Hernando de Soto (document 
 
 **What this subject covers in Chapter 1:** the bell jar, document n°6 in full, the conclusion of the chapter (social contract, Polanyi, Rodrik) and the extensions (Europe, Arab Spring, subprimes). With Subject A1, the whole of Chapter 1 is covered.
 
-@part B2 | Chapter 2 | Mock exam 2 – Subject B2 – Globalisation, the South and the end of Fordism | 20 | 90
+@part B2 | Chapter 2 | Mock exam 2 – Subject B2 · Chapter 2: Globalisation, the South and the end of Fordism | 20 | 90
 @q B2 | 20
+*Subject on **Chapter 2** (the O-ring model, the emergence of the South, the end of Fordism).*
+
 **"Is globalisation to blame for the difficulties of rich countries?"**
 
 Discuss, using the course on the new organisation of production and the other authors and documents studied in class.
