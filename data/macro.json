@@ -1,0 +1,1027 @@
+{
+ "id": "macro",
+ "exam": "1h30 · en anglais · deux sujets au choix (chapitre 1 ou 2) · raisonnements argumentés, exemples du cours et de la vie quotidienne",
+ "chapters": [
+  {
+   "id": "c1a",
+   "title": "Ch. 1 – De Soto, le parcours du combattant et le capital mort"
+  },
+  {
+   "id": "c1b",
+   "title": "Ch. 1 – Le débat, le contrat social et le document n°6"
+  },
+  {
+   "id": "c2a",
+   "title": "Ch. 2 – Nouvelle économie : Solow, Gordon, les NTIC"
+  },
+  {
+   "id": "c2b",
+   "title": "Ch. 2 – Modèle O-ring, émergence du Sud, fin du fordisme"
+  }
+ ],
+ "quiz": [
+  {
+   "id": "macro-q01",
+   "ch": "c1a",
+   "q": "De quel pays vient Hernando de Soto ?",
+   "choices": [
+    "Le Pérou",
+    "Le Chili",
+    "L'Égypte",
+    "Haïti"
+   ],
+   "answer": 0,
+   "explain": "Né en 1941 à Arequipa, au Pérou."
+  },
+  {
+   "id": "macro-q02",
+   "ch": "c1a",
+   "q": "Quel institut de Soto a-t-il fondé à Lima en 1980 ?",
+   "choices": [
+    "L'ILD, Institut pour la liberté et la démocratie",
+    "Le GATT",
+    "L'USAID",
+    "La Banque mondiale"
+   ],
+   "answer": 0,
+   "explain": "L'ILD a ensuite conseillé une trentaine de gouvernements."
+  },
+  {
+   "id": "macro-q03",
+   "ch": "c1a",
+   "q": "À quoi répond le titre de son premier livre, L'Autre Sentier (1986) ?",
+   "choices": [
+    "Au Sentier lumineux, les terroristes qui avaient essayé de l'assassiner",
+    "À un roman de Vargas Llosa",
+    "Au consensus de Washington",
+    "À la route de la soie"
+   ],
+   "answer": 0,
+   "explain": "Il propose une autre voie que la violence pour sortir de la pauvreté."
+  },
+  {
+   "id": "macro-q04",
+   "ch": "c1a",
+   "q": "Quel est le sous-titre du Mystère du capital (2000) ?",
+   "choices": [
+    "Pourquoi le capitalisme triomphe en Occident et échoue partout ailleurs",
+    "Le capital au XXIe siècle",
+    "La Grande Transformation",
+    "Civilisation matérielle, économie et capitalisme"
+   ],
+   "answer": 0,
+   "explain": "C'est le livre de référence du chapitre 1."
+  },
+  {
+   "id": "macro-q05",
+   "ch": "c1a",
+   "q": "Quelle image tirée de Braudel décrit un capitalisme réservé à quelques secteurs ?",
+   "choices": [
+    "Un capitalisme « en système clos, voire enkysté » : la cloche de verre",
+    "La main invisible",
+    "La destruction créatrice",
+    "Le cercle vertueux"
+   ],
+   "answer": 0,
+   "explain": "Le capitalisme existe, mais sous une cloche, pour une minorité."
+  },
+  {
+   "id": "macro-q06",
+   "ch": "c1a",
+   "q": "Quelle explication du sous-développement de Soto rejette-t-il ?",
+   "choices": [
+    "Les mentalités et la culture (l'éthique protestante de Weber)",
+    "Le coût de la légalité",
+    "L'absence de titres de propriété",
+    "Les défauts du système juridique"
+   ],
+   "answer": 0,
+   "explain": "Pour lui, les entrepreneurs ne manquent pas : c'est le droit qui bloque."
+  },
+  {
+   "id": "macro-q07",
+   "ch": "c1a",
+   "q": "Que préconisait le consensus de Washington ?",
+   "choices": [
+    "Stabiliser la monnaie, libéraliser, privatiser",
+    "Distribuer des titres de propriété",
+    "Taxer le capital",
+    "Nationaliser les banques"
+   ],
+   "answer": 0,
+   "explain": "Ces politiques ont majoritairement échoué dans les pays pauvres."
+  },
+  {
+   "id": "macro-q08",
+   "ch": "c1a",
+   "q": "Combien de temps a-t-il fallu pour enregistrer l'entreprise d'un seul salarié de de Soto à Lima ?",
+   "choices": [
+    "289 jours, à raison de 6 heures par jour",
+    "4 heures",
+    "2 semaines",
+    "19 ans"
+   ],
+   "answer": 0,
+   "explain": "Pour un coût de 1 230 dollars."
+  },
+  {
+   "id": "macro-q09",
+   "ch": "c1a",
+   "q": "Que représentaient les 1 230 dollars dépensés pour légaliser l'entreprise au Pérou ?",
+   "choices": [
+    "31 fois le salaire minimum mensuel",
+    "Le prix d'une machine à coudre",
+    "La moitié d'un salaire minimum",
+    "10 fois le PIB par habitant"
+   ],
+   "answer": 0,
+   "explain": "Un coût hors de portée pour un pauvre."
+  },
+  {
+   "id": "macro-q10",
+   "ch": "c1a",
+   "q": "Combien d'étapes impose la municipalité de Lima pour un titre légal sur un logement ?",
+   "choices": [
+    "728",
+    "207",
+    "111",
+    "65"
+   ],
+   "answer": 0,
+   "explain": "207 = les opérations de la seule première phase pour légaliser un logement."
+  },
+  {
+   "id": "macro-q11",
+   "ch": "c1a",
+   "q": "Quelle part des petites entreprises industrielles de Lima est illégale ?",
+   "choices": [
+    "90 %",
+    "50 %",
+    "25 %",
+    "10 %"
+   ],
+   "answer": 0,
+   "explain": "Et 85 % du transport urbain, 60 % de la distribution alimentaire."
+  },
+  {
+   "id": "macro-q12",
+   "ch": "c1a",
+   "q": "Combien de temps faut-il en Haïti pour légaliser un terrain acquis, au total ?",
+   "choices": [
+    "19 ans",
+    "289 jours",
+    "5 ans",
+    "6 mois"
+   ],
+   "answer": 0,
+   "explain": "5 ans de bail, 65 formalités en 2 ans, puis l'achat."
+  },
+  {
+   "id": "macro-q13",
+   "ch": "c1a",
+   "q": "Que montre le laisser-passer A 38 dans le cours ?",
+   "choices": [
+    "Que la bureaucratie existe aussi en France",
+    "Que l'Égypte est la plus lente",
+    "Que la France n'a pas de bureaucratie",
+    "Que les titres sont inutiles"
+   ],
+   "answer": 0,
+   "explain": "Le cas de la France, version Astérix."
+  },
+  {
+   "id": "macro-q14",
+   "ch": "c1a",
+   "q": "Pour de Soto, l'illégalité des habitants des pays pauvres signifie surtout que…",
+   "choices": [
+    "L'État ne les respecte pas, avec des démarches aussi lourdes",
+    "Ils refusent de respecter la loi",
+    "Ils préfèrent l'économie souterraine par culture",
+    "Ils ne veulent pas payer d'impôts"
+   ],
+   "answer": 0,
+   "explain": "C'est l'inverse d'un manque de respect de la loi."
+  },
+  {
+   "id": "macro-q15",
+   "ch": "c1a",
+   "q": "Qu'est-ce que le « capital mort » ?",
+   "choices": [
+    "Des biens possédés mais sans titre, qui ne peuvent ni circuler ni servir de garantie",
+    "Du capital détruit par une crise",
+    "Des machines obsolètes",
+    "L'épargne non investie des riches"
+   ],
+   "answer": 0,
+   "explain": "Il représente jusqu'à 90 % de l'économie de certains pays."
+  },
+  {
+   "id": "macro-q16",
+   "ch": "c1a",
+   "q": "Quelle part des créations d'entreprises américaines passe par un emprunt gagé sur une hypothèque ?",
+   "choices": [
+    "70 %",
+    "10 %",
+    "30 %",
+    "95 %"
+   ],
+   "answer": 0,
+   "explain": "Sans titre, pas d'hypothèque, donc pas de crédit."
+  },
+  {
+   "id": "macro-q17",
+   "ch": "c1a",
+   "q": "Que permet un titre de propriété, selon de Soto ?",
+   "choices": [
+    "Rendre les biens fongibles : les diviser, les vendre, les hypothéquer",
+    "Seulement protéger contre le vol",
+    "Échapper à l'impôt",
+    "Interdire la revente"
+   ],
+   "answer": 0,
+   "explain": "Le titre « fixe le potentiel économique » du bien."
+  },
+  {
+   "id": "macro-q18",
+   "ch": "c1a",
+   "q": "Pourquoi le droit des pays pauvres est-il souvent défaillant ?",
+   "choices": [
+    "Il hérite du droit colonial, fait pour extraire les richesses",
+    "Il est trop récent",
+    "Il copie le droit américain",
+    "Il n'existe aucune loi"
+   ],
+   "answer": 0,
+   "explain": "Un droit pensé pour protéger les colons, pas pour faire circuler le capital."
+  },
+  {
+   "id": "macro-q19",
+   "ch": "c1b",
+   "q": "Le titre de la 3e partie du plan du prof est : la légalisation des propriétés est…",
+   "choices": [
+    "Une condition nécessaire mais pas suffisante",
+    "Une condition suffisante",
+    "Inutile",
+    "Contraire au développement"
+   ],
+   "answer": 0,
+   "explain": "Il faut aussi des dirigeants courageux et un contrat social."
+  },
+  {
+   "id": "macro-q20",
+   "ch": "c1b",
+   "q": "Quel groupe de Soto juge-t-il le plus conservateur dans les pays pauvres ?",
+   "choices": [
+    "Les juristes et les avocats",
+    "Les entrepreneurs informels",
+    "Les militaires",
+    "Les étudiants"
+   ],
+   "answer": 0,
+   "explain": "Il faut s'appuyer sur les quelques juristes ouverts."
+  },
+  {
+   "id": "macro-q21",
+   "ch": "c1b",
+   "q": "Quel exemple historique de Soto utilise-t-il pour les États-Unis ?",
+   "choices": [
+    "La conquête de l'Ouest : plus d'un siècle pour unifier les droits de propriété",
+    "La guerre de Sécession",
+    "Le New Deal",
+    "La crise de 1929"
+   ],
+   "answer": 0,
+   "explain": "Les pays pauvres d'aujourd'hui en sont au même point."
+  },
+  {
+   "id": "macro-q22",
+   "ch": "c1b",
+   "q": "Quelle loi l'ILD a-t-il fait voter au Pérou en 1991 ?",
+   "choices": [
+    "La Ley de Registro de Predios Rurales, un enregistrement cadastral",
+    "Une loi de nationalisation",
+    "Un impôt sur la fortune",
+    "Le Homestead Act"
+   ],
+   "answer": 0,
+   "explain": "C'est l'un des résultats concrets du cours."
+  },
+  {
+   "id": "macro-q23",
+   "ch": "c1b",
+   "q": "Selon de Soto, quel est « le vrai contrat social » ?",
+   "choices": [
+    "Le système juridique",
+    "Le droit de vote",
+    "L'impôt sur le revenu",
+    "La sécurité sociale"
+   ],
+   "answer": 0,
+   "explain": "D'où l'équivalence droits sociaux = droits juridiques."
+  },
+  {
+   "id": "macro-q24",
+   "ch": "c1b",
+   "q": "Qui avertit que la contradiction entre les peuples et l'économie de marché « fait le lit du fascisme » ?",
+   "choices": [
+    "Karl Polanyi, La Grande Transformation",
+    "Max Weber",
+    "Robert Solow",
+    "Fernand Braudel"
+   ],
+   "answer": 0,
+   "explain": "De Soto reprend cette idée."
+  },
+  {
+   "id": "macro-q25",
+   "ch": "c1b",
+   "q": "Comment de Soto analyse-t-il l'Europe ?",
+   "choices": [
+    "Sans marché juridique unifié, pas de vrai marché unique",
+    "Elle a trop de titres de propriété",
+    "Elle est trop centralisée juridiquement",
+    "Elle n'a pas de bureaucratie"
+   ],
+   "answer": 0,
+   "explain": "Le fractionnement juridique limite les économies d'échelle."
+  },
+  {
+   "id": "macro-q26",
+   "ch": "c1b",
+   "q": "Comment de Soto qualifie-t-il la crise des subprimes ?",
+   "choices": [
+    "Un tiers-monde de la finance en Occident, une crise de droits de propriété",
+    "Une crise de surproduction",
+    "Une crise purement monétaire",
+    "Une crise des matières premières"
+   ],
+   "answer": 0,
+   "explain": "Personne ne savait ce que contenaient les titres « pourris »."
+  },
+  {
+   "id": "macro-q27",
+   "ch": "c1b",
+   "q": "Que résume la formule r > g de Piketty ?",
+   "choices": [
+    "Le rendement du capital dépasse la croissance, donc les inégalités se creusent",
+    "La croissance dépasse le rendement du capital",
+    "Les revenus du travail augmentent plus vite que le capital",
+    "Le taux d'intérêt est supérieur à l'inflation"
+   ],
+   "answer": 0,
+   "explain": "Document n°6 : c'est la thèse attaquée par de Soto."
+  },
+  {
+   "id": "macro-q28",
+   "ch": "c1b",
+   "q": "Que reproche de Soto aux statistiques de Piketty ?",
+   "choices": [
+    "Elles ignorent les 90 % de la population mondiale qui vivent dans l'informel",
+    "Elles sont trop récentes",
+    "Elles ne couvrent que l'Afrique",
+    "Elles surestiment la croissance"
+   ],
+   "answer": 0,
+   "explain": "Une analyse eurocentrée."
+  },
+  {
+   "id": "macro-q29",
+   "ch": "c1b",
+   "q": "Selon l'enquête de l'ILD en Égypte, quelle part du revenu « du travail » vient en fait du capital ?",
+   "choices": [
+    "47 %",
+    "10 %",
+    "90 %",
+    "25 %"
+   ],
+   "answer": 0,
+   "explain": "120 chercheurs ; 360 milliards de dollars d'immobilier."
+  },
+  {
+   "id": "macro-q30",
+   "ch": "c1b",
+   "q": "Qui était vraiment Mohamed Bouazizi, selon de Soto ?",
+   "choices": [
+    "Un entrepreneur depuis l'âge de 12 ans, exproprié de son capital",
+    "Un chômeur sans activité",
+    "Un fonctionnaire",
+    "Un militant politique"
+   ],
+   "answer": 0,
+   "explain": "63 autres entrepreneurs ont tenté de se suicider dans les deux mois."
+  },
+  {
+   "id": "macro-q31",
+   "ch": "c1b",
+   "q": "Quelle phrase du document n°6 oppose l'Occident au reste du monde ?",
+   "choices": [
+    "« Du papier sans actifs » contre « des actifs sans papier »",
+    "« Les ordinateurs sont partout sauf dans les statistiques »",
+    "« Un pays a la conjoncture de ses structures »",
+    "« Indoor plumbing beats iPads »"
+   ],
+   "answer": 0,
+   "explain": "Le capital fictif contre le capital mort."
+  },
+  {
+   "id": "macro-q32",
+   "ch": "c2a",
+   "q": "Quelle est la phrase de Solow en 1987 ?",
+   "choices": [
+    "« Les ordinateurs sont partout, sauf dans les statistiques de la productivité »",
+    "« L'âge d'or de la croissance est derrière nous »",
+    "« Indoor plumbing beats iPads »",
+    "« Un pays a la conjoncture de ses structures »"
+   ],
+   "answer": 0,
+   "explain": "C'est le paradoxe de Solow."
+  },
+  {
+   "id": "macro-q33",
+   "ch": "c2a",
+   "q": "Pourquoi le paradoxe de Solow devient-il obsolète au début des années 2000 ?",
+   "choices": [
+    "La productivité du travail américaine se met enfin à augmenter",
+    "Les ordinateurs disparaissent",
+    "La croissance s'arrête",
+    "Solow change de théorie sur le capital"
+   ],
+   "answer": 0,
+   "explain": "En 2000, Solow lui-même dit que les ordinateurs sont entrés dans les statistiques."
+  },
+  {
+   "id": "macro-q34",
+   "ch": "c2a",
+   "q": "Quelle condition faut-il, en plus des ordinateurs, pour parler de 3e révolution industrielle ?",
+   "choices": [
+    "Un changement dans l'organisation du travail des entreprises",
+    "Une baisse du prix du pétrole",
+    "Une guerre mondiale",
+    "Une hausse des impôts"
+   ],
+   "answer": 0,
+   "explain": "La technique seule ne suffit pas."
+  },
+  {
+   "id": "macro-q35",
+   "ch": "c2a",
+   "q": "Quand se situe la 1re révolution industrielle selon la fiche n°1 du cours ?",
+   "choices": [
+    "Vers 1760-1830, surtout en Angleterre",
+    "Vers 1860-1900, en Europe et aux États-Unis",
+    "1913-1972",
+    "Depuis les années 1990"
+   ],
+   "answer": 0,
+   "explain": "Vapeur, train, métier à tisser."
+  },
+  {
+   "id": "macro-q36",
+   "ch": "c2a",
+   "q": "Quelle période la fiche n°1 appelle-t-elle l'âge d'or de la productivité ?",
+   "choices": [
+    "1913-1972",
+    "1760-1830",
+    "1995-2005",
+    "1870-1900"
+   ],
+   "answer": 0,
+   "explain": "Les effets de la 2e révolution industrielle."
+  },
+  {
+   "id": "macro-q37",
+   "ch": "c2a",
+   "q": "Quel est le premier argument de Gordon contre la nouvelle économie ?",
+   "choices": [
+    "Un effet de moyenne : la productivité n'a augmenté que dans le secteur des NTIC",
+    "Les ordinateurs sont trop chers",
+    "Internet n'existe pas encore",
+    "La productivité a baissé partout"
+   ],
+   "answer": 0,
+   "explain": "Une illusion d'optique dans les statistiques."
+  },
+  {
+   "id": "macro-q38",
+   "ch": "c2a",
+   "q": "Que montre le graphique de Gordon « Diminishing Returns in the New Economy » ?",
+   "choices": [
+    "Plus de puissance (MHz) n'apporte presque plus d'utilité",
+    "L'utilité augmente sans limite",
+    "Les prix des ordinateurs montent",
+    "Le nombre d'ordinateurs baisse"
+   ],
+   "answer": 0,
+   "explain": "Des rendements décroissants."
+  },
+  {
+   "id": "macro-q39",
+   "ch": "c2a",
+   "q": "Selon l'étude Olfeo 2015 du cours, combien de temps de surf personnel par jour au bureau ?",
+   "choices": [
+    "Environ 50 minutes",
+    "5 minutes",
+    "4 heures",
+    "Aucun"
+   ],
+   "answer": 0,
+   "explain": "1 h 53 sur Internet par jour, dont 44 % personnel."
+  },
+  {
+   "id": "macro-q40",
+   "ch": "c2a",
+   "q": "Par combien le télégraphe a-t-il multiplié la vitesse de transmission, selon Gordon ?",
+   "choices": [
+    "3 000",
+    "10",
+    "100",
+    "1 million"
+   ],
+   "answer": 0,
+   "explain": "Et divisé le coût par 100."
+  },
+  {
+   "id": "macro-q41",
+   "ch": "c2a",
+   "q": "Pourquoi le cours parle-t-il de « Gordon et Jésus » ?",
+   "choices": [
+    "Pour Gordon, ceux qui croient à la 3e RI attendent un messie qui ne viendra pas",
+    "Gordon est théologien",
+    "Gordon compare l'ordinateur à la Bible",
+    "Gordon annonce une révolution religieuse"
+   ],
+   "answer": 0,
+   "explain": "Les nouvelles technologies jouent le rôle du messie."
+  },
+  {
+   "id": "macro-q42",
+   "ch": "c2a",
+   "q": "Dans l'interview au Monde (2016), quelle période Gordon présente-t-il comme une parenthèse exceptionnelle ?",
+   "choices": [
+    "1870-1970 aux États-Unis",
+    "1995-2005",
+    "1760-1830 en Angleterre",
+    "2008-2020"
+   ],
+   "answer": 0,
+   "explain": "« L'âge d'or de la croissance est derrière nous »."
+  },
+  {
+   "id": "macro-q43",
+   "ch": "c2a",
+   "q": "Que répond Krugman à Gordon (2013) ?",
+   "choices": [
+    "Les « androïdes » (reconnaissance vocale, traduction, voiture autonome) pourraient relancer la croissance",
+    "Gordon a raison sur tout",
+    "La plomberie est inutile",
+    "Il faut interdire les robots"
+   ],
+   "answer": 0,
+   "explain": "Optimiste pour la croissance, inquiet pour les salaires."
+  },
+  {
+   "id": "macro-q44",
+   "ch": "c2a",
+   "q": "Quel exemple le prof oppose-t-il à Gordon ?",
+   "choices": [
+    "Un vaccin contre le Covid en un an, impossible sans ordinateurs",
+    "Le télégraphe",
+    "La machine à vapeur",
+    "Le moteur à explosion"
+   ],
+   "answer": 0,
+   "explain": "Gordon oublie l'ensemble des usages des NTIC."
+  },
+  {
+   "id": "macro-q45",
+   "ch": "c2a",
+   "q": "Quelle part de l'économie américaine représente le secteur des NTIC dans le cours ?",
+   "choices": [
+    "Environ 15 %",
+    "Environ 1 %",
+    "Environ 50 %",
+    "Environ 80 %"
+   ],
+   "answer": 0,
+   "explain": "Environ 8 % en France."
+  },
+  {
+   "id": "macro-q46",
+   "ch": "c2a",
+   "q": "Quel était l'objectif du sommet de Lisbonne (2000) ?",
+   "choices": [
+    "Faire de l'Europe l'économie de la connaissance la plus compétitive du monde",
+    "Créer l'euro",
+    "Taxer les géants du numérique",
+    "Fermer les frontières"
+   ],
+   "answer": 0,
+   "explain": "Pour rattraper le retard européen sur les NTIC."
+  },
+  {
+   "id": "macro-q47",
+   "ch": "c2a",
+   "q": "Que dit la loi de Metcalfe ?",
+   "choices": [
+    "La valeur d'un réseau augmente avec le carré du nombre de ses utilisateurs",
+    "La puissance des puces double tous les deux ans",
+    "Les coûts variables augmentent avec la production",
+    "Le premier entrant perd toujours"
+   ],
+   "answer": 0,
+   "explain": "C'est l'effet de réseau."
+  },
+  {
+   "id": "macro-q48",
+   "ch": "c2a",
+   "q": "Pourquoi le secteur des NTIC fabrique-t-il naturellement des monopoles ?",
+   "choices": [
+    "Économies d'échelle (coûts fixes élevés) et effets de réseau",
+    "Interdiction de la concurrence par l'État",
+    "Manque d'innovation",
+    "Coûts variables très élevés"
+   ],
+   "answer": 0,
+   "explain": "D'où de fortes barrières à l'entrée."
+  },
+  {
+   "id": "macro-q49",
+   "ch": "c2a",
+   "q": "Qu'est-ce qu'une licorne ?",
+   "choices": [
+    "Une start-up valorisée plus d'un milliard de dollars",
+    "Une entreprise publique",
+    "Un monopole d'État",
+    "Une entreprise sans salariés"
+   ],
+   "answer": 0,
+   "explain": "Fruit de la révolution financière américaine."
+  },
+  {
+   "id": "macro-q50",
+   "ch": "c2b",
+   "q": "Qui a conçu le modèle O-ring ?",
+   "choices": [
+    "Michael Kremer, prix Nobel 2019",
+    "Robert Gordon",
+    "Robert Solow",
+    "Angus Maddison"
+   ],
+   "answer": 0,
+   "explain": "Professeur à Harvard."
+  },
+  {
+   "id": "macro-q51",
+   "ch": "c2b",
+   "q": "D'où vient le nom O-ring ?",
+   "choices": [
+    "Un joint d'étanchéité : une navette perdue à cause d'une seule pièce",
+    "Un anneau olympique",
+    "Un circuit électronique",
+    "Une marque de pneus"
+   ],
+   "answer": 0,
+   "explain": "Le maillon faible menace toute la chaîne."
+  },
+  {
+   "id": "macro-q52",
+   "ch": "c2b",
+   "q": "Quelle est la leçon du modèle O-ring sur les qualifications ?",
+   "choices": [
+    "Les travailleurs d'une même chaîne doivent avoir un niveau proche, homogène",
+    "Il faut mélanger tous les niveaux",
+    "Seuls les dirigeants comptent",
+    "La qualification n'a plus d'importance"
+   ],
+   "answer": 0,
+   "explain": "D'où les appariements sélectifs."
+  },
+  {
+   "id": "macro-q53",
+   "ch": "c2b",
+   "q": "Pourquoi le modèle O-ring n'était-il pas possible avant l'informatique ?",
+   "choices": [
+    "Il faut transmettre instantanément beaucoup de données en réseau",
+    "Les avions n'existaient pas",
+    "Les salaires étaient trop bas",
+    "Il n'y avait pas de sous-traitants"
+   ],
+   "answer": 0,
+   "explain": "Sans cela, la seule organisation possible est la pyramide."
+  },
+  {
+   "id": "macro-q54",
+   "ch": "c2b",
+   "q": "Quel exemple illustre l'ancienne organisation pyramidale fordiste dans le cours ?",
+   "choices": [
+    "Renault à Boulogne-Billancourt",
+    "Le Boeing 787",
+    "Le Falcon 7X",
+    "La Volvo S40"
+   ],
+   "answer": 0,
+   "explain": "La grande usine intégrée."
+  },
+  {
+   "id": "macro-q55",
+   "ch": "c2b",
+   "q": "Qu'a montré la conception du Falcon 7X de Dassault ?",
+   "choices": [
+    "Des partenaires du monde entier ont conçu l'avion ensemble, à distance",
+    "Un avion conçu dans une seule usine",
+    "Un avion sans ordinateur",
+    "Un échec commercial"
+   ],
+   "answer": 0,
+   "explain": "Document n°15, sur un plateau virtuel."
+  },
+  {
+   "id": "macro-q56",
+   "ch": "c2b",
+   "q": "La valeur ajoutée d'une voiture comme la Volvo S40 provient d'au moins…",
+   "choices": [
+    "10 pays",
+    "2 pays",
+    "1 pays",
+    "50 pays"
+   ],
+   "answer": 0,
+   "explain": "Entre le tiers et la moitié des composants sont importés, retravaillés et réexportés."
+  },
+  {
+   "id": "macro-q57",
+   "ch": "c2b",
+   "q": "Quel nouveau type d'inégalités le modèle O-ring fait-il apparaître ?",
+   "choices": [
+    "Des inégalités à l'intérieur des groupes (intra-classes)",
+    "Des inégalités entre classes sociales uniquement",
+    "La fin de toute inégalité",
+    "Des inégalités seulement entre pays"
+   ],
+   "answer": 0,
+   "explain": "De petits écarts de performance donnent de grands écarts de revenus."
+  },
+  {
+   "id": "macro-q58",
+   "ch": "c2b",
+   "q": "Selon le cours, quel est le lien entre révolution industrielle et mondialisation ?",
+   "choices": [
+    "La révolution industrielle a permis la mondialisation, pas l'inverse",
+    "La mondialisation a causé la révolution industrielle",
+    "Elles n'ont aucun lien",
+    "La mondialisation a bloqué la révolution industrielle"
+   ],
+   "answer": 0,
+   "explain": "Comme la 1re RI a précédé la 1re mondialisation."
+  },
+  {
+   "id": "macro-q59",
+   "ch": "c2b",
+   "q": "Quel risque crée l'erreur de raisonnement qui part de la mondialisation ?",
+   "choices": [
+    "La montée du protectionnisme, qui briserait l'espoir des pays pauvres",
+    "Une hausse de la productivité",
+    "La fin des NTIC",
+    "Une baisse des inégalités"
+   ],
+   "answer": 0,
+   "explain": "Pour les pays pauvres, le commerce reste un espoir."
+  },
+  {
+   "id": "macro-q60",
+   "ch": "c2b",
+   "q": "Avant le modèle O-ring, quel pays avait réussi seul sa transition industrielle hors de l'Occident ?",
+   "choices": [
+    "Le Japon",
+    "La Chine",
+    "L'Inde",
+    "Le Brésil"
+   ],
+   "answer": 0,
+   "explain": "La fragmentation de la production ouvre aujourd'hui des niches aux pays du Sud."
+  },
+  {
+   "id": "macro-q61",
+   "ch": "c2b",
+   "q": "Qu'a reconstitué Angus Maddison ?",
+   "choices": [
+    "Le PIB par tête de toutes les zones du monde sur le très long terme (de l'an 1 à 1998)",
+    "Le cours des actions américaines",
+    "Les salaires des ouvriers de Ford",
+    "Le nombre d'ordinateurs par pays"
+   ],
+   "answer": 0,
+   "explain": "Ses graphiques sont en échelle semi-logarithmique."
+  },
+  {
+   "id": "macro-q62",
+   "ch": "c2b",
+   "q": "Quelle innovation est au cœur du mouvement des « Makers » (Chris Anderson, 2012) ?",
+   "choices": [
+    "Les imprimantes 3D",
+    "Le télégraphe",
+    "Les smartphones",
+    "Les robots industriels"
+   ],
+   "answer": 0,
+   "explain": "Organisés en FabLabs ; Obama en parle le 12 février 2013."
+  },
+  {
+   "id": "macro-q63",
+   "ch": "c2b",
+   "q": "Quel était l'enchaînement du fordisme ?",
+   "choices": [
+    "Une partie des gains de productivité reversée en salaires",
+    "Des salaires bloqués pour financer la recherche",
+    "La sous-traitance généralisée",
+    "La production dans les pays du Sud"
+   ],
+   "answer": 0,
+   "explain": "Grâce notamment aux syndicats, d'où l'intérêt des keynésiens."
+  },
+  {
+   "id": "macro-q64",
+   "ch": "c2b",
+   "q": "Que propose Rodrik face à la fin du fordisme ?",
+   "choices": [
+    "Un nouveau contrat social adapté aux nouvelles inégalités",
+    "Le retour à la grande usine",
+    "Le protectionnisme",
+    "La suppression de la protection sociale"
+   ],
+   "answer": 0,
+   "explain": "Le contrat social d'après-guerre est fragilisé."
+  },
+  {
+   "id": "macro-q65",
+   "ch": "c2b",
+   "q": "Quelle citation clôt le chapitre 2 ?",
+   "choices": [
+    "« The fault... is not in our stars, but in ourselves »",
+    "« Où est la sagesse que nous avons perdue dans la connaissance ? »",
+    "« Un pays a la conjoncture de ses structures »",
+    "« You can see the computer age everywhere »"
+   ],
+   "answer": 0,
+   "explain": "Shakespeare, au générique de Spellbound (Hitchcock, 1945)."
+  }
+ ],
+ "cards": [
+  {
+   "id": "macro-f01",
+   "ch": "c1a",
+   "front": "Hernando de Soto en 5 points",
+   "back": "Péruvien, né en 1941 à Arequipa, libéral.\nILD fondé à Lima en 1980.\nL'Autre Sentier (1986), Le Mystère du capital (2000).\n4e à la présidentielle de 2021 (11,6 %).\nInspire l'USAID et la Banque mondiale."
+  },
+  {
+   "id": "macro-f02",
+   "ch": "c1a",
+   "front": "L'expérience de de Soto à Lima",
+   "back": "Une petite entreprise textile, 2 machines à coudre.\n289 jours à 6 h par jour pour 1 salarié.\n1 230 $ = 31 salaires minimum.\n207 opérations, 2 ans à plein temps."
+  },
+  {
+   "id": "macro-f03",
+   "ch": "c1a",
+   "front": "Les chiffres du parcours du combattant",
+   "back": "Lima : 728 étapes pour un titre de logement ; 90 % des petites entreprises industrielles illégales.\nPhilippines : presque 100 étapes, 13 à 25 ans.\nÉgypte : 5 à 14 ans.\nHaïti : 111 étapes, 4 112 jours ; 19 ans au total."
+  },
+  {
+   "id": "macro-f04",
+   "ch": "c1a",
+   "front": "La cloche de verre (Braudel)",
+   "back": "Le capitalisme a vécu « en système clos, voire enkysté », réservé à quelques secteurs : des poches de richesse dans un océan de pauvreté."
+  },
+  {
+   "id": "macro-f05",
+   "ch": "c1a",
+   "front": "Le capital mort",
+   "back": "Des biens possédés mais sans titre : ils ne peuvent ni circuler, ni être vendus à un inconnu, ni servir de garantie. Jusqu'à 90 % de l'économie de certains pays."
+  },
+  {
+   "id": "macro-f06",
+   "ch": "c1a",
+   "front": "Le capital selon de Soto",
+   "back": "Un surplus réinvesti pour créer plus de richesse.\nIl naît du titre de propriété, qui rend les biens fongibles.\n« Extraire un potentiel invisible ».\n70 % des entreprises américaines naissent d'un emprunt gagé sur une hypothèque."
+  },
+  {
+   "id": "macro-f07",
+   "ch": "c1a",
+   "front": "Pourquoi le droit des pays pauvres est défaillant",
+   "back": "Hérité du droit colonial (fait pour extraire).\nPensé pour protéger, pas pour faire circuler.\nComparaison : l'Europe de Colbert, la conquête de l'Ouest."
+  },
+  {
+   "id": "macro-f08",
+   "ch": "c1b",
+   "front": "La légalisation : CN mais pas CS",
+   "back": "Nécessaire : recenser les droits existants, créer un système légal, protocole progressif.\nPas suffisante : il faut des chefs d'État courageux (Myerson), des juristes ouverts, l'adhésion de la population, une démocratie économique et juridique."
+  },
+  {
+   "id": "macro-f09",
+   "ch": "c1b",
+   "front": "Le contrat social (de Soto, Rodrik, Polanyi)",
+   "back": "Sans contrat social, le capitalisme sera combattu.\nLe vrai contrat social, c'est le système juridique.\nPolanyi : les inégalités font le lit du fascisme."
+  },
+  {
+   "id": "macro-f10",
+   "ch": "c1b",
+   "front": "Les 4 extensions de de Soto",
+   "back": "France : le laisser-passer A 38.\nEurope : pas de marché juridique unifié.\nPrintemps arabes : petits commerçants sans titres.\nSubprimes : un tiers-monde de la finance en Occident."
+  },
+  {
+   "id": "macro-f11",
+   "ch": "c1b",
+   "front": "Document n°6 : de Soto contre Piketty",
+   "back": "Piketty : r > g, les inégalités se creusent seules.\nDe Soto : il oublie les 90 % du monde dans l'informel.\nÉgypte : 47 % du revenu « du travail » vient du capital, 360 Md$ d'immobilier.\nBouazizi : un entrepreneur exproprié."
+  },
+  {
+   "id": "macro-f12",
+   "ch": "c1b",
+   "front": "Les 4 leçons du document n°6",
+   "back": "1. C'est l'absence de capital qui cause la pauvreté.\n2. Capital et travail ne sont pas ennemis.\n3. L'obstacle : l'incapacité à accumuler et protéger son capital.\n4. Le respect de l'individu n'est pas propre à l'Occident."
+  },
+  {
+   "id": "macro-f13",
+   "ch": "c1b",
+   "front": "Du papier sans actifs, des actifs sans papier",
+   "back": "Occident : capital fictif, des titres sans valeur réelle (dérivés, crise de 2008).\nAilleurs : des biens réels sans titres (capital mort).\nModèle : la France de la Révolution (Coquelin)."
+  },
+  {
+   "id": "macro-f14",
+   "ch": "c2a",
+   "front": "Nouvelle économie : les deux définitions",
+   "back": "Presse : le secteur des NTIC (10-15 % du PIB américain, 5-6 % du français).\nÉconomistes : une 3e révolution industrielle, technique + nouvelle organisation du travail."
+  },
+  {
+   "id": "macro-f15",
+   "ch": "c2a",
+   "front": "Les deux premières révolutions industrielles",
+   "back": "1re : Angleterre, 1760-1830 (vapeur, train, métier à tisser).\n2e : Europe et États-Unis, 1860-1900 (moteur à explosion, électricité, téléphone, eau courante).\nÂge d'or de la productivité : 1913-1972."
+  },
+  {
+   "id": "macro-f16",
+   "ch": "c2a",
+   "front": "Le paradoxe de Solow",
+   "back": "1987 : « You can see the computer age everywhere but in the productivity statistics ».\nFin du paradoxe dans les années 2000 (États-Unis : 4 % de croissance par an entre 1995 et 2005)."
+  },
+  {
+   "id": "macro-f17",
+   "ch": "c2a",
+   "front": "Les arguments de Gordon",
+   "back": "Effet de moyenne (seul le secteur NTIC progresse).\nRendements décroissants des ordinateurs.\nInternet au bureau : 30 à 40 % d'usage perso.\nLe télégraphe a fait mieux (× 3 000).\n1870-1970, une parenthèse dorée."
+  },
+  {
+   "id": "macro-f18",
+   "ch": "c2a",
+   "front": "Krugman contre Gordon (2013)",
+   "back": "« Indoor plumbing beats iPads » résume Gordon.\nMais les androïdes arrivent (voix, traduction, voiture autonome).\nOptimiste pour la croissance, inquiet pour les salaires."
+  },
+  {
+   "id": "macro-f19",
+   "ch": "c2a",
+   "front": "Les caractéristiques des biens NTIC",
+   "back": "Investissements à fonds perdus.\nÉconomies d'échelle (coûts fixes, coûts variables quasi nuls).\nEffets de réseau (Metcalfe : valeur = carré des utilisateurs).\n→ monopoles et barrières à l'entrée."
+  },
+  {
+   "id": "macro-f20",
+   "ch": "c2a",
+   "front": "La rente des pays producteurs de NTIC",
+   "back": "Bénéfices géants, amortisseur macro pour la classe moyenne, réinvestissement en recherche (cercle vertueux), first mover advantage. Les États-Unis en profitent le plus."
+  },
+  {
+   "id": "macro-f21",
+   "ch": "c2b",
+   "front": "Le modèle O-ring (Kremer)",
+   "back": "Nobel 2019. Un joint défaillant fait perdre une navette.\nUn maillon faible détruit tout : qualifications homogènes, appariements sélectifs, fragmentation de la production en réseau."
+  },
+  {
+   "id": "macro-f22",
+   "ch": "c2b",
+   "front": "Pyramide fordiste contre réseau O-ring",
+   "back": "Avant : trois pyramides au Nord, le Sud exclu (Renault Billancourt).\nAujourd'hui : un réseau de sous-traitants, d'usines et de centres d'appel entre le Nord, le Sud et les pays très pauvres (Boeing 787, Falcon 7X, Volvo S40)."
+  },
+  {
+   "id": "macro-f23",
+   "ch": "c2b",
+   "front": "Les nouvelles inégalités",
+   "back": "De petits écarts de performance, de grands écarts de revenus (l'informaticien de la navette contre celui de Carrefour).\nCarrières incertaines.\nLutte intra-classes plutôt qu'entre classes."
+  },
+  {
+   "id": "macro-f24",
+   "ch": "c2b",
+   "front": "Révolution industrielle et mondialisation",
+   "back": "La RI permet la mondialisation, pas l'inverse.\nLa fragmentation de la supply chain ouvre des niches au Sud.\nErreur inverse → protectionnisme."
+  },
+  {
+   "id": "macro-f25",
+   "ch": "c2b",
+   "front": "La fin du fordisme",
+   "back": "Fordisme : gains de productivité partagés avec les salaires (Ford, syndicats, keynésiens).\nSa fin fragilise le contrat social d'après-guerre.\nRodrik : un nouveau contrat social."
+  },
+  {
+   "id": "macro-f26",
+   "ch": "c2b",
+   "front": "La conclusion du cours",
+   "back": "La productivité repose sur les institutions (démocratie économique).\n« The fault... is not in our stars, but in ourselves » (Shakespeare, Spellbound)."
+  }
+ ]
+}

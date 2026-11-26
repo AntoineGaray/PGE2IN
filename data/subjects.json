@@ -58,9 +58,10 @@
       "id": "macro",
       "short": "Macroéconomie",
       "name": "Macroéconomie",
-      "prof": "M. Zumer",
-      "color": "#6b7280",
-      "file": null
+      "prof": "M. Zumer · Macroéconomie contemporaine",
+      "color": "#0e5e6f",
+      "file": "macro.json",
+      "fiche": "fiches/macro.json"
     },
     {
       "id": "geo",

@@ -403,3 +403,7 @@ a.path-row:hover { border-color: var(--ink-2); }
 #open-a { width: 100%; box-sizing: border-box; margin-top: 4px; resize: vertical; font: inherit; padding: 10px 12px; border: 1.5px solid var(--line); border-radius: 12px; }
 .btn.pulse { animation: pulse 1.2s ease-in-out 3; }
 @keyframes pulse { 50% { transform: scale(1.05); } }
+
+/* Encadrés des fiches (À retenir, Complément, Vie quotidienne, Humour) */
+.fiche blockquote { margin: .9em 0; padding: .6em 1em; border-left: 4px solid var(--line); background: #f7f8f9; border-radius: 0 10px 10px 0; font-size: .96em; }
+.fiche blockquote p { margin: .3em 0; }

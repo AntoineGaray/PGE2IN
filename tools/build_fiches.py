@@ -15,7 +15,10 @@ SUBJECTS = {
     "mq": "Méthodes quantitatives III",
     "art": "Art et culture en Asie",
     "rse": "Workshop RSE",
+    "macro": "Macroéconomie",
 }
+# Date de la dernière version de chaque fiche (par défaut : 23/11/2026)
+UPDATED = {"macro": "2026-11-26"}
 TABS = [("detaillee", "Fiche détaillée"), ("courte", "Fiche courte")]
 
 # ---------- XML Claude Docs -> HTML ----------
@@ -138,4 +141,4 @@ for sid, name in SUBJECTS.items():
         html, toc = normalise(load(sid, key))
         tabs.append({"key": key, "name": label, "html": html, "toc": toc})
         print(f"{sid}/{key}: {len(html)} car., {len(toc)} titres")
-    (OUT / f"{sid}.json").write_text(json.dumps({"subject": sid, "title": name, "updated": "2026-11-23", "tabs": tabs}, ensure_ascii=False))
+    (OUT / f"{sid}.json").write_text(json.dumps({"subject": sid, "title": name, "updated": UPDATED.get(sid, "2026-11-23"), "tabs": tabs}, ensure_ascii=False))
