@@ -1049,22 +1049,34 @@
     const key = params.get("tab") || prefs[id] || "detaillee";
     const tab = f.tabs.find((t) => t.key === key) || f.tabs[0];
     prefs[id] = tab.key; store.set("ficheTab", prefs);
-    if (/class="katex/.test(tab.html)) ensureKatexCss();
+    // Langue de la fiche : pge2.ficheLang = "fr" | "en" (commun à toutes les matières)
+    const hasEn = f.tabs.some((t) => t.html_en);
+    let lang = params.get("lang") || store.get("ficheLang", "fr");
+    if (lang !== "en" || !hasEn) lang = "fr";
+    if (params.get("lang") && hasEn) store.set("ficheLang", lang);
+    const en = lang === "en" && !!tab.html_en;
+    const html = en ? tab.html_en : tab.html, tocItems = en ? tab.toc_en : tab.toc;
+    if (/class="katex/.test(html)) ensureKatexCss();
+    const qs = (k, v) => "#/s/" + id + "/fiche?tab=" + (k || tab.key) + "&lang=" + (v || lang);
 
-    const toc = tab.toc.map((t) => `<a href="#" data-target="${esc(t.id)}" class="toc-l${t.level}">${esc(t.text)}</a>`).join("");
+    const toc = tocItems.map((t) => `<a href="#" data-target="${esc(t.id)}" class="toc-l${t.level}">${esc(t.text)}</a>`).join("");
     $app.innerHTML = `
       <p><a href="#/s/${id}" class="small muted">← ${esc(s.short)}</a></p>
       <div class="fiche-head">
         <div><h1>${esc(f.title)}</h1>
         <p class="muted small">Copie des fiches de révision, mise à jour le ${new Date(f.updated).toLocaleDateString("fr-FR", { day: "numeric", month: "long" })}.</p></div>
-        <div class="tabs" role="tablist">${f.tabs.map((t) => `<button role="tab" data-tab="${t.key}" class="${t.key === tab.key ? "on" : ""}">${esc(t.name)}</button>`).join("")}</div>
+        <div class="fiche-switches">
+          <div class="tabs" role="tablist">${f.tabs.map((t) => `<button role="tab" data-tab="${t.key}" class="${t.key === tab.key ? "on" : ""}">${esc(t.name)}</button>`).join("")}</div>
+          ${hasEn ? `<div class="tabs lang-switch" role="group" aria-label="Langue de la fiche">${[["fr", "FRA"], ["en", "ENG"]].map(([v, l]) => `<button data-lang="${v}" class="${v === lang ? "on" : ""}" aria-pressed="${v === lang}">${l}</button>`).join("")}</div>` : ""}
+        </div>
       </div>
+      ${lang === "en" && !tab.html_en ? `<div class="notice">This sheet is not translated yet: French version shown.</div>` : ""}
       <div class="fiche-layout">
         <nav class="toc" id="toc" aria-label="Sommaire">
-          <button class="toc-toggle" id="toc-toggle" aria-expanded="false">☰ Sommaire</button>
-          <div class="toc-list" id="toc-list"><div class="toc-title">Sommaire</div>${toc}</div>
+          <button class="toc-toggle" id="toc-toggle" aria-expanded="false">☰ ${en ? "Contents" : "Sommaire"}</button>
+          <div class="toc-list" id="toc-list"><div class="toc-title">${en ? "Contents" : "Sommaire"}</div>${toc}</div>
         </nav>
-        <article class="fiche" id="fiche">${tab.html}</article>
+        <article class="fiche" id="fiche" lang="${en ? "en" : "fr"}">${html}</article>
       </div>
       <div class="fiche-foot actions">
         <a class="btn accent" href="#/s/${id}/quiz">Tester avec un quiz</a>
@@ -1073,7 +1085,10 @@
       </div>`;
 
     document.querySelectorAll(".fiche-head .tabs button").forEach((b) => {
-      b.onclick = () => { location.hash = "#/s/" + id + "/fiche?tab=" + b.dataset.tab; };
+      b.onclick = () => { location.hash = qs(b.dataset.tab); };
+    });
+    document.querySelectorAll(".lang-switch button").forEach((b) => {
+      b.onclick = () => { store.set("ficheLang", b.dataset.lang); location.hash = qs(null, b.dataset.lang); };
     });
     const list = document.getElementById("toc-list");
     const toggle = document.getElementById("toc-toggle");

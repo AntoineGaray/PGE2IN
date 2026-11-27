@@ -520,3 +520,14 @@ a.path-row:hover { border-color: var(--ink-2); }
   .nav-long { display: none; }   /* « Mes erreurs » devient « Erreurs » sur petit téléphone */
   .nav-short { display: inline; }
 }
+
+/* Fiche : onglets détaillée / courte + bascule FRA / ENG */
+.fiche-switches { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.lang-switch button { min-width: 52px; font-weight: 700; letter-spacing: .02em; }
+@media (max-width: 860px) {
+  .fiche-switches { width: 100%; }
+  .fiche-switches .tabs:not(.lang-switch) { flex: 1; width: auto; }
+  .fiche-head .lang-switch { width: auto; }
+  .fiche-head .lang-switch button { flex: 0 0 auto; }
+}
+@media (max-width: 420px) { .fiche-switches .tabs button { font-size: 13px; padding-left: 8px; padding-right: 8px; } }

@@ -139,6 +139,12 @@ for sid, name in SUBJECTS.items():
     tabs = []
     for key, label in TABS:
         html, toc = normalise(load(sid, key))
-        tabs.append({"key": key, "name": label, "html": html, "toc": toc})
-        print(f"{sid}/{key}: {len(html)} car., {len(toc)} titres")
+        t = {"key": key, "name": label, "html": html, "toc": toc}
+        # Version anglaise (bouton FRA / ENG) : <matiere>-<onglet>-en.md, termes repris des supports du cours
+        try:
+            t["html_en"], t["toc_en"] = normalise(load(sid, key + "-en"))
+        except FileNotFoundError:
+            pass
+        tabs.append(t)
+        print(f"{sid}/{key}: {len(html)} car., {len(toc)} titres" + (f" | EN : {len(t['html_en'])} car., {len(t['toc_en'])} titres" if "html_en" in t else ""))
     (OUT / f"{sid}.json").write_text(json.dumps({"subject": sid, "title": name, "updated": UPDATED.get(sid, "2026-11-23"), "tabs": tabs}, ensure_ascii=False))
