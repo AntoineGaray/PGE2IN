@@ -9,6 +9,11 @@ Elles ne se mettent pas à jour toutes seules : après une modification d'un doc
 
 Les titres reçoivent des ids générés à partir de leur texte : le sommaire est reconstruit à chaque fois.
 
+**Version anglaise (bouton FRA / ENG)** : `tools/fiches_src/<matiere>-<detaillee|courte>-en.md`, construite par le même script (champs `html_en` et `toc_en`).
+Les termes viennent des supports du cours en anglais (slides, résumés, chapitre de Davenport et Kim) ; pour la macro (cours en français), des titres et termes anglais des auteurs cités.
+Les formules s'écrivent dans un bloc ```latex. Toute modification d'une fiche française doit être reportée dans sa version anglaise.
+Les compléments hors cours de la macro restent en français seulement.
+
 # Partiels types
 
 Source : `tools/exams_src/<matiere>.md` (balises `@exam`, `@intro`, `@method`, `@part n | pastille | titre | points | minutes`, `@data`, `@q numéro | points`, `@c`).
