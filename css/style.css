@@ -498,3 +498,25 @@ a.path-row:hover { border-color: var(--ink-2); }
   :root[data-theme="dark"] .fiche th, :root[data-theme="dark"] .exam th { background: #f4f0e6; }
   :root[data-theme="dark"] .ex-method { background: #fff8ea; }
 }
+
+/* Téléphone : le bouton de thème doit tenir dans la barre, à droite du profil */
+@media (max-width: 560px) {
+  .topbar-right { gap: 2px; min-width: 0; }
+  .topnav a { padding: 6px 5px; font-size: 12.5px; }
+  .theme-toggle { width: 30px; height: 30px; font-size: 15px; border-color: transparent; }
+}
+@media (max-width: 380px) {
+  .brand-text { display: none; }   /* le logo R reste et ramène à l'accueil */
+}
+/* Le nom de profil se coupe (…) plutôt que de pousser le bouton de thème hors de l'écran */
+.topbar-right { min-width: 0; }
+.topnav { min-width: 0; }
+.theme-toggle { flex: 0 0 auto; }
+@media (max-width: 560px) {
+  .topnav a[href="#/account"] { max-width: 110px; overflow: hidden; text-overflow: ellipsis; }
+}
+.nav-short { display: none; }
+@media (max-width: 400px) {
+  .nav-long { display: none; }   /* « Mes erreurs » devient « Erreurs » sur petit téléphone */
+  .nav-short { display: inline; }
+}

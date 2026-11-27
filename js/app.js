@@ -218,7 +218,7 @@
   // ---------- Navigation ----------
   function setNav() {
     const h = location.hash || "#/";
-    const links = [["#/", "Matières"], ["#/errors", "Mes erreurs"], ["#/lb", "Classement"]];
+    const links = [["#/", "Matières"], ["#/errors", "<span class=\"nav-long\">Mes erreurs</span><span class=\"nav-short\">Erreurs</span>"], ["#/lb", "Classement"]];
     const who = session ? (session.guest ? "Invité" : esc(session.pseudo)) : "Connexion";
     document.getElementById("topnav").innerHTML =
       links.map(([href, t]) => `<a href="${href}" class="${h === href || (href !== "#/" && h.startsWith(href)) ? "active" : ""}">${t}</a>`).join("") +
