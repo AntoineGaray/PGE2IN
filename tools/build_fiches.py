@@ -131,7 +131,7 @@ def load(sid, tab):
                 return raw
             if ext == "xml":
                 return xml_to_html(raw)
-            return markdown.markdown(raw, extensions=["tables", "sane_lists"])
+            return markdown.markdown(raw, extensions=["tables", "sane_lists", "fenced_code"])
     raise FileNotFoundError(f"{sid}-{tab}")
 
 OUT.mkdir(parents=True, exist_ok=True)
