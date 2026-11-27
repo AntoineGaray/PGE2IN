@@ -7,12 +7,25 @@
   <meta name="description" content="Quiz, flashcards, suivi des erreurs et classement pour les partiels PGE2 International.">
   <meta name="theme-color" content="#1d2433">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%231d2433'/><text x='50' y='68' font-size='54' text-anchor='middle' fill='%23ffb547' font-family='Georgia'>R</text></svg>">
+  <script>
+    // Thème appliqué avant l'affichage, pour éviter un flash blanc le soir.
+    // pge2.theme = "dark" | "light" ; absent = suit le réglage du système.
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem("pge2.theme"); } catch (e) {}
+      if (t !== "dark" && t !== "light") t = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", t);
+    })();
+  </script>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="topbar">
     <a href="#/" class="brand"><span class="logo">R</span><span>Révisions <b>PGE2</b></span></a>
-    <nav class="topnav" id="topnav"></nav>
+    <div class="topbar-right">
+      <nav class="topnav" id="topnav"></nav>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Passer en mode sombre" title="Mode sombre / clair">🌙</button>
+    </div>
   </header>
   <main id="app" class="container" aria-live="polite">
     <p class="muted">Chargement…</p>

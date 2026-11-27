@@ -1317,6 +1317,30 @@
     draw();
   }
 
+  // ---------- Mode sombre / clair ----------
+  // pge2.theme = "dark" | "light" (choix de l'appareil, non synchronisé). Absent = suit le système.
+  (function themeToggle() {
+    const btn = document.getElementById("theme-toggle");
+    const meta = document.querySelector('meta[name="theme-color"]');
+    const sys = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null;
+    const saved = () => { try { const t = localStorage.getItem("pge2.theme"); return t === "dark" || t === "light" ? t : null; } catch (e) { return null; } };
+    function apply(t) {
+      document.documentElement.setAttribute("data-theme", t);
+      if (meta) meta.setAttribute("content", t === "dark" ? "#0c0f14" : "#1d2433");
+      if (btn) {
+        btn.textContent = t === "dark" ? "☀️" : "🌙";
+        btn.setAttribute("aria-label", t === "dark" ? "Passer en mode clair" : "Passer en mode sombre");
+      }
+    }
+    apply(saved() || (sys && sys.matches ? "dark" : "light"));
+    if (btn) btn.onclick = () => {
+      const next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+      try { localStorage.setItem("pge2.theme", next); } catch (e) {}
+      apply(next);
+    };
+    if (sys && sys.addEventListener) sys.addEventListener("change", (e) => { if (!saved()) apply(e.matches ? "dark" : "light"); });
+  })();
+
   // ---------- Démarrage ----------
   (async function start() {
     try { await loadSubjects(); }
