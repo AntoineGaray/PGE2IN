@@ -63,6 +63,9 @@ def block(el):
             html = "<tr>" + "".join(f"<{tag}>" + "".join(inline(p) for p in c.findall("paragraph")) + f"</{tag}>" for c in cells) + "</tr>"
             (head if is_head and not body else body).append(html)
         return "<table>" + (f"<thead>{''.join(head)}</thead>" if head else "") + f"<tbody>{''.join(body)}</tbody></table>"
+    if el.tag == "video":
+        # Bloc vidéo (même syntaxe que le bloc ```video des sources Markdown)
+        return f'<pre><code class="language-video">{escape(el.text or "")}</code></pre>'
     return ""
 
 def xml_to_html(xml):
@@ -79,7 +82,7 @@ def slug(s, used):
     used.add(s)
     return s
 
-def normalise(html):
+def normalise(html, lang="fr"):
     soup = BeautifulSoup(html, "html.parser")
     for h1 in soup.find_all("h1"):
         h1.decompose()
@@ -120,7 +123,35 @@ def normalise(html):
         for a in list(el.attrs):
             if a not in ("id", "class", "type", "colspan", "rowspan") or (a == "id" and el.name not in ("h2", "h3")):
                 del el[a]
+    # Vidéos YouTube : seul contenu externe autorisé (les iframes des exports restent supprimées plus haut).
+    # La fiche ne contient qu'une miniature ; l'iframe youtube-nocookie.com est créée au clic par js/app.js.
+    for code in soup.find_all("code", class_="language-video"):
+        pre = code.find_parent("pre")
+        (pre or code).replace_with(BeautifulSoup(video_html(code.get_text(), lang), "html.parser"))
     return str(soup), toc
+
+YT_ID = re.compile(r"^[A-Za-z0-9_-]{11}$")
+def video_html(src, lang):
+    """Bloc ```video : lignes « clé: valeur » (id, title, channel, duration), puis éventuellement
+    une ligne --- suivie d'une note en Markdown affichée sous la vidéo."""
+    head, _, note = src.partition("\n---\n")
+    meta = {}
+    for line in head.strip().splitlines():
+        k, _, v = line.partition(":")
+        meta[k.strip().lower()] = v.strip()
+    vid = meta.get("id", "")
+    if not YT_ID.match(vid):
+        raise ValueError(f"bloc video : id YouTube invalide « {vid} »")
+    title = meta.get("title") or "Vidéo"
+    info = " · ".join(x for x in (meta.get("channel"), meta.get("duration"), "in English" if lang == "en" else "en anglais") if x)
+    play = "Play the video" if lang == "en" else "Lire la vidéo"
+    note_html = f'<div class="yt-note">{markdown.markdown(note.strip())}</div>' if note.strip() else ""
+    return (f'<figure class="yt" data-yt="{vid}">'
+            f'<button class="yt-btn" type="button" aria-label="{escape(play)} : {escape(title)} (YouTube)">'
+            f'<img class="yt-thumb" src="https://i.ytimg.com/vi/{vid}/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">'
+            f'<span class="yt-play" aria-hidden="true"></span></button>'
+            f'<figcaption><span class="yt-title">🎬 {escape(title)}</span><span class="yt-meta">{escape(info)}</span></figcaption>'
+            f'{note_html}</figure>')
 
 def load(sid, tab):
     for ext in ("html", "xml", "md"):
@@ -142,7 +173,7 @@ for sid, name in SUBJECTS.items():
         t = {"key": key, "name": label, "html": html, "toc": toc}
         # Version anglaise (bouton FRA / ENG) : <matiere>-<onglet>-en.md, termes repris des supports du cours
         try:
-            t["html_en"], t["toc_en"] = normalise(load(sid, key + "-en"))
+            t["html_en"], t["toc_en"] = normalise(load(sid, key + "-en"), "en")
         except FileNotFoundError:
             pass
         tabs.append(t)

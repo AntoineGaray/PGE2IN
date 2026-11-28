@@ -95,6 +95,13 @@ The PowerPoint shows the **procedure flowcharts** from the book: grids covered w
 
 > **Everyday life.** Any homeowner's **mortgage**: the bank lends because the house has a **title registered with a notary** and can serve as collateral. This is exactly de Soto's "living" capital. Conversely, something you own without an invoice or papers (a bike, a car without registration) is hard to sell to a stranger: it is a small piece of dead capital.
 
+```video
+id: 4XOkgP1ryyA
+title: The Mystery of Capital by Hernando de Soto: 5 Minute Summary
+channel: SnapTale Audiobook Summaries
+duration: 5:45
+```
+
 ### 5. Why are poor countries' legal systems failing?
 
 - **The colonial legacy**: colonial law was not designed to **create** wealth, but to **extract** it and protect the colonists' property.
@@ -145,6 +152,13 @@ This is the exact title of the third part of the professor's outline: **a necess
 | **The subprime crisis** | A **property rights crisis**: nobody really knew what the "toxic" securities contained. De Soto speaks of **creating a financial Third World in the West** |
 
 > **Humour.** **Permit A38** is the best possible wink, since the professor put it in the course himself: "To register his workshop in Lima, de Soto lived 289 days in Asterix's place that sends you mad."
+
+```video
+id: QJs8gkTmjgw
+title: Hernando de Soto on Globalization
+channel: Free To Choose Network
+duration: 2:24
+```
 
 ### 8. Course document no. 6: "The Poor Versus Piketty"
 
@@ -265,6 +279,13 @@ A text handed out in class: Hernando de Soto answers Thomas Piketty's bestseller
 
 > **Humour.** "Gordon waits for the 3rd industrial revolution the way others wait for the Messiah: he does not believe it will come." Or, with Krugman: "Indoor plumbing beats the iPad, but the iPad did help write this paper."
 
+```video
+id: 6Y9uMW1ZNvI
+title: Brynjolfsson: Productivity paradox
+channel: McKinsey & Company
+duration: 3:50
+```
+
 ### 4. The "net economy": the ICT sector
 
 **What it includes**: computing, electronics, micro-electronics, telecoms, audiovisual and multimedia. It must be measured as a whole.
@@ -318,6 +339,13 @@ This is the idea of the **first mover advantage**. The ICT sector is key because
 
 > **Everyday life.** **Network effects**: a class WhatsApp group is useless if you are alone in it, and becomes essential when the whole year group is in it. Same for the class revision site: the more players there are, the more interesting the leaderboard. Metcalfe live.
 
+```video
+id: QhgdpASae2s
+title: Metcalfe's Law in Network Economics
+channel: Ashley Hodgson
+duration: 4:02
+```
+
 ### 6. The O-ring model (Michael Kremer)
 
 **The author**: **Michael Kremer** (born 1964), professor at **Harvard**, **Nobel Prize in Economics 2019**; his research covers education, health, water and agriculture in developing countries. The model dates from the **1990s**; it is what **Silicon Valley** management knows.
@@ -353,6 +381,13 @@ This is the idea of the **first mover advantage**. The ICT sector is key because
 **Selective (assortative) matching**: each production unit becomes a **small homogeneous group** of workers with almost identical skills and training (a clustering, agglomeration phenomenon).
 
 > **Everyday life.** The O-ring model is **group work** at school: if a single member does not hand in their part, the whole group's mark collapses. That is also why people try to team up with others at their level: selective matching.
+
+```video
+id: VKtTdEgt4uc
+title: The Leeroy Jenkins Principle: Why One Idiot Can Destroy Everything
+channel: Econ Nerds
+duration: 4:07
+```
 
 ### 7. A new type of inequality
 

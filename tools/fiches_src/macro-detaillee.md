@@ -97,6 +97,13 @@ Le PowerPoint montre les **organigrammes des procédures** tirés du livre : des
 
 > **Vie quotidienne.** Le **prêt immobilier** de tes parents, ou de n'importe quel propriétaire : la banque prête parce que la maison a un **titre enregistré chez le notaire** et peut servir de garantie. C'est exactement le capital « vivant » de de Soto. À l'inverse, un objet qu'on possède sans facture ni papiers (un vélo, une voiture sans carte grise) est difficile à revendre à un inconnu : c'est du petit capital mort.
 
+```video
+id: 4XOkgP1ryyA
+title: The Mystery of Capital by Hernando de Soto: 5 Minute Summary
+channel: SnapTale Audiobook Summaries
+duration: 5:45
+```
+
 ### 5. Pourquoi les systèmes juridiques des pays pauvres sont-ils défaillants ?
 
 - **L'héritage colonial** : le droit colonial n'était pas fait pour **créer** des richesses, mais pour en **extraire** et protéger la propriété des colons.
@@ -147,6 +154,13 @@ C'est le titre exact de la troisième partie du plan du prof : **une CN mais pas
 | **La crise des subprimes** | Une **crise de droits de propriété** : personne ne savait vraiment ce que contenaient les titres « pourris ». De Soto parle de la **fabrication d'un tiers-monde de la finance en Occident** |
 
 > **Humour.** Le **laisser-passer A 38** est le meilleur clin d'œil possible, puisque c'est le prof qui l'a mis dans le cours : « Pour enregistrer son atelier à Lima, de Soto a vécu 289 jours de la maison qui rend fou d'Astérix. »
+
+```video
+id: QJs8gkTmjgw
+title: Hernando de Soto on Globalization
+channel: Free To Choose Network
+duration: 2:24
+```
 
 ### 8. Le document n° 6 du cours : « Les pauvres contre Piketty »
 
@@ -268,6 +282,13 @@ Texte distribué en cours : Hernando de Soto répond au best-seller de Thomas Pi
 
 > **Humour.** « Gordon attend la 3e révolution industrielle comme d'autres attendent le Messie : il ne croit pas qu'elle viendra. » Ou, avec Krugman : « La plomberie bat l'iPad, mais l'iPad a bien aidé à écrire cette copie. »
 
+```video
+id: 6Y9uMW1ZNvI
+title: Brynjolfsson: Productivity paradox
+channel: McKinsey & Company
+duration: 3:50
+```
+
 ### 4. La « nette économie » : le secteur des NTIC
 
 **Ce qu'il contient** : l'informatique, l'électronique, la micro-électronique, les télécoms, l'audiovisuel et le multimédia. Il faut le mesurer comme un tout.
@@ -321,6 +342,13 @@ C'est l'idée du **first mover advantage** (l'avantage du premier entrant). Le s
 
 > **Vie quotidienne.** Les **effets de réseau** : un groupe WhatsApp de classe ne sert à rien si tu es seul dedans, et devient indispensable quand toute la promo y est. Même chose pour le site de révision de la classe : plus il y a de joueurs, plus le classement est intéressant. Metcalfe en direct.
 
+```video
+id: QhgdpASae2s
+title: Metcalfe's Law in Network Economics
+channel: Ashley Hodgson
+duration: 4:02
+```
+
 ### 6. Le modèle O-ring (Michael Kremer)
 
 **L'auteur** : **Michael Kremer** (né en 1964), professeur à **Harvard**, **prix Nobel d'économie 2019** ; ses recherches portent sur l'éducation, la santé, l'eau et l'agriculture dans les pays en développement. Le modèle date des **années 1990** ; c'est ce que connaît le management de la **Silicon Valley**.
@@ -356,6 +384,13 @@ C'est l'idée du **first mover advantage** (l'avantage du premier entrant). Le s
 **Les appariements sélectifs** : chaque unité de production devient un **petit ensemble homogène** de travailleurs aux qualifications et formations presque identiques (un phénomène de regroupement, d'agglomération).
 
 > **Vie quotidienne.** Le modèle O-ring, c'est le **travail de groupe** à l'école : si un seul membre ne rend pas sa partie, toute la note du groupe s'effondre. Et c'est pour ça qu'on cherche à se mettre avec des gens de son niveau : les appariements sélectifs.
+
+```video
+id: VKtTdEgt4uc
+title: The Leeroy Jenkins Principle: Why One Idiot Can Destroy Everything
+channel: Econ Nerds
+duration: 4:07
+```
 
 ### 7. Un nouveau type d'inégalités
 

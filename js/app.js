@@ -837,9 +837,16 @@
     if (!h) return null;
     const out = document.createElement("div");
     let n = h.nextElementSibling;
-    while (n && !/^H[23]$/.test(n.tagName)) { out.appendChild(n.cloneNode(true)); n = n.nextElementSibling; }
+    let videos = 0;
+    while (n && !/^H[23]$/.test(n.tagName)) {
+      // Les vidéos restent dans la fiche : l'extrait chronométré ne garde que le texte du cours
+      if (n.matches && n.matches("figure.yt")) videos++; else out.appendChild(n.cloneNode(true));
+      n = n.nextElementSibling;
+    }
+    const words = (out.textContent || "").split(/\s+/).filter(Boolean).length;
+    if (videos) out.insertAdjacentHTML("beforeend", `<p class="small muted path-video-note">🎬 ${videos > 1 ? videos + " vidéos en anglais accompagnent" : "Une vidéo en anglais accompagne"} cette partie dans la <a href="#/s/${f.subject}/fiche?tab=detaillee">fiche de cours</a>.</p>`);
     if (/class="katex/.test(out.innerHTML)) ensureKatexCss();
-    return { html: out.innerHTML, words: (out.textContent || "").split(/\s+/).filter(Boolean).length };
+    return { html: out.innerHTML, words };
   }
   // Temps de lecture conseillé : environ 2 fois le temps de lecture, entre 2 et 8 minutes, arrondi à 30 s
   const readSeconds = (words) => Math.min(480, Math.max(120, Math.round((words / 200) * 2 * 60 / 30) * 30));
@@ -1331,6 +1338,24 @@
     document.querySelectorAll(".tabs button").forEach((b) => { b.onclick = () => { period = b.dataset.p; draw(); }; });
     draw();
   }
+
+  // ---------- Vidéos des fiches ----------
+  // La fiche ne contient qu'une miniature (figure.yt) ; le lecteur youtube-nocookie.com n'est chargé qu'au clic.
+  document.addEventListener("click", (e) => {
+    const btn = e.target.closest && e.target.closest(".yt-btn");
+    if (!btn) return;
+    const fig = btn.closest("figure.yt"), vid = fig && fig.dataset.yt;
+    if (!vid || !/^[A-Za-z0-9_-]{11}$/.test(vid)) return;
+    const f = document.createElement("iframe");
+    f.src = "https://www.youtube-nocookie.com/embed/" + vid + "?autoplay=1&rel=0";
+    f.title = (fig.querySelector(".yt-title") || {}).textContent || "YouTube";
+    f.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen";
+    f.allowFullscreen = true;
+    f.referrerPolicy = "strict-origin-when-cross-origin";
+    f.className = "yt-frame";
+    btn.replaceWith(f);
+    fig.classList.add("playing");
+  });
 
   // ---------- Mode sombre / clair ----------
   // pge2.theme = "dark" | "light" (choix de l'appareil, non synchronisé). Absent = suit le système.

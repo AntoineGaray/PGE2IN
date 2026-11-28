@@ -33,3 +33,19 @@ Source : `tools/path_src/<matiere>.py` (liste `STEPS` : ancre de la sous-partie 
 
 Points : 10 pts par question, une seule fois par joueur (table `path_scored`, script `supabase/004_parcours_guide.sql`).
 L'extrait affiché est lu directement dans la fiche : si la fiche est régénérée avec un titre de sous-partie modifié, relancer l'étape 1 (elle signale l'ancre manquante).
+
+
+**Vidéos YouTube dans les fiches (28/11)** : bloc ```video dans une source Markdown (ou élément `<video>` dans une source XML), placé à la fin de la sous-partie :
+
+    ```video
+    id: 4XOkgP1ryyA
+    title: Titre de la vidéo
+    channel: Chaîne
+    duration: 5:45
+    ---
+    Note facultative en Markdown, affichée sous la vidéo.
+    ```
+
+La fiche n'affiche qu'une miniature ; le lecteur youtube-nocookie.com se charge au clic (js/app.js). Les autres iframes restent supprimées.
+Mettre la vidéo dans la source FR et dans la source EN. Le parcours guidé n'affiche pas les vidéos (une ligne renvoie à la fiche) et son minuteur ne change pas.
+Le script qui a inséré les 9 vidéos du 28/11 n'est pas gardé : les blocs sont dans les sources.

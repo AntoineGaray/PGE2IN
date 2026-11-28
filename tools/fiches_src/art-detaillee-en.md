@@ -13,6 +13,13 @@ China defines itself by its culture rather than by a territory: people speak of 
 - **Huang Di**, the Yellow Emperor, the mythical first emperor, supposedly ruling around 2700 BC. The slides present him with **Yan Di** and show the Yellow Emperor's mausoleum.
 - The first **Xia dynasty** (around 2000-1600 BC) is considered semi-fictional today.
 
+```video
+id: zdHkY3XYHKA
+title: China – 3,000 Years of History in a Minute
+channel: EarthDirect
+duration: 1:01
+```
+
 ### Shang Dynasty (1600 – 11th century BC): the writing civilization
 
 - **The oldest proof of Chinese writing**: oracles inscribed on animal bones like turtle shells or ox scapulae.
@@ -29,6 +36,13 @@ China defines itself by its culture rather than by a territory: people speak of 
 - **Confucius** (*Kongzi*) tries to define the optimal social and political model. His thought becomes the cornerstone of a kind of **meritocracy** at the base of the Chinese social system up until today.
 - **Lao Zi** leads **Taoism**: the world is driven by two antagonist forces, **Yin and Yang** (water and fire, feminine and masculine). The purpose is to follow the *Dao*, the way. Rituals honour ancestors. It is still the biggest locally developed religion in China.
 - **Arts**: bronze production at its peak, a new painting style and **lacquers**.
+
+```video
+id: 6Ne6_4mzRVE
+title: What You Didn't Know About Ancient China
+channel: 5 MINUTES
+duration: 5:13
+```
 
 ### Qin Dynasty (221 – 206 BC): modeling the Empire
 
@@ -50,6 +64,13 @@ China defines itself by its culture rather than by a territory: people speak of 
 - **A refined culture**: silk is also worn in China (drinking tea with friends, music, poetry, astronomy). The slides show tomb paintings, pottery, silk and tea sets.
 - **The Han identity**: characters are called *Hanzi*, the language *Hanyu*, traditional clothes and way of life *Hanfu*. **Hanfu** is becoming trendy again in modern China.
 - New styles in painting, calligraphy, sculpture and pottery. Through the Silk Road, **Buddhism enters China** and spreads across East Asia.
+
+```video
+id: rkJIWvLpGZM
+title: A new wave of Hanfu revival
+channel: CGTN
+duration: 7:10
+```
 
 ## China: from the Six Dynasties to the Ming
 
@@ -126,6 +147,15 @@ The Qing take China to its greatest size, but miss modernization. Then come the 
 - **A flourishing contemporary art scene**, mixing modernity, old style and light social criticism. Example quoted in the slides: **Yue Minjun** (his self-portraits with a frozen laugh).
 - **Soft power** is rising, with science-fiction literature and the film industry.
 - **Strong control and the isolationism temptation** are back under Xi Jinping.
+
+```video
+id: 0TDII5IkI3Y
+title: The Wandering Earth – Official Trailer
+channel: Netflix Malaysia
+duration: 2:06
+---
+**Why a film trailer?** Mr Sridi ends his course on China with this video. It illustrates one idea of this part: Chinese soft power is rising, with science fiction and the film industry. Here, China shows itself to the world through a big science-fiction film. In an exam answer, it is an example of soft power, to quote alongside the Hanfu trend. *Addition, not from the course: the film (2019) is adapted from a short story by Liu Cixin, the author of* The Three-Body Problem.
+```
 
 ## Japan: from the Jomon to today
 
