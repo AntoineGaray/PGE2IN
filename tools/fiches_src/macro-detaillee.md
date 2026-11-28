@@ -1,7 +1,7 @@
 
 ## Infos examen (confirmées par M. Zumer le 26/11)
 
-Partiel de **1h30**, en anglais comme tous les partiels de la PGE2 International. M. Zumer a répondu **oui** aux quatre questions qu'Antoine lui a posées par mail le 24/11 :
+Partiel de **1h30**, en anglais comme tous les partiels de la PGE2 International. M. Zumer a répondu **oui** aux quatre questions qui lui ont été posées par mail le 24/11 :
 
 1. **Deux sujets au choix** : l'un porte sur le **chapitre 1**, l'autre sur le **chapitre 2**.
 2. Les **crossovers** sont autorisés : tu peux faire des liens d'un chapitre à l'autre.
